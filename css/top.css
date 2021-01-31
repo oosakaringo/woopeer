@@ -1,0 +1,85 @@
+body {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-family: "Poiret One", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", Meiryo, Osaka, sans-serif, cursive;
+}
+h1 {
+	font-size: 16px;
+	font-weight: normal;
+}
+h2 {
+	visibility: hidden;
+}
+em {
+	visibility: hidden;
+}
+
+#main {
+	padding: 0px;
+	height: 95px;
+	background: url(../img/top1.gif) no-repeat center;
+	background-size: contain;
+	width: 100%;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 100px;
+	margin-left: 0px;
+	max-width: 435px;
+	display: inline-block;
+}
+#bt {
+	margin: 0px 0px 100px;
+	padding: 0px;
+	background: url(../img/koma.gif) repeat-x 0px 17px;
+}
+#bt1 {
+	margin: 0px;
+	padding: 0px;
+}
+#btb {
+	margin: 0px auto;
+	padding: 0px;
+	width: 150px;
+}
+
+#bt #bt1 a {
+	background: url(../img/bt1.gif) no-repeat 2px 2px;
+	margin: 0px;
+	padding: 0px;
+	height: 40px;
+	width: 150px;
+	display: block;
+	text-decoration: none;
+}
+#bt #bt1 a:hover {
+	background: url(../img/bt1.gif) no-repeat 1px 1px;
+}
+#footer {
+	font-size: 10px;
+	color: #CCCCCC;
+	text-align: center;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CCCCCC;
+	padding: 0px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	letter-spacing: 1px;
+}
+#header {
+	font-size: 10px;
+	color: #CCCCCC;
+	letter-spacing: 1px;
+	padding: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	margin: 0px 0px 100px;
+}
+#searchcontrol {
+	margin: 0px auto;
+	width: 300px;
+}
