@@ -1,0 +1,622 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>The 100 マスター</title>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:800&display=swap" rel="stylesheet">
+
+<style type="text/css">
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-size: 16px;
+  /*font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
+  font-family: 'Ubuntu', sans-serif;
+  word-break: break-all;
+  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*min-height: 100vh;*/
+  text-align: center;
+  color: #333;
+}
+.flex{
+  display: flex;
+}
+img, svg{
+  max-width: 100%;
+}
+.fill-bad {
+  fill: #048;
+}
+.fill-good {
+  fill: #f08daf;
+}
+.w80{
+  width: 80%;
+}
+.max400{
+  max-width: 400px;
+  margin: auto;
+}
+.tabel-border th, .tabel-border td, .tabel-border {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.tabel-border {
+  margin: auto;
+}
+.tabel-border th {
+  color: #fff;
+}
+.tabel-border td, .tabel-border th {
+  width: 3em;
+  height: 3em;
+  min-width: 3em;
+  min-height: 3em;
+}
+.tabel-border input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 0;
+}
+.bgc-danger {
+  background-color: #f99;
+}
+thead th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+button {
+  margin: .1em;
+  line-height: 1;
+  width: 2.5em;
+  height: 2.5em;
+  vertical-align: middle;
+  border-radius: 1em;
+  background-color: #fff;
+  font-weight: bold;
+  color: #0f4c81;
+  font-family: 'M PLUS 1p', sans-serif;
+  /*-webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;*/
+  padding: 0;
+}
+input, button {
+  font-size: 100%;
+  text-align: center;
+}
+select {
+  font-size: 60%;
+  margin-top: 1em;
+  border: solid thin;
+  background-color: transparent;
+  color: #fff;
+  padding: .2em;
+  width: 7em;
+}
+.pos-sticky-b {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+}
+.pos-fixed-b {
+  position: fixed;
+  bottom: 0
+}
+#btn-set {
+  background-color: rgba(200,200,200,.8);
+  padding: .3em;
+  margin-top: 1em;
+}
+.tabel-border .border{
+  border: medium solid #0f0;
+}
+#content-info {
+  position: absolute;
+  color: #fff;
+  width: 100vw;
+  height: 100%;
+  font-size: 200%;
+  font-weight: bold;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  /*background-image: linear-gradient(-90deg, #0F5779, #0F4C81, #1E2F55, #0F5779, #0F4C81, #1E2F55);
+  background-size: 800% 400%;*/
+  background-image: linear-gradient( #0F5779, #0F4C81, #1E2F55, #0F5779);
+  background-size: 100% 400%;
+  animation: gradient2 60s linear infinite;
+}
+#content-info h1{
+  text-shadow: 2px 2px 0px #7E6ABC, -4px -4px 0px #F096A3;
+  font-family: 'M PLUS 1p';
+  font-size: 150%;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+select {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance:textfield;
+}
+.move {
+  transition: 1s ease 0s;
+  -moz-transition: 1s ease 0s;
+  -webkit-transition: 1s ease 0s;
+}
+#timer-view {
+  position: absolute;
+  top: .8em;
+  right: .8em;
+  font-weight: bold;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 99% 50%;
+  }
+}
+@keyframes gradient2 {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% -25%;
+  }
+}
+@media (max-width: 480px) {
+/*html,body {
+  height: 100%;
+}*/
+.tabel-border {
+  width: 100%;
+}
+.tabel-border td, .tabel-border th {
+  width: 10%;
+  height: 10vw;
+  min-width: 10%;
+  min-height: 10vw;
+}
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+<h1>100マスター</h1>
+<div id="timer-view"></div>
+<table class="tabel-border" id="js-result">
+  <thead>
+    <tr>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="content-info" class="move"></div>
+<!--div id="btn-set" class="text-center pos-sticky-b">
+  <button value=""></button>
+</div-->
+<script>
+'use strict';
+$.ajax({
+  type: 'get',
+  url: './img/icons.svg'
+}).done(function(data) {
+  var svg = $(data).find('svg');
+  $('body').prepend(svg);
+});
+
+let d_start;
+let v_timer;
+let v_mathType;
+const a_no10=[1,2,3,4,5,6,7,8,9];
+const v_3starTime=4*60*1000;
+const v_2starTime=6*60*1000;
+const v_1starTime=8*60*1000;
+const v_3starColor="#0f4c81";
+const v_2starColor="#440f81";
+const v_1starColor="#810f4c";
+let a_qux=[];
+let a_quy=[];
+let a_ans=[];
+const e_contentInfo=document.getElementById('content-info');
+const e_time=document.getElementById('timer-view');
+const e_th=$('.tabel-border th');
+const a_contentCelect=['＋','ー','X'];
+const v_inputAll=81;
+let a_qu=[];
+let v_quAll=18;
+let v_level=0;
+let v_maxLevel;
+let v_halfLevel;
+let v_firstHtml="";
+let v_storage=0;
+let a_storage=[[],[],[]];
+let a_nowSelect=[0,0,0];
+if (typeof localStorage == 'undefined') {
+  v_firstHtml='<div><button onclick="f_contentSet(0)">+</button><button onclick="f_contentSet(1)">-</button><button onclick="f_contentSet(2)">x</button></div>';
+}else{
+  v_storage=localStorage.getItem("userLevel-2");
+  let v_nowSelect=localStorage.getItem("userNowLevel");
+  if(v_storage){
+    a_storage=JSON.parse(v_storage);
+  }
+  if(v_nowSelect){
+    a_nowSelect=JSON.parse(v_nowSelect);
+  }
+}
+function f_firstHtmlMake(){
+  v_firstHtml="";
+  for(let v_i=0;v_i<3;v_i++){
+    v_firstHtml+='<div><button onclick="f_contentSet('+v_i+')">'+a_contentCelect[v_i]+'</button><select>';
+    let v_all=Number(a_storage[v_i].length);
+    if(v_i<2){
+      v_all=99;
+    }else{
+      v_all=39;
+    }
+    for(let v_ii=0;v_ii<v_all;v_ii++){
+      let v_selected=""
+      if(v_ii==a_nowSelect[v_i]){
+        v_selected=' selected';
+      }
+      let v_score=a_storage[v_i][v_ii];
+      v_firstHtml+='<option value="'+v_ii+'"'+v_selected+'>Level:'+(v_ii+1)+f_starHtml(v_score)+'</option>';
+    }
+    v_firstHtml+='</select></div>';
+  }
+  return v_firstHtml;
+}
+function f_changeColor(v_color){
+  e_time.style.color=v_color;
+  $('.tabel-border th').css('background-color',v_color);
+}
+function f_contentSet(v_n){
+  f_changeColor(v_3starColor);
+  e_time.innerHTML='';
+  v_mathType=v_n;
+  if(v_n<2){
+    v_maxLevel=99;
+    v_halfLevel=49;
+  }else{
+    v_maxLevel=39;
+    v_halfLevel=19;
+  }
+  a_qux=f_aShuffle(Array.from(a_no10));
+  a_quy=f_aShuffle(Array.from(a_no10));
+  v_level=Number($('select:eq('+v_n+') option:selected').val());
+  a_nowSelect[v_n]=v_level;
+  localStorage.setItem("userNowLevel",JSON.stringify(a_nowSelect));
+  if(v_level<v_halfLevel){
+    for(let v_i=0;v_i<9;v_i++){
+      a_qux[v_i]+=v_level;
+    }
+  }else{
+    for(let v_i=0;v_i<9;v_i++){
+      a_qux[v_i]+=v_halfLevel;
+      a_quy[v_i]+=(v_level-v_halfLevel);
+    }
+  }
+  $('#js-result th:eq(0)').html(a_contentCelect[v_n]);
+  for(let v_i=0;v_i<v_inputAll;v_i++){
+    $("input[type=number]:eq("+v_i+")").val("");
+  }
+  if(v_n==0){
+    a_ans=[];
+    for(let v_i=0;v_i<9;v_i++){
+      for(let v_ii=0;v_ii<9;v_ii++){
+        a_ans.push(a_qux[v_ii]+a_quy[v_i]);
+      }
+    }
+  }else if(v_n==1){
+    for(let v_i=0;v_i<9;v_i++){
+      a_qux[v_i]=a_qux[v_i]+10;
+    }
+    a_ans=[];
+    for(let v_i=0;v_i<9;v_i++){
+      for(let v_ii=0;v_ii<9;v_ii++){
+        a_ans.push(a_qux[v_ii]-a_quy[v_i]);
+      }
+    }
+  }else if(v_n==2){
+    a_ans=[];
+    for(let v_i=0;v_i<9;v_i++){
+      for(let v_ii=0;v_ii<9;v_ii++){
+        a_ans.push(a_qux[v_ii]*a_quy[v_i]);
+      }
+    }
+  }
+  a_qu=a_qux.concat(a_quy);
+  for(let v_i=0;v_i<v_quAll;v_i++){
+    $('#js-result th:eq('+(v_i+1)+')').html(a_qu[v_i]);
+  }
+
+  /*//test
+  for(let v_i=0;v_i<80;v_i++){
+    $("input[type=number]:eq("+v_i+")").val(a_ans[v_i]);
+  }*/
+  
+  e_contentInfo.style.zIndex="-1";
+  e_contentInfo.style.opacity="0";
+
+  $('input[type=number]:eq(0)').select();
+
+  d_start=new Date();
+  v_timer=setInterval(function(){
+    let a_time=f_time();
+    if(a_time[3]>v_1starTime){
+      f_changeColor(v_1starColor);
+    }else if(a_time[3]>v_2starTime){
+      f_changeColor(v_2starColor);
+    }
+    e_time.innerHTML=a_time[0]+':'+a_time[1];
+  },1000);
+}
+function f_time(){
+  let d_now=new Date();
+  let v_dif=d_now.getTime()-d_start.getTime();
+  let v_min=Math.floor(v_dif / 60000);
+  let v_sec=Math.floor((v_dif - v_min * 60000) / 1000);
+  if(v_sec<10){
+    v_sec='0'+v_sec;
+  }
+  let v_msec=Math.floor(v_dif - v_min * 60000 - v_sec * 1000);
+  let a_return=[v_min,v_sec,v_msec,v_dif];
+  return [v_min,v_sec,v_msec,v_dif];
+}
+f_setContentInfo('<div><h1>100マスター</h1>'+f_firstHtmlMake()+'</div>');
+$('#js-result td').each(function(){
+  $(this).html('<input type="number" min="1" pattern="[0-9]*">');
+});
+$('input[type=number]').focus(function(){
+  $(this).select();
+});
+let v_input=0;
+$('input:eq('+v_input+')').addClass('border');
+$('input:eq('+v_input+')').select();
+$('input').keypress(function(e) {
+  if (13 == e.which){
+    v_input=$('input').index(this);
+    f_nextSelect();
+    f_check();
+  }
+});
+$("input").focus(function(){
+  v_input=$('input').index(this);
+  f_serectClass();
+});
+function f_aShuffle(as){
+  let v_asAll=as.length;
+  for(let v_i=0;v_i<v_asAll;v_i++){
+    let v_random = Math.floor(Math.random() * v_asAll);
+    let v_org = as[v_i];
+    as[v_i]=as[v_random];
+    as[v_random]=v_org;
+  }
+  return as;
+}
+function f_nextSelect(){
+  v_input++;
+  $('input:eq('+v_input+')').select();
+}
+function f_serectClass(){
+  $('.border').removeClass('border');
+  $('input:eq('+v_input+')').addClass('border');
+}
+function f_check(){
+  let v_h=1;
+  $("input[type=number]").each(function (){
+    if(!$(this).val()){
+      v_h=0;
+      return false;
+    }
+  });
+  if(v_h){
+    let v_out=0;
+    for(let v_i=0;v_i<v_inputAll;v_i++){
+      if($("input[type=number]:eq("+v_i+")").val()==a_ans[v_i]){
+        $("input[type=number]:eq("+v_i+")").removeClass('bgc-danger');
+      }else{
+        $("input[type=number]:eq("+v_i+")").addClass('bgc-danger');
+        v_out++;
+      }
+    }
+    if(v_out==0){
+      $('.border').removeClass('border');
+      $('input').blur();
+      clearInterval(v_timer);
+      let a_time=f_time();
+      let v_nowTime=a_time[3];
+      let v_starHtml='';
+      if(v_nowTime<v_3starTime){
+        v_starHtml='<svg class="fill-good"><use xlink:href="#flower"/></svg><svg class="fill-good"><use xlink:href="#flower"/></svg><svg class="fill-good"><use xlink:href="#flower"/></svg>';
+      }else if(v_nowTime<v_2starTime){
+        v_starHtml='<svg class="fill-good"><use xlink:href="#flower"/></svg><svg class="fill-good"><use xlink:href="#flower"/></svg><svg class="fill-bad"><use xlink:href="#flower"/></svg>';
+      }else if(v_nowTime<v_1starTime){
+        v_starHtml='<svg class="fill-good"><use xlink:href="#flower"/></svg><svg class="fill-bad"><use xlink:href="#flower"/></svg><svg class="fill-bad"><use xlink:href="#flower"/></svg>';
+      }else{
+        v_starHtml='<svg class="fill-bad"><use xlink:href="#flower"/></svg><svg class="fill-bad"><use xlink:href="#flower"/></svg><svg class="fill-bad"><use xlink:href="#flower"/></svg>';
+      }
+      let v_nowLevel=a_storage[v_mathType][v_level];
+      if(!v_nowLevel){
+        v_nowLevel=v_1starTime;
+      }
+      if(v_nowTime<v_nowLevel){
+        a_storage[v_mathType][v_level]=v_nowTime;
+        if(v_level<v_maxLevel && v_level==(a_storage[v_mathType].length-1)){
+          a_storage[v_mathType][v_level+1]=v_1starTime;
+        }
+      }
+      localStorage.setItem("userLevel-2",JSON.stringify(a_storage));
+      f_setContentInfo('<div><h1>100マスター</h1><div>Level:'+(v_level+1)+' CLEAR!!</div><div class="flex w80 max400">'+v_starHtml+'</div><div>'+a_time[0]+'分'+a_time[1]+'秒'+a_time[2]+f_firstHtmlMake()+'</div></div>');
+    }
+  }
+}
+function f_setContentInfo(v_html){
+  e_contentInfo.innerHTML=v_html;
+  e_contentInfo.style.zIndex="1";
+  e_contentInfo.style.opacity="1";
+}
+function f_starHtml(v_n){
+  let v_starHtml='';
+  v_n=parseInt(v_n);
+  if(v_n==0){
+    v_n=v_1starTime;
+  }
+  if(v_n<v_3starTime){
+    v_starHtml+='&#x1f33c;&#x1f33c;&#x1f33c;';
+  }else if(v_n<v_2starTime){
+    v_starHtml+='&#x1f33c;&#x1f33c;●';
+  }else if(v_n<v_1starTime){
+    v_starHtml+='&#x1f33c;●●';
+  }else{
+    v_starHtml+='●●●';
+  }
+  return v_starHtml;
+}
+</script>
+</body>
+</html>
