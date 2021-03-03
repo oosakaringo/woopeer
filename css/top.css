@@ -1,85 +1,69 @@
 body {
-	text-align: center;
-	margin: 0px;
-	padding: 0px;
-	font-family: "Poiret One", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", Meiryo, Osaka, sans-serif, cursive;
+  text-align: center;
+  font-family: "Poiret One",'Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", Meiryo, Osaka, sans-serif, cursive;
+  font-size: 16px;
 }
 h1 {
-	font-size: 16px;
-	font-weight: normal;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 0 2em;
 }
-h2 {
-	visibility: hidden;
+img {
+  max-width: 100%;
 }
-em {
-	visibility: hidden;
+main {
+  padding: 4em 2em;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 }
-
-#main {
-	padding: 0px;
-	height: 95px;
-	background: url(../img/top1.gif) no-repeat center;
-	background-size: contain;
-	width: 100%;
-	margin-top: 20px;
-	margin-right: 0px;
-	margin-bottom: 100px;
-	margin-left: 0px;
-	max-width: 435px;
-	display: inline-block;
+header, footer {
+  padding: 1em 0;
 }
-#bt {
-	margin: 0px 0px 100px;
-	padding: 0px;
-	background: url(../img/koma.gif) repeat-x 0px 17px;
+.logo {
+  letter-spacing: .1em;
+  font-size: 12px;
+  color: #666;
+  letter-spacing: .1em;
 }
-#bt1 {
-	margin: 0px;
-	padding: 0px;
+.btn {
+  width: 25vw;
+  max-width: 160px;
+  height: 25vw;
+  max-height: 160px;
+  border-radius: 2em;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+  transition: .3s ease 0s;
 }
-#btb {
-	margin: 0px auto;
-	padding: 0px;
-	width: 150px;
+.btn:hover,.btn:focus,.btn:active {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  top: -2px;
 }
-
-#bt #bt1 a {
-	background: url(../img/bt1.gif) no-repeat 2px 2px;
-	margin: 0px;
-	padding: 0px;
-	height: 40px;
-	width: 150px;
-	display: block;
-	text-decoration: none;
+.btn-img, .btn-img img {
+  height: 100%;
+  width: 100%;
 }
-#bt #bt1 a:hover {
-	background: url(../img/bt1.gif) no-repeat 1px 1px;
+.btn-img img {
+  object-fit: cover;
 }
-#footer {
-	font-size: 10px;
-	color: #CCCCCC;
-	text-align: center;
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-top-color: #CCCCCC;
-	padding: 0px;
-	margin-top: 10px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	letter-spacing: 1px;
+.btn-title {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-weight: bold;
+  padding: 2em .5em .5em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .4), rgba(0, 0, 0, .6));
+  text-shadow: 1px 1px 1px #000;
 }
-#header {
-	font-size: 10px;
-	color: #CCCCCC;
-	letter-spacing: 1px;
-	padding: 0px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #CCCCCC;
-	margin: 0px 0px 100px;
-}
-#searchcontrol {
-	margin: 0px auto;
-	width: 300px;
+@media (max-width: 767px) {
+  main {
+    min-height: 87vh;
+  }
 }
