@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>URL</key>
+	<string>https://s3.console.aws.amazon.com/s3/buckets/woopeer.com?region=ap-northeast-1&amp;prefix=img/codepen/&amp;showversions=false</string>
+</dict>
+</plist>
