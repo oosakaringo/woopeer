@@ -17,7 +17,7 @@ var f_rippleIn = function (e) {
   var start_y = e.pageY - e_rippleRect.top - v_rippleSize / 2 - v_scrollTop;
   var end_x = e_rippleRect.width / 2 - v_rippleSize / 2;
   var end_y = e_rippleRect.height / 2 - v_rippleSize / 2;
-  this.style.cssText = "--ripple-size:" + v_rippleSize + "px;--ripple-scale:" + v_rippleScale + ";--ripple-translate-start:" + start_x + "px," + start_y + "px;--ripple-translate-end:" + end_x + "px," + end_y + "px;";
+  this.style.cssText = "--ripple-size:" + v_rippleSize + "px;--ripple-scale:" + v_rippleScale + ";--ripple-start:" + start_x + "px," + start_y + "px;--ripple-end:" + end_x + "px," + end_y + "px;";
   this.classList.add("ripple-activation", "ripple-focused");
   var a_focused = document.querySelectorAll(".ripple-focused:not(.ripple-activation)");
   a_focused.forEach(function (e) {

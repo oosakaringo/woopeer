@@ -51,16 +51,16 @@
 }
 .ripple-deactivation::after {
   animation: ripple-opacity-out 150ms forwards;
-  transform: translate(var(--ripple-translate-end, 0)) scale(var(--ripple-scale, 1));
+  transform: translate(var(--ripple-end, 0)) scale(var(--ripple-scale, 1));
   --ripple-opacity: 0.12;
 }
 @keyframes ripple-radius-in {
   from {
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translate(var(--ripple-translate-start, 0)) scale(1);
+    transform: translate(var(--ripple-start, 0)) scale(1);
   }
   to {
-    transform: translate(var(--ripple-translate-end, 0)) scale(var(--ripple-scale, 1));
+    transform: translate(var(--ripple-end, 0)) scale(var(--ripple-scale, 1));
   }
 }
 @keyframes ripple-opacity-in {
@@ -102,30 +102,4 @@ a.ripple {
   padding: 0.5em;
   vertical-align: middle;
   color: inherit;
-}
-/*.btn.ripple-focused::before {
-  opacity: 0.12;
-}*/
-/*.btn-raised:hover::before {
-  //opacity: var(--ripple-opacity, 0.08);
-}
-.btn.btn-raised::after, .btn.btn-raised::before {
- //background-color: #fff;
-}
-.btn.btn-raised.ripple-activation::after, .btn.btn-raised.ripple-deactivation::after {
-  //--ripple-opacity: 0.24;
-}
-.btn.btn-raised.ripple-focused::before {
-  //opacity: 0.24;
-}*/
-ul.links {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-}
-ul.links a {
-  padding: 1em 2em;
-  color: inherit;
-  letter-spacing: normal;
-  width: 100%;
 }
