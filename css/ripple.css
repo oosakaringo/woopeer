@@ -96,7 +96,7 @@
 .ripple-color.ripple-focused::before {
   opacity: 0.12;
 }
-a.ripple {
+a.ripple:not(.btn) {
   display: inline-block;
   text-decoration: none;
   padding: 0.5em;
