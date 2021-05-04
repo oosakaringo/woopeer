@@ -93,13 +93,9 @@
 .ripple-white.ripple-focused::before {
   opacity: 0.24;
 }
+.ripple-color::after, .ripple-color::before {
+  background-color: var(--main-color, #000);
+}
 .ripple-color.ripple-focused::before {
   opacity: 0.12;
-}
-a.ripple:not(.btn) {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.5em;
-  vertical-align: middle;
-  color: inherit;
 }

@@ -265,8 +265,9 @@ a:hover {
 }
 .btn-raised, .btn-raised:hover, .btn-raised:focus, .btn::after, .btn::before {
   background-color: var(--main-color, #999);
+  color: #fff;
 }
-.btn-outlined, .btn-outlined:hover, .btn-outlined:focus {
+.btn-outlined, .btn-outlined.ripple, .btn-outlined:hover, .btn-outlined:focus {
   border: solid thin;
 }
 .btn-raised {
