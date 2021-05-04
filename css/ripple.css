@@ -81,6 +81,21 @@
     opacity: 0;
   }
 }
+.ripple-white.ripple-activation::after, .ripple-white.ripple-deactivation::after {
+  --ripple-opacity: 0.24;
+}
+.ripple-white::after, .ripple-white::before {
+  background-color: #fff;
+}
+.ripple-white:hover::before {
+  opacity: var(--ripple-opacity, 0.08);
+}
+.ripple-white.ripple-focused::before {
+  opacity: 0.24;
+}
+.ripple-color.ripple-focused::before {
+  opacity: 0.12;
+}
 a.ripple {
   display: inline-block;
   text-decoration: none;
@@ -88,60 +103,21 @@ a.ripple {
   vertical-align: middle;
   color: inherit;
 }
-.btn {
-  padding: 1em 1.5em;
-  border-radius: 0.5em;
-  border: none;
-  color: var(--main-color, #333);
-  background-color: transparent;
-  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 1em;
-  font-weight: 500;
-  user-select: none;
-  -webkit-user-select: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn .btn-inner-icon {
-  font-size: 120%;
-  margin: 0 0.3em 0 -0.1em;
-}
-.btn:hover, .btn:focus {
-  border: none;
-  outline: none;
-}
-.btn.ripple-focused::before {
+/*.btn.ripple-focused::before {
   opacity: 0.12;
-}
-.btn-raised, .btn-raised:hover, .btn-raised:focus, .btn::after, .btn::before {
-  background-color: var(--main-color, #999);
-}
-.btn-outlined, .btn-outlined:hover, .btn-outlined:focus {
-  border: solid thin;
-}
-.btn-raised {
-  color: #fff;
-  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
-}
-.btn-raised:hover, .btn-raised:focus {
-  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
-}
-.btn-raised:active {
-  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
-}
-.btn-raised:hover::before {
-  opacity: var(--ripple-opacity, 0.08);
+}*/
+/*.btn-raised:hover::before {
+  //opacity: var(--ripple-opacity, 0.08);
 }
 .btn.btn-raised::after, .btn.btn-raised::before {
-  background-color: #fff;
+ //background-color: #fff;
 }
 .btn.btn-raised.ripple-activation::after, .btn.btn-raised.ripple-deactivation::after {
-  --ripple-opacity: 0.24;
+  //--ripple-opacity: 0.24;
 }
 .btn.btn-raised.ripple-focused::before {
-  opacity: 0.24;
-}
+  //opacity: 0.24;
+}*/
 ul.links {
   margin: 0;
   padding-left: 0;
