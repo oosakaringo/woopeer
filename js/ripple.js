@@ -27,7 +27,6 @@ var f_rippleIn = function (e) {
   setTimeout(function () {
     this.v_animationFlg = 0;
   }, 225);
-  return false;
 };
 var f_rippleFocused = function () {
   var e_ripple = document.querySelector(".ripple-activation");
