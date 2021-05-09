@@ -3,33 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<title>ページのタイトル</title>
+<title>新世紀エヴァンゲリオン</title>
 <script type="module">
 document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js');
 </script>
 <link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/ripple.css" media="print">
 <link rel="stylesheet" href="/css/print.css" media="print">
 <meta name="description" content="ページの説明文">
-<meta property="og:title" content="ページのタイトル">
+<meta property="og:title" content="新世紀エヴァンゲリオン">
 <meta property="og:description" content="ページの説明文">
 <meta property="og:image" content="https://woopeer.com/image.jpg">
 <meta property="og:image:alt" content="画像の説明文">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:url" content="https://woopeer.com/shop/">
-<link rel="canonical" href="https://woopeer.com/shop/">
+<meta property="og:url" content="https://woopeer.com/shop/evangelion/">
+<link rel="canonical" href="https://woopeer.com/shop/evangelion/">
 <link rel="icon" href="/favicon.ico">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/my.webmanifest">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
+<style type="text/css">
+.ff-serif {
+  font-family: 'Noto Serif JP', serif;
+  font-feature-settings: "palt" 1;
+  font-kerning: normal;
+}
+</style>
 <meta name="theme-color" content="#000000">
 </head>
-
 <body>
-<!-- コンテンツ --> 
-<script src="/js/xy-polyfill.js" nomodule></script> 
-<script src="/js/ripple.js" type="module"></script>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">link</a></li>
+      <li><a href="#">link</a></li>
+      <li><a href="#">link</a></li>
+    </ul>
+  </nav>
+  <h1 class="ff-serif"> <span class="font-bigger bg-white">新世紀エヴァンゲリオン</span> </h1>
+</header>
+<main>
+  <article>
+    <section>
+      <h1>web design production</h1>
+      <div class="mb20"><img src="img/top1.gif" alt="woopeer site logo"></div>
+      <div class="flex flex-wrap flex-jc-evenly pt20"> <a href="https://woopeer.com/100cells_calculation/" class="btn ripple ripple-white" target="_blank">
+        <div class="btn-img"><img src="img/The100_btn.png" alt="ブログのイメージ"></div>
+        <span class="btn-title">100マス計算</span> </a><a href="http://blog.woopeer.com/" class="btn ripple ripple-white" target="_blank">
+        <div class="btn-img"><img src="img/blog_btn.jpg" alt="ブログのイメージ"></div>
+        <span class="btn-title">blog</span> </a> </div>
+    </section>
+  </article>
+</main>
+<footer><span class="logo">2021 woopeer.com</span></footer>
+<script src="js/ripple.js"></script>
 </body>
 </html>

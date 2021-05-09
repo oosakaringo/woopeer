@@ -33,12 +33,15 @@ a:hover {
 }
 .font-big, h2 {
   font-size: 120%;
+  letter-spacing: -.008em;
 }
 .font-bigger, h1 {
   font-size: 150%;
+  letter-spacing: -.015em;
 }
 .small {
   font-size: 80%;
+  letter-spacing: 1.5px;
 }
 .sans-serif {
   font-family: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "Hiragino Mincho Pro", HGS明朝E, メイリオ, Meiryo, serif;
