@@ -34,10 +34,12 @@ a:hover {
 .font-big, h2 {
   font-size: 120%;
   letter-spacing: -.008em;
+  line-height: 1.2;
 }
 .font-bigger, h1 {
   font-size: 150%;
   letter-spacing: -.015em;
+  line-height: 1.2;
 }
 .small {
   font-size: 80%;
