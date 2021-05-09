@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta charset="UTF-8">
+<title>top</title>
+<style type="text/css">
+.loader {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin: -20px 0 0 -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+  -moz-animation: spin 1s infinite linear;
+  border: medium solid #09c;
+  border-top-color: transparent;
+}
+@keyframes spin {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+@-webkit-keyframes spin {
+from {
+-webkit-transform: rotate(0deg);
+}
+to {
+-webkit-transform: rotate(360deg);
+}
+}
+@-moz-keyframes spin {
+from {
+-moz-transform: rotate(0deg);
+}
+to {
+-moz-transform: rotate(360deg);
+}
+}
+</style>
+</head>
+<body>
+<div class="load-css"></div>
+<div class="load-gif"></div>
+<div><a href="next.html">next</a></div>
+<script>
+const e_href = document.querySelector('a');
+let date = new Date();
+let v_random=date.getTime();
+let pri_img = document.createElement('img');
+let v_loadimg='loading.gif?'+v_random;
+pri_img.src = v_loadimg;
+e_href.href+='?t='+v_random;
+e_href.addEventListener('click', event => {
+  document.querySelector('.load-gif').innerHTML = '<img src="'+v_loadimg+'">';
+  document.querySelector('.load-css').classList.add('loader');
+  e_href.innerHTML = `Click count: ${event.detail}`;
+});
+</script>
+</body>
+</html>
