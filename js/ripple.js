@@ -3,7 +3,7 @@ const c_supportTouch = "ontouchend" in document;
 const c_touchStart = c_supportTouch ? "touchstart" : "mousedown";
 const c_touchEnd = c_supportTouch ? "touchend" : "mouseup";
 let v_tabIndex = 0;
-var f_rippleIn = function (e) {
+function f_rippleIn(e){
   this.classList.remove("ripple-activation", "ripple-focused", "ripple-deactivation");
   var e_rippleRect = this.getBoundingClientRect();
   var v_rippleSize = e_rippleRect.width;
@@ -28,7 +28,7 @@ var f_rippleIn = function (e) {
     this.v_animationFlg = 0;
   }, 225);
 };
-var f_rippleFocused = function () {
+function f_rippleFocused(){
   var e_ripple = document.querySelector(".ripple-activation");
   if (e_ripple) {
     if (e_ripple.v_animationFlg) {
