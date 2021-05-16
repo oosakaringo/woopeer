@@ -24,7 +24,7 @@ document.documentElement.classList.add('js');
 <link rel="canonical" href="https://woopeer.com/shop/evangelion/">
 <link rel="icon" href="/shop/evangelion/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/my.webmanifest">
+<!--link rel="manifest" href="/my.webmanifest"-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
 <style type="text/css">
@@ -120,11 +120,15 @@ body {
       <h1 class="ff-serif mt10 mb10">ミュージック</h1>
       <div class="bg-white css-swip shadow-lv1" id="music01_01"> <a href="#" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a> </div>
     </section>
+    <section class="pl10 pr10">
+      <h1 class="ff-serif mt10 mb10">グッズ</h1>
+      <div class="bg-white css-swip shadow-lv1" id="goods01_01"> <a href="#" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a> </div>
+    </section>
   </article>
 </main>
-<footer class="bg-black color-white text-center pd10 ff-serif"><span class="logo">2021 evangelion SHOP</span></footer>
+<footer class="bg-black color-white text-center pd10 ff-serif mt20"><span class="logo">2021 evangelion SHOP</span></footer>
 <script>
-const a_loadJson=['comic01_01','music01_01'];
+const a_loadJson=['comic01_01','music01_01','goods01_01'];
 const v_loadAll=a_loadJson.length;
 let a_httpObj=new Array();
 let a_loadData=new Array();
@@ -135,26 +139,30 @@ for(var v_i=0;v_i<v_loadAll;v_i++){
     if(( this.readyState === 4) && (this.status === 200)){
       var a_data=JSON.parse(this.responseText);
       a_loadData.push(a_data);
-      f_setItems(a_data);
+      if(a_loadData.length==v_loadAll){
+        f_setItems();
+      }
     }
   }
   a_httpObj[v_i].open("get", v_loadUrl, true);
   a_httpObj[v_i].setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   a_httpObj[v_i].send(null);
 }
-function f_setItems(a_item){
-  var e_item=document.getElementById(a_item.name);
-  var e_itemOrgHtml=e_item.innerHTML;
-  var v_all=a_item.items.length;
-  var v_html='';
-  for(var v_i=0;v_i<v_all;v_i++){
-    v_html+='<div class="mg05 ripple ripple-white">'+a_item.items[v_i]+'</div>';
+
+function f_setItems(){
+  for(var v_i=0;v_i<v_loadAll;v_i++){
+    var e_item=document.getElementById(a_loadData[v_i].name);
+    var e_itemOrgHtml=e_item.innerHTML;
+    var v_all=a_loadData[v_i].items.length;
+    var v_html='';
+    for(var v_ii=0;v_ii<v_all;v_ii++){
+      v_html+='<div class="mg05 ripple ripple-white">'+a_loadData[v_i].items[v_ii]+'</div>';
+    }
+    e_item.innerHTML=v_html+e_itemOrgHtml;
   }
-  e_item.innerHTML=v_html+e_itemOrgHtml;
   f_rippleStart();
 }
 
-</script> 
-
+</script>
 </body>
 </html>
