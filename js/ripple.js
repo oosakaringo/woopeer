@@ -1,9 +1,10 @@
-const a_ripple = document.querySelectorAll(".ripple");
 const c_supportTouch = "ontouchend" in document;
 const c_touchStart = c_supportTouch ? "touchstart" : "mousedown";
 const c_touchEnd = c_supportTouch ? "touchend" : "mouseup";
 let v_tabIndex = 0;
-function f_rippleIn(e){
+f_rippleStart();
+
+function f_rippleIn(e) {
   this.classList.remove("ripple-activation", "ripple-focused", "ripple-deactivation");
   var e_rippleRect = this.getBoundingClientRect();
   var v_rippleSize = e_rippleRect.width;
@@ -27,8 +28,9 @@ function f_rippleIn(e){
   setTimeout(function () {
     this.v_animationFlg = 0;
   }, 225);
-};
-function f_rippleFocused(){
+}
+
+function f_rippleFocused() {
   var e_ripple = document.querySelector(".ripple-activation");
   if (e_ripple) {
     if (e_ripple.v_animationFlg) {
@@ -40,7 +42,7 @@ function f_rippleFocused(){
     }
   }
   return false;
-};
+}
 
 function f_rippleEnd(e) {
   e.classList.add("ripple-deactivation");
@@ -53,14 +55,18 @@ var f_rippleOut = function () {
   this.classList.remove("ripple-focused", "ripple-activation", "ripple-deactivation");
   return false;
 };
-a_ripple.forEach(function (e) {
-  e.v_animationFlg = 0;
-  if (e.tabIndex >= 0) {
-    v_tabIndex = e.tabIndex + 1;
-  } else {
-    e.tabIndex = v_tabIndex;
-  }
-  e.addEventListener(c_touchStart, f_rippleIn, false);
-  e.addEventListener("blur", f_rippleOut, false);
-});
-document.addEventListener(c_touchEnd, f_rippleFocused, false);
+
+function f_rippleStart() {
+  let a_ripple = document.querySelectorAll(".ripple");
+  a_ripple.forEach(function (e) {
+    e.v_animationFlg = 0;
+    if (e.tabIndex >= 0) {
+      v_tabIndex = e.tabIndex + 1;
+    } else {
+      e.tabIndex = v_tabIndex;
+    }
+    e.addEventListener(c_touchStart, f_rippleIn, false);
+    e.addEventListener("blur", f_rippleOut, false);
+  });
+  document.addEventListener(c_touchEnd, f_rippleFocused, false);
+}

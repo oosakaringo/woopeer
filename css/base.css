@@ -224,6 +224,18 @@ a:hover {
   text-overflow: ellipsis;
   width: 100%;
 }
+.css-swip {
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+.css-swip > * {
+  scroll-snap-align: center;
+  flex: none;
+}
 .move {
   transition: .3s ease 0s;
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1), opacity 15ms linear 30ms, transform 270ms 0ms cubic-bezier(0, 0, 0.2, 1);
@@ -267,6 +279,7 @@ a:hover {
 .btn:hover, .btn:focus {
   border: none;
   outline: none;
+  text-decoration: none;
 }
 .btn-raised, .btn-raised:hover, .btn-raised:focus, .btn::after, .btn::before {
   background-color: var(--main-color, #999);

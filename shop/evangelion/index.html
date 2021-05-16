@@ -9,7 +9,7 @@ document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js');
 </script>
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/ripple.css" media="print">
+<link rel="stylesheet" href="/css/ripple.css">
 <link rel="stylesheet" href="/css/print.css" media="print">
 <meta name="description" content="ページの説明文">
 <meta property="og:title" content="新世紀エヴァンゲリオン">
@@ -20,47 +20,141 @@ document.documentElement.classList.add('js');
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://woopeer.com/shop/evangelion/">
+<meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://woopeer.com/shop/evangelion/">
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/shop/evangelion/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/my.webmanifest">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap" rel="stylesheet">
 <style type="text/css">
+:root {
+--main-color: #000;
+}
+#header-nav {
+  background-color: #222;
+--main-color: #fff;
+}
+.top-icon {
+  width: 3.5em;
+  height: 3.5em;
+  display: flex;
+  padding: .3em .3em;
+  margin-left: .5em;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav-list .btn {
+  margin: 0;
+  border-radius: 0;
+}
+.main-bg-color {
+  background-color: var(--main-color, #666);
+}
+.sub-bg-color {
+  background-color: #939597
+}
+.bg-black {
+  background-color: black;
+}
+.main-color {
+  color: #eb981c;
+}
+.color-gray {
+  color: #999;
+}
 .ff-serif {
   font-family: 'Noto Serif JP', serif;
   font-feature-settings: "palt" 1;
   font-kerning: normal;
 }
+.main-visual {
+  max-height: 50vw;
+  width: 100%;
+  object-position: 100% 0;
+  object-fit: cover;
+  border: thin solid #000;
+}
+
+@media screen and (min-width: 921px) {
+.main-visual {
+  max-height: 500px;
+  max-width: 1000px;
+  margin: auto;
+}
+}
+
+@media screen and (max-width: 320px) {
+body {
+  font-size: 12px;
+}
+}
 </style>
-<meta name="theme-color" content="#000000">
+<script src="/js/ripple.js"></script>
 </head>
 <body>
 <header>
-  <nav>
-    <ul>
-      <li><a href="#">link</a></li>
-      <li><a href="#">link</a></li>
-      <li><a href="#">link</a></li>
+  <nav id="header-nav" class="shadow-lv4 pos-sticky-top">
+    <ul class="nav-list">
+      <li><a href="#" class="ripple top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>
+      <li><a href="#" class="btn ripple">comic</a></li>
+      <li><a href="#" class="btn ripple">music</a></li>
+      <li><a href="#" class="btn ripple">goods</a></li>
     </ul>
   </nav>
-  <h1 class="ff-serif bg-white"> <span class="font-bigger">新世紀エヴァンゲリオン</span> </h1>
+  <h1 class="ff-serif bg-white text-center mg0 pd05"> <span class="font-bigger">新世紀エヴァンゲリオン</span> </h1>
+  <div class="bg-black"><img src="https://images-na.ssl-images-amazon.com/images/I/71j2PW0R60L.jpg" class="main-visual"></div>
 </header>
 <main>
   <article>
-    <section>
-      <h1>web design production</h1>
-      <div class="mb20"><img src="img/top1.gif" alt="woopeer site logo"></div>
-      <div class="flex flex-wrap flex-jc-evenly pt20"> <a href="https://woopeer.com/100cells_calculation/" class="btn ripple ripple-white" target="_blank">
-        <div class="btn-img"><img src="img/The100_btn.png" alt="ブログのイメージ"></div>
-        <span class="btn-title">100マス計算</span> </a><a href="http://blog.woopeer.com/" class="btn ripple ripple-white" target="_blank">
-        <div class="btn-img"><img src="img/blog_btn.jpg" alt="ブログのイメージ"></div>
-        <span class="btn-title">blog</span> </a> </div>
+    <section class="pl10 pr10">
+      <h1 class="ff-serif mt10 mb10">コミック</h1>
+      <div class="bg-white css-swip shadow-lv1" id="comic01_01"> <a href="#" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a> </div>
+    </section>
+    <section class="pl10 pr10">
+      <h1 class="ff-serif mt10 mb10">ミュージック</h1>
+      <div class="bg-white css-swip shadow-lv1" id="music01_01"> <a href="#" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a> </div>
     </section>
   </article>
 </main>
-<footer><span class="logo">2021 woopeer.com</span></footer>
-<script src="js/ripple.js"></script>
+<footer class="bg-black color-white text-center pd10 ff-serif"><span class="logo">2021 evangelion SHOP</span></footer>
+<script>
+const a_loadJson=['comic01_01','music01_01'];
+const v_loadAll=a_loadJson.length;
+let a_httpObj=new Array();
+let a_loadData=new Array();
+for(var v_i=0;v_i<v_loadAll;v_i++){
+  var v_loadUrl="/shop/evangelion/data/"+a_loadJson[v_i]+".json";
+  a_httpObj[v_i] = new XMLHttpRequest();
+  a_httpObj[v_i].onreadystatechange = function(){
+    if(( this.readyState === 4) && (this.status === 200)){
+      var a_data=JSON.parse(this.responseText);
+      a_loadData.push(a_data);
+      f_setItems(a_data);
+    }
+  }
+  a_httpObj[v_i].open("get", v_loadUrl, true);
+  a_httpObj[v_i].setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  a_httpObj[v_i].send(null);
+}
+function f_setItems(a_item){
+  var e_item=document.getElementById(a_item.name);
+  var e_itemOrgHtml=e_item.innerHTML;
+  var v_all=a_item.items.length;
+  var v_html='';
+  for(var v_i=0;v_i<v_all;v_i++){
+    v_html+='<div class="mg05 ripple ripple-white">'+a_item.items[v_i]+'</div>';
+  }
+  e_item.innerHTML=v_html+e_itemOrgHtml;
+  f_rippleStart();
+}
+
+</script> 
+
 </body>
 </html>
