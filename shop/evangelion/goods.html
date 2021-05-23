@@ -95,80 +95,21 @@ body {
 }
 }
 </style>
-<script src="/js/ripple.js"></script>
+<script src="/js/ripple.js"></script> 
+<script src="load_data_set.js"></script>
 </head>
 <body>
 <header>
-  <nav id="header-nav" class="shadow-lv4 pos-sticky-top">
-    <ul class="nav-list">
-      <li><a href="/shop/evangelion/" class="ripple top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>
-      <li><a href="/shop/evangelion/comic.html" class="btn ripple">comic</a></li>
-      <li><a href="/shop/evangelion/music.html" class="btn ripple">CD/DVD</a></li>
-      <li><a href="/shop/evangelion/goods.html" class="btn ripple">goods</a></li>
-    </ul>
-  </nav>
-  <h1 class="ff-serif bg-white text-center mg0 pd05"> <span class="font-bigger">新世紀エヴァンゲリオン・THEコミック</span> </h1>
+  <nav id="header-nav" class="shadow-lv4 pos-sticky-top"></nav>
+  <h1 class="ff-serif bg-white text-center mg0 pd05"> <span class="font-bigger">新世紀エヴァンゲリオン・THEグッズ</span> </h1>
   <div class="bg-black flex"><img src="https://images-na.ssl-images-amazon.com/images/I/81HCzXhf3fL.jpg" class="main-visual"><img src="https://images-na.ssl-images-amazon.com/images/I/716J6yeGg8L.jpg" class="main-visual"><img src="https://images-na.ssl-images-amazon.com/images/I/91cTQMTQ5bL.jpg" class="main-visual"></div>
 </header>
 <main>
-  <article>
-    <section class="pl10 pr10">
-      <h1 class="ff-serif mt10 mb05">フィギュア（初号機）</h1>
-      <div class="bg-white css-swip shadow-lv1" id="goods01_02"></div>
-    </section>
-    <section class="pl10 pr10">
-      <h1 class="ff-serif mt10 mb05">碇シンジ育成計画</h1>
-      <div class="bg-white css-swip shadow-lv1" id="comic01_03"></div>
-    </section>
-    <section class="pl10 pr10">
-      <h1 class="ff-serif mt10 mb05">ピコピコ中学生伝説・碇シンジ探偵日記</h1>
-      <div class="bg-white css-swip shadow-lv1" id="comic01_04"></div>
-    </section>
-    <section class="pl10 pr10">
-      <h1 class="ff-serif mt10 mb05">原画集</h1>
-      <div class="bg-white css-swip shadow-lv1" id="comic01_05"></div>
-    </section>
-    <section class="pl10 pr10">
-      <h1 class="ff-serif mt10 mb05">その他関連書籍</h1>
-      <div class="bg-white css-swip shadow-lv1" id="comic01_06"></div>
-    </section>
-  </article>
+  <article id="result"></article>
 </main>
 <footer class="bg-black color-white text-center pd10 ff-serif mt20"><span class="logo">2021 evangelion SHOP</span></footer>
 <script>
 const a_loadJson=['goods01_02','comic01_03','comic01_04','comic01_05','comic01_06'];
-const v_loadAll=a_loadJson.length;
-let a_httpObj=new Array();
-let a_loadData=new Array();
-for(var v_i=0;v_i<v_loadAll;v_i++){
-  var v_loadUrl="/shop/evangelion/data/"+a_loadJson[v_i]+".json";
-  a_httpObj[v_i] = new XMLHttpRequest();
-  a_httpObj[v_i].onreadystatechange = function(){
-    if(( this.readyState === 4) && (this.status === 200)){
-      var a_data=JSON.parse(this.responseText);
-      a_loadData.push(a_data);
-      if(a_loadData.length==v_loadAll){
-        f_setItems();
-      }
-    }
-  }
-  a_httpObj[v_i].open("get", v_loadUrl, true);
-  a_httpObj[v_i].setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  a_httpObj[v_i].send(null);
-}
-
-function f_setItems(){
-  for(var v_i=0;v_i<v_loadAll;v_i++){
-    var e_item=document.getElementById(a_loadData[v_i].name);
-    var e_itemOrgHtml=e_item.innerHTML;
-    var v_all=a_loadData[v_i].items.length;
-    var v_html='';
-    for(var v_ii=0;v_ii<v_all;v_ii++){
-      v_html+='<div class="mg05 ripple ripple-white">'+a_loadData[v_i].items[v_ii]+'</div>';
-    }
-    e_item.innerHTML=v_html+e_itemOrgHtml;
-  }
-  f_rippleStart();
 }
 
 </script>

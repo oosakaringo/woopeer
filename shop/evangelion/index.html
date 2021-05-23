@@ -95,73 +95,34 @@ body {
 }
 }
 </style>
-<script src="/js/ripple.js"></script>
+<script src="/js/ripple.js"></script> 
+<script src="load_data_set.js"></script>
 </head>
 <body>
 <header>
-  <nav id="header-nav" class="shadow-lv4 pos-sticky-top">
-    <ul class="nav-list">
-      <li><a href="/shop/evangelion/" class="ripple top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>
-      <li><a href="/shop/evangelion/comic.html" class="btn ripple">comic</a></li>
-      <li><a href="/shop/evangelion/music.html" class="btn ripple">CD/DVD</a></li>
-      <li><a href="/shop/evangelion/goods.html" class="btn ripple">goods</a></li>
-    </ul>
-  </nav>
+  <nav id="header-nav" class="shadow-lv4 pos-sticky-top"></nav>
   <h1 class="ff-serif bg-white text-center mg0 pd05"> <span class="font-bigger">新世紀エヴァンゲリオン</span> </h1>
   <div class="bg-black"><img src="https://images-na.ssl-images-amazon.com/images/I/71j2PW0R60L.jpg" class="main-visual"></div>
 </header>
 <main>
-  <article>
-    <section class="pl10 pr10">
-      <h1 class="ff-serif mt10 mb05">コミック</h1>
-      <div class="bg-white css-swip shadow-lv1" id="comic01_01"> <a href="/shop/evangelion/comic.html" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a> </div>
-    </section>
-    <section class="pl10 pr10">
-      <h1 class="ff-serif mt10 mb05">ミュージック・DVD</h1>
-      <div class="bg-white css-swip shadow-lv1" id="music01_01"> <a href="/shop/evangelion/music.html" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a> </div>
-    </section>
-    <section class="pl10 pr10">
-      <h1 class="ff-serif mt10 mb05">グッズ</h1>
-      <div class="bg-white css-swip shadow-lv1" id="goods01_01"> <a href="/shop/evangelion/goods.html" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a> </div>
-    </section>
-  </article>
+  <article id="result"></article>
 </main>
 <footer class="bg-black color-white text-center pd10 ff-serif mt20"><span class="logo">2021 evangelion SHOP</span></footer>
 <script>
-const a_loadJson=['comic01_01','music01_01','goods01_01'];
-const v_loadAll=a_loadJson.length;
-let a_httpObj=new Array();
-let a_loadData=new Array();
-for(var v_i=0;v_i<v_loadAll;v_i++){
-  var v_loadUrl="/shop/evangelion/data/"+a_loadJson[v_i]+".json";
-  a_httpObj[v_i] = new XMLHttpRequest();
-  a_httpObj[v_i].onreadystatechange = function(){
-    if(( this.readyState === 4) && (this.status === 200)){
-      var a_data=JSON.parse(this.responseText);
-      a_loadData.push(a_data);
-      if(a_loadData.length==v_loadAll){
-        f_setItems();
-      }
-    }
+const a_loadJson=['comic01_01','music01_01','goods01_01','goods01_01'];
+f_loadDataSet();
+const e_result = document.getElementById('result');
+const o_moreLink = new MutationObserver(records => {
+  const ae_moreLink=document.querySelectorAll('#result > section > .css-swip');
+  for(var v_i=0;v_i<v_navAll;v_i++){
+    ae_moreLink[v_i].insertAdjacentHTML('beforeend','<a href="/shop/evangelion/'+a_nav[v_i].link+'.html" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a>');
   }
-  a_httpObj[v_i].open("get", v_loadUrl, true);
-  a_httpObj[v_i].setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  a_httpObj[v_i].send(null);
-}
+});
+o_moreLink.observe(e_result, {
+  childList: true
+});
 
-function f_setItems(){
-  for(var v_i=0;v_i<v_loadAll;v_i++){
-    var e_item=document.getElementById(a_loadData[v_i].name);
-    var e_itemOrgHtml=e_item.innerHTML;
-    var v_all=a_loadData[v_i].items.length;
-    var v_html='';
-    for(var v_ii=0;v_ii<v_all;v_ii++){
-      v_html+='<div class="mg05 ripple ripple-white">'+a_loadData[v_i].items[v_ii]+'</div>';
-    }
-    e_item.innerHTML=v_html+e_itemOrgHtml;
-  }
-  f_rippleStart();
-}
+  
 
 </script>
 </body>
