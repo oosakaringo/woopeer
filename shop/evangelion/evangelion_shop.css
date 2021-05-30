@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+:root {
+--main-color: #000;
+}
+#header-nav {
+  background-color: #222;
+--main-color: #fff;
+}
+body {
+  color: #000;
+}
+.top-icon {
+  width: 3.5em;
+  height: 3.5em;
+  display: flex;
+  padding: .3em .3em;
+  margin-left: .5em;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.nav-list .btn {
+  margin: 0;
+  border-radius: 0;
+}
+.main-bg-color {
+  background-color: var(--main-color, #666);
+}
+.sub-bg-color {
+  background-color: #939597
+}
+.bg-black {
+  background-color: black;
+}
+.main-color {
+  color: #eb981c;
+}
+.color-gray {
+  color: #999;
+}
+.ff-serif {
+  font-family: 'Noto Serif JP', serif;
+  font-feature-settings: "palt" 1;
+  font-kerning: normal;
+}
+.main-visual {
+  max-height: 50vw;
+  width: 100%;
+  object-position: 100% 0;
+  object-fit: cover;
+  border: thin solid #000;
+}
+
+@media screen and (min-width: 921px) {
+.main-visual {
+  max-height: 500px;
+  max-width: 1000px;
+  margin: auto;
+}
+}
+
+@media screen and (max-width: 320px) {
+body {
+  font-size: 12px;
+}
+}

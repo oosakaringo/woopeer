@@ -60,7 +60,7 @@ function f_loadDataSet() {
       var v_html = '<section class="pl10 pr10"><h1 class="ff-serif mt10 mb05">' + a_loadData[v_setName].title + '</h1><div class="bg-white css-swip shadow-lv1">';
       var v_all = a_loadData[v_setName].items.length;
       for (var v_ii = 0; v_ii < v_all; v_ii++) {
-        v_html += '<div class="mg05 ripple ripple-white">' + a_loadData[v_setName].items[v_ii] + '</div>';
+        v_html += '<div goods-no="'+(v_ii+1)+'" class="mg05 ripple ripple-white">' + a_loadData[v_setName].items[v_ii] + '</div>';
       }
       v_html += '</div></section>';
       e_result.innerHTML += v_html;
