@@ -1,4 +1,4 @@
-const version = 'v3';
+const version = 'v4';
 // インストール時にキャッシュする
 self.addEventListener('install', (event) => {
   console.log('service worker install ...');
@@ -12,6 +12,7 @@ self.addEventListener('install', (event) => {
         '/shop/evangelion/goods.html',
         '/shop/evangelion/goods01.html',
         '/shop/evangelion/music.html',
+        '/shop/evangelion/fashion.html',
         '/shop/evangelion/app.js',
         '/shop/evangelion/load_data_set.js',
         '/shop/evangelion/evangelion_shop.css',

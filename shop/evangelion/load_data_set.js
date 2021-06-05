@@ -14,6 +14,10 @@ const a_nav = [{
     link: "goods",
     title: "goods"
   },
+  {
+    link: "fashion",
+    title: "fashion"
+  },
 ];
 const v_navAll = a_nav.length;
 let v_navHtml = '<ul class="nav-list css-swip"><li><a href="/shop/evangelion/" class="ripple top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>';

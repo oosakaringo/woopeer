@@ -227,7 +227,7 @@ a:hover {
 .css-swip {
   scroll-snap-type: x mandatory;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
   display: flex;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
