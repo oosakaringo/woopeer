@@ -1,4 +1,4 @@
-const version = 'v5';
+const version = 'v9';
 // インストール時にキャッシュする
 self.addEventListener('install', (event) => {
   console.log('service worker install ...');
@@ -31,7 +31,7 @@ self.addEventListener("activate", function (event) {
       caches.keys().then(function (oldCacheKeys) {
         oldCacheKeys
           .filter(function (key) {
-            return key !== CACHE_NAME;
+            return key !== version;
           })
           .map(function (key) {
             return caches.delete(key);

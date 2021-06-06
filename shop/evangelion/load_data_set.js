@@ -20,7 +20,7 @@ const a_nav = [{
   },
 ];
 const v_navAll = a_nav.length;
-let v_navHtml = '<ul class="nav-list css-swip"><li><a href="/shop/evangelion/" class="ripple top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>';
+let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/evangelion/" class="ripple top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>';
 for (var v_i = 0; v_i < v_navAll; v_i++) {
   v_navHtml += '<li><a href="/shop/evangelion/' + a_nav[v_i].link + '.html" class="btn ripple">' + a_nav[v_i].title + '</a></li>';
 }
@@ -73,6 +73,7 @@ function f_loadDataSet() {
     var v_resultImgAll=e_resultImg.length;
     for(var v_i=0;v_i<v_resultImgAll;v_i++){
       e_resultImg[v_i].setAttribute('loading', 'lazy');
+      e_resultImg[v_i].setAttribute('alt', ' ');
     }
     f_rippleStart();
   }

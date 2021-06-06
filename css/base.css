@@ -446,7 +446,7 @@ a:hover {
     font-size: 14px;
     line-height: 1.8;
   }
-  section > * {
+  section > *, .max-w {
     max-width: 840px;
     margin-right: auto;
     margin-left: auto;
@@ -579,17 +579,17 @@ a:hover {
   }
 }
 @media screen and (min-width: 1321px) {
-  section > * {
+  section > *, .max-w {
     max-width: 1120px;
   }
 }
 @media screen and (min-width: 1545px) {
-  section > * {
+  section > *, .max-w {
     max-width: 1400px;
   }
 }
 @media screen and (min-width: 1865px) {
-  section > * {
+  section > *, .max-w {
     max-width: 1520px;
   }
 }
