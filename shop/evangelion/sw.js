@@ -1,11 +1,11 @@
-const version = 'v4';
+const version = 'v5';
 // インストール時にキャッシュする
 self.addEventListener('install', (event) => {
   console.log('service worker install ...');
-  self.skipWaiting();
   // キャッシュ完了までインストールが終わらないように待つ
   event.waitUntil(
     caches.open(version).then((cache) => {
+      skipWaiting();
       return cache.addAll([
         '/shop/evangelion/index.html',
         '/shop/evangelion/comic.html',
@@ -25,8 +25,21 @@ self.addEventListener('install', (event) => {
   );
 });
 
-self.addEventListener('activate', (event) => {
-  console.info('activate', event);
+self.addEventListener("activate", function (event) {
+  event.waitUntil(
+    (function () {
+      caches.keys().then(function (oldCacheKeys) {
+        oldCacheKeys
+          .filter(function (key) {
+            return key !== CACHE_NAME;
+          })
+          .map(function (key) {
+            return caches.delete(key);
+          });
+      });
+      clients.claim();
+    })()
+  );
 });
 
 self.addEventListener('fetch', function(event) {

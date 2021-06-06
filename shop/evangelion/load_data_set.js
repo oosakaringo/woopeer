@@ -69,6 +69,11 @@ function f_loadDataSet() {
       v_html += '</div></section>';
       e_result.innerHTML += v_html;
     }
+    var e_resultImg=e_result.querySelectorAll('img');
+    var v_resultImgAll=e_resultImg.length;
+    for(var v_i=0;v_i<v_resultImgAll;v_i++){
+      e_resultImg[v_i].setAttribute('loading', 'lazy');
+    }
     f_rippleStart();
   }
 }
