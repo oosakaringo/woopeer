@@ -36,7 +36,7 @@ document.documentElement.classList.add('js');
 <header>
   <nav id="header-nav" class="shadow-lv4 pos-sticky-top"></nav>
   <h1 class="ff-serif bg-white text-center mg0 pd05"> <span class="font-bigger">新世紀エヴァンゲリオン</span> </h1>
-  <div class="bg-black"><img src="https://images-na.ssl-images-amazon.com/images/I/71j2PW0R60L.jpg" class="main-visual"></div>
+  <div class="bg-black"><img src="https://images-na.ssl-images-amazon.com/images/I/71j2PW0R60L.jpg" class="main-visual" alt=""></div>
 </header>
 <main>
   <article id="result"></article>
@@ -51,6 +51,7 @@ const o_moreLink = new MutationObserver(records => {
   for(var v_i=0;v_i<v_navAll;v_i++){
     ae_moreLink[v_i].insertAdjacentHTML('beforeend','<a href="/shop/evangelion/'+a_nav[v_i].link+'.html" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a>');
   }
+  f_rippleStart();
 });
 o_moreLink.observe(e_result, {
   childList: true

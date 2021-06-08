@@ -8,6 +8,7 @@
   --main-color: #fff;
   position: fixed;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 body {
   color: #000;

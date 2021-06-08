@@ -64,6 +64,7 @@ function f_rippleStart() {
       v_tabIndex = e.tabIndex + 1;
     } else {
       e.tabIndex = v_tabIndex;
+      v_tabIndex++;
     }
     e.addEventListener(c_touchStart, f_rippleIn, false);
     e.addEventListener("blur", f_rippleOut, false);
