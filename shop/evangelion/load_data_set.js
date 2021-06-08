@@ -20,9 +20,9 @@ const a_nav = [{
   },
 ];
 const v_navAll = a_nav.length;
-let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/evangelion/" class="ripple top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>';
+let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/evangelion/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>';
 for (var v_i = 0; v_i < v_navAll; v_i++) {
-  v_navHtml += '<li><a href="/shop/evangelion/' + a_nav[v_i].link + '.html" class="btn ripple">' + a_nav[v_i].title + '</a></li>';
+  v_navHtml += '<li><a href="/shop/evangelion/' + a_nav[v_i].link + '.html" class="btn ripple ripple-white">' + a_nav[v_i].title + '</a></li>';
 }
 v_navHtml += '</ul>';
 window.addEventListener('DOMContentLoaded', function() {
@@ -38,7 +38,7 @@ function f_loadDataSet() {
   const e_result = document.getElementById('result');
   const a_httpObj = new Array();
   const a_loadData = new Array();
-  const v_fistSetNo = 8;
+  const v_fistSetNo = 3;
   let v_loaedAll = 0;
   for (var v_i = 0; v_i < v_loadAll; v_i++) {
     let v_json = a_loadJson[v_i];

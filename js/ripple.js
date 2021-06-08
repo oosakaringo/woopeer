@@ -1,7 +1,6 @@
 const c_supportTouch = "ontouchend" in document;
 const c_touchStart = c_supportTouch ? "touchstart" : "mousedown";
 const c_touchEnd = c_supportTouch ? "touchend" : "mouseup";
-let v_tabIndex = 0;
 f_rippleStart();
 
 function f_rippleIn(e) {
@@ -60,11 +59,8 @@ function f_rippleStart() {
   let a_ripple = document.querySelectorAll(".ripple");
   a_ripple.forEach(function (e) {
     e.v_animationFlg = 0;
-    if (e.tabIndex >= 0) {
-      v_tabIndex = e.tabIndex + 1;
-    } else {
-      e.tabIndex = v_tabIndex;
-      v_tabIndex++;
+    if (e.tabIndex < 0) {
+      e.tabIndex = 0;
     }
     e.addEventListener(c_touchStart, f_rippleIn, false);
     e.addEventListener("blur", f_rippleOut, false);
