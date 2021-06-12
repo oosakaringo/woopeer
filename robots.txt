@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /yoshiaki_nakao/
+Disallow: /yoshiaki_nakao_app/
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/
+
+Sitemap: https://woopeer.com/shop/evangelion/sitemap.xml

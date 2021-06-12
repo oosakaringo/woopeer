@@ -96,3 +96,11 @@ function f_loadDataSet() {
     f_rippleStart();
   }
 }
+/*GAì«Ç›çûÇ›*/
+var j_GA = document.createElement('script');
+j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-6GQHWD9SMM";
+document.head.appendChild(j_GA);
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6GQHWD9SMM');
