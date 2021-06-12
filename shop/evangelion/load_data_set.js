@@ -98,9 +98,9 @@ function f_loadDataSet() {
 }
 /*GAì«Ç›çûÇ›*/
 var j_GA = document.createElement('script');
-j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-6GQHWD9SMM";
+j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-R3P7D3FQPJ";
 document.head.appendChild(j_GA);
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-6GQHWD9SMM');
+gtag('config', 'G-R3P7D3FQPJ');
