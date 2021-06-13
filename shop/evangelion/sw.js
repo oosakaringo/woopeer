@@ -1,4 +1,4 @@
-const version = 'v12';
+const version = 'v13';
 // インストール時にキャッシュする
 self.addEventListener('install', (event) => {
   console.log('service worker install ...');

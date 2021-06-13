@@ -70,13 +70,16 @@ header {
   border: thin solid #000;
 }
 .dummy-img {
-  width: 180px;
+  width: 200px;
   height: 250px;
   background-color: #ddd;
 }
 .goods-img {
   width: 100%;
   height: auto;
+}
+.css-not-swip {
+  scroll-snap-type: none;
 }
 
 @media screen and (min-width: 921px) {

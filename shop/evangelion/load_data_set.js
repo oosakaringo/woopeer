@@ -62,10 +62,10 @@ function f_loadDataSet() {
   function f_setItems01() {
     for (var v_i = 0; v_i < v_loadAll; v_i++) {
       var v_setName = a_loadJson[v_i];
-      var v_html = '<section class="pl10 pr10"><h1 class="ff-serif mt10 mb05">' + a_loadData[v_setName].title + '</h1><div class="bg-white css-swip shadow-lv1">';
+      var v_html = '<section class="pl10 pr10"><h1 class="ff-serif mt10 mb05">' + a_loadData[v_setName].title + '</h1><div class="bg-white css-swip css-not-swip shadow-lv1 js-items">';
       var v_all = a_loadData[v_setName].items.length;
       for (var v_ii = 0; v_ii < v_all; v_ii++) {
-        if(v_ii<v_fistSetNo){
+        if(v_i==0 && v_ii<v_fistSetNo){
           v_html += '<div goods-no="'+(v_ii+1)+'" class="mg05 ripple ripple-white js-item">' + a_loadData[v_setName].items[v_ii] + '</div>';
         }else{
           v_html += '<div goods-no="'+(v_ii+1)+'" class="mg05 ripple ripple-white js-item"><div class="dummy-img"></div></div>';
@@ -73,34 +73,40 @@ function f_loadDataSet() {
       }
       v_html += '</div></section>';
       e_result.innerHTML += v_html;
-      f_setImgRender(e_result,0);
+      f_setImgRender(e_result);
     }
     setTimeout(f_setItems02,1000);
   }
   function f_setItems02() {
     for (var v_i = 0; v_i < v_loadAll; v_i++) {
       var v_setName = a_loadJson[v_i];
-      var e_setItems02=document.querySelector("#result section:nth-child("+(v_i+1)+") .css-swip");
+      var e_setItems02=document.querySelector("#result section:nth-child("+(v_i+1)+") .js-items");
       var v_html = '';
       var v_all = a_loadData[v_setName].items.length;
-      if(v_all > v_fistSetNo){
-        for (var v_ii = v_fistSetNo; v_ii < v_all; v_ii++) {
-          e_setItems02.querySelector(".js-item:nth-child("+(v_ii+1)+")").innerHTML=a_loadData[v_setName].items[v_ii];
-        }
-        f_setImgRender(e_result,v_fistSetNo);
+      var v_st = 0;
+      if(v_i==0){
+        v_st=v_fistSetNo;
       }
+      for (var v_ii = v_st; v_ii < v_all; v_ii++) {
+        e_setItems02.querySelector(".js-item:nth-child("+(v_ii+1)+")").innerHTML=a_loadData[v_setName].items[v_ii];
+      }
+      f_setImgRender(e_result);
+      setTimeout(f_reSwip,3000);
     }
     f_rippleStart();
   }
-  function f_setImgRender(e, v_st){
+  function f_reSwip(){
+    document.querySelector(".css-not-swip").classList.remove("css-not-swip");
+  }
+  function f_setImgRender(e){
     var e_img=e.querySelectorAll('img');
     var v_imgAll=e_img.length;
-    for(var v_i=v_st;v_i<v_imgAll;v_i++){
+    for(var v_i=0;v_i<v_imgAll;v_i++){
       e_img[v_i].setAttribute('loading', 'lazy');
       if(e_img[v_i].getAttribute("width")==1){
         e_img[v_i].setAttribute('height', '0px');
       }else{
-        e_img[v_i].setAttribute('width', '180px');
+        e_img[v_i].setAttribute('width', '250px');
         e_img[v_i].setAttribute('height', '250px');
         e_img[v_i].classList.add('goods-img');
       }
@@ -108,7 +114,7 @@ function f_loadDataSet() {
     }
     var e_href=e.querySelectorAll('a');
     var v_hrefAll=e_href.length;
-    for(var v_i=v_st;v_i<v_hrefAll;v_i++){
+    for(var v_i=0;v_i<v_hrefAll;v_i++){
       e_href[v_i].setAttribute('aria-label', '商品ページへ');
       e_href[v_i].setAttribute('rel', 'noopener');
     }
