@@ -20,7 +20,7 @@ const a_nav = [{
   },
 ];
 const v_navAll = a_nav.length;
-let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/evangelion/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo"></a></li>';
+let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/evangelion/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo" width="50px" height="50px"></a></li>';
 for (var v_i = 0; v_i < v_navAll; v_i++) {
   v_navHtml += '<li><a href="/shop/evangelion/' + a_nav[v_i].link + '.html" class="btn ripple ripple-white">' + a_nav[v_i].title + '</a></li>';
 }
@@ -106,9 +106,15 @@ function f_loadDataSet() {
       }
       e_img[v_i].setAttribute('alt', '');
     }
+    var e_href=e.querySelectorAll('a');
+    var v_hrefAll=e_href.length;
+    for(var v_i=v_st;v_i<v_hrefAll;v_i++){
+      e_href[v_i].setAttribute('aria-label', '商品ページへ');
+      e_href[v_i].setAttribute('rel', 'noopener');
+    }
   }
 }
-/*GA�ǂݍ���*/
+/*GA読み込み*/
 var j_GA = document.createElement('script');
 j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-R3P7D3FQPJ";
 document.head.appendChild(j_GA);

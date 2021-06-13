@@ -24,8 +24,8 @@ header {
   margin-top: 3.5em;
 }
 .top-icon {
-  width: 3.5em;
-  height: 3.5em;
+  width: 3.8em;
+  height: 3.8em;
   display: flex;
   padding: .3em .3em;
   margin-left: .5em;
@@ -64,6 +64,7 @@ header {
 .main-visual {
   max-height: 50vw;
   width: 100%;
+  height: auto;
   object-position: 100% 0;
   object-fit: cover;
   border: thin solid #000;
