@@ -68,6 +68,15 @@ header {
   object-fit: cover;
   border: thin solid #000;
 }
+.dummy-img {
+  width: 180px;
+  height: 250px;
+  background-color: #ddd;
+}
+.goods-img {
+  width: 100%;
+  height: auto;
+}
 
 @media screen and (min-width: 921px) {
 .main-visual {
