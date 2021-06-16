@@ -62,8 +62,8 @@ function f_rippleStart() {
     if (e.tabIndex < 0) {
       e.tabIndex = 0;
     }
-    e.addEventListener(c_touchStart, f_rippleIn, false);
-    e.addEventListener("blur", f_rippleOut, false);
+    e.addEventListener(c_touchStart, f_rippleIn, {passive: true});
+    e.addEventListener("blur", f_rippleOut, {passive: true});
   });
-  document.addEventListener(c_touchEnd, f_rippleFocused, false);
+  document.addEventListener(c_touchEnd, f_rippleFocused, {passive: true});
 }
