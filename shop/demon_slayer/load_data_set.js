@@ -1,12 +1,3 @@
-/*GA読み込み*/
-var j_GA = document.createElement('script');
-j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-R3P7D3FQPJ";
-document.head.appendChild(j_GA);
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-R3P7D3FQPJ');
-
 const a_nav = [{
     link: "comic",
     title: "comic"
@@ -29,17 +20,15 @@ const a_nav = [{
   },
 ];
 const v_navAll = a_nav.length;
-let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/evangelion/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo" width="50px" height="50px"></a></li>';
+let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/demon_slayer/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo" width="50px" height="50px"></a></li>';
 for (var v_i = 0; v_i < v_navAll; v_i++) {
-  v_navHtml += '<li><a href="/shop/evangelion/' + a_nav[v_i].link + '.html" class="btn ripple ripple-white">' + a_nav[v_i].title + '</a></li>';
+  v_navHtml += '<li><a href="/shop/demon_slayer/' + a_nav[v_i].link + '.html" class="btn ripple ripple-white">' + a_nav[v_i].title + '</a></li>';
 }
 v_navHtml += '</ul>';
 window.addEventListener('DOMContentLoaded', function() {
   document.getElementById('header-nav').innerHTML = v_navHtml;
 });
-const d_now=new Date();
-const v_year=d_now.getUTCFullYear();
-const v_footerHtml='<footer class="bg-black color-white text-center pd10 ff-serif mt20"><span class="logo">'+v_year+' evangelion SHOP</span></footer>';
+
 function f_loadDataSet() {
   if (!a_loadJson || !document.getElementById('result')) {
     return;
@@ -53,7 +42,7 @@ function f_loadDataSet() {
   let v_loaedAll = 0;
   for (var v_i = 0; v_i < v_loadAll; v_i++) {
     let v_json = a_loadJson[v_i];
-    var v_loadUrl = "/shop/evangelion/data/" + v_json + ".json";
+    var v_loadUrl = "/shop/demon_slayer/data/" + v_json + ".json";
     a_httpObj[v_i] = new XMLHttpRequest();
     a_httpObj[v_i].onreadystatechange = function () {
       if ((this.readyState === 4) && (this.status === 200)) {
@@ -86,9 +75,7 @@ function f_loadDataSet() {
       e_result.innerHTML += v_html;
       f_setImgRender(e_result);
     }
-    setTimeout(f_setItems02,2000);
-    let e_main=document.getElementsByTagName("main")[0];
-    e_main.insertAdjacentHTML('afterend',v_footerHtml);
+    setTimeout(f_setItems02,1000);
   }
   function f_setItems02() {
     for (var v_i = 0; v_i < v_loadAll; v_i++) {
@@ -104,7 +91,7 @@ function f_loadDataSet() {
         e_setItems02.querySelector(".js-item:nth-child("+(v_ii+1)+")").innerHTML=a_loadData[v_setName].items[v_ii];
       }
       f_setImgRender(e_result);
-      setTimeout(f_reSwip,4000);
+      setTimeout(f_reSwip,3000);
     }
     f_rippleStart();
   }
@@ -133,3 +120,11 @@ function f_loadDataSet() {
     }
   }
 }
+/*GA読み込み*/
+var j_GA = document.createElement('script');
+j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-R3P7D3FQPJ";
+document.head.appendChild(j_GA);
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-R3P7D3FQPJ');
