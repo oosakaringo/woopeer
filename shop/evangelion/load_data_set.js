@@ -29,7 +29,7 @@ const a_nav = [{
   },
 ];
 const v_navAll = a_nav.length;
-let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/evangelion/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo" width="50px" height="50px"></a></li>';
+let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/evangelion/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo" width="50" height="50"></a></li>';
 for (var v_i = 0; v_i < v_navAll; v_i++) {
   v_navHtml += '<li><a href="/shop/evangelion/' + a_nav[v_i].link + '.html" class="btn ripple ripple-white">' + a_nav[v_i].title + '</a></li>';
 }
@@ -119,8 +119,8 @@ function f_loadDataSet() {
       if(e_img[v_i].getAttribute("width")==1){
         e_img[v_i].setAttribute('height', '0px');
       }else{
-        e_img[v_i].setAttribute('width', '250px');
-        e_img[v_i].setAttribute('height', '250px');
+        e_img[v_i].setAttribute('width', '250');
+        e_img[v_i].setAttribute('height', '250');
         e_img[v_i].classList.add('goods-img');
       }
       e_img[v_i].setAttribute('alt', '');
