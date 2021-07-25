@@ -1,3 +1,12 @@
+/*GA読み込み*/
+var j_GA = document.createElement('script');
+j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-RW5J484MPD";
+document.head.appendChild(j_GA);
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-RW5J484MPD');
+
 const a_nav = [{
     link: "comic",
     title: "comic"
@@ -20,7 +29,7 @@ const a_nav = [{
   },
 ];
 const v_navAll = a_nav.length;
-let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/demon_slayer/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo" width="50px" height="50px"></a></li>';
+let v_navHtml = '<ul class="nav-list css-swip max-w"><li><a href="/shop/demon_slayer/" class="ripple ripple-white top-icon"><img src="img/top_icon.png" alt="top_logo" width="50" height="50"></a></li>';
 for (var v_i = 0; v_i < v_navAll; v_i++) {
   v_navHtml += '<li><a href="/shop/demon_slayer/' + a_nav[v_i].link + '.html" class="btn ripple ripple-white">' + a_nav[v_i].title + '</a></li>';
 }
@@ -28,7 +37,9 @@ v_navHtml += '</ul>';
 window.addEventListener('DOMContentLoaded', function() {
   document.getElementById('header-nav').innerHTML = v_navHtml;
 });
-
+const d_now=new Date();
+const v_year=d_now.getUTCFullYear();
+const v_footerHtml='<footer class="bg-black color-white text-center pd10 ff-serif mt20"><span class="logo">'+v_year+' demon_slayer SHOP</span></footer>';
 function f_loadDataSet() {
   if (!a_loadJson || !document.getElementById('result')) {
     return;
@@ -62,7 +73,7 @@ function f_loadDataSet() {
   function f_setItems01() {
     for (var v_i = 0; v_i < v_loadAll; v_i++) {
       var v_setName = a_loadJson[v_i];
-      var v_html = '<section class="pl10 pr10"><h1 class="ff-serif mt10 mb05">' + a_loadData[v_setName].title + '</h1><div class="bg-white css-swip css-not-swip shadow-lv1 js-items">';
+      var v_html = '<section class="pl10 pr10"><div class="shadow-lv1 bg-white mt20 pt05"><h1 class="ff-serif mt0 mb0 pl05 pt0">' + a_loadData[v_setName].title + '</h1><div class=" css-swip css-not-swip js-items pl05 pr05 pb05">';
       var v_all = a_loadData[v_setName].items.length;
       for (var v_ii = 0; v_ii < v_all; v_ii++) {
         if(v_i==0 && v_ii<v_fistSetNo){
@@ -71,11 +82,13 @@ function f_loadDataSet() {
           v_html += '<div goods-no="'+(v_ii+1)+'" class="mg05 ripple ripple-white js-item"><div class="dummy-img"></div></div>';
         }
       }
-      v_html += '</div></section>';
+      v_html += '</div></div></section>';
       e_result.innerHTML += v_html;
       f_setImgRender(e_result);
     }
-    setTimeout(f_setItems02,1000);
+    setTimeout(f_setItems02,2000);
+    let e_main=document.getElementsByTagName("main")[0];
+    e_main.insertAdjacentHTML('afterend',v_footerHtml);
   }
   function f_setItems02() {
     for (var v_i = 0; v_i < v_loadAll; v_i++) {
@@ -91,7 +104,7 @@ function f_loadDataSet() {
         e_setItems02.querySelector(".js-item:nth-child("+(v_ii+1)+")").innerHTML=a_loadData[v_setName].items[v_ii];
       }
       f_setImgRender(e_result);
-      setTimeout(f_reSwip,3000);
+      setTimeout(f_reSwip,4000);
     }
     f_rippleStart();
   }
@@ -106,8 +119,8 @@ function f_loadDataSet() {
       if(e_img[v_i].getAttribute("width")==1){
         e_img[v_i].setAttribute('height', '0px');
       }else{
-        e_img[v_i].setAttribute('width', '250px');
-        e_img[v_i].setAttribute('height', '250px');
+        e_img[v_i].setAttribute('width', '250');
+        e_img[v_i].setAttribute('height', '250');
         e_img[v_i].classList.add('goods-img');
       }
       e_img[v_i].setAttribute('alt', '');
@@ -120,11 +133,3 @@ function f_loadDataSet() {
     }
   }
 }
-/*GA読み込み*/
-var j_GA = document.createElement('script');
-j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-R3P7D3FQPJ";
-document.head.appendChild(j_GA);
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-R3P7D3FQPJ');

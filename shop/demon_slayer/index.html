@@ -9,7 +9,7 @@ document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js');
 </script>
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="demon_slayer_shop.css">
+<link rel="stylesheet" href="shop.css">
 <link rel="stylesheet" href="/css/ripple.css">
 <link rel="stylesheet" href="/css/print.css" media="print">
 <meta name="description" content="鬼滅の刃のコミック・ミュージック・フィギュア・グッズ・ファッションをまとめてわかりやすくご紹介">
@@ -26,28 +26,35 @@ document.documentElement.classList.add('js');
 <link rel="icon" href="/shop/demon_slayer/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <!--link rel="manifest" href="/my.webmanifest"-->
+<style type="text/css">
+body {
+  background-image:linear-gradient(45deg, #37BDAD 25%, transparent 25%, transparent 75%, #37BDAD 75%),linear-gradient(45deg, #37BDAD 25%, transparent 25%, transparent 75%, #37BDAD 75%);
+  background-size:60px 60px;
+  background-position:0 0,30px 30px;
+  background-color:var(--main-color, #666);
+}
+</style>
 <script src="/shop/demon_slayer/app.js"></script>
 <script src="/js/ripple.js"></script>
 <script src="load_data_set.js"></script>
 </head>
 <body>
-<header>
+<header class="main-bg-color">
   <nav id="header-nav" class="shadow-lv4 pos-sticky-top"></nav>
-  <h1 class="ff-serif bg-white text-center mg0 pd05"> <span class="font-bigger">鬼滅の刃</span> </h1>
-  <div class="bg-black"><img src="https://images-na.ssl-images-amazon.com/images/I/71j2PW0R60L.jpg" class="main-visual" alt="" width="500px" height="250px"></div>
+  <h1 class="ff-serif text-center mg0 pd05 color-white"> <span class="font-bigger">鬼滅の刃</span> </h1>
+  <div><img src="https://images-fe.ssl-images-amazon.com/images/S/pv-target-images/414ed3d99d2b71f4a788a3fa7f57c2793316a4ea101218d7ef6aa28144fad7c9.jpg" class="main-visual" alt="" width="500" height="250"></div>
 </header>
 <main>
   <article id="result"></article>
 </main>
-<footer class="bg-black color-white text-center pd10 ff-serif mt20"><span class="logo">2021 demon slayer SHOP</span></footer>
 <script>
 const a_loadJson=['comic01_01','music01_01','goods01_01','goods02_01','fashion01_01'];
 f_loadDataSet();
 const e_result = document.getElementById('result');
 const o_moreLink = new MutationObserver(records => {
-  const ae_moreLink=document.querySelectorAll('#result > section > .css-swip');
+  const ae_moreLink=document.querySelectorAll('#result > section > .bg-white > .css-swip');
   for(var v_i=0;v_i<v_navAll;v_i++){
-    ae_moreLink[v_i].insertAdjacentHTML('beforeend','<a href="/shop/demon_slayer/'+a_nav[v_i].link+'.html" class="bg-black color-white fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white">もっと見る</a>');
+    ae_moreLink[v_i].insertAdjacentHTML('beforeend','<a href="/shop/demon_slayer/'+a_nav[v_i].link+'.html" class="sub-bg-color color-black fb ff-serif flex flex-ai-center flex-jc-center pd05 ripple ripple-white js-item mg05">もっと見る</a>');
   }
   f_rippleStart();
 });
