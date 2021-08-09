@@ -67,6 +67,9 @@ a:hover {
 .flex-jc-between {
   justify-content: space-between;
 }
+.flex-jc-evenly {
+  justify-content: space-evenly;
+}
 .flex-ac-center {
   align-content: center;
 }

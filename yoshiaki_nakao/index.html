@@ -54,15 +54,22 @@ a.btn, a.btn:hover {
   color: #000;
   text-decoration: none;
 }
-.item-card:not(.disabled) {
-  margin-bottom: 3%;
+.item-card-wrap {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.girid-title, .girid-title + .item-card {
+  grid-column-start: 1;
+}
+.item-card {
   cursor: pointer;
 }
-.item-card:not(.disabled):hover {
+.item-card:hover {
   box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 .item-card .thumbnail {
-  max-height: 200px;
+  max-height: 250px;
   width: 100%;
   object-position: 100% 0;
   object-fit: cover;
@@ -119,10 +126,6 @@ a.btn, a.btn:hover {
 }
 
 @media screen and (min-width: 921px) {
-.item-card {
-  width: 23%;
-  min-width: 250px;
-}
 .item-card ul {
   padding-left: 2em;
 }
@@ -144,6 +147,7 @@ a.btn, a.btn:hover {
 @page {
   margin: 0cm;
 }
+
 @media print {
 .main-bg-color {
   background-color: var(--main-color, #666);
@@ -331,8 +335,8 @@ p, ul, .item-card {
       <h2 class="color-white cam-border-bottom pb05 pt05 mt0 base-bg-color flex flex-ai-center"><span class="material-icons"> work </span>works</h2>
     </div>
     <div class="pl10 pr10">
-      <p class="color-white font-big fb">2020</p>
-      <div class="flex flex-jc-between flex-wrap">
+      <div class="item-card-wrap">
+        <p class="color-white font-big fb girid-title">2021</p>
         <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/100cells_calculation.png?12" class="thumbnail" alt="">
           <p class="pl05 pr05 fb ws-nowrap">100マス計算webアプリ</p>
           <ul class="smal pl20 pr05">
@@ -343,6 +347,62 @@ p, ul, .item-card {
           <div class="pick-up-content pl10 pr10">
             <p>javascriptコンテンツ制作。１００マス計算のプログラム、足し算、引き算、掛け算、レベル設定、ローカルストレージでのデータ保存。など。</p>
             <a href="/100cells_calculation/index.html" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span></div>
+        </div>
+        <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/lim04_210607.png?12" class="thumbnail" alt="">
+          <p class="pl05 pr05 fb ws-nowrap">1,000円OFFの限定クーポン</p>
+          <ul class="smal pl20 pr05">
+            <li>既存ユーザーリピート施策</li>
+            <li>デザイン</li>
+            <li>コーディング</li>
+          </ul>
+          <div class="pick-up-content pl10 pr10">
+            <p>店舗契約の継続と促進のためリピートユーザーの獲得が必要となりました。６月～7月の２カ月間で６回の期間を区切り、それぞれでクーポンを発行し１ユーザーで最大６回の利用を目指す。デザインを６回自動更新。</p>
+            <a href="https://mitsuraku.jp/lpe/lim04_210607/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span></div>
+        </div>
+        <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/lim24_2108.png?12" class="thumbnail" alt="">
+          <p class="pl05 pr05 fb ws-nowrap">夏のマッサージ・エステ クーポン</p>
+          <ul class="smal pl20 pr05">
+            <li>緊急対応案件</li>
+            <li>デザイン</li>
+            <li>コーディング</li>
+          </ul>
+          <div class="pick-up-content pl10 pr10">
+            <p>緊急企画案件。コロナ（デルタ株）の影響で落ち込んだ予約を回復すべく急遽行った施策。デザインチーム３名で、LP、メルマガ、バナー（20枚）を2日間で納品。</p>
+            <a href="https://mitsuraku.jp/lpe/lim24_2108/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span></div>
+        </div>
+        <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/eprae_cp.png?12" class="thumbnail" alt="">
+          <p class="pl05 pr05 fb ws-nowrap">特典一覧ページ</p>
+          <ul class="smal pl20 pr05">
+            <li>
+              <div class="ws-nowrap">デザイン・ディレクション</div>
+            </li>
+            <li>コーディング</li>
+            <li>javascript制御</li>
+            <li>
+              <div class="ws-nowrap">日時指定の表示変更と運用api</div>
+            </li>
+          </ul>
+          <div class="pick-up-content pl10 pr10">
+            <p>ユーザーの声をもとに特典一覧のページを作成。運用を含めたディレクション、日時での表示出し分け、ユーザー毎の出し分け、javascriptでのソート機能<br>
+              javascriptでJSONデータをもとに表示を整形、日々の運用を自動化することで運用コストを削減。トップページ、マイページに継ぐPVでユーザーが満足度の高いコンテンツにできた。</p>
+            <a href="https://mitsuraku.jp/pages/eprae_cp/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span> </div>
+        </div>
+        <p class="color-white font-big fb girid-title">2020</p>
+        <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/mnc_raelottery.png?12" class="thumbnail" alt="">
+          <p class="pl05 pr05 fb ws-nowrap">ルーレットくじ企画</p>
+          <ul class="smal pl20 pr05">
+            <li>既存ユーザー企画</li>
+            <li>デザイン</li>
+            <li>
+              <div class="ws-nowrap">javascriptでアニメーション制御</div>
+            </li>
+            <li>アニメーション</li>
+          </ul>
+          <div class="pick-up-content pl10 pr10">
+            <p>既存顧客向けサービス。毎日１回引けるルーレットくじクーポンで来店見込みの無いユーザーへ来店を促す。<br>
+              LPページの作成以外にルーレットHTMLアニメーションの作成とjavascriptでの表示の制御を行なった。<br>
+              adobe animateでルーレットのHTMLアニメーションを制作。１等、２等、３等、ハズレのパターンをjavascriptで制御。</p>
+            <a href="https://mitsuraku.jp/lpe/mnc_raelottery/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span> </div>
         </div>
         <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/ep30mil_anv_raef.png?12" class="thumbnail" alt="">
           <p class="pl05 pr05 fb ws-nowrap">3,000万会員突破記念企画</p>
@@ -382,44 +442,7 @@ p, ul, .item-card {
               手数料の関係で、これまで大手の店舗様とはキャンペーンが打ちにくくユーザーからの不満の声があった、少ないコストにする事でキャンペーンが展開でき、ユーザーと大手サロンとのどちら共メリットがある企画。</p>
             <a href="https://mitsuraku.jp/lpe/selectpoint_em_300/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span> </div>
         </div>
-        <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/mnc_raelottery.png?12" class="thumbnail" alt="">
-          <p class="pl05 pr05 fb ws-nowrap">ルーレットくじ企画</p>
-          <ul class="smal pl20 pr05">
-            <li>既存ユーザー企画</li>
-            <li>デザイン</li>
-            <li>
-              <div class="ws-nowrap">javascriptでアニメーション制御</div>
-            </li>
-            <li>アニメーション</li>
-          </ul>
-          <div class="pick-up-content pl10 pr10">
-            <p>既存顧客向けサービス。毎日１回引けるルーレットくじクーポンで来店見込みの無いユーザーへ来店を促す。<br>
-              LPページの作成以外にルーレットHTMLアニメーションの作成とjavascriptでの表示の制御を行なった。<br>
-              adobe animateでルーレットのHTMLアニメーションを制作。１等、２等、３等、ハズレのパターンをjavascriptで制御。</p>
-            <a href="https://mitsuraku.jp/lpe/mnc_raelottery/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span> </div>
-        </div>
-        <div class="item-card disabled"></div>
-        <div class="item-card disabled"></div>
-      </div>
-      <p class="color-white font-big fb page-break">2019</p>
-      <div class="flex flex-jc-between flex-wrap">
-        <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/eprae_cp.png?12" class="thumbnail" alt="">
-          <p class="pl05 pr05 fb ws-nowrap">特典一覧ページ</p>
-          <ul class="smal pl20 pr05">
-            <li>
-              <div class="ws-nowrap">デザイン・ディレクション</div>
-            </li>
-            <li>コーディング</li>
-            <li>javascript制御</li>
-            <li>
-              <div class="ws-nowrap">日時指定の表示変更と運用api</div>
-            </li>
-          </ul>
-          <div class="pick-up-content pl10 pr10">
-            <p>ユーザーの声をもとに特典一覧のページを作成。運用を含めたディレクション、日時での表示出し分け、ユーザー毎の出し分け、javascriptでのソート機能<br>
-              javascriptでJSONデータをもとに表示を整形、日々の運用を自動化することで運用コストを削減。トップページ、マイページに継ぐPVでユーザーが満足度の高いコンテンツにできた。</p>
-            <a href="https://mitsuraku.jp/pages/eprae_cp/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span> </div>
-        </div>
+        <p class="color-white font-big fb page-break girid-title">2019</p>
         <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/sgtk_sp_18_new.png?12" class="thumbnail" alt="">
           <p class="pl05 pr05 fb ws-nowrap">７０％OFFのお得クーポン企画</p>
           <ul class="smal pl20 pr05">
@@ -459,9 +482,7 @@ p, ul, .item-card {
               既存ユーザーの家族紹介で新規ユーザー獲得ができた。家族ということもあり通常の紹介企画よりも反応が良かった。</p>
             <a href="https://mitsuraku.jp/lpe/ykkr1920/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span> </div>
         </div>
-      </div>
-      <p class="color-white font-big fb">2018</p>
-      <div class="flex flex-jc-between flex-wrap">
+        <p class="color-white font-big fb girid-title">2018</p>
         <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/rizap.png?12" class="thumbnail" alt="">
           <p class="pl05 pr05 fb ws-nowrap">RIZAPとの共同企画</p>
           <ul class="smal pl20 pr05">
@@ -510,9 +531,7 @@ p, ul, .item-card {
               この企画を通してブログや口コミ返信の重要さを契約店舗様に告知とユーザーと店舗様の絆作りに貢献できた。</p>
             <a href="https://mitsuraku.jp/lpn/rae_bestblg30_2018/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク(結果発表) </a> <a href="https://mitsuraku.jp/lpn/rae_bestblg30_2018_thnk/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク（クーポンLP）</a> <span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span></div>
         </div>
-      </div>
-      <p class="color-white font-big fb">2017</p>
-      <div class="flex flex-jc-between flex-wrap">
+        <p class="color-white font-big fb girid-title">2017</p>
         <div class="bg-white shadow-lv1 item-card move ripple"><img src="img/mamariraku.png?12" class="thumbnail" alt="">
           <p class="pl05 pr05 fb ws-nowrap">子育て支援企画</p>
           <ul class="smal pl20 pr05">
@@ -533,8 +552,6 @@ p, ul, .item-card {
               ユーザーからも反響が高く、満足度の高いキャンペーンとなった。</p>
             <a href="https://mitsuraku.jp/pages/4th_challenge/" target="_blank" rel="noopener" class="btn btn-raised ripple ripple-white">ページリンク</a><span class="btn btn-color btn-outlined ripple ripple-color main-color" onclick="f_modalClose()">閉じる</span> </div>
         </div>
-        <div class="item-card disabled"></div>
-        <div class="item-card disabled"></div>
       </div>
       <div id="pickup-modal" class="pick-up move-slow"></div>
     </div>
@@ -552,7 +569,7 @@ function f_modalClose(){
     $('#pickup-modal').css('display','none');
   },500);
 }
-$('.flex .item-card:not(.disabled)').on('click',function(){
+$('.item-card-wrap .item-card').on('click',function(){
   $('#pickup-modal').html('<div class="msk" onclick="f_modalClose()"></div><div class="bg-white shadow-lv1 item-card move disabled">'+$(this).html()+'</div>');
   $('#pickup-modal').css('display','block');
   setTimeout(function(){
