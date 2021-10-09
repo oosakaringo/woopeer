@@ -9,9 +9,69 @@ document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js');
 </script>
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="evangelion_shop.css">
 <link rel="stylesheet" href="/css/ripple.css">
 <link rel="stylesheet" href="/css/print.css" media="print">
+<style>
+.ff-serif {
+  font-family: 'Noto Serif JP', serif;
+  font-feature-settings: "palt" 1;
+  font-kerning: normal;
+}
+header {
+  margin-top: 3.5em;
+}
+#header-nav {
+  background-color: rgba(0, 0, 0, .7);
+  --main-color: #fff;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav-list .btn {
+  margin: 0;
+  border-radius: 0;
+}
+.top-icon {
+  width: 3.8em;
+  height: 3.8em;
+  display: flex;
+  padding: .3em .3em;
+  margin-left: .5em;
+}
+.bg-black {
+  background-color: black;
+}
+.main-visual {
+  max-height: 32vw;
+  width: 100%;
+  height: auto;
+  object-position: 100% 0;
+  object-fit: cover;
+  border: thin solid #000;
+}
+.js-item {
+  height: 250px;
+}
+.goods-img {
+  width: 100%;
+  height: 250px;
+  min-width: 150px;
+  object-fit: contain;
+}
+body {
+  background-image: url(./img/bg01.jpg);
+}
+h1 {
+  background-color: #fff;
+}
+</style>
 <meta name="description" content="新世紀エヴァンゲリオン・コミックをメインにアニメや映画の原画などをまとめてご紹介">
 <meta property="og:title" content="新世紀エヴァンゲリオン・THEコミック">
 <meta property="og:description" content="新世紀エヴァンゲリオン・コミックをメインにアニメや映画の原画などをまとめてご紹介">
@@ -26,17 +86,6 @@ document.documentElement.classList.add('js');
 <link rel="icon" href="/shop/evangelion/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <!--link rel="manifest" href="/my.webmanifest"-->
-<style type="text/css">
-.main-visual {
-  max-height: 32vw;
-}
-body {
-  background-image: url(./img/bg01.jpg);
-}
-h1 {
-  background-color: #fff;
-}
-</style>
 <script src="/shop/evangelion/app.js"></script>
 <script src="/js/ripple.js"></script>
 <script src="load_data_set.js"></script>

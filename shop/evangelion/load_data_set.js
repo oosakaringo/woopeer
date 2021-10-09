@@ -1,7 +1,31 @@
+/*プリロード*/
+var e_preloadShopStylesheet = document.createElement("link");
+e_preloadShopStylesheet.rel = 'preload';
+e_preloadShopStylesheet.href = 'evangelion_shop.css';
+e_preloadShopStylesheet.as = 'style';
+document.head.appendChild(e_preloadShopStylesheet);
+
+/*SEOあと読み対策*/
+let v_loadDeferred = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com"><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&amp;display=swap">';
+
+var e_noscript = document.createElement("noscript");
+e_noscript.id='deferred-content';
+e_noscript.innerHTML=v_loadDeferred;
+document.head.appendChild(e_noscript);
+
+var loadDeferredContent = function() {
+  var addStylesNode = document.getElementById("deferred-content");
+  var replacement = document.createElement("div");
+  replacement.innerHTML = addStylesNode.innerHTML;
+  document.body.appendChild(replacement);
+  addStylesNode.parentElement.removeChild(addStylesNode);
+};
+var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+if (raf) raf(function() { window.setTimeout(loadDeferredContent, 0); });
+ else window.addEventListener('load', loadDeferredContent);
+
+
 /*GA読み込み*/
-var j_GA = document.createElement('script');
-j_GA.src = "https://www.googletagmanager.com/gtag/js?id=G-R3P7D3FQPJ";
-document.head.appendChild(j_GA);
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());

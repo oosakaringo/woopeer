@@ -1,11 +1,4 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
-@font-face {
-  font-family: 'Noto Serif JP';
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap') format('woff2'),
-    url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap') format('woff');
-  font-display: fallback;
-}
 /* CSS Document */
 :root {
 --main-color: #000;
@@ -60,14 +53,6 @@ header {
   font-family: 'Noto Serif JP', serif;
   font-feature-settings: "palt" 1;
   font-kerning: normal;
-}
-.main-visual {
-  max-height: 50vw;
-  width: 100%;
-  height: auto;
-  object-position: 100% 0;
-  object-fit: cover;
-  border: thin solid #000;
 }
 .dummy-img {
   width: 200px;
