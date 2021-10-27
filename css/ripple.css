@@ -3,8 +3,6 @@
   overflow: hidden;
   transition: 235ms 0ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  border: none;
-  outline: none;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   will-change: transform, opacity;
