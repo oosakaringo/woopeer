@@ -47,7 +47,7 @@ function f_rippleEnd(e) {
   e.classList.add("ripple-deactivation");
   e.classList.remove("ripple-activation");
   setTimeout(function () {
-    e.classList.remove("ripple-deactivation");
+    e.classList.remove("ripple-focused", "ripple-activation", "ripple-deactivation");
   }, 150);
 }
 var f_rippleOut = function () {
