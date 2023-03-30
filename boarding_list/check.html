@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>WEB乗船名簿-チェックイン-QRを読込</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WEB乗船名簿-チェックイン-QRを読込">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style>
+.bg-main {
+  background-image: linear-gradient(rgba(0,0,0,0) calc(50px + 1em), rgba(0,0,0,0.4) calc(50px + 1em), rgba(0,0,0,0.3)), url("files/img/check_bg_img.webp");
+  background-position: top, 80% 35%;
+  height: 50vmin;
+  max-height: 240px;
+  padding-top: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover, 100%;
+  text-shadow: 0 0 5px #000, 0 0 100px #000;
+}
+.wbl-step {
+  overflow: hidden;
+}
+.wbl-step li {
+  z-index: 1
+}
+.wbl-step li:last-child {
+  margin-right: -40px;
+  z-index: 0;
+  left: -20px
+}
+.wbl-step li:first-child {
+  margin-left: -20px
+}
+.wbl-step li > * {
+  z-index: 1;
+}
+.wbl-step li::before {
+  content: "";
+  width: 101%;
+  height: 100%;
+  background-color: #fff;
+  border-right: 3px solid var(--bs-success);
+  border-left: 3px solid var(--bs-success);
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  transform: skewX(-25deg);
+}
+.wbl-step .wbl-step-active {
+  color: #fff;
+}
+.wbl-step .wbl-step-active::before {
+  background-color: var(--bs-success);
+}
+
+@media (min-width:992px) {
+.bg-main {
+  background-position: top, 0 43%;
+  background-size: cover, cover;
+}
+.bg-safetyfirst, .bg-qr, .bg-privacy, .bg-new_customers, .bg-management {
+  height: 40vh;
+  background-size: 100%;
+}
+}
+</style>
+
+<!-- jsQR.jsの読み込み --> 
+<script src="files/js/jsQR.js"></script>
+</head>
+
+<body>
+<script src="files/js/header.js"></script>
+<header class="sticky-top"></header>
+<main>
+  <article class="pb-0 pb-sm-5">
+    <section class="container bg-main d-flex align-content-center flex-wrap text-center text-white position-relative px-0">
+      <div class="w-100 ls-2">
+        <h2 class="fw-bold fs-1">チェックイン</h2>
+        <em>Check in</em> </div>
+      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='%23fff'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="w-100 small position-absolute bottom-0">
+        <ol class="breadcrumb justify-content-center small mb-2 fw-bold">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
+          <li class="breadcrumb-item" aria-current="page">チェックイン（乗船名簿記入）</li>
+        </ol>
+      </nav>
+    </section>
+    <section class="container bg-white text-primary pb-2">
+      <h2 class="py-3 text-center m-0 fw-bold fs-4">乗船名簿へ記入を行います。</h2>
+      <ol class="row mb-0 border-top border-bottom border-success border-3 ps-0 smaller wbl-step">
+        <li class="col d-flex align-items-center justify-content-center py-2 px-0 position-relative wbl-step-active"><em class="fs-3 pe-2">1</em><span>QRを読込</span></li>
+        <li class="col d-flex align-items-center justify-content-center py-2 px-0 position-relative"><em class="fs-3 pe-2">2</em><span>同意とメッセージ</span></li>
+        <li class="col d-flex align-items-center justify-content-center py-2 px-0 position-relative"><em class="fs-3 pe-2">3</em><span>完了</span></li>
+      </ol>
+    </section>
+    <section class="container px-0 bg-light position-relative">
+      <div class="position-absolute bg-white top-0 w-100 pt-5 remove-gap"> <img src="files/img/bg_msk2.svg" width="375" height="71" alt="" class="w-100 remove-gap"> </div>
+      <div class="position-relative">
+        <h3 class="col-12 col-md-9 mx-auto fw-bold fs-5"><img src="files/img/icon_qr_m.svg" alt="" width="80" height="80" class="filter-drop-shadow">QRを読み込む</h3>
+        <div class="col-10 col-md-8 mx-auto pb-5">
+          <p class="small">QRコードリーダーを利用するか、下記のカメラ部分を使って、船のQR コードを読み込んでください。</p>
+          <div class="p-3 bg-white w-100 text-center">
+            <canvas id="canvas" style="width:100%"></canvas>
+          </div>
+          <div id="output">
+            <input id="outputMessage" value="No QR code detected." type="text">
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="sticky-top pt-4 bd-gray-800 text-white"></footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<script src="files/js/footer.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "70px";
+  } else {
+    e_menuTop.style.bottom = "-150px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+</script> 
+<script>
+var video = document.createElement("video");
+var canvasElement = document.getElementById("canvas");
+var canvas = canvasElement.getContext("2d");
+
+function drawLine(begin, end, color) {
+  canvas.beginPath();
+  canvas.moveTo(begin.x, begin.y);
+  canvas.lineTo(end.x, end.y);
+  canvas.lineWidth = 4;
+  canvas.strokeStyle = color;
+  canvas.stroke();
+}
+navigator.mediaDevices.getUserMedia({
+  video: {
+    facingMode: "environment"
+  }
+}).then(function (stream) {
+  video.srcObject = stream;
+  video.setAttribute("playsinline", true);
+  video.play();
+  requestAnimationFrame(tick);
+});
+
+function tick() {
+  if (video.readyState === video.HAVE_ENOUGH_DATA) {
+    canvasElement.height = video.videoHeight;
+    canvasElement.width = video.videoWidth;
+    canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+    var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+    var code = jsQR(imageData.data, imageData.width, imageData.height, {
+      inversionAttempts: "dontInvert",
+    });
+    if (code) {
+      drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#ba1a1a");
+      drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#ba1a1a");
+      drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#ba1a1a");
+      drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#ba1a1a");
+      document.getElementById("outputMessage").value = code.data;
+      f_check(code.data);
+    } else {
+      //document.getElementById("outputMessage").value = "No QR code detected.";
+    }
+  }
+  requestAnimationFrame(tick);
+}
+function f_check(v_n){
+  setTimeout(function(){
+    window.location.href = 'check2.html';
+  },2000);
+}
+</script>
+</body>
+</html>

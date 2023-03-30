@@ -12,7 +12,7 @@
 <meta property="og:image" content="">
 <link href="css/theme.css" rel="stylesheet" type="text/css">
 <link href="css/base.css?3" rel="stylesheet" type="text/css">
-<style type="text/css">
+<style>
 :root {
 --md-sys-typescale-display-large-font-family-name: initial;
 --md-sys-typescale-display-medium-font-family-name: initial;
@@ -33,6 +33,9 @@
   height: clamp(260px, 60vmin, 500px);
   filter: saturate(55%) brightness(200%);
   object-fit: cover;
+}
+.text-glow {
+  text-shadow: 0 0 50px var(--md-sys-color-surface), 0 0 10px var(--md-sys-color-secondary-container);
 }
 .img-face {
   object-fit: cover;
@@ -82,7 +85,7 @@
   opacity: 1;
 }
 .op .pick-up-content {
-  padding: 0 1.5em 1.5em 1.5em;
+  padding: 1.5em;
   display: block;
   height: auto;
 }
@@ -94,8 +97,12 @@
 .op .pickup-item {
   transform: scale3d(1, 1, 1);
 }
+.op .pick-up-main {
+  max-height: 80vh;
+  overflow-y: auto;
+}
 .pick-up .thumbnail {
-  height: max(290px, 40vmin);
+  height: auto;
 }
 .msk {
   width: 100vw;
@@ -112,6 +119,14 @@
 }
 .pick-up .btn {
   display: inline-flex;
+}
+.chronology dd {
+  border-left: solid 2px var(--md-sys-color-secondary-container);
+  padding: 0.5em 0 0.5em 1.5em;
+  margin-left: 1.5em;
+}
+section:nth-child(n + 4), footer {
+  content-visibility: auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -146,7 +161,7 @@ body .material-symbols-rounded {
 </style>
 <noscript class="deferred-node">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<link href="../css/ripple.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/ripple.css" type="text/css">
 <link rel="stylesheet" href="../css/print.css" media="print">
 </noscript>
 </head>
@@ -158,17 +173,16 @@ body .material-symbols-rounded {
       <div class="radius15"><img src="img/bg03.webp" alt="" width="2400" height="1200" id="top_img"></div>
       <div class="pos-absolute pl10 pr10">
         <h1 class="display-large text-center fb mg0">中尾 義昭</h1>
-        <ul class="disp-flex flex-wrap flex-jc-center fb pl0">
+        <ul class="disp-flex flex-wrap flex-jc-center fb pl0 text-glow">
           <li class="disp-block">UI/UXデザイナー</li>
           <li class="ml15">webデザイナー</li>
           <li class="ml15">アートディレクター</li>
-          <li class="ml15">プロダクトマネージャー</li>
         </ul>
-        <ul class="disp-flex flex-wrap flex-jc-center pl0 mb0">
+        <ul class="disp-flex flex-wrap flex-jc-center pl0 mb0 text-glow">
           <li class="disp-block">UI/UX</li>
           <li class="ml15">画像製作</li>
-          <li class="ml15">webコーディング</li>
-          <li class="ml15">アニメーション制作</li>
+          <li class="ml15">webデザイン</li>
+          <li class="ml15">アニメーション</li>
           <li class="ml15">マネジメント</li>
         </ul>
       </div>
@@ -176,13 +190,13 @@ body .material-symbols-rounded {
     <div class="pos-sticky-top pt05 mt10">
       <nav class="max-1760 secondary-container radius25 css-swip pd0 move-slow js-nav">
         <ol class="disp-flex pl0 text-center mg0">
-          <li class="disp-block w100">
+          <li class="disp-flex w100">
             <button class="btn primary-text radius25 w100 title-medium fb pt15 pb15 pl0 pr10 ripple ripple-white primary on-primary-text tab-about" onclick="f_tabScroll('about')"><span class="material-symbols-rounded">face</span>ABOUT</button>
           </li>
-          <li class="disp-block w100">
+          <li class="disp-flex w100">
             <button class="btn primary-text radius25 w100 title-medium fb pt15 pb15 pl0 pr10 ripple ripple-white tab-pr" onclick="f_tabScroll('pr')"><span class="material-symbols-rounded">policy</span>自己PR</button>
           </li>
-          <li class="disp-block w100">
+          <li class="disp-flex w100">
             <button class="btn primary-text radius25 w100 title-medium fb pt15 pb15 pl0 pr10 ripple ripple-white tab-works" onclick="f_tabScroll('works')"><span class="material-symbols-rounded">work</span>WORKS</button>
           </li>
         </ol>
@@ -190,7 +204,7 @@ body .material-symbols-rounded {
     </div>
     <section class="max-w pt20 pb20" id="about">
       <h2 class="display-small fb"><span class="material-symbols-rounded">face</span>中尾 義昭<span class="title-medium fn pl15 disp-iblock">Yoshiaki Nakao</span><span class="label-small fn pl10 disp-iblock">1973.12.05</span></h2>
-      <div class="pc-flex mb10 primary on-primary-text radius15"> <img src="img/yoshiaki_nakao.webp" alt="中尾 義昭" class="img-face radius15 max-480 mg0">
+      <div class="pc-flex mb10 primary on-primary-text radius15"> <img src="img/yoshiaki_nakao.webp" alt="中尾 義昭" width="3024" height="4032" class="img-face radius15 max-480 mg0">
         <dl class="mt10 mb0 ml20 pd15">
           <dt class="tertiary-container-text title-large">業務</dt>
           <dd>
@@ -235,16 +249,23 @@ body .material-symbols-rounded {
       </div>
       <div class="pd15 pl20 secondary on-secondary-text radius15">
         <h3 class="mt05 mb05 secondary-container-text title-large">略歴</h3>
-        <p class="title-medium fb">プレイングマネージャーとしてこれまでの経験を活かしチームをまとめ、効率の良い業務を目指しています。</p>
-        <ul class="title-medium">
-          <li>2000年頃からwebデザイナーとしてキャリアをスタート。</li>
-          <li>2003年にFlashデザイナーとしてフリーランスに。</li>
-          <li>2005年ネットプライス入社。携帯電話ichのデザイン担当。売り上げに貢献。</li>
-          <li>2008年スマホサイト、アプリの立ち上げ担当。</li>
-          <li>2013年PCを含むサイト全体のデザイン責任者に。</li>
-          <li>2017年EPARKリラク＆エステに入社、業界２位までのユーザー獲得に貢献。</li>
-          <li>2021年kokopelliに入社、入社半年で貢献が認められMVP受賞。</li>
-        </ul>
+        <p class="title-medium fb pl15 ml15 mt0 mb0">マネージャーとして、プレーヤーとして、経験を活かし、チームをまとめ、最高のパフォーマンスを出すことを目指しています。</p>
+        <dl class="title-medium chronology">
+          <dt class="fb">2000年</dt>
+          <dd>webデザイナーとしてキャリアをスタート。</dd>
+          <dt class="fb">2003年</dt>
+          <dd>Flashデザイナーとしてフリーランスに。</dd>
+          <dt class="fb">2005年</dt>
+          <dd>ネットプライス入社。携帯電話ichのデザイン担当。売り上げに貢献。</dd>
+          <dt class="fb">2008年</dt>
+          <dd>スマホサイト、アプリの立ち上げ担当。</dd>
+          <dt class="fb">2013年</dt>
+          <dd>PCを含むサイト全体のデザイン責任者に。</dd>
+          <dt class="fb">2017年</dt>
+          <dd>EPARKリラク＆エステに入社、業界２位までのユーザー獲得に貢献。</dd>
+          <dt class="fb">2021年</dt>
+          <dd>kokopelliに入社、入社半年で貢献が認められMVP受賞。</dd>
+        </dl>
       </div>
     </section>
     <section class="max-w pt20 pb20" id="pr">
@@ -252,7 +273,7 @@ body .material-symbols-rounded {
       <p class="title-medium">できることや強みのご紹介。</p>
       <article class="surface-variant on-primary-container-text radius15 pb15 mb10 pos-relative"> <img src="img/bg04.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
         <div class="pl15 pr15">
-          <h3 class="on-background-text headline-medium fb img-title">活かせる 経験・知識・技術</h3>
+          <h3 class="on-background-text headline-medium fb img-title text-glow">活かせる 経験・知識・技術</h3>
           <ul class="title-medium">
             <li>デザイナーマネジメント</li>
             <li>UI/UXデザイン</li>
@@ -271,20 +292,19 @@ body .material-symbols-rounded {
       </article>
       <article class="tertiary-container on-tertiary-container-text radius15 pb15 mb10 pos-relative"> <img src="img/bg02.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
         <div class="pl15 pr15">
-          <h3 class="on-background-text headline-medium fb img-title">業務上での強み ／ 心がけてきたこと</h3>
+          <h3 class="on-background-text headline-medium fb img-title text-glow">業務上での強み ／ 心がけてきたこと</h3>
           <ul class="title-medium">
             <li>
               <dl>
                 <dt class="mb05 mt10 fb">プレイングマネージャー</dt>
-                <dd class="ml0"> 5年以上デザイナーのマネジメントを行いながら自身もデザイナーとして積極的に関わっております。自身もプレーヤーとして動く事で他のデザイナーからの共感を圧倒的に得られやすく、結果としてまとまりの強いチーム作りができると考えております。 </dd>
+                <dd class="ml0">5年以上デザイナーのマネジメントを行いながら自身もデザイナーとして積極的に関わっております。自身もプレーヤーとして動く事で他のデザイナーからの共感を圧倒的に得られやすく、結果としてまとまりの強いチーム作りができると考えております。 </dd>
               </dl>
             </li>
             <li>
               <dl>
                 <dt class="mb05 mt10 fb">デザイン能力</dt>
-                <dd class="ml0">10年以上毎週2本以上の特集と月2本のキャンペーンを制作し続けております。あらゆるジャンルの物を制作してきていますので
-                  好き嫌いがなくオールジャンルのデザインができます。<br>
-                  flashを手がけていた経験もあり動きのあるコンテンツやシーンごとの見せ方動き方も考えてデザインする事ができます。 </dd>
+                <dd class="ml0">10年以上毎週2本以上の特集と月2本のキャンペーンを制作し続けております。あらゆるジャンルの物を制作してきていますので好き嫌いがなくオールジャンルのデザインができます。<br>
+                  flashを手がけていた経験もあり動きのあるコンテンツやシーンごとの見せ方動き方も考えてデザインする事ができます。</dd>
               </dl>
             </li>
             <li>
@@ -298,8 +318,7 @@ body .material-symbols-rounded {
             <li>
               <dl>
                 <dt class="mb05 mt10 fb">ユーザー視点を意識した制作</dt>
-                <dd class="ml0">12年間のECサイト、3年間のEPARKのノウハウ蓄積によって様々なユーザーに対するデザインスキルがあります。デザイナー視
-                  点よりもユーザー視点でのデザインが求められる事が多くございました。LPリリース後もマーケティング部門と連携しABテストを行い、CVRを上げていく様な動きができます。</dd>
+                <dd class="ml0">12年間のECサイト、3年間のEPARKのノウハウ蓄積によって様々なユーザーに対するデザインスキルがあります。デザイナー視点よりもユーザー視点でのデザインが求められる事が多くございました。LPリリース後もマーケティング部門と連携しABテストを行い、CVRを上げていく様な動きができます。</dd>
               </dl>
             </li>
             <li>
@@ -312,14 +331,13 @@ body .material-symbols-rounded {
             <li>
               <dl>
                 <dt class="mb05 mt10 fb">高速なLP制作</dt>
-                <dd class="ml0">状況や環境の変化スピードがより早くなっている昨今の現状を踏まえ、少ない人数、工数で最短の制作が求められております。
-                  そんな要望に答える事ができる様な体制作りや運用ノウハウがございます。</dd>
+                <dd class="ml0">状況や環境の変化スピードがより早くなっている昨今の現状を踏まえ、少ない人数、工数で最短の制作が求められております。そんな要望に答える事ができる様な体制作りや運用ノウハウがございます。</dd>
               </dl>
             </li>
             <li>
               <dl>
                 <dt class="mb05 mt10 fb">アニメーション制作</dt>
-                <dd class="ml0"> アドビAnimateを使ってHTML5ベースのアニメーション制作ができます。スマホやPCの性能が上がってきている昨今において動きのあるコンテンツが求められております。HTMLアニメーションを使ってのHTML制作など行なっております。 </dd>
+                <dd class="ml0"> アドビAnimateを使ってHTML5ベースのアニメーション制作ができます。スマホやPCの性能が上がってきている昨今において動きのあるコンテンツが求められております。HTMLアニメーションを使ってのHTML制作など行なっております。</dd>
               </dl>
             </li>
             <li>
@@ -337,192 +355,335 @@ body .material-symbols-rounded {
       <h2 class="display-small mb05 fb"><span class="material-symbols-rounded">work</span>WORKS</h2>
       <p class="title-medium">これまでの実績を年代別でご紹介。</p>
       <div class="item-card-wrap">
+        <p class="display-small mb0 girid-title">2022</p>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"> <img src="img/cap2022_05.webp" class="thumbnail radius15" alt="" loading="lazy" width="900" height="1100">
+            <h3 class="pd10 pb05 mg0 on-background-text">事業承継プロジェクト</h3>
+            <ul class="mg0 pb10">
+              <li>UIUXデザイン</li>
+              <li>画面デザイン</li>
+              <li>各種画像制作</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>事業承継コラム、事業承継コンテンツ、株価資産、相続税資産、4つのコンテンツのUIデザインをfigmaを使ってデザイン。UXの観点で動きを含めたデザイン作成。</p>
+              <figure><img src="img/cap2022_05_01.webp" width="900" height="1000" class="thumbnail radius15" alt="" loading="lazy">
+                <figcaption class="text-center">株価資産コンテンツ</figcaption>
+              </figure>
+              <figure><img src="img/cap2022_05_02.webp" width="900" height="1000" class="thumbnail radius15" alt="" loading="lazy">
+                <figcaption class="text-center">相続税資産コンテンツ</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
+            <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
+          </div>
+        </div>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"> <img src="img/cap2022_01.webp" class="thumbnail radius15" alt="" loading="lazy" width="900" height="1100">
+            <h3 class="pd10 pb05 mg0 on-background-text">ビジネスマッチング推奨LP</h3>
+            <ul class="mg0 pb10">
+              <li>UIUXデザイン</li>
+              <li>画面デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>ビジネスマッチング（コンテンツ）宣伝用のLP。<br>
+                ビジネスマッチングの機能を漫画を使ってわかりやすく説明。企業にとって有益なコンテンツであることを伝え、稼働率やチャーン改善を目的としたページ。</p>
+              <figure><img src="img/cap2022_05_01.webp" width="900" height="1000" class="thumbnail radius15" alt="" loading="lazy">
+                <figcaption class="text-center">株価資産コンテンツ</figcaption>
+              </figure>
+              <figure><img src="img/cap2022_05_02.webp" width="900" height="1000" class="thumbnail radius15" alt="" loading="lazy">
+                <figcaption class="text-center">相続税資産コンテンツ</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"> <a href="https://bigadvance.jp/lp/matching/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+            <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
+          </div>
+        </div>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"> <img src="img/cap2022_02.webp" class="thumbnail radius15" alt="" loading="lazy" width="900" height="1100">
+            <h3 class="pd10 pb05 mg0 on-background-text">CAMPFIREとの提携</h3>
+            <ul class="mg0 pb10">
+              <li>UIUXデザイン</li>
+              <li>画面デザイン</li>
+              <li>各種画像制作</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>CAMPFIREとの提携にあたりコンテンツの追加をこなう。ページのデザインを全般的に行う。<br>
+                現状のデザインをベースに提携先のデザインを取り込む。<br>
+                ページ遷移などのUIUXもデザインを行なった。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
+            <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
+          </div>
+        </div>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"> <img src="img/cap2022_03.webp" class="thumbnail radius15" alt="" loading="lazy" width="900" height="1100">
+            <h3 class="pd10 pb05 mg0 on-background-text">オープンイノベーションAUBAとの提携</h3>
+            <ul class="mg0 pb10">
+              <li>UIUXデザイン</li>
+              <li>画面デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>オープンイノベーションの規模拡大のため最大手のAUBAとの提携を行なった。ページのデザインを全般的に行う。<br>
+                現状のデザインをベースに提携先のデザインを取り込む。<br>
+                ページ遷移などのUIUXもデザインを行なった。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
+            <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
+          </div>
+        </div>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"> <img src="img/cap2022_04.webp" class="thumbnail radius15" alt="" loading="lazy" width="900" height="1100">
+            <h3 class="pd10 pb05 mg0 on-background-text">活用ガイドサイトの立ち上げ</h3>
+            <ul class="mg0 pb10">
+              <li>UIUXデザイン</li>
+              <li>画面デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>Big Advandce活性化と初心者むけのサイトを立ち上げるプロジェクト。<br>
+                デザインはもちろんサイトの構成や運用方法など幅広く関わった。<br>
+                表示するコンテンツの出しわけなどJavaScriptを使ったコンテンツとなった。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"> <a href="https://bigadvance.jp/welcome/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+            <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
+          </div>
+        </div>
         <p class="display-small mb0 girid-title">2021</p>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/100cells_calculation.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">100マス計算webアプリ</h3>
-          <ul class="mg0 pb10">
-            <li>Javascriptプログラム</li>
-            <li>デザイン</li>
-            <li>コーディング</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>javascriptコンテンツ制作。１００マス計算のプログラム、足し算、引き算、掛け算、レベル設定、ローカルストレージでのデータ保存。など。</p>
-            <a href="/100cells_calculation/index.html" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"> <img src="img/100cells_calculation.webp" width="806" height="788" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">100マス計算webアプリ</h3>
+            <ul class="mg0 pb10">
+              <li>Javascriptプログラム</li>
+              <li>デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>javascriptコンテンツ制作。１００マス計算のプログラム、足し算、引き算、掛け算、レベル設定、ローカルストレージでのデータ保存。など。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"> <a href="/100cells_calculation/index.html" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/lim04_210607.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">1,000円OFFの限定クーポン</h3>
-          <ul class="mg0 pb10">
-            <li>既存ユーザーリピート施策</li>
-            <li>デザイン</li>
-            <li>コーディング</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>店舗契約の継続と促進のためリピートユーザーの獲得が必要となりました。６月～7月の２カ月間で６回の期間を区切り、それぞれでクーポンを発行し１ユーザーで最大６回の利用を目指す。デザインを６回自動更新。</p>
-            <a href="https://mitsuraku.jp/lpe/lim04_210607/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/lim04_210607.webp" width="500" height="500" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">1,000円OFFの限定クーポン</h3>
+            <ul class="mg0 pb10">
+              <li>既存ユーザーリピート施策</li>
+              <li>デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>店舗契約の継続と促進のためリピートユーザーの獲得が必要となりました。６月～7月の２カ月間で６回の期間を区切り、それぞれでクーポンを発行し１ユーザーで最大６回の利用を目指す。デザインを６回自動更新。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/lpe/lim04_210607/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/lim24_2108.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">夏のマッサージ・エステ クーポン</h3>
-          <ul class="mg0 pb10">
-            <li>緊急対応案件</li>
-            <li>デザイン</li>
-            <li>コーディング</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>緊急企画案件。コロナ（デルタ株）の影響で落ち込んだ予約を回復すべく急遽行った施策。デザインチーム３名で、LP、メルマガ、バナー（20枚）を2日間で納品。</p>
-            <a href="https://mitsuraku.jp/lpe/lim24_2108/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/lim24_2108.webp" width="500" height="500" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">夏のマッサージ・エステ クーポン</h3>
+            <ul class="mg0 pb10">
+              <li>緊急対応案件</li>
+              <li>デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>緊急企画案件。コロナ（デルタ株）の影響で落ち込んだ予約を回復すべく急遽行った施策。デザインチーム３名で、LP、メルマガ、バナー（20枚）を2日間で納品。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/lpe/lim24_2108/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/eprae_cp.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">特典一覧ページ</h3>
-          <ul class="mg0 pb10">
-            <li> デザイン・ディレクション </li>
-            <li>コーディング</li>
-            <li>javascript制御</li>
-            <li> 日時指定の表示変更と運用api </li>
-          </ul>
-          <div class="pick-up-content">
-            <p>ユーザーの声をもとに特典一覧のページを作成。運用を含めたディレクション、日時での表示出し分け、ユーザー毎の出し分け、javascriptでのソート機能<br>
-              javascriptでJSONデータをもとに表示を整形、日々の運用を自動化することで運用コストを削減。トップページ、マイページに継ぐPVでユーザーが満足度の高いコンテンツにできた。</p>
-            <a href="https://mitsuraku.jp/pages/eprae_cp/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/eprae_cp.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">特典一覧ページ</h3>
+            <ul class="mg0 pb10">
+              <li> デザイン・ディレクション </li>
+              <li>コーディング</li>
+              <li>javascript制御</li>
+              <li> 日時指定の表示変更と運用api </li>
+            </ul>
+            <div class="pick-up-content">
+              <p>ユーザーの声をもとに特典一覧のページを作成。運用を含めたディレクション、日時での表示出し分け、ユーザー毎の出し分け、javascriptでのソート機能<br>
+                javascriptでJSONデータをもとに表示を整形、日々の運用を自動化することで運用コストを削減。トップページ、マイページに継ぐPVでユーザーが満足度の高いコンテンツにできた。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/pages/eprae_cp/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
         <p class="display-small mb0 girid-title">2020</p>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/mnc_raelottery.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">ルーレットくじ企画</h3>
-          <ul class="mg0 pb10">
-            <li>既存ユーザー企画</li>
-            <li>デザイン</li>
-            <li> javascriptでアニメーション制御 </li>
-            <li>アニメーション</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>既存顧客向けサービス。毎日１回引けるルーレットくじクーポンで来店見込みの無いユーザーへ来店を促す。<br>
-              LPページの作成以外にルーレットHTMLアニメーションの作成とjavascriptでの表示の制御を行なった。<br>
-              adobe animateでルーレットのHTMLアニメーションを制作。１等、２等、３等、ハズレのパターンをjavascriptで制御。</p>
-            <a href="https://mitsuraku.jp/lpe/mnc_raelottery/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/mnc_raelottery.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">ルーレットくじ企画</h3>
+            <ul class="mg0 pb10">
+              <li>既存ユーザー企画</li>
+              <li>デザイン</li>
+              <li> javascriptでアニメーション制御 </li>
+              <li>アニメーション</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>既存顧客向けサービス。毎日１回引けるルーレットくじクーポンで来店見込みの無いユーザーへ来店を促す。<br>
+                LPページの作成以外にルーレットHTMLアニメーションの作成とjavascriptでの表示の制御を行なった。<br>
+                adobe animateでルーレットのHTMLアニメーションを制作。１等、２等、３等、ハズレのパターンをjavascriptで制御。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/lpe/mnc_raelottery/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/ep30mil_anv_raef.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">3,000万会員突破記念企画</h3>
-          <ul class="mg0 pb10">
-            <li>新規ユーザー企画</li>
-            <li>デザイン</li>
-            <li>コーディング</li>
-            <li>ABテスト</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>マーケティング部門との連携でユーザー数3,000万人突破を記念した企画を実施。更なる新規ユーザー獲得が目的。ABテストを実施し、結果をもとに毎週ブラッシュアップ。CVRアップで目標１２０％達成。<br>
-              リターゲティング、Facebook、等の展開で新規ユーザー獲得に大きく貢献。</p>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/ep30mil_anv_raef.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">3,000万会員突破記念企画</h3>
+            <ul class="mg0 pb10">
+              <li>新規ユーザー企画</li>
+              <li>デザイン</li>
+              <li>コーディング</li>
+              <li>ABテスト</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>マーケティング部門との連携でユーザー数3,000万人突破を記念した企画を実施。更なる新規ユーザー獲得が目的。ABテストを実施し、結果をもとに毎週ブラッシュアップ。CVRアップで目標１２０％達成。<br>
+                リターゲティング、Facebook、等の展開で新規ユーザー獲得に大きく貢献。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/rae_dlcp_medical.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">お薬手帳アプリ連携企画</h3>
-          <ul class="mg0 pb10">
-            <li>新規ユーザー企画</li>
-            <li>デザイン</li>
-            <li>コーディング</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>関連事業部とのアプリ連携企画。関連事業部との連携で相互送客を目指す。<br>
-              関連事業部アプリからの新規ユーザー獲得に貢献した。関連事業部とはユーザーID等が連携できており相性は良く、リピーター増加もできた。</p>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/rae_dlcp_medical.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">お薬手帳アプリ連携企画</h3>
+            <ul class="mg0 pb10">
+              <li>新規ユーザー企画</li>
+              <li>デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>関連事業部とのアプリ連携企画。関連事業部との連携で相互送客を目指す。<br>
+                関連事業部アプリからの新規ユーザー獲得に貢献した。関連事業部とはユーザーID等が連携できており相性は良く、リピーター増加もできた。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/selectpoint_em_300.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">300円OFFキャンペーン</h3>
-          <ul class="mg0 pb10">
-            <li>既存ユーザー企画</li>
-            <li>デザイン指示出し</li>
-            <li>コーディング</li>
-            <li>ABテスト</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>既存顧客向けサービス。マーケティング部門との連携で、よりライトなキャンペーン金額でのユーザー行動の分析。少ないポイント還元で行う事で大手サロンへの誘導が可能になり顧客の満足度アップを狙う。<br>
-              手数料の関係で、これまで大手の店舗様とはキャンペーンが打ちにくくユーザーからの不満の声があった、少ないコストにする事でキャンペーンが展開でき、ユーザーと大手サロンとのどちら共メリットがある企画。</p>
-            <a href="https://mitsuraku.jp/lpe/selectpoint_em_300/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/selectpoint_em_300.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">300円OFFキャンペーン</h3>
+            <ul class="mg0 pb10">
+              <li>既存ユーザー企画</li>
+              <li>デザイン指示出し</li>
+              <li>コーディング</li>
+              <li>ABテスト</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>既存顧客向けサービス。マーケティング部門との連携で、よりライトなキャンペーン金額でのユーザー行動の分析。少ないポイント還元で行う事で大手サロンへの誘導が可能になり顧客の満足度アップを狙う。<br>
+                手数料の関係で、これまで大手の店舗様とはキャンペーンが打ちにくくユーザーからの不満の声があった、少ないコストにする事でキャンペーンが展開でき、ユーザーと大手サロンとのどちら共メリットがある企画。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/lpe/selectpoint_em_300/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
         <p class="display-small mb0 girid-title">2019</p>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/sgtk_sp_18_new.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">７０％OFFのお得クーポン企画</h3>
-          <ul class="mg0 pb10">
-            <li> メニュー在庫処分企画 </li>
-            <li>デザイン</li>
-            <li>コーディング</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>全店舗での在庫メニューを割引価格で顧客に紹介。在庫メニューの削減とユーザー誘導のwin-winを狙う。好評な企画で新規ユーザー獲得と送客もできた。</p>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/sgtk_sp_18_new.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">７０％OFFのお得クーポン企画</h3>
+            <ul class="mg0 pb10">
+              <li> メニュー在庫処分企画 </li>
+              <li>デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>全店舗での在庫メニューを割引価格で顧客に紹介。在庫メニューの削減とユーザー誘導のwin-winを狙う。好評な企画で新規ユーザー獲得と送客もできた。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/epfb_giv.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">家族お祝い割キャンペーン</h3>
-          <ul class="mg0 pb10">
-            <li>既存ユーザー企画</li>
-            <li>HTMLメルマガ</li>
-            <li>コーディング</li>
-            <li>デザイン割り振り</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>既存顧客の家族へ向けたキャンペーン。既存顧客のご家族様にマッサージのプレゼントを送ってもらい家族間で紹介いただく事での新規ユーザー獲得。複数のデザイナーにHTML素材を作成してもらう形で進め、連携してサービスを展開した。</p>
-            <a href="https://mitsuraku.jp/lpe/epfb_giv/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/epfb_giv.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">家族お祝い割キャンペーン</h3>
+            <ul class="mg0 pb10">
+              <li>既存ユーザー企画</li>
+              <li>HTMLメルマガ</li>
+              <li>コーディング</li>
+              <li>デザイン割り振り</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>既存顧客の家族へ向けたキャンペーン。既存顧客のご家族様にマッサージのプレゼントを送ってもらい家族間で紹介いただく事での新規ユーザー獲得。複数のデザイナーにHTML素材を作成してもらう形で進め、連携してサービスを展開した。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/lpe/epfb_giv/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/ykkr1920.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">年末年始企画</h3>
-          <ul class="mg0 pb10">
-            <li>既存ユーザー企画</li>
-            <li>デザイン割り振り</li>
-            <li> コーディング </li>
-            <li>HTMLメルマガ</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>既存顧客向けサービス。毎年恒例のお年玉企画。複数のデザイナーとの連携、メルマガ、SNSバナー等での告知。<br>
-              お年玉プレゼントのメルマガテンプレートが選べるサービス、全デザイナーに協力いただき、約２０パターンの中からコンペを行い決定した。<br>
-              既存ユーザーの家族紹介で新規ユーザー獲得ができた。家族ということもあり通常の紹介企画よりも反応が良かった。</p>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/ykkr1920.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">年末年始企画</h3>
+            <ul class="mg0 pb10">
+              <li>既存ユーザー企画</li>
+              <li>デザイン割り振り</li>
+              <li> コーディング </li>
+              <li>HTMLメルマガ</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>既存顧客向けサービス。毎年恒例のお年玉企画。複数のデザイナーとの連携、メルマガ、SNSバナー等での告知。<br>
+                お年玉プレゼントのメルマガテンプレートが選べるサービス、全デザイナーに協力いただき、約２０パターンの中からコンペを行い決定した。<br>
+                既存ユーザーの家族紹介で新規ユーザー獲得ができた。家族ということもあり通常の紹介企画よりも反応が良かった。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
         <p class="display-small mb0 girid-title">2018</p>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/rizap.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">RIZAPとの共同企画</h3>
-          <ul class="mg0 pb10">
-            <li>デザイン</li>
-            <li>コーディング</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>RAIZAPとの共同企画。デザイン全般を担当。ライターが取材を行い、コラム風にLPを制作。提携先へのサービスへの誘導を行う。<br>
-              取材を含め３週間程度の最短で本番リリース。<br>
-              リリース後も何度かブラッシュアップを重ねコンバージョン率を上げていく。<br>
-              当初の目標には届かなかったものの提携先や、営業等の関係者からはスピーディーな対応に評価いただき、長期のサービス継続ができました。</p>
-            <a href="https://mitsuraku.jp/sc/rizap/index.html" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/rizap.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">RIZAPとの共同企画</h3>
+            <ul class="mg0 pb10">
+              <li>デザイン</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>RAIZAPとの共同企画。デザイン全般を担当。ライターが取材を行い、コラム風にLPを制作。提携先へのサービスへの誘導を行う。<br>
+                取材を含め３週間程度の最短で本番リリース。<br>
+                リリース後も何度かブラッシュアップを重ねコンバージョン率を上げていく。<br>
+                当初の目標には届かなかったものの提携先や、営業等の関係者からはスピーディーな対応に評価いただき、長期のサービス継続ができました。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/sc/rizap/index.html" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/musee.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">Museeとの提携企画</h3>
-          <ul class="mg0 pb10">
-            <li>コーディング</li>
-            <li> 運用しやすいテンプレート制作 </li>
-          </ul>
-          <div class="pick-up-content">
-            <p>Museeとの提携企画。毎月更新する提携先LPを自社LPに展開。<br>
-              毎月更新される提携先のサイトからデザインをコピーする必要があるのですが、自社のページにそのまま移植が厳しい状況で更新に1日以上かかっていたが、独自のjavascriptとCSSでアコーディオン等の機能をテンプレート化、２時間程度で更新できる様にした。提携先、自社担当者からもスピーディーな対応に高評価いただき、長期提携が継続できた。</p>
-            <a href="https://mitsuraku.jp/esthe/company/musee/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/musee.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">Museeとの提携企画</h3>
+            <ul class="mg0 pb10">
+              <li>コーディング</li>
+              <li> 運用しやすいテンプレート制作 </li>
+            </ul>
+            <div class="pick-up-content">
+              <p>Museeとの提携企画。毎月更新する提携先LPを自社LPに展開。<br>
+                毎月更新される提携先のサイトからデザインをコピーする必要があるのですが、自社のページにそのまま移植が厳しい状況で更新に1日以上かかっていたが、独自のjavascriptとCSSでアコーディオン等の機能をテンプレート化、２時間程度で更新できる様にした。提携先、自社担当者からもスピーディーな対応に高評価いただき、長期提携が継続できた。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/esthe/company/musee/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/fitness2018.webp" class="thumbnail radius15" alt="" loading="lazy">
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/fitness2018.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
           <h3 class="pd10 pb05 mg0 on-background-text">大手フィットネス提携企画</h3>
           <ul class="mg0 pb10">
             <li>デザイン</li>
@@ -530,43 +691,56 @@ body .material-symbols-rounded {
           </ul>
           <div class="pick-up-content">
             <p>大手フィットネスクラブとの提携案件。大手各社との協力連携でキャンペーンが実現。一定の評価をいただき、次年度からは個別のキャンペーンに発展。</p>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/rae_bestblg30_2018.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">契約店舗様のブログ促進企画</h3>
-          <ul class="mg0 pb10">
-            <li>デザイン</li>
-            <li> コーディング </li>
-            <li>HTMLメルマガ</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>ブログや口コミの返信の更新が多い契約店舗様がユーザーの満足度やリピートが高い数値をもとにブログ促進のための企画。<br>
-              この企画を通してブログや口コミ返信の重要さを契約店舗様に告知とユーザーと店舗様の絆作りに貢献できた。</p>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/rae_bestblg30_2018.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">契約店舗様のブログ促進企画</h3>
+            <ul class="mg0 pb10">
+              <li>デザイン</li>
+              <li> コーディング </li>
+              <li>HTMLメルマガ</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>ブログや口コミの返信の更新が多い契約店舗様がユーザーの満足度やリピートが高い数値をもとにブログ促進のための企画。<br>
+                この企画を通してブログや口コミ返信の重要さを契約店舗様に告知とユーザーと店舗様の絆作りに貢献できた。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
         <p class="display-small mb0 girid-title">2017</p>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/mamariraku.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">子育て支援企画</h3>
-          <ul class="mg0 pb10">
-            <li>デザイン指示出し</li>
-            <li>コーディング</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>自社の子育て支援の一貫として子供同伴で行ける店舗の紹介とキャンペーンの紹介。実際の口コミを紹介することで安心感を演出。</p>
-            <a href="https://mitsuraku.jp/pages/mamariraku/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/mamariraku.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">子育て支援企画</h3>
+            <ul class="mg0 pb10">
+              <li>デザイン指示出し</li>
+              <li>コーディング</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>自社の子育て支援の一貫として子供同伴で行ける店舗の紹介とキャンペーンの紹介。実際の口コミを紹介することで安心感を演出。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant"><a href="https://mitsuraku.jp/pages/mamariraku/" target="_blank" rel="noopener" class="btn radius15 fb ripple ripple-white primary on-primary-text">ページリンク</a>
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
-        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup"><img src="img/4th_challenge.webp" class="thumbnail radius15" alt="" loading="lazy">
-          <h3 class="pd10 pb05 mg0 on-background-text">リピート促進企画</h3>
-          <ul class="mg0 pb10">
-            <li>デザイン指示出し</li>
-          </ul>
-          <div class="pick-up-content">
-            <p>既存ユーザーの利用促進企画。ユーザーの月平均利用が３回弱ということもあり、もう一回利用を促し既存顧客をヘビーユーザーへと誘導。<br>
-              ユーザーからも反響が高く、満足度の高いキャンペーンとなった。</p>
+        <div class="ripple ripple-white surface-variant on-surface-variant-text radius15 js-pickup">
+          <div class="pick-up-main"><img src="img/4th_challenge.webp" width="563" height="667" class="thumbnail radius15" alt="" loading="lazy">
+            <h3 class="pd10 pb05 mg0 on-background-text">リピート促進企画</h3>
+            <ul class="mg0 pb10">
+              <li>デザイン指示出し</li>
+            </ul>
+            <div class="pick-up-content">
+              <p>既存ユーザーの利用促進企画。ユーザーの月平均利用が３回弱ということもあり、もう一回利用を促し既存顧客をヘビーユーザーへと誘導。<br>
+                ユーザーからも反響が高く、満足度の高いキャンペーンとなった。</p>
+            </div>
+          </div>
+          <div class="pick-up-content pick-up-footer surface-variant">
             <button class="btn btn-outlined primary-text radius15 fb ripple ripple-white" onclick="f_modalClose()">閉じる</button>
           </div>
         </div>
@@ -588,12 +762,11 @@ const a_id={'about':e_about,'pr':e_pr,'works':e_works};
 let v_targetScroll;
 /*タブ切り替え*/
 function f_tabScroll(v_id){
-  v_targetScroll=window.pageYOffset+a_id[v_id].getBoundingClientRect().top-50;
+  v_targetScroll=window.pageYOffset+a_id[v_id].getBoundingClientRect().top-40;
   window.scrollTo({
     top: v_targetScroll,
     behavior: "smooth"
   });
-  f_tab(v_id);
 }
 function f_tab(v_id){
   var e_removeTab=document.querySelector('.js-nav button.primary.on-primary-text:not(.tab-'+v_id+')');
@@ -610,13 +783,13 @@ window.addEventListener('scroll',function(){
   }else{
     e_nav.classList.remove('max-w','shadow-lv2');
   }
-  if(e_about.getBoundingClientRect().y<50){
+  if(e_about.getBoundingClientRect().y<150){
     f_tab('about');
   }
-  if(e_pr.getBoundingClientRect().y<50){
+  if(e_pr.getBoundingClientRect().y<150){
     f_tab('pr');
   }
-  if(e_works.getBoundingClientRect().y<50){
+  if(e_works.getBoundingClientRect().y<150){
     f_tab('works');
   }
 });
@@ -661,7 +834,9 @@ var loadDeferredStyles = function() {
   e_js.src='../js/ripple.js';
   var e_script = document.getElementsByTagName('script')[0];
   e_script.parentNode.insertBefore(e_js,e_script);
-  setTimeout(function(){document.body.classList.add('onloaded')},50);
+  document.fonts.ready.then(function(fontFaceSet){
+    document.body.classList.add('onloaded');
+  });
 };
 var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
 window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;

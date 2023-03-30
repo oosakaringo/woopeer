@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>FISHING PASSPORT</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FISHING PASSPORT">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style>
+.bg-main {
+  background-image: linear-gradient(rgba(0,0,0,0) calc(50px + 1em), rgba(0,0,0,0.4) calc(50px + 1em), rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.3)), url("files/img/captain_bg_img.webp");
+  background-position: top, 80% 35%;
+  height: 60vmin;
+  max-height: 300px;
+  padding-top: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover, 150%;
+  text-shadow: 0 0 5px #000, 0 0 100px #000;
+}
+.bg-safetyfirst, .bg-qr, .bg-privacy, .bg-new_customers, .bg-management {
+  background-repeat: no-repeat;
+  height: min(35vh, 100vw);
+  min-height: 360px;
+}
+.bg-safetyfirst {
+  background-image: url("files/img/safetyfirst_bg_img.webp");
+  background-position: 70% 60%;
+  background-size: 180%;
+}
+.bg-qr {
+  background-image: url(files/img/qr_bg_img.webp);
+  background-position: 60% 50%;
+  background-size: 130%;
+}
+.bg-privacy {
+  background-image: url(files/img/privacy_bg_img.webp);
+  background-position: 20% 10%;
+  background-size: 130%;
+}
+.bg-new_customers {
+  background-image: url(files/img/new_customers_bg_img.webp);
+  background-position: 40% 20%;
+  background-size: 120%;
+}
+.bg-management {
+  background-image: url(files/img/management_bg_img.webp);
+  background-position: 20% 80%;
+  background-size: 120%;
+}
+.movie-banner {
+  height: max(200px, 30vw);
+  width: 100%;
+  object-fit: cover;
+}
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+}
+
+@media (min-width:992px) {
+.bg-main {
+  background-position: top, 0 43%;
+  background-size: cover, cover;
+}
+.bg-safetyfirst, .bg-qr, .bg-privacy, .bg-new_customers, .bg-management {
+  height: 40vh;
+  background-size: 100%;
+}
+}
+</style>
+</head>
+
+<body>
+<script src="files/js/header.js"></script>
+<header class="sticky-top"></header>
+<main>
+  <article class="pb-0 pb-sm-5">
+    <section class="container bg-main d-flex align-content-center flex-wrap text-center text-white position-relative px-0">
+      <div class="w-100 ls-2">
+        <h2 class="fw-bold ls-2 fs-1">サービス</h2>
+        <em>Service</em> </div>
+      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='%23fff'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="w-100 small position-absolute bottom-0">
+        <ol class="breadcrumb justify-content-center small mb-2 fw-bold">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
+          <li class="breadcrumb-item">サービス</li>
+          <li class="breadcrumb-item" aria-current="page">釣り船・遊漁船船長様へ</li>
+        </ol>
+      </nav>
+    </section>
+    <section class="container bg-white text-primary px-0 pb-2">
+      <h2 class="position-relative py-3 text-center m-0 fw-bold fs-4"> <img src="files/img/captain_img01.svg" alt="" width="80" height="80" class="position-absolute top-0 start-0"> <span class="position-relative">釣り船・遊漁船船長様へ</span></h2>
+      <div class="bg-accent text-white d-flex justify-content-center position-relative align-items-center py-2 mb-4"> <img src="files/img/icon_files_w.svg" alt="" width="30" height="36" class="me-2">
+        <div>
+          <p class="mb-0 d-flex align-items-center"><span class="small">ご利用料金：</span><span class="fs-5">基本1隻まで無料</span></p>
+          <p class="mb-0 smaller">(複数の登録する場合は有料となる場合がございます。お問合せ下さい)</p>
+        </div>
+      </div>
+      <h3 class="fs-5 fw-bold py-3 mb-2 position-relative mx-auto text-center lh-1 max-360"> <img src="files/img/bg_title01.svg" alt="" width="350" height="60" class="position-absolute top-0 start-0 w-100 h-100"> <span class="position-relative">手書きのお客様情報から解放!</span></h3>
+      <p class="fw-bold text-center">海外のお客様の集客も可能です。<br>
+        今後更に機能を拡充致します。</p>
+    </section>
+    <section class="container px-0 bg-white pb-5">
+      <div class="position-relative bg-safetyfirst"> <img src="files/img/bg_msk.svg" width="375" height="71" alt="" class="position-absolute start-0 bottom-1 w-100">
+        <div class="position-absolute end-0 bottom-0 col-4"><img src="files/img/icon_safetyfirst.svg" width="100" height="100" alt=""></div>
+      </div>
+      <div class="position-relative col-10 col-sm-8 col-md-6 mx-auto">
+        <h3 class="fs-4 fw-bold text-primary ls-1">乗船名簿電子化</h3>
+        <p class="small mb-4">近年、急激な天候の変化などにより海難事故が発生しております。当サイトでは万が一に備え、乗船名簿を電子化し海上保安庁などに共有。より安心できる用電子化します。</p>
+      </div>
+    </section>
+    <section class="container px-0 bg-white pb-5">
+      <div class="position-relative bg-qr"> <img src="files/img/bg_msk.svg" width="375" height="71" alt="" class="position-absolute start-0 bottom-1 w-100">
+        <div class="position-absolute end-0 bottom-0 col-4"><img src="files/img/icon_qr.svg" width="100" height="100" alt=""></div>
+      </div>
+      <div class="position-relative col-10 col-sm-8 col-md-6 mx-auto">
+        <h3 class="fs-4 fw-bold text-primary ls-1">簡単な手順</h3>
+        <p class="small mb-4">毎回、同じ情報を手書きで記入していませんか? QRを読み込むだけでこの問題を解決します。またペンの使いまわし等によるウイルス感染も防止します。</p>
+      </div>
+    </section>
+    <section class="container px-0 bg-white pb-5">
+      <div class="position-relative bg-privacy"> <img src="files/img/bg_msk.svg" width="375" height="71" alt="" class="position-absolute start-0 bottom-1 w-100">
+        <div class="position-absolute end-0 bottom-0 col-4"><img src="files/img/icon_privacy.svg" width="100" height="100" alt=""></div>
+      </div>
+      <div class="position-relative col-10 col-sm-8 col-md-6 mx-auto">
+        <h3 class="fs-4 fw-bold text-primary ls-1">個人情報保護</h3>
+        <p class="small mb-4">乗り合いの場合は、紙で印刷したリストをまわして記入する過程で、知らない人に住所や年齢、血液型など個人情報が露呈します。特に女性の場合ストーキングの心配も発生。この問題が無くなります。</p>
+      </div>
+    </section>
+    <section class="container px-0 bg-white pb-5">
+      <div class="position-relative bg-new_customers"> <img src="files/img/bg_msk.svg" width="375" height="71" alt="" class="position-absolute start-0 bottom-1 w-100">
+        <div class="position-absolute end-0 bottom-0 col-4"><img src="files/img/icon_new_customers.svg" width="100" height="100" alt=""></div>
+      </div>
+      <div class="position-relative col-10 col-sm-8 col-md-6 mx-auto">
+        <h3 class="fs-4 fw-bold text-primary ls-1">新規顧客獲得</h3>
+        <p class="small mb-4">日本語以外の言語での紹介も行う事ができ、海外のお客様の集客も可能です。予約や事前決済（デポジットも対応可能）をすることもできます。お問合せ下さい。</p>
+      </div>
+    </section>
+    <section class="container px-0 bg-white pb-4">
+      <div class="position-relative bg-management"> <img src="files/img/bg_msk.svg" width="375" height="71" alt="" class="position-absolute start-0 bottom-1 w-100">
+        <div class="position-absolute end-0 bottom-0 col-4"><img src="files/img/icon_management.svg" width="100" height="100" alt=""></div>
+      </div>
+      <div class="position-relative col-10 col-sm-8 col-md-6 mx-auto">
+        <h3 class="fs-4 fw-bold text-primary ls-1">管理画面のご提供</h3>
+        <p class="small mb-4">専用の管理画面のIDとパスワードを発行いたします。乗船者の情報や、電子領収証の発行が可能です。また、以前の乗船者の掘り起こしなどが可能です。</p>
+      </div>
+    </section>
+    <section class="container px-0 bg-white">
+      <div class="position-relative bottom-1"> <img src="files/img/bg_msk2.svg" width="375" height="71" alt="" class="w-100"> </div>
+      <div class="bg-light">
+        <div class="position-relative col-11 col-md-8 mx-auto mb-5">
+          <h3 class="fs-4 fw-bold text-primary ls-1 text-center mb-4">アプリ紹介動画</h3>
+          <a href="###">
+          <div class="position-relative"> <img src="files/img/movie_img.webp" alt="アプリ紹介動画" width="1500" height="1080" class="movie-banner rounded">
+            <div class="w-100 h-100 position-absolute top-0 start-0 d-flex align-items-center justify-content-center"><img src="files/img/btn_play_movie.svg" alt="" width="180" height="50"></div>
+          </div>
+          </a> </div>
+        <h3 class="fs-4 fw-bold text-primary ls-1 text-center mb-0 pb-2">資料請求はこちら</h3>
+      </div>
+    </section>
+    <div class="sticky-bottom">
+      <div class="container bg-light text-center py-2"> <a href="####" class="btn btn-cv text-white rounded fw-bold px-5">
+        <div class="d-flex align-items-center"><img src="files/img/icon_folder.svg" alt="" width="40" height="30" class="me-3 img-fluid">資料ダウンロード</div>
+        </a> </div>
+    </div>
+    <div class="container bg-light pt-5">
+      <div class="row"> <a href="###" class="col px-0 btn btn-sm btn-cv text-white d-flex justify-content-center align-items-center py-5">
+        <div><img src="files/img/icon_beginner.svg" width="50" height="50" alt="" class="mb-2"><br>
+          初めての方<br>
+          （新規登録）</div>
+        </a><a href="find.html" class="col px-0 btn btn-sm btn-cv text-white d-flex justify-content-center align-items-center py-5">
+        <div><img src="files/img/icon_ship.svg" width="80" height="50" alt="" class="mb-3"><br>
+          遊漁船を探す</div>
+        </a></div>
+    </div>
+  </article>
+</main>
+<footer class="sticky-top pt-4 bd-gray-800 text-white"></footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<script src="files/js/footer.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "70px";
+  } else {
+    e_menuTop.style.bottom = "-150px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

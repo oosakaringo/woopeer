@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=0.8,minimum-scale=0.5,maximum-scale=3.0,user-scalable=yes">
 <meta name="description" content="design production synthesis site,デザイン,oosakaringo">
 <meta name="keywords" content="design production synthesis site,デザイン,oosakaringo">
-<title>woopeer</title>
+<title>woopeer.com</title>
 <link href="css/theme.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/base2023.css">
 <style>
@@ -49,9 +49,10 @@
   text-shadow: 0 0 60px var(--md-sys-color-surface), 0 0 5px var(--md-sys-color-secondary-container);
 }
 .content-img {
-  max-height: min(240px, 35vmin);
+  /*max-height: min(400px, 50vmin);*/
   /*filter: saturate(80%) brightness(130%);*/
   object-fit: cover;
+  height: 420px;
 }
 .img-title {
   position: absolute;
@@ -127,54 +128,13 @@ display:none;
   filter: invert(85%) hue-rotate(180deg) saturate(200%) brightness(140%);
 }
 }
-</style>
-  
-<script type="application/ld+json">
-[
-{
-"@context": "https://schema.org",
-"@type": "Article",
-"headline": "woopeer",
-"image": [
-  "https://woopeer.com/img/woopeer_logo.svg",
-  "https://woopeer.com/img/seo02.webp",
-  "https://woopeer.com/img/seo01.webp",
-  "https://woopeer.com/img/adobe_img.webp",
-  "https://woopeer.com/img/portfolio_01.webp",
-  "https://woopeer.com/img/The100_btn.png",
-  "https://woopeer.com/img/blog_btn.jpg"
-],
-"datePublished": "2020-01-01T08:00:00+08:00",
-"dateModified": "2023-01-01T09:20:00+08:00",
-"author": [
-  {
-    "@type": "Person",
-    "name": "Yoshiaki Nakao",
-    "url": "https://woopeer.com/yoshiaki_nakao_2023/"
-  },{
-    "@type": "Person",
-    "name": "Yoshiaki Nakao",
-    "url": "http://blog.woopeer.com/"
-  }
-],
-"description":"woopeerはwebに特化したデザイナーです。さまざまなテクニックと知見でユーザーに合わせたwebデザインを提供いたします。"
-},
-{
-"@context": "https://schema.org",
-"@type": "Organization",
-"url": "https://woopeer.com/",
-"logo": "https://woopeer.com/img/woopeer_logo.svg"
-},
-{
-"@context": "https://schema.org",
-"@type": "ContactPoint",
-"web": "https://docs.google.com/forms/d/e/1FAIpQLSd-7ysGdRjHfmk-WHX9YN6L_6B6t0jzyeE8meKzsnkF5TdHRg/viewform",
-"contactType": "customer support",
-"areaServed": "JP",
-"availableLanguage": "Japanese"
+
+@media (min-width: 920px) {
+.content-img {
+  height: 360px;
 }
-]
-  </script>
+}
+</style>
 <noscript class="deferred-node">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -237,31 +197,33 @@ display:none;
       </nav>
     </div>
     <section class="pd15" id="web">
-      <div class="max-w mb20">
-        <h2 class="display-large fb">webデザイン</h2>
-        <p>webデザインで最も重要なことは、どれくらいより多くのユーザーの支持を得られるかです。素晴らしいデザインやコンテンツであっても使いにくくては利用するユーザーはいませんし、検索で上位に表示されなければそもそも気付かれもされずに終わってしまいます。どれくらい素晴らしいデザインであっても使われなければそれまでということです。</p>
+      <div class="max-w mb20 disp-flex flex-ai-center flex-jc-center max-1760"> <img src="img/bg09.webp" alt="" width="2400" height="1200" class="radius15 content-img">
+        <div class="pos-absolute ml10 mr10 pl20 pr20 max-w text-glow">
+          <h2 class="display-large fb text-center">webデザイン</h2>
+          <p>webデザインで最も重要なことは、どれくらいより多くのユーザーの支持を得られるかです。素晴らしいデザインやコンテンツであっても使いにくくては利用するユーザーはいませんし、検索で上位に表示されなければそもそも気付かれもされずに終わってしまいます。どれくらい素晴らしいデザインであっても使われなければそれまでということです。</p>
+        </div>
       </div>
-      <article class="max-w surface1 pt20 pb20 mt20 mb20 pos-relative"> <img src="img/bg02.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
-        <h3 class="on-background-text display-small fb img-title text-glow pl15 pr15">マテリアルデザインをすすめるワケ</h3>
+      <article class="max-w surface1 pb20 mb20">
+        <h3 class="display-small fb">マテリアルデザインをすすめるワケ</h3>
         <p>より多くの人に使いやすいデザインは、GoogleやMicrosoft、Appleなどのメジャーサービスを参考にすることが最も重要です。<br>
           というのも、これらのメジャーサービスは今現在多くのユーザーに使われているサービスだからです。中でもGoogleは、検索エンジン、Chrome、Gmail、YouTube、Map、スマートフォン（Android）、など触れない日はないというくらい多くのユーザーから利用されています。Googleはより多くの人が触れることでデザインを進化させ改善されてさらにユーザーを増やし続けているのです。</p>
         <p>Material Design（マテリアルデザイン）というGoogleのデザインシステムをご存知でしょうか。前述したGoogleのサービスはMaterial Designをベースにデザインされています。ですので自身のwebサービスにMaterial Designを取り入れることで普段慣れ親しんだ使いやすくて迷わない、それでいて整った最先端のデザインとなるのです。</p>
         <p>2021年、最新のマテリアルデザイン3が発表されました。そして2022年から順次googleサービスがマテリアルデザイン3へと更新されて行きました。ということで本サイトもマテリアルデザイン3を取り入れて作成を行なっております。</p>
         <div class="text-center mt20 pt20 pb20"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdVcFZfrmX5VjlhdggH082tuUWATzvujFsB_jvIeDk1l15U2g/viewform" class="btn tertiary on-tertiary-text ripple ripple-white radius25 disp-iblock" target="_blank" rel="noopener">マテリアルデザインのご依頼はこちら</a> </div>
       </article>
-      <article class="max-w surface1 pt20 pb20 mt20 mb20 pos-relative"> <img src="img/bg04.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
-        <h3 class="on-background-text display-small fb img-title text-glow pl15 pr15">SEO をデザインする</h3>
+      <article class="max-w surface1 pb20 mb20">
+        <h3 class="display-small fb">SEO をデザインする</h3>
         <p>より多くのユーザーからの支持を得るためには、より多くの人の目に触れさせる必要があります。その為にはSEO対策は必要不可欠です。近年のGoogle検索ではより内容が重要視されて専門性の高いコンテンツが上位表示されるようになりました。技術面でもドメインや被リンクよりもモバイル対応や表示スピードに重きが置かれるようになっています。</p>
         <div class="pc-grid grid-1-2 mt20 pt20">
           <div>
-            <h4 class="on-background-text headline-medium fb mt0">PageSpeed Insights</h4>
+            <h4 class="headline-medium fb mt0">PageSpeed Insights</h4>
             <p>Google developersが提供しているPageSpeed InsightsでGoogleがどのように分析しているかを確認することができます。また、改善ポイントもわかるのでスコアを元に改善を行なって行きます。</p>
             <p>PageSpeed InsightsではあくまでGoogle目線でのスコアです。GoogleはchromeやAndroidなどから実ユーザーからのデータを元に計測されています。ある程度のPVが集まるようになると実際のデータが確認できるようになります。このデータは即時反映されるわけではなく改善してもすぐに確認できない事に注意が必要です。</p>
           </div>
           <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener"><img src="img/seo02.webp" alt="PageSpeed Insightsスコアキャプチャ" class="radius10 img-cap goldensize" loading="lazy"></a></div>
         <div class="pc-grid grid-1-2 mt20 pt20">
           <div>
-            <h4 class="on-background-text headline-medium fb mt0">LightHouseスコア</h4>
+            <h4 class="headline-medium fb mt0">LightHouseスコア</h4>
             <p>PageSpeed Insightsでの改善提案は10〜20以上になるケースが多いです。その為PageSpeed Insightsでは１つ１つの改善を数値計測するのは難しい状況です。そこでChromeに搭載されているLightHouse機能を使う方法をご提案いたします。</p>
             <p>LightHouseを使えば１つ１つの改善をリアルタイムで確認することができます。改善の結果オール100点の満点スコアも可能です。ちなみに全てのスコアで100が出れば、花火が上がるおまけがあります。目指せオール100点。</p>
           </div>
@@ -270,13 +232,15 @@ display:none;
       </article>
     </section>
     <section class="pd15" id="javascript">
-      <div class="max-w mb20">
-        <h2 class="display-large fb">JavaScript</h2>
-        <p>webデザイナーはJavaScriptが必須と考えます。webデザインはwebサイトの動きや表示方法など全てのデザインに責任があります。webデザインをCSSで行うことは当然ですがCSSだけでは表現しきれない場面も多々出てきます。そういった場合でもJavaScriptを使って思い通りの動きを演出する必要があります。<br>
-          また、ページのコンバージョンを考えた場合でも最適な表示をユーザーごとに出し分けすることで、よりユーザーに価値あるものとなります。</p>
+      <div class="max-w mb20 disp-flex flex-ai-center flex-jc-center max-1760"> <img src="img/bg12.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
+        <div class="pos-absolute ml10 mr10 pl20 pr20 max-w text-glow">
+          <h2 class="display-large fb text-center">JavaScript</h2>
+          <p>webデザイナーはJavaScriptが必須と考えます。webデザインはwebサイトの動きや表示方法など全てのデザインに責任があります。webデザインをCSSで行うことは当然ですがCSSだけでは表現しきれない場面も多々出てきます。そういった場合でもJavaScriptを使って思い通りの動きを演出する必要があります。<br>
+            また、ページのコンバージョンを考えた場合でも最適な表示をユーザーごとに出し分けすることで、よりユーザーに価値あるものとなります。</p>
+        </div>
       </div>
-      <article class="max-w surface1 pt20 pb20 mt20 mb20 pos-relative"> <img src="img/bg12.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
-        <h3 class="on-background-text display-small fb img-title text-glow pl15 pr15">JavaScriptとゲームの関係</h3>
+      <article class="max-w surface1 pb20 mb20">
+        <h3 class="display-small fb">JavaScriptとゲームの関係</h3>
         <p>ゲーム要素のあるwebコンテンツは、タイム計測、スコア集計、履歴、条件想定、バグテストなど多くの条件の組み合わせで表示の最適化を行う必要がございます。この事からゲーム作成は高度なwebコンテンツと言えます。</p>
         <div class="pc-grid grid-1-1 mt20"> <a href="https://woopeer.com/100cells_calculation/" target="_blank" rel="noopener"><img src="img/The100_btn.png" alt="百マス計算100マスターのキャプチャ" width="720" height="450" class="radius15 img-cap mt20" loading="lazy"></a>
           <div>
@@ -295,12 +259,14 @@ display:none;
       </article>
     </section>
     <section class="pd15" id="anime">
-      <div class="max-w mb20">
-        <h2 class="display-large fb">アニメーション</h2>
-        <p>YouTubeが広まって動画コンテンツが当たり前の時代になりました。これからのwebサイトに動画コンテンツは必須になりつつあります。</p>
+      <div class="max-w mb20 disp-flex flex-ai-center flex-jc-center max-1760"> <img src="img/bg07.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
+        <div class="pos-absolute ml10 mr10 pl20 pr20 max-w text-glow">
+          <h2 class="display-large fb text-center">アニメーション</h2>
+          <p>YouTubeが広まって動画コンテンツが当たり前の時代になりました。これからのwebサイトに動画コンテンツは必須になりつつあります。</p>
+        </div>
       </div>
-      <article class="max-w surface1 pt20 pb20 mt20 mb20 pos-relative"> <img src="img/bg07.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
-        <h3 class="on-background-text display-small fb img-title text-glow pl15 pr15">プロモーション用<span class="disp-iblock">アニメーション</span></h3>
+      <article class="max-w surface1 pb20 mb20">
+        <h3 class="display-small fb ">プロモーション用<span class="disp-iblock">アニメーション</span></h3>
         <p>YouTubeが一般的になって誰でも動画配信や動画編集をアップするようになりました。動画作成のハードルが下がり中規模のプロダクトでもプロモーション用の動画作成が必須となってきました。また、マーケティングの観点からもYouTubeにアップすることでYouTubeからの導線を確保し、各種SNS広告に出稿することも可能となります。</p>
         <div class="pc-grid grid-1-2 mt20 pt20">
           <div>
@@ -319,13 +285,15 @@ display:none;
       </article>
     </section>
     <section class="pd15" id="uiux">
-      <div class="max-w mb20">
-        <h2 class="display-large fb">UI/UX・デザイン</h2>
-        <p>新規のプロダクトを開始する際にはモックアップ制作が必須となってきています。<br>
-          ページ遷移やフォームの動き、ボタンの位置など動きを含めたUI/UXを確認した上で開発を進めることで無駄を省きスピード感のあるプロダクトリリースが行えます。そのため一定のクオリティーのモックアップが求められています。</p>
+      <div class="max-w mb20 disp-flex flex-ai-center flex-jc-center max-1760"> <img src="img/bg08.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
+        <div class="pos-absolute ml10 mr10 pl20 pr20 max-w text-glow">
+          <h2 class="display-large fb text-center">UI/UXデザイン</h2>
+          <p>新規のプロダクトを開始する際にはモックアップ制作が必須となってきています。<br>
+            ページ遷移やフォームの動き、ボタンの位置など動きを含めたUI/UXを確認した上で開発を進めることで無駄を省きスピード感のあるプロダクトリリースが行えます。そのため一定のクオリティーのモックアップが求められています。</p>
+        </div>
       </div>
-      <article class="max-w surface1 pt20 mt20 mb20 pos-relative"> <img src="img/bg08.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
-        <h3 class="on-background-text display-small fb img-title text-glow pl15 pr15">UI/UXにはFigmaが最適解</h3>
+      <article class="max-w surface1 pb20 mb20">
+        <h3 class="display-small fb">UI/UXにはFigmaが最適解</h3>
         <div class="overflow-hidden mt10"> <img src="img/figma_logo.svg" alt="figmaのロゴ" width="38" height="57" class="w30 pt10 pr20 pb10 pull-left" loading="lazy">
           <p>2022年10月AdobeがFigmaを買収したというNEWSがありました。このNEWSは過去にあったAdobeがMacromediaを買収した衝撃を思い起こさせます。<br>
             FigmaとXDどちらも良質なソフトですがFigmaのオープン性は特に素晴らしく、今後はAdobe製品との連携ができるようになることに期待しております。</p>
@@ -347,12 +315,14 @@ display:none;
       </article>
     </section>
     <section class="pd15" id="image">
-      <div class="max-w mb20">
-        <h2 class="display-large fb">画像加工</h2>
-        <p>スマホのカメラ性能が飛躍的によくなり、合わせて画像加工アプリによる画像加工が一般的になりました。こういう事からプロによる画像加工は不要になってきたと思われがちですが、逆にスマホアプリではできない高度な加工をもっと行いたいという要望も高まっています。</p>
+      <div class="max-w mb20 disp-flex flex-ai-center flex-jc-center max-1760"> <img src="img/bg10.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
+        <div class="pos-absolute ml10 mr10 pl20 pr20 max-w text-glow">
+          <h2 class="display-large fb text-center">画像加工</h2>
+          <p>スマホのカメラ性能が飛躍的によくなり、合わせて画像加工アプリによる画像加工が一般的になりました。こういう事からプロによる画像加工は不要になってきたと思われがちですが、逆にスマホアプリではできない高度な加工をもっと行いたいという要望も高まっています。</p>
+        </div>
       </div>
-      <article class="max-w surface1 pt20 pb20 mt20 mb20 pos-relative"> <img src="img/bg10.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
-        <h3 class="on-background-text display-small fb img-title text-glow pl15 pr15">高度な画像加工</h3>
+      <article class="max-w surface1 pb20 mb20">
+        <h3 class="display-small fb">高度な画像加工</h3>
         <div class="pc-grid grid-1-1 grid-rtl mt10"> <img src="img/adobe_img.webp" alt="adobeのイメージ" width="1200" height="1200" class="radius15 mt10" loading="lazy">
           <div>
             <p>より専門的な加工が求められてる背景として画像加工が一般的になってきた事があります。これは一見逆なように思われますがスマホなどの加工アプリを使うユーザーが増えたことでアプリではできないもっと高度な加工をしたいという要望が出てきたり、画像加工そのものへの興味や関心が増えてきた事があります。</p>
@@ -363,12 +333,14 @@ display:none;
       </article>
     </section>
     <section class="pd15" id="info">
-      <div class="max-w mb20">
-        <h2 class="display-large fb">情報</h2>
-        <p>woopeer 運営者の経歴やスキルまとめ。webデザインブログ。</p>
+      <div class="max-w mb20 disp-flex flex-ai-center flex-jc-center max-1760"> <img src="img/bg03.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
+        <div class="pos-absolute ml10 mr10 pl20 pr20 max-w text-glow">
+          <h2 class="display-large fb text-center">情報</h2>
+          <p>woopeer 運営者の経歴やスキルまとめ。webデザインブログ。</p>
+        </div>
       </div>
-      <article class="max-w surface1 pt20 mt20 mb20 pos-relative"> <img src="img/bg09.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
-        <h3 class="on-background-text display-small fb img-title text-glow pl15 pr15">woopeer 運営者のポートフォリオ</h3>
+      <article class="max-w surface1 pb20 mb20">
+        <h3 class="display-small fb">woopeer 運営者のポートフォリオ</h3>
         <div class="pc-grid grid-1-2 mt10"> <a href="https://woopeer.com/yoshiaki_nakao_2023/"><img src="img/portfolio_01.webp" alt="ポートフォリオサイト" width="1200" height="1200" class="radius10 img-cap mt10" loading="lazy"></a>
           <div>
             <p>woopeer 運営者の経歴やスキルをまとめました。</p>
@@ -378,8 +350,8 @@ display:none;
           </div>
         </div>
       </article>
-      <article class="max-w surface1 pb20 mt20 mb20 pos-relative"> <img src="img/bg03.webp" alt="" width="2400" height="1200" class="radius15 content-img" loading="lazy">
-        <h3 class="on-background-text display-small fb img-title text-glow pl15 pr15">webデザインブログ</h3>
+      <article class="max-w surface1 pb20 mb20">
+        <h3 class="display-small fb">webデザインブログ</h3>
         <div class="pc-grid grid-1-2 grid-rtl mt10"> <a href="http://blog.woopeer.com/" target="_blank" rel="noopener"><img src="img/blog_btn.jpg" alt="ブログへのリンク画像" width="1200" height="1200" class="radius15 img-cap mt10 goldensize" loading="lazy"></a>
           <div>
             <p>webの世界は日々進化し常に新しい技術が発表されています。その中での気付きやまとめをブログで発信しています。</p>
@@ -436,10 +408,6 @@ window.addEventListener('scroll',function(){
     f_tabNo();
   }
 });
-window.addEventListener('scroll',function(){
-  document.querySelector('.youtube').innerHTML=
-`<iframe width="560" height="315" src="https://www.youtube.com/embed/-VUPSY9gEDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-}, {once: true});
 /*SEO対策：CSSを遅延読み込み*/
 var loadDeferredStyles = function() {
   var replacement = document.createElement("div");
@@ -452,6 +420,9 @@ var loadDeferredStyles = function() {
   for(var v_i=0; v_i<v_addNodeAll; v_i++){
     a_addNode[v_i].parentElement.removeChild(a_addNode[v_i]);
   }
+  
+  document.querySelector('.youtube').innerHTML=
+`<iframe width="560" height="315" src="https://www.youtube.com/embed/-VUPSY9gEDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
   
   var e_js=document.createElement('script');
   e_js.type='text/javascript';

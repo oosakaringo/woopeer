@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>WEB乗船名簿-遊漁船の情報</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WEB乗船名簿-遊漁船の情報">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style>
+.bg-main {
+  background-image: linear-gradient(rgba(0,0,0,0) calc(50px + 1em), rgba(0,0,0,0.4) calc(50px + 1em), rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.3)), url("files/img/captain_bg_img.webp");
+  background-position: top, 80% 35%;
+  height: 60vmin;
+  max-height: 300px;
+  padding-top: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover, 150%;
+  text-shadow: 0 0 5px #000, 0 0 100px #000;
+}
+.wbl-check-box {
+  color: #aeaeae;
+  font-size: 80%;
+  padding: 1em 0;
+}
+.btn-check:checked+.wbl-check-box {
+  background-color: var(--bs-warning);
+  color: #fff;
+  border-color: var(--bs-warning)!important;
+}
+.wbl-img-ship {
+  object-fit: cover;
+  height: 60vmin;
+  width: 50%;
+  max-height: 160px;
+}
+.wbl-img-captain {
+  object-fit: cover;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  bottom: 0;
+  left: 5vw;
+}
+.carousel img {
+  object-fit: cover;
+  height: 50vmin;
+  max-width: 800px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+.carousel-indicators {
+  bottom: -20px;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: var(--bs-warning);
+}
+.carousel-indicators [data-bs-target] {
+  height: 6px;
+}
+.wbl-btn-cv {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -1.2em;
+}
+.wbl-title::before {
+  content: "";
+  width: 2.1em;
+  height: 1.25em;
+  display: inline-block;
+  background-color: var(--bs-warning);
+  transform: skewX(-25deg) translate(-10px, 0);
+}
+.wbl-step {
+  counter-reset: item;
+  list-style-type: none;
+}
+.wbl-step::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: var(--bs-light);
+  display: block;
+  position: absolute;
+  left: 30px;
+}
+.wbl-step li {
+  padding: 0.6em 0.3em 0.6em 4em;
+  line-height: 1.2;
+}
+.wbl-step li::before {
+  counter-increment: item;
+  content: counter(item);
+  position: absolute;
+  left: 0.5em;
+  top: 50%;
+  margin-top: -0.5em;
+  font-size: 120%;
+  line-height: 1;
+  z-index: 1;
+  color: #fff;
+  padding: 0 2.3em 0 0.3em;
+}
+.wbl-step li::after {
+  content: "";
+  width: 5em;
+  height: 101%;
+  display: inline-block;
+  transform: skewX(-25deg) translate(-10px, 0);
+  position: absolute;
+  top: 0;
+  left: -1.3em;
+  background-image: linear-gradient(to right, var(--bs-primary) calc(100% - 5px), #fff calc(100% - 4px));
+}
+
+@media (min-width:992px) {
+.bg-main {
+  background-position: top, 0 43%;
+  background-size: cover, cover;
+}
+}
+</style>
+</head>
+
+<body>
+<script src="files/js/header.js"></script>
+<header class="sticky-top"></header>
+<main>
+  <article class="pb-0 pb-sm-5">
+    <section class="container bg-main d-flex align-content-center flex-wrap text-center text-white position-relative px-0">
+      <div class="w-100 ls-2">
+        <h2 class="fw-bold ls-2 fs-1">探す</h2>
+        <em>Find a ship</em> </div>
+      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='%23fff'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="w-100 small position-absolute bottom-0">
+        <ol class="breadcrumb justify-content-center small mb-2 fw-bold">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
+          <li class="breadcrumb-item"><a href="find.html" class="text-white text-decoration-none">遊漁船を探す</a></li>
+          <li class="breadcrumb-item" aria-current="page">TRIPPERトリッパーUF51</li>
+        </ol>
+      </nav>
+    </section>
+    <section class="container bg-white text-primary px-0 pb-3 pb-md-5 position-relative">
+      <h2 class="py-3 text-center m-0 fw-bold fs-4">船の情報</h2>
+      <h3 class="bg-primary text-white text-center py-3 mb-3 fs-5">TRIPPERトリッパーUF51</h3>
+      <ul class="d-flex ps-3 mb-1 smaller">
+        <li class="d-block border-end pe-3 me-3 border-dark">地域：沖縄</li>
+        <li class="d-block">登録番号：沖縄000000</li>
+      </ul>
+      <div class="text-center"><a href="check.html"><img src="files/img/btn_checkin02.svg" alt="乗船名簿を書く・チェックイン" width="330" height="80" class="wbl-btn-cv"></a></div>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="10000">
+        <div class="carousel-indicators mb-0">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active"> <img src="files/img/TRIPPERE_UF51.webp" class="d-block w-100" alt="...">
+            <div class="small fw-bold text-center pt-1">正面</div>
+          </div>
+          <div class="carousel-item"> <img src="files/img/TRIPPERE_UF52.webp" class="d-block w-100" alt="...">
+            <div class="small fw-bold text-center pt-1">側面</div>
+          </div>
+          <div class="carousel-item"> <img src="files/img/TRIPPERE_UF53.webp" class="d-block w-100" alt="...">
+            <div class="small fw-bold text-center pt-1">停留</div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+      </div>
+      <div class="position-absolute bottom-0 w-100">
+        <div class="d-flex justify-content-between align-items-end col-11 col-lg-10 col-xl-7 mx-auto"> <img src="files/img/captain.webp" alt="" width="1500" height="1000" class="wbl-img-captain rounded-circle border border-white border-3 col-3 max-160 ">
+          <button class="btn btn-warning btn-sm fw-bold px-2 lh-1"><i class="bi bi-heart-fill pe-2"></i><span class="small">お気に入り</span></button>
+        </div>
+      </div>
+    </section>
+    <section class="container px-0 bg-white pt-3">
+      <div class="position-relative bottom-1">
+        <div class="position-absolute top-0 w-100">
+          <div class="col-11 col-lg-10 col-xl-7 mx-auto">
+            <h2 class="fw-bold fs-5 mb-1">林 雅海</h2>
+            <p class="mb-0 small">ジョニーです!よろしく★</p>
+          </div>
+        </div>
+        <img src="files/img/bg_msk2.svg" width="375" height="110" alt="" class="w-100 pt-4"> </div>
+      <div class="bg-light pb-5">
+        <div class="col-11 col-lg-10 col-xl-7 mx-auto bg-white py-3">
+          <h3 class="wbl-title fs-6 mb-3 text-warning fw-bold position-relative overflow-hidden d-flex align-items-center">基本情報</h3>
+          <table class="table border-top border-bottom small mb-5">
+            <tbody class="small">
+              <tr>
+                <th scope="row" class="bg-primary text-white col-5">E-mail </th>
+                <td>reezemasami@gmail.com</td>
+              </tr>
+              <tr>
+                <th scope="row" class="bg-primary text-white">TEL</th>
+                <td>09093802671</td>
+              </tr>
+              <tr>
+                <th scope="row" class="bg-primary text-white">Instagram</th>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row" class="bg-primary text-white">Facebook</th>
+                <td>Breezeokinawa</td>
+              </tr>
+              <tr>
+                <th scope="row" class="bg-primary text-white">搭乗数</th>
+                <td>６</td>
+              </tr>
+              <tr>
+                <th scope="row" class="bg-primary text-white">設備</th>
+                <td>水洗トイレ<br>
+                  ポット</td>
+              </tr>
+              <tr>
+                <th scope="row" class="bg-primary text-white">主要ターゲット（魚種）</th>
+                <td>浪人鯵（GT）<br>
+                  加治木（カジキ）</td>
+              </tr>
+              <tr>
+                <th scope="row" class="bg-primary text-white">お支払い方法</th>
+                <td>クレジットカード</td>
+              </tr>
+              <tr>
+                <th scope="row" class="bg-primary text-white">スタイル</th>
+                <td>キャスティング<br>
+                  ジギング</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="wbl-title fs-6 mb-3 text-warning fw-bold position-relative overflow-hidden d-flex align-items-center">料金について</h3>
+          <div class="p-3 small mb-3">
+            <p>沖縄の海にはまだまだ手付かずのポイントはあります。ディープエリアのBIGカンパチ・イソマグロ攻略へのご案内いたします。また近場のライトジギング・テンヤ釣りへも出港中です！！</p>
+            <p class="fw-bold"> 【チャーター料金案内】<br>
+              慶良間諸島近海ジギングチャーター　￥110,000<br>
+              渡名喜・栗国島遠征ジギングチャーター　￥130,000<br>
+              （パヤオフィッシングとの組み合わせも可能です）</p>
+            <p>より多くの方に沖縄の豊かな海を味わって頂けるよう少人数での乗合も随時開催中です！！</p>
+            <p class="fw-bold">【乗合料金】<br>
+              ３名参加の場合 お一人様 / ￥21,000<br>
+              ４名参加の場合 お一人様 / ￥18,000<br>
+              ５名参加の場合 お一人様 / ￥15,000</p>
+            <p class="border border-2 border-primary py-2 text-center fw-bold">乗合申込は開催日より30日前から受付となります</p>
+          </div>
+          <h3 class="wbl-title fs-6 mb-3 text-warning fw-bold position-relative overflow-hidden d-flex align-items-center">予約方法</h3>
+          <ol class="wbl-step small fw-bold px-3 position-relative mb-5">
+            <li class="bg-light mb-3 border-top border-bottom border-white border-5 position-relative overflow-hidden">出港スケジュールをご確認ください</li>
+            <li class="bg-light mb-3 border-top border-bottom border-white border-5 position-relative overflow-hidden">お電話にて承っております。（林：09093802671）</li>
+          </ol>
+          <h3 class="wbl-title fs-6 mb-3 text-warning fw-bold position-relative overflow-hidden d-flex align-items-center">母港</h3>
+          <div class="d-flex justify-content-center px-2 mb-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17926.093618457428!2d139.77260088004854!3d35.628086217203375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018618a89a85b99%3A0xe816648aa4be4d1c!2z5p2x5Lqs5riv!5e0!3m2!1sja!2sjp!4v1679364575952!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+          </div>
+          <div class="text-center mb-3"><a href="check.html" class="btn btn-warning col-8 col-lg-6">乗船名簿を記入</a></div>
+          <div class="text-center mb-3"><a href="find.html" class="btn btn-warning col-8 col-lg-6">戻る</a></div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="sticky-top pt-4 bd-gray-800 text-white"></footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<script src="files/js/footer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "70px";
+  } else {
+    e_menuTop.style.bottom = "-150px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

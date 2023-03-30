@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>WEB乗船名簿-マイページ</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WEB乗船名簿-マイページ">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style>
+header .container, .bg-main, .bg-primary-gradient {
+  background-image: linear-gradient(to right, #283c73, #172642);
+}
+.bg-main {
+  height: 80vmin;
+  max-height: 400px;
+  padding-top: 1.5em;
+  padding-bottom: 5em
+}
+.wbl-passport {
+  background-color: #c30000;
+  border-radius: 1em;
+  background-image: url("files/img/passport_bg.webp");
+  background-size: 60px;
+  position: relative;
+  margin-bottom: -60px;
+  top: -80px;
+}
+.wbl-img-user {
+  object-fit: cover;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+.wbl-icon-img {
+  margin: -20px 0 0 10px;
+}
+.wbl-step dt {
+  height: 40px;
+  margin-right: 24px;
+}
+.wbl-step dt::after {
+  content: "";
+  border-top: solid 40px var(--bs-primary);
+  border-right: solid 20px transparent;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -19.8px;
+}
+.wbl-step dd::after {
+  content: "";
+  border-bottom: solid 40px var(--bs-light);
+  border-left: solid 20px transparent;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -19.8px;
+}
+.wbl-img-ship {
+  object-fit: cover;
+  height: 30vmin;
+  width: 40vw;
+  max-height: 200px;
+}
+.wbl-history-ship {
+  font-size: 12px;
+  line-height: 1.4;
+}
+.wbl-history-ship::before {
+  content: "";
+  width: 16px;
+  height: 100%;
+  background-color: var(--bs-light);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 25px;
+}
+.wbl-history-ship .small {
+  font-size: 80%;
+}
+.banner-licenses {
+  object-fit: contain;
+  height: 15vw;
+  width: 25%;
+  max-height: 100px;
+}
+
+@media (min-width:768px) {
+.wbl-history-ship {
+  font-size: 16px;
+}
+}
+</style>
+</head>
+
+<body>
+<script src="files/js/header.js"></script>
+<header class="sticky-top"></header>
+<main>
+  <article class="pb-0 pb-sm-5">
+    <section class="container bg-main d-flex align-content-center flex-wrap text-center text-white position-relative px-0">
+      <div class="w-100 ls-2">
+        <h2 class="fw-bold ls-2 fs-1">マイページ</h2>
+        <em>My page</em> </div>
+      <div class="position-absolute start-0 bottom-1 w-100">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='%23fff'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="w-100 small">
+          <ol class="breadcrumb justify-content-center small mb-0 fw-bold">
+            <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
+            <li class="breadcrumb-item" aria-current="page">マイページ</li>
+          </ol>
+        </nav>
+        <img src="files/img/bg_msk.svg" width="375" height="100" alt="" class="w-100"> </div>
+    </section>
+    <section class="container bg-white px-3 position-relative pb-3">
+      <div class="wbl-passport p-3 p-sm-4 px-sm-5 text-white max-480 mx-auto small">
+        <h2 class="fw-light ls-2 small d-flex align-items-center justify-content-center mb-2"><img src="files/img/icon_kiku.svg" alt="" width="24" height="24" class="me-3">FISHING PASSPORT<img src="files/img/icon_kiku.svg" alt="" width="24" height="24" class="ms-2"></h2>
+        <div class="d-flex align-items-center mb-2">
+          <div class="col-4 position-relative"><img src="files/img/sample.webp" alt="" width="5000" height="3335" class="wbl-img-user img-fluid"><a href="####"><img src="files/img/icon_camera.svg" alt="写真変更" width="40" height="40" class="position-absolute end-0 bottom-0 p-1"></a></div>
+          <div class="d-grid w-100 ms-3">
+            <div class="d-flex border-bottom border-success justify-content-between pb-2 mb-2">
+              <div>
+                <h3 class="fs-4 mb-0">MASATO SANO</h3>
+                <div>No. TR4824123</div>
+              </div>
+              <img src="files/img/icon_rank_gold.svg" alt="" width="35" height="45"> </div>
+            <div class="d-flex align-items-end justify-content-between w-100">
+              <table class="small">
+                <tbody>
+                  <tr>
+                    <th scope="row" class="fw-normal pe-2">発行日</th>
+                    <td class="fw-bold">YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="fw-normal pe-2">有効期限</th>
+                    <td class="fw-bold">YYYY.MM.DD</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="fw-normal pe-2">国籍</th>
+                    <td class="fw-bold">JPN 日本</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a href="####" class="btn btn-sm btn-primary fw-bold px-2 bg-primary-gradient border-0">編集</a> </div>
+          </div>
+        </div>
+        <p class="text-truncate mb-0 small">FP&lt;JPN&lt;&lt;マサト&lt;&lt;佐野&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+          TR4824123&lt;&lt;&lt;00000000M0000&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+      </div>
+    </section>
+    <section class="container px-3 pb-5 bg-white position-relative">
+      <h3 class="fs-5 d-flex align-items-center justify-content-between mb-3"><span class="d-flex align-items-center"><img src="files/img/icon_files.svg" alt="" width="40" height="40" class="me-2">領収証</span><span class="smaller">WEB領収証（印紙）について</span></h3>
+      <ul class="ps-0">
+        <li class="d-block border-bottom"> <a href="find2.html" class="d-flex align-items-center justify-content-between text-body text-decoration-none py-2">
+          <div class="d-grid"> <span class="text-warning small">yyyy.mm.dd</span> <span>●●様　乗船代　160,500円<img src="files/img/icon_pdf.svg" alt="" width="40" height="40" class="wbl-icon-img"></span> </div>
+          <span class="small lh-1">保存<br>
+          <img src="files/img/icon_arrow_right.svg" alt="" width="30" height="8"></span> </a> </li>
+        <li class="d-block border-bottom"> <a href="find2.html" class="d-flex align-items-center justify-content-between text-body text-decoration-none py-2">
+          <div class="d-grid"> <span class="text-warning small">yyyy.mm.dd</span> <span>●●様　乗船代　160,500円<img src="files/img/icon_pdf.svg" alt="" width="40" height="40" class="wbl-icon-img"></span> </div>
+          <span class="small lh-1">保存<br>
+          <img src="files/img/icon_arrow_right.svg" alt="" width="30" height="8"></span> </a> </li>
+      </ul>
+    </section>
+    <section class="container px-3 pb-5 bg-white position-relative">
+      <h3 class="fs-5 d-flex align-items-center justify-content-between mb-3"><span class="d-flex align-items-center"><img src="files/img/icon_bell.svg" alt="" width="40" height="40" class="me-2">お知らせ</span></h3>
+      <ul class="ps-0">
+        <li class="d-block border-bottom"> <a href="find2.html" class="d-flex align-items-center justify-content-between text-body text-decoration-none py-2">
+          <div class="d-grid"> <span class="text-warning small">yyyy.mm.dd<span class="badge bg-primary rounded-0 ms-2 px-3">募集</span></span> <span>トリッパー 募集!　02.01-04 4名</span> </div>
+          <span class="small lh-1">見る<br>
+          <img src="files/img/icon_arrow_right.svg" alt="" width="30" height="8"></span> </a> </li>
+        <li class="d-block border-bottom"> <a href="find2.html" class="d-flex align-items-center justify-content-between text-body text-decoration-none py-2">
+          <div class="d-grid"> <span class="text-warning small">yyyy.mm.dd<span class="badge bg-primary rounded-0 ms-2 px-3">募集</span></span> <span>Fishing Life 募集!　03.01-04 4名</span> </div>
+          <span class="small lh-1">見る<br>
+          <img src="files/img/icon_arrow_right.svg" alt="" width="30" height="8"></span> </a> </li>
+      </ul>
+    </section>
+    <section class="container px-3 pb-5 bg-white position-relative">
+      <h3 class="fs-5 d-flex align-items-center justify-content-between mb-3"><span class="d-flex align-items-center"><img src="files/img/icon_history.svg" alt="" width="40" height="40" class="me-2">乗船履歴</span><a href="###" class="btn btn-primary btn-sm bg-primary-gradient fw-bold">もっと見る</a></h3>
+      <dl class="d-flex wbl-step my-2">
+        <dt class="bg-primary text-white ps-2 pe-1 position-relative d-flex align-items-center fs-5">2023</dt>
+        <dd class="bg-light text-primary fw-bold w-100 mb-0 ps-1 position-relative d-flex align-items-center">チェックイン（ご利用情報）</dd>
+      </dl>
+      <div class="wbl-history-ship position-relative pt-3 pb-1"> <a href="find2.html" class="d-flex align-items-center bg-white position-relative text-decoration-none text-body shadow mb-3"> <img src="files/img/TRIPPERE_UF51.webp" alt="" width="1500" height="1000" class="wbl-img-ship">
+        <div class="ps-2 px-sm-3 px-md-5">
+          <p class="mb-2 fw-bold text-primary">ご利用日時：2023/03/16<br>
+            ご利用者名：正登　佐野</p>
+          <p class="small mb-0"> サービス名：TRIPPERE トリッパーUF51<br>
+            責任者：林　雅海<br>
+            E-mail：breezemasami@gmail.com<br>
+            電話：0909380267 </p>
+        </div>
+        </a><a href="find2.html" class="d-flex align-items-center bg-white position-relative text-decoration-none text-body shadow mb-3"> <img src="files/img/TRIPPERE_UF52.webp" alt="" width="1500" height="1000" class="wbl-img-ship">
+        <div class="ps-2 px-sm-3 px-md-5">
+          <p class="mb-2 fw-bold text-primary">ご利用日時：2023/01/16<br>
+            ご利用者名：正登　佐野</p>
+          <p class="small mb-0"> サービス名：TRIPPERE トリッパーUF52<br>
+            責任者：林　雅海<br>
+            E-mail：breezemasami@gmail.com<br>
+            電話：0909380267 </p>
+        </div>
+        </a> </div>
+      <dl class="d-flex wbl-step my-2">
+        <dt class="bg-primary text-white ps-2 pe-1 position-relative d-flex align-items-center fs-5">2022</dt>
+        <dd class="bg-light text-primary fw-bold w-100 mb-0 ps-1 position-relative d-flex align-items-center">チェックイン（ご利用情報）</dd>
+      </dl>
+      <div class="wbl-history-ship position-relative pt-3 pb-1"> <a href="find2.html" class="d-flex align-items-center bg-white position-relative text-decoration-none text-body shadow mb-3"> <img src="files/img/TRIPPERE_UF53.webp" alt="" width="1500" height="1000" class="wbl-img-ship">
+        <div class="ps-2 px-sm-3 px-md-5">
+          <p class="mb-2 fw-bold text-primary">ご利用日時：2022/12/16<br>
+            ご利用者名：正登　佐野</p>
+          <p class="small mb-0"> サービス名：TRIPPERE トリッパーUF53<br>
+            責任者：林　雅海<br>
+            E-mail：breezemasami@gmail.com<br>
+            電話：0909380267 </p>
+        </div>
+        </a></div>
+    </section>
+    <section class="container px-3 pb-5 bg-white position-relative">
+      <h3 class="fs-5 d-flex align-items-center justify-content-between mb-3"><span class="d-flex align-items-center"><img src="files/img/icon_card.svg" alt="" width="40" height="40" class="me-2">遊魚券 / ライセンス</span></h3>
+      <a href="####" class="d-flex align-items-center bg-white position-relative text-decoration-none text-body shadow mb-3 ps-4 py-2"> <img src="files/img/tag_jgfa.png" alt="" width="636" height="533" class="img-fluid banner-licenses">
+      <dl class="mb-0 ms-3">
+        <dt class="text-primary fs-5">JGFA年間会費</dt>
+        <dd class="mb-0 small">【有効期間】2023/12/31まで</dd>
+      </dl>
+      </a> <a href="####" class="d-flex align-items-center bg-white position-relative text-decoration-none text-body shadow mb-3 ps-4 py-2"> <img src="files/img/tag_aomori_fish.png" alt="" width="137" height="92" class="img-fluid banner-licenses">
+      <dl class="mb-0 ms-3">
+        <dt class="text-primary fs-5">青森県内水面漁連</dt>
+        <dd class="mb-0 small">【有効期間】2023/12/31まで</dd>
+      </dl>
+      </a> </section>
+  </article>
+</main>
+<footer class="sticky-top pt-4 bd-gray-800 text-white"></footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<script src="files/js/footer.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "0px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

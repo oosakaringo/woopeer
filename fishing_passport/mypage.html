@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FISHING PASSPORT</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FISHING PASSPORT">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style type="text/css">
+.modal.fade:not(.show) .modal-dialog {
+  transform: translate(50px, 0);
+}
+#modal_menu .modal-dialog {
+  width: 80%;
+  margin-left: 20%;
+}
+body {
+  background-color: #fff8f7;
+}
+footer {
+  background-image: url("files/img/bg_01.svg");
+  background-size: 200px;
+  background-repeat: repeat-x;
+  background-position: 0% 110%;
+  padding: 30px 10px 20px;
+}
+.fspp_passport {
+  background-color: #fbf7f1;
+  background-image: url("files/img/passport_bg.webp");
+  background-size: 40%;
+}
+.fspp_border_bottom::after {
+  content: "";
+  width: 100%;
+  height: 1em;
+  display: block;
+  background-image: url("files/img/hr_bg.webp");
+  background-repeat: repeat-x;
+  background-size: contain;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+.user_img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  -webkit-mask-image: url("files/img/msk.svg");
+  mask-image: url(files/img/msk.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+</style>
+</head>
+
+<body>
+<header class="bg-primary text-white d-flex justify-content-between align-items-center px-2 sticky-top">
+  <div class="d-flex align-items-center"><img src="files/img/main_logo.svg" alt="" width="40" height="40">
+    <div class="small lh-sm ps-1">FISHING<br>
+      PASSPORT</div>
+  </div>
+  <div class="d-flex">
+    <button class="btn btn-sm text-white dropdown-toggle px-3" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <img src="files/img/language_icon.svg" alt="" width="20" height="20"><br>
+    <span class="smaller">JP</span></button>
+    <button class="btn btn-sm text-white px-3" type="button" data-bs-toggle="modal" data-bs-target="#modal_menu"> <img src="files/img/menu_icon.svg" alt="" width="20" height="20"><br>
+    <span class="smaller">MENU</span></button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+      <li><a class="dropdown-item" href="#">日本語</a></li>
+      <li><a class="dropdown-item" href="#">English</a></li>
+      <li><a class="dropdown-item" href="#">中文</a></li>
+    </ul>
+  </div>
+</header>
+<div class="modal fade" id="modal_menu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-primary text-white">
+      <div class="modal-header">
+        <h5 class="modal-title d-flex align-items-center" id="exampleModalLabel"> <img src="files/img/main_logo.svg" alt="" width="40" height="40">
+          <div class="small lh-sm ps-1">FISHING PASSPORT</div>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-grid gap-2 border-bottom pb-3"> <a href="##" class="btn text-white">HOME</a><a href="##" class="btn text-white">マイページ</a><a href="##" class="btn text-white">ご利用規約</a> <a href="##" class="btn text-white">当サイトについて</a><a href="##" class="btn text-white">対応サイト一覧</a> </div>
+        <div class="d-grid gap-2 py-3"> <a href="##"><img src="files/img/banner01.png" alt="" width="1381" height="212" class="img-fluid"></a> </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb small px-2 py-1">
+    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">マイページ</li>
+  </ol>
+</nav>
+<main>
+  <article>
+    <section class="container fspp_border_bottom mb-3">
+      <div class="card fspp_passport col-lg-8 m-auto">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start"> <img src="files/img/main_logo_gold.svg" alt="" width="50" height="50"> <span class="d-flex align-items-top lh-1"><img src="files/img/icon02.svg" alt="" width="40" height="25">FISHING PASSPORT<img src="files/img/icon02.svg" alt="" width="40" height="25"></span> <img src="files/img/main_logo_gold.svg" alt="" width="50" height="50"> </div>
+          <div class="row justify-content-evenly">
+            <div class="col-5 col-md-4 col-xl-3">
+              <div class="position-relative"> <img src="files/img/sample.webp" class="user_img" alt=""> <i class="bi bi-camera-fill" style="position: absolute;bottom:8%;right:10%;font-size:200%;color:rgba(255,255,255,0.6);line-height:1;"></i></div>
+            </div>
+            <div class="col px-0 col-md-4">
+              <dl class="mb-0 mb-sm-2 d-flex align-items-end">
+                <dt class="me-1 smaller fw-normal">釣人番号 ／</dt>
+                <dd class="mb-0">TR4824123</dd>
+              </dl>
+              <div class="d-flex mb-sm-2">
+                <dl class="mb-0 me-3 d-flex align-items-end">
+                  <dt class="me-1 smaller fw-normal">姓 ／</dt>
+                  <dd class="mb-0">佐野</dd>
+                </dl>
+                <dl class="mb-0 d-flex align-items-end">
+                  <dt class="me-1 smaller fw-normal">名 ／</dt>
+                  <dd class="mb-0">マサト</dd>
+                </dl>
+              </div>
+              <dl class="mb-0 mb-sm-2 d-flex align-items-end">
+                <dt class="me-1 smaller fw-normal">国 籍 ／</dt>
+                <dd class="mb-0">JAPAN 日本</dd>
+              </dl>
+              <dl class="mb-0 mb-sm-2 d-flex align-items-end">
+                <dt class="me-1 smaller fw-normal">発行年月日 ／</dt>
+                <dd class="mb-0">yyyy-mm-dd</dd>
+              </dl>
+              <dl class="mb-0 mb-sm-2 d-flex align-items-end">
+                <dt class="me-1 smaller fw-normal">有効期間満了日 ／</dt>
+                <dd class="mb-0">∞</dd>
+              </dl>
+              <ul class="p-0 mt-2 mt-sm-3 d-flex gap-2 flex-wrap">
+                <li class="d-block"><img src="files/img/badge03.svg" width="60" height="60" alt=""></li>
+                <li class="d-block"><img src="files/img/badge04.svg" width="60" height="60" alt=""></li>
+                <li class="d-block"><img src="files/img/badge05.svg" width="60" height="60" alt=""></li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-truncate mb-0 small">FP&lt;JPN&lt;&lt;マサト&lt;&lt;佐野&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
+            TR4824123&lt;&lt;&lt;00000000M0000&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</p>
+        </div>
+      </div>
+      <div class="gap-2 d-flex justify-content-end mt-2"><a href="mypage_edit.html" class="btn btn-outline-secondary btn-sm lh-1 px-3"><i class="bi bi-pen-fill pe-2"></i>編集</a></div>
+    </section>
+    <section class="container fspp_border_bottom">
+      <h4 class="fw-bold pt-3"><i class="bi bi-megaphone pe-2"></i>お知らせ</h4>
+      <ul class="ps-0 pb-4">
+        <li class="border-bottom d-block"> <a href="###" class="text-decoration-none d-flex justify-content-between align-items-center py-3">
+          <div>
+            <div class="d-flex align-items-center">
+              <time class="text-primary me-3">2023/01/01</time>
+              <span class="badge bg-primary">募集</span> </div>
+            <span class="text-body"> トリッパー 募集!　02.01-04 4名 </span> </div>
+          <div class="text-center small text-nowrap"> 見る<br>
+            <i class="bi bi-arrow-right fs-4 lh-1 px-2"></i> </div>
+          </a> </li>
+        <li class="border-bottom d-block"> <a href="###" class="text-decoration-none d-flex justify-content-between align-items-center py-3">
+          <div>
+            <div class="d-flex align-items-center">
+              <time class="text-primary me-3">2023/01/01</time>
+              <span class="badge bg-primary">募集</span> </div>
+            <span class="text-body">Fishing Life 募集!　03.01-04 4名</span> </div>
+          <div class="text-center small text-nowrap"> 見る<br>
+            <i class="bi bi-arrow-right fs-4 lh-1 px-2"></i> </div>
+          </a> </li>
+        <li class="border-bottom d-block"> <a href="###" class="text-decoration-none d-flex justify-content-between align-items-center py-3">
+          <div>
+            <div class="d-flex align-items-center">
+              <time class="text-primary me-3">2023/01/01</time>
+              <span class="badge bg-primary">募集</span> </div>
+            <span class="text-body">文字が多い場合の文字が多い場合の文字が多い場合の文字が多い場合の文字が多い場合の文字が多い場合の文字が多い場合の文字が多い場合の文字が多い場合の文字が多い場合のFishing Life 募集!　03.01-04 4名</span> </div>
+          <div class="text-center small text-nowrap"> 見る<br>
+            <i class="bi bi-arrow-right fs-4 lh-1 px-2"></i> </div>
+          </a> </li>
+      </ul>
+    </section>
+    <section class="container py-3"> <a href="##" class="col-lg-8 m-auto d-block"><img src="files/img/banner01.png" alt="" width="1381" height="212" class="img-fluid my-3"></a> <a href="##" class="col-lg-8 m-auto d-block"><img src="files/img/banner01.png" alt="" width="1381" height="212" class="img-fluid my-3"></a> </section>
+  </article>
+</main>
+<footer class="bg-primary text-center"> <img src="files/img/main_logo_gold.svg" alt="" width="80" height="80" class="mb-2">
+  <p class="small text-success">FISHING PASSPORT</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
