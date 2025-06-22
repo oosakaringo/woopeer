@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>マイページ　CLINIC PRO クリニック・プロ　クリニック商材マッチングサイト</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="マイページ　CLINIC PRO クリニック・プロ　クリニック商材マッチングサイト">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Noto+Sans+JP:wght@400;600&display=swap');
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+html:not(.offcanvasOP) {
+  scroll-padding-top: 70px
+}
+header {
+  background-image: url("files/img/bg_header.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header-breadcrumb {
+  top: 70px;
+  z-index: 10;
+  height: 50px;
+}
+.main-img {
+  height: 50vmin;
+}
+.max-2000 {
+  max-width: 2000px;
+}
+.user-img {
+  margin-top: max(-7vmax, -100px);
+  width: min(14vmax, 200px)
+}
+.border-transparent {
+  border-color: transparent!important;
+  overflow: hidden;
+  background-position-x: 10%;
+  background-size: 120%;
+}
+.grid-1-2-3, .grid-1-1-2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.badge-square {
+  height: fit-content;
+  aspect-ratio: 1/1;
+}
+.page-link {
+  width: 2.5em;
+  line-height: 2.5em;
+  color: var(--bs-gray-800);
+  background-color: var(--bs-gray-300);
+}
+.page-item.active .page-link {
+  background-color: var(--bs-gray-800);
+}
+.footer-order >:nth-child(1) {
+  order: 3;
+}
+.footer-order >:nth-child(2) {
+  order: 4;
+}
+.footer-order >:nth-child(3) {
+  order: 1;
+}
+.footer-order >:nth-child(4) {
+  order: 2;
+}
+a.shadow:hover, button.shadow:hover {
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,0,0,.5)!important;
+  transition: 0.5s ease-out 0s;
+  z-index: 10
+}
+.cart-grid {
+  grid-template-columns: 30% 1fr;
+}
+.cart-grid > :nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.cart-grid > :nth-child(3) {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+.user-img {
+  margin-bottom: max(-5vmax, -80px);
+}
+.grid-1-2-3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (min-width:992px) {/*PC*/
+.cart-grid {
+  grid-template-columns: 40% 1fr;
+}
+.cart-grid > :nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.cart-grid > :nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.grid-1-2-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-1-1-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width:991px) {/*SP,TAB*/
+.list-border > :not(:last-child) {
+  border-bottom: thin solid var(--bs-gray-400);
+  padding-bottom: 16px;
+  margin-bottom: 16px
+}
+}
+
+@media (max-width:767px) {/*SP*/
+header {
+  background-size: auto 180%;
+  background-position: 50% 10%;
+}
+.list-border > :not(:last-child) {
+  padding-bottom: 8px;
+  margin-bottom: 8px
+}
+}
+</style>
+</head>
+
+<body>
+<header class="ps-2 top-0 w-100 position-sticky">
+  <div class="d-flex justify-content-between align-items-center move max-2000 mx-auto">
+    <div class="col-5 col-md-3 max-160 text-center mb-1"><span class="smaller fw-bold ffs-palt text-white">クリニック専用販売サイト-クリプロ</span> <img src="files/img/logo_clipro.svg" alt="" width="237.84" height="64" class="img-fluid"></div>
+    <div class="d-flex align-items-center gap-1"> <a href="###" class="text-decoration-none text-white smaller d-grid text-center gap-1"> <span>Login</span> <img src="files/img/icon_user.svg" alt="" width="72" height="24"> </a>
+      <button class="btn btn-sm px-1 text-white d-grid gap-1" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <span class="smaller">Language</span> <span class="d-flex align-items-center gap-1"> <img src="files/img/icon_language.svg" alt="" width="24" height="24"> <span>JP</span><i class="bi bi-chevron-down"></i> </span> </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+        <li><a class="dropdown-item" href="#">日本語</a></li>
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">中文簡体</a></li>
+      </ul>
+      <button class="btn py-2 px-3 lh-1 fs-3" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><img src="files/img/icon_hamburger.svg" alt="" width="32" height="32"></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-560 bg-success text-white" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1 justify-content-end">
+    <button type="button" class="btn p-0 text-white fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex justify-content-center mb-5 pb-4"> <a href="###" class="d-flex align-items-center flex-column pe-5 border-end text-white text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close"><img src="files/img/icon_plan_w.svg" alt="" width="60" height="60" class="mb-3"> <span class="small d-none d-sm-block">私はクリニックに</span> <span class="fs-5">提案したい</span></a>
+      <button type="button" class="btn d-flex align-items-center flex-column ps-5 p-0 text-white" data-bs-toggle="modal" data-bs-target="#modal-sale" data-bs-dismiss="offcanvas" aria-label="Close"> <img src="files/img/icon_sale_w.svg" alt="" width="60" height="60" class="mb-3"> <span class="small d-none d-sm-block">私はクリニックです</span> <span class="fs-5">販売したい</span> </button>
+    </div>
+    <div class="d-flex gap-3 justify-content-around flex-wrap mb-5"> <a href="###" class="btn col-10 col-md-5 text-primary rounded-pill bg-white" data-bs-dismiss="offcanvas" aria-label="Close">提案を探したい</a> <a href="###" class="btn col-10 col-md-5 text-primary rounded-pill border border-white" data-bs-dismiss="offcanvas" aria-label="Close"><span class="text-white">お問い合わせ</span></a> </div>
+    <div class="d-flex small justify-content-center"> <a href="####" class="text-decoration-none text-white d-block px-3 border-end" data-bs-dismiss="offcanvas" aria-label="Close" target="_blank" rel="noopener">運営会社（外部リンク）</a> <a href="####" class="text-decoration-none text-white d-block px-3" data-bs-dismiss="offcanvas" aria-label="Close">利用規約（汎用）</a> </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-sale" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center mb-3"> <img src="files/img/icon_sale_b.svg" alt="" width="80" height="60">
+          <div>For CLINIC</div>
+        </div>
+        <h5 class="text-center">私はクリニックです</h5>
+        <p class="col-10 mx-auto mb-4">当サイトはクリニック様専用です。新規会員登録後審査がございます。あらかじめご了承ください。</p>
+        <div class="text-center"> <a href="###" class="btn btn-success rounded-pill col-8 mb-3" data-bs-dismiss="modal" aria-label="Close">新規会員登録（無料）</a> <a href="###" class="btn btn-success rounded-pill col-8 mb-3" data-bs-dismiss="modal" aria-label="Close">ログインする</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header-breadcrumb position-sticky max-2000 mx-auto">
+  <div class="d-flex align-items-center justify-content-center gap-2 container h-100"> <span class="ffs-palt"> HOME / クリニックマイページ</span> </div>
+</div>
+<main>
+  <article>
+    <section>
+      <div class="bg-light">
+        <div class="position-relative max-2000 mx-auto"> <img src="files/img/mypage_top.jpg" alt="" width="2000" height="1333" class="img-cover w-100 main-img">
+          <button class="btn btn-dark px-2 py-1 position-absolute bottom-0 end-0 mb-3 me-3 max-120"><img src="files/img/icon_camera_w.svg" alt="" width="28" height="28" class="col-8"></button>
+        </div>
+      </div>
+      <div class="col-lg-8 mx-auto d-flex justify-content-center justify-content-md-start px-5">
+        <div class="position-relative user-img"><img src="files/img/user_01.jpg" alt="" width="500" height="500" class="img-cover w-100 square-h rounded-circle filter-drop-shadow">
+          <button class="btn p-0 position-absolute bottom-0 end-0 bg-gray-400 rounded-circle col-3 badge-square"><img src="files/img/icon_camera.svg" alt="" width="28" height="28" class="col-7"></button>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="text-center fw-bold fs-3 ls-1 ffs-palt mt-3 mb-4 pb-md-4">共立美容外科 新宿本店</h2>
+        <dl class="bg-success col-lg-11 mx-auto rounded-10 border border-5 border-transparent filter-drop-shadow">
+          <dt class="px-3 pb-2 pt-1 text-white fw-bold d-flex align-items-center fs-5 justify-content-between"><span class=" d-flex gap-2 align-items-center"><img src="files/img/icon_apply_w.svg" alt="" width="32" height="32">取り扱い申請中</span><span class="badge bg-danger">審査中</span></dt>
+          <dd class="bg-white mb-0 p-3 d-flex justify-content-center align-items-center gap-lg-5 gap-md-4 gap-3">
+            <div class="col-4 position-relative max-240"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"><img src="files/img/icon_new.svg" alt="" width="80" height="80" class="position-absolute top-0 start-0 col-4 h-auto" style="margin: -10px -16%"></div>
+            <div>
+              <h5 class="fw-bold">幹細胞培養上製 5ｇ</h5>
+              <p class="fw-bold text-primary mb-1">不死化幹細胞</p>
+              <p class="mb-0 fs-4">¥15,000</p>
+            </div>
+          </dd>
+        </dl>
+      </div>
+    </section>
+    <section>
+      <div class="container py-5">
+        <div class="col-lg-11 mx-auto">
+          <h3 class="fw-bold d-flex gap-3 align-items-center mb-4"><img src="files/img/icon_info.svg" alt="" width="60" height="60">お知らせ</h3>
+          <ul class="d-grid grid-1-1-2 ps-0 gap-lg-4 list-border mb-4">
+            <li class="d-flex align-items-center gap-2 gap-lg-4">
+              <div class="col-3 col-md-4"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"></div>
+              <div>
+                <div class="fw-bold text-primary fs-5">2023/10/12</div>
+                <div class="fs-5">商品●●が発売になりました。</div>
+              </div>
+            </li>
+            <li class="d-flex align-items-center gap-2 gap-lg-4">
+              <div class="col-3 col-md-4"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"></div>
+              <div>
+                <div class="fw-bold text-primary fs-5">2023/10/12</div>
+                <div class="fs-5">商品●●が発売になりました。</div>
+              </div>
+            </li>
+          </ul>
+          <a href="###" class="btn btn-success rounded-pill d-block mx-auto max-200">もっと見る</a> </div>
+      </div>
+    </section>
+    <section class="bg-light">
+      <div class="container py-5">
+        <div class="col-lg-11 mx-auto">
+          <h3 class="fw-bold d-flex gap-3 align-items-center mb-4"><img src="files/img/icon_history.svg" alt="" width="60" height="60">ご注文履歴</h3>
+          <div class="d-grid grid-1-1-2 ps-0 gap-3 gap-lg-4 mb-4"> <a href="####" class="d-flex align-items-center gap-3 gap-lg-4 text-body text-decoration-none bg-white shadow">
+            <div class="col-3 col-md-4 my-3 my-lg-0 ms-3 ms-lg-0"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"></div>
+            <div>
+              <div class="small">注文日：2023/10/12</div>
+              <div class="fw-bold"> 購入個数：1個</div>
+              <div class="fw-bold fs-5 my-1">幹細胞培養上製10g x 12</div>
+              <span class="bg-warning text-dark rounded-3 px-2 fw-bold small">在庫確認中</span> </div>
+            </a> <a href="####" class="d-flex align-items-center gap-3 gap-lg-4 text-body text-decoration-none bg-white shadow">
+            <div class="col-3 col-md-4 my-3 my-lg-0 ms-3 ms-lg-0"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"></div>
+            <div>
+              <div class="small">注文日：2023/10/12</div>
+              <div class="fw-bold"> 購入個数：1個</div>
+              <div class="fw-bold fs-5 my-1">幹細胞培養上製10g x 12</div>
+              <span class="bg-warning text-dark rounded-3 px-2 fw-bold small">在庫確認中</span> </div>
+            </a> </div>
+          <a href="###" class="btn btn-success rounded-pill d-block mx-auto max-200">もっと見る</a> </div>
+      </div>
+    </section>
+    <section>
+      <div class="container py-5">
+        <div class="col-lg-11 mx-auto">
+          <h3 class="fw-bold d-flex gap-3 align-items-center mb-4"><img src="files/img/icon_trading.svg" alt="" width="60" height="60">取引中の商品</h3>
+          <p>契約が成立し発注可能になった商品一覧です。購入する事が出来ます。</p>
+          <div class="d-grid ps-0 gap-3 mb-4 d-md-flex justify-content-between">
+            <button class="d-md-grid d-flex text-body text-decoration-none bg-white shadow border-0 p-0 small col-md-4 col-xl-3" data-bs-toggle="modal" data-bs-target="#modal-cart">
+            <div class="col-5 col-md-12 position-relative"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"> <span class="bg-primary text-white px-2 rounded-3 position-absolute top-0 start-0 mt-2 ms-2 fw-bold small">一般卸売</span> </div>
+            <div class="d-grid align-content-between col-7 col-md-12 h-100">
+              <div class="text-md-center text-start ps-3 pt-3">
+                <div><span class="bg-gray-600 text-white rounded-3 fw-bold px-3 py-1">納期：9/12以降</span></div>
+                <div class="fw-bold fs-6 my-1">幹細胞培養上製10g</div>
+                <div class="fw-bold text-primary">特徴：不死化幹細胞</div>
+                <div class="fs-4 mb-md-2">¥15,000</div>
+              </div>
+              <div class="bg-success fw-bold text-white py-1">発注する</div>
+            </div>
+            </button>
+            <button class="d-md-grid d-flex text-body text-decoration-none bg-white shadow border-0 p-0 small col-md-4 col-xl-3" data-bs-toggle="modal" data-bs-target="#modal-cart">
+            <div class="col-5 col-md-12 position-relative"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"> <span class="bg-primary text-white px-2 rounded-3 position-absolute top-0 start-0 mt-2 ms-2 fw-bold small">一般卸売</span> </div>
+            <div class="d-grid align-content-between col-7 col-md-12 h-100">
+              <div class="text-md-center text-start ps-3 pt-3">
+                <div><span class="bg-gray-600 text-white rounded-3 fw-bold px-3 py-1">納期：9/12以降</span></div>
+                <div class="fw-bold fs-6 my-1">幹細胞培養上製10g</div>
+                <div class="fw-bold text-primary">特徴：不死化幹細胞</div>
+                <div class="fs-4 mb-md-2">¥15,000</div>
+              </div>
+              <div class="bg-success fw-bold text-white py-1">発注する</div>
+            </div>
+            </button>
+            <button class="d-md-grid d-flex text-body text-decoration-none bg-white shadow border-0 p-0 small col-md-4 col-xl-3" data-bs-toggle="modal" data-bs-target="#modal-cart">
+            <div class="col-5 col-md-12 position-relative"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"> <span class="bg-white text-primary px-2 rounded-3 position-absolute top-0 start-0 mt-2 ms-2 fw-bold small">直送販売</span> </div>
+            <div class="d-grid align-content-between col-7 col-md-12 h-100">
+              <div class="text-md-center text-start ps-3 pt-3">
+                <div><span class="bg-gray-600 text-white rounded-3 fw-bold px-3 py-1">納期：9/12以降</span></div>
+                <div class="fw-bold fs-6 my-1">幹細胞培養上製10g</div>
+                <div class="fw-bold text-primary">特徴：不死化幹細胞</div>
+                <div class="fs-4 mb-md-2">¥15,000</div>
+              </div>
+              <div class="bg-success fw-bold text-white py-1">発注する</div>
+            </div>
+            </button>
+          </div>
+          <nav aria-label="ページネーション">
+            <ul class="pagination justify-content-center gap-2 text-center">
+              <li class="page-item disabled"> <a class="page-link rounded-circle badge-square border-0 p-0" href="#" aria-label="前へ"><i class="bi bi-chevron-left"></i></a> </li>
+              <li class="page-item active"><a class="page-link rounded-circle badge-square border-0 p-0" href="#">1</a></li>
+              <li class="page-item"> <a class="page-link rounded-circle badge-square border-0 p-0" href="#">2</a> </li>
+              <li class="page-item"><a class="page-link rounded-circle badge-square border-0 p-0" href="#">3</a></li>
+              <li class="page-item"><a class="page-link rounded-circle badge-square border-0 p-0" href="#">4</a></li>
+              <li class="page-item"><a class="page-link rounded-circle badge-square border-0 p-0" href="#">5</a></li>
+              <li class="page-item"> <a class="page-link rounded-circle badge-square border-0 p-0" href="#" aria-label="次へ"><i class="bi bi-chevron-right"></i></a> </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<div class="modal fade" id="modal-cart" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0 pb-2">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="text-center mb-3 small"> <img src="files/img/icon_cart.svg" alt="" width="60" height="50">
+          <div>For CLINIC</div>
+        </div>
+        <h5 class="text-center fw-bold mb-4">商品を購入する</h5>
+        <div class="d-grid cart-grid gap-3 mb-4">
+          <div class="position-relative"><img src="files/img/product_01.webp" alt="" width="800" height="800" class="img-fluid"> <span class="bg-primary badge position-absolute top-0 start-0 mt-1 ms-1">一般卸売</span> </div>
+          <div>
+            <div class="fw-bold fs-5 lh-1 mb-1">幹細胞培養上製10g</div>
+            <div class="fw-bold text-primary mb-1">特徴：不死化幹細胞</div>
+            <div><span class="bg-gray-600 text-white rounded-3 fw-bold px-3 py-1 d-inline-block small">納期：9/12以降</span></div>
+            <div class="fs-4 text-end lh-sm">¥15,000</div>
+          </div>
+          <div>
+            <div class="d-flex gap-2 mb-2">
+              <div class="fw-bold d-flex fs-5 justify-content-between col-9 bg-gray-800 text-white px-3 align-items-center"><span>卸売価格</span><span>¥10,000</span></div>
+              <select class="form-select bg-gray-300 rounded-0 border-0 h-100" aria-label="Default select example">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+            <ul class="p-0 text-end mb-2">
+              <li class="d-block">送料：¥1,000</li>
+              <li class="d-block">税8%：¥0</li>
+              <li class="d-block">税10%：<span class="js_tax_10">¥1,000</span></li>
+            </ul>
+            <div class="fw-bold d-flex fs-5 justify-content-between bg-gray-800 text-white px-3"><span>合計</span><span class="js-total">¥12,000</span></div>
+          </div>
+        </div>
+        <div class="form-check d-grid justify-content-center mb-4">
+          <label class="form-check-label" for="check-cart-1">
+            <input class="form-check-input" type="checkbox" value="" id="check-cart-1">
+            販売条件に同意します。 </label>
+          <label class="form-check-label" for="check-cart-2">
+            <input class="form-check-input" type="checkbox" value="" id="check-cart-2">
+            注文内容に間違いはありません。 </label>
+        </div>
+        <button class="btn btn-lg btn-success rounded-pill col-8 mb-3 mx-auto d-block disabled js-submit" data-bs-target="#modal-cart-completed" data-bs-toggle="modal" data-bs-dismiss="modal">注文確定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-cart-completed" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0 pb-2">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="text-center mb-3 small"> <img src="files/img/icon_cart.svg" alt="" width="60" height="50">
+          <div>For CLINIC</div>
+        </div>
+        <h5 class="text-center fw-bold mb-4">商品を購入する</h5>
+        <p class="d-flex justify-content-center mb-4">ご注文ありがとうございました。<br>
+          担当者が在庫などを確認いたします。<br>
+          在庫などに問題がある場合はご連絡します。</p>
+        <button class="btn btn-lg btn-outline-success rounded-pill text-body col-8 mb-3 mx-auto d-block" data-bs-dismiss="modal"><span>閉じる</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="bg-gray-800 text-white">
+  <div class="d-lg-flex py-5 ps-5 px-lg-0 container justify-content-between footer-order">
+    <ul class="footer-link ps-0 mb-0">
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>HOME</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>クリニックに提案したい</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>商材を販売したい</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>提案を探したい</a></li>
+    </ul>
+    <ul class="footer-link ps-0 mb-5">
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>利用規約（汎用）</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>お問合せ（汎用）</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>運営会社（外部リンク）</a></li>
+    </ul>
+    <div class="pb-3"><img src="files/img/logo_clipro.svg" alt="" width="237.84" height="64" class="img-fluid"></div>
+    <dl class="mb-0 me-4 me-lg-5">
+      <dt class="fs-3 fw-normal ls-1 mb-2">SOLID Inc.</dt>
+      <dd class="mb-0">〒155-0031<br>
+        東京都世田谷区北沢２-３０-８<br>
+        クレセント下北沢２Ｆ</dd>
+    </dl>
+  </div>
+  <p class="text-center small py-3 mb-0 border-top">Copyright&copy;aaaaaaa.All rights reserved.</p>
+</footer>
+<div id="menu_top" class="move js-menutop col-3 max-120 pe-4" style="z-index: 1040">
+  <div class="bg-success text-white badge-square d-flex align-items-center justify-content-center rounded-circle flex-column filter-drop-shadow"> <img src="files/img/icon_up.svg" alt="" width="16" height="16" class="img-fluid"> TOP </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+const arg = new Object;
+const pair=location.search.substring(1).split('&');
+for(i=0;pair[i];i++) {
+var kv = pair[i].split('=');
+arg[kv[0]]=kv[1];
+}
+if(arg['login']=="true"){
+  document.getElementById('js_flg_login').remove();
+}
+
+const e_html=document.querySelector('html');
+const e_offcanvas=document.querySelector('[data-bs-toggle="offcanvas"]');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+e_offcanvas.addEventListener('click',function(){
+  e_html.classList.add('offcanvasOP');
+});
+console.log(a_offcanvasHash);
+a_offcanvasHash.forEach(function(e){
+  e.addEventListener('click',function(){
+    setTimeout(function(){
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+const e_headerBreadcrumb=document.querySelector('.header-breadcrumb');
+
+let r_footer;
+window.onscroll = function () {  
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if(window.pageYOffset > 5){
+    e_headerBreadcrumb.classList.add('blur-w');
+  }else{
+    e_headerBreadcrumb.classList.remove('blur-w');
+  }
+  if ((window.pageYOffset > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+
+js_menutop.addEventListener("click", backToTop);
+function backToTop() {
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+}
+
+/*カート*/
+const v_price=10000;
+const v_postage=1000;
+const v_tax_ratio=0.1;
+const e_modalCart=document.getElementById('modal-cart');
+const e_formSelect=e_modalCart.querySelector('select');
+const e_jsTotal=e_modalCart.querySelector('.js-total');
+const e_jsTax10=e_modalCart.querySelector('.js_tax_10');
+e_formSelect.addEventListener('change', (e)=>{
+  let v_sum=v_price * e.target.value;
+  let v_tax=Math.floor(v_sum*v_tax_ratio);
+  e_jsTax10.innerHTML="¥"+f_separator3(v_tax);
+  e_jsTotal.innerHTML="¥"+f_separator3(v_sum + v_tax + v_postage);
+});
+function f_separator3(v_n){
+  return String(v_n).replace( /(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+}
+const e_checkCart1 = document.getElementById('check-cart-1');
+const e_checkCart2 = document.getElementById('check-cart-2');
+const e_jsSubmit = document.querySelector('.js-submit');
+const updateSubmitButtonState = () => {
+  e_jsSubmit.classList.toggle('disabled', !(e_checkCart1.checked && e_checkCart2.checked));
+};
+e_checkCart1.addEventListener('change', updateSubmitButtonState);
+e_checkCart2.addEventListener('change', updateSubmitButtonState);
+updateSubmitButtonState();
+
+</script>
+</body>
+</html>

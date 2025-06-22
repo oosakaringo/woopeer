@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>JDMSOご訪問キャンペーン</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="JDMSOご訪問キャンペーン">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Noto+Sans+JP:wght@400;600&display=swap');
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.text-accent2 {
+  color: #ffcf00;
+}
+.ff-akshar {
+  font-family: 'Akshar', sans-serif;
+}
+.bg-top {
+  background-image: repeating-linear-gradient(135deg, #fff000, #fff000 15px, transparent 15px, transparent 30px);
+  background-color: #fff67f
+}
+.collapsed .bi-chevron-up {
+  transform: rotate(-180deg);
+}
+.text-marker01 {
+  background-image: linear-gradient(transparent calc(1.4em - 16px), var(--bs-accent) 10px);
+  line-height: 1.4;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.text-marker02 {
+  position: relative;
+  padding-bottom: 0.8em;
+  margin-bottom: 0.5em
+}
+.text-marker02::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 50px;
+  background-color: var(--bs-primary);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -25px
+}
+.blur-primary {
+  box-shadow: 0 0 20px #fff, 0 0 10px var(--bs-success);
+}
+.font-palt {
+  font-feature-settings: 'palt';
+}
+.js-entry .disabled > :not(h4) {
+  opacity: 0.5;
+  background-color: #999;
+}
+.js-entry .disabled .js-form {
+  display: none;
+}
+.js-typing {
+  visibility: hidden;
+}
+.js-typing::after {
+  content: "|";
+  animation: typinganime 0.8s ease infinite;
+}
+.js-roulette {
+  grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+}
+.js-roulette span {
+  width: 2em;
+  line-height: 2;
+  text-align: center;
+}
+.js-roulette span:not(.bd-gray-500):not(.bg_roulette_A):not(.bg_roulette_B):not(.bg_roulette_C) {
+  border-radius: 100%;
+}
+.js-roulette .roulette-on {
+  background-color: #fff;
+}
+.js-roulette .roulette-on.bd-gray-500 {
+  background-color: var(--bs-gray-300)!important;
+}
+.js-roulette span.bg_roulette_A,.js-roulette span.bg_roulette_B,.js-roulette span.bg_roulette_C {
+  animation: blink 0.2s 5;
+}
+.bg_roulette_A{
+  background-color: var(--bs-accent);
+  }
+.bg_roulette_B{
+  background-color: #c3ecd1;
+  }
+.bg_roulette_C{
+  background-color: #c4e7ff;
+  }
+.rotation-banner {
+  width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.rotation-banner > .rotation-banner-inner {
+  display: flex;
+  align-items: center;
+}
+.rotation-banner img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 80px;
+  min-height: 50px;
+  padding: 1em;
+}
+#modal-company .modal-body a img {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  max-width: 220px;
+  max-height: 70px;
+  padding: 10px;
+}
+@keyframes blink {
+0% {
+background-color: transparent;
+}
+50% {
+background-color: #fff;
+transform:scale(1.5);
+}
+100% {
+background-color: transparent;
+}
+}
+@keyframes carousel-animation {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(-100%);
+}
+}
+@keyframes typinganime {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+@media (min-width:992px) {
+}
+</style>
+</head>
+
+<body>
+<div class="bg-primary text-center smaller p-1 text-white">日本流通管理支援機構（株）は偽造防止と、産地証明を行う会社です。</div>
+<header class="sticky-top">
+  <div class="d-flex justify-content-between align-items-center px-2 py-1">
+    <div class="max-160"> <img src="files/img/logo_jdmso_kabu.png" alt="" width="457" height="143" class="img-fluid"></div>
+    <button class="btn bd-gray-200 rounded-circle p-2 lh-1 fs-2 text-success" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#modal_menu"><i class="bi bi-list"></i></button>
+  </div>
+  <div class="text-center bd-gray-800 text-accent small py-1 ls-1"><span class="js-typing">11:52分  エントリーありがとうございます。</span></div>
+</header>
+<div class="offcanvas offcanvas-end" id="modal_menu" tabindex="-1" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header border-bottom border-color-nomal">
+    <h5 class="mb-0">MENU</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-bod">
+    <div class="list-group list-group-flush border-bottom border-color-nomal"> <a href="#####" class="list-group-item bg-transparent">お問い合わせ</a> <a href="#####" class="list-group-item bg-transparent">PRIVACY POLICY</a> </div>
+  </div>
+</div>
+<main>
+  <article class="font-palt ls-1">
+    <h2 class="text-center bg-danger text-white small fw-bold py-1 ls-2 m-0">日本の食品輸出EXPO2023</h2>
+    <section class="bg-top pt-2 pb-4 pb-sm-5">
+      <h2 class="max-680 mx-auto px-4 position-relative mb-sm-2" style="margin-bottom: max(-4vmin,-20px);z-index: 1;"> <img src="files/img/top01.svg" alt="本日はご訪問ありがとうございます。産地証明＆流通管理のJDMSOブースご訪問キャンペーン" width="188" height="150" class="w-100 h-100"> </h2>
+      <div class="max-680 mx-auto px-1 position-relative mb-sm-2" style="margin-bottom: max(-4vmin,-20px)"> <img src="files/img/top02.svg" alt="タグをスキャンして豪華賞品を当てよう！" width="188" height="150" class="w-100 h-100"> </div>
+      <div class="max-680 mx-auto px-1 mb-sm-2 mb-lg-0"> <img src="files/img/top03.svg" alt="エントリー期間　6月21日（水）〜23日（金）" width="188" height="150" class="w-100 h-100"> </div>
+      <div class="container d-flex justify-content-between px-0 align-items-center mb-sm-4">
+        <div class="col-3 mb-4 mb-lg-0"> <img src="files/img/top04.webp" alt="" width="432" height="488" class="img-fluid"></div>
+        <div style="margin: 0 -20px;width: 70%;" class="max-600"> <img src="files/img/top06.svg" alt="" width="300" height="140" class="img-fluid w-100"></div>
+        <div class="col-3  mb-4 mb-lg-0"> <img src="files/img/top05.webp" alt="" width="417" height="433" class="img-fluid"></div>
+      </div>
+      <a href="####" class="btn bg-primary text-white fw-bold btn-lg rounded-pill d-block col-8 mx-auto max-400 position-relative ls-2 fs-1 py-1"> <img src="files/img/icon-down.svg" alt="" width="150" height="150" class="position-absolute start-0 top-0 ms-4 h-100" style="width: 7%">ENTRY</a> </section>
+    <section class="bd-gray-200 pt-5 pb-4 px-3-">
+      <div class="mx-auto container">
+        <h3 class="fs-2 text-center ld-s-1 fw-bold mb-4">抽選結果</h3>
+        <div class="d-flex"><span class="bg_roulette_A px-3 py-1 smaller">A賞</span><span class="bg_roulette_B px-3 py-1 smaller">B賞</span><span class="bg_roulette_C px-3 py-1 smaller">C賞</span></div>
+        <div class="js-roulette d-grid smaller ls-0 bd-gray-400"> </div>
+      </div>
+    </section>
+    <section class="bd-gray-200 pt-5 pb-4 px-3">
+      <div class="max-600 mx-auto js-entry">
+        <h3 class="fs-2 text-center ld-s-1 fw-bold mb-4">エントリー手順</h3>
+        <div class="bg-white rounded-5 overflow-hidden mb-3">
+          <h4 class="bg-primary text-white ps-3 ps-md-5 py-2 fs-6 fw-bold mb-0">step 01.ボタンを押してください</h4>
+          <div class="p-3 px-md-5">
+            <button class="btn bg-success text-white fw-bold btn-lg rounded-pill d-block col-9 mx-auto max-400 position-relative ls-2 fs-5 my-3" onClick="f_step(1)">当選通知</button>
+          </div>
+        </div>
+        <div class="bg-white rounded-5 overflow-hidden mb-3 disabled">
+          <h4 class="bg-primary text-white ps-3 ps-md-5 py-2 fs-6 fw-bold mb-0">step 02.エントリーフォームを送る</h4>
+          <div class="p-3 px-md-5 small">
+            <p>エントリー参加用Emailを送信します。届いたメールのURLをクリックしてエントリーしてね！</p>
+            <div class="mb-3 js-form">
+              <label for="entry-mail" class="form-label">メールアドレス</label>
+              <div class="input-group">
+                <input type="email" class="form-control" id="entry-mail" placeholder="" required>
+                <button class="btn bg-success text-white fw-bold" type="button" onClick="f_step(2)">送信</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-5 overflow-hidden mb-3 disabled">
+          <h4 class="bg-primary text-white ps-3 ps-md-5 py-2 fs-6 fw-bold mb-0">step 03.必要事項を入力</h4>
+          <div class="p-3 px-md-5 small">
+            <p>必要事項を入力してください</p>
+            <div class="mb-3 js-form">
+              <label for="entry-nickname" class="form-label">ニックネーム</label>
+              <input type="text" class="form-control mb-2" id="entry-nickname" placeholder="" required>
+              <div>
+                <label class="small fw-bold">性別</label>
+                <div class="d-flex gap-3 mb-2">
+                  <input name="gender" type="radio" class="btn-check" id="gender_male" value="gender_male" required>
+                  <label class="btn btn-outline-success btn-sm" for="gender_male">男性</label>
+                  <input name="gender" type="radio" class="btn-check" id="gender_female" value="gender_female" required>
+                  <label class="btn btn-outline-success btn-sm" for="gender_female">女性</label>
+                </div>
+              </div>
+              <label class="small fw-bold">生年月日</label>
+              <div class="d-flex gap-2 mb-3">
+                <select class="form-select" name="year" required>
+                  <option value="" disabled="" hidden="">年</option>
+                  <option value="1920">1920年</option>
+                  <option value="1921">1921年</option>
+                  <option value="1922">1922年</option>
+                  <option value="1923">1923年</option>
+                  <option value="1924">1924年</option>
+                  <option value="1925">1925年</option>
+                  <option value="1926">1926年</option>
+                  <option value="1927">1927年</option>
+                  <option value="1928">1928年</option>
+                  <option value="1929">1929年</option>
+                  <option value="1930">1930年</option>
+                  <option value="1931">1931年</option>
+                  <option value="1932">1932年</option>
+                  <option value="1933">1933年</option>
+                  <option value="1934">1934年</option>
+                  <option value="1935">1935年</option>
+                  <option value="1936">1936年</option>
+                  <option value="1937">1937年</option>
+                  <option value="1938">1938年</option>
+                  <option value="1939">1939年</option>
+                  <option value="1940">1940年</option>
+                  <option value="1941">1941年</option>
+                  <option value="1942">1942年</option>
+                  <option value="1943">1943年</option>
+                  <option value="1944">1944年</option>
+                  <option value="1945">1945年</option>
+                  <option value="1946">1946年</option>
+                  <option value="1947">1947年</option>
+                  <option value="1948">1948年</option>
+                  <option value="1949">1949年</option>
+                  <option value="1950">1950年</option>
+                  <option value="1951">1951年</option>
+                  <option value="1952">1952年</option>
+                  <option value="1953">1953年</option>
+                  <option value="1954">1954年</option>
+                  <option value="1955">1955年</option>
+                  <option value="1956">1956年</option>
+                  <option value="1957">1957年</option>
+                  <option value="1958">1958年</option>
+                  <option value="1959">1959年</option>
+                  <option value="1960">1960年</option>
+                  <option value="1961">1961年</option>
+                  <option value="1962">1962年</option>
+                  <option value="1963">1963年</option>
+                  <option value="1964">1964年</option>
+                  <option value="1965">1965年</option>
+                  <option value="1966">1966年</option>
+                  <option value="1967">1967年</option>
+                  <option value="1968">1968年</option>
+                  <option value="1969">1969年</option>
+                  <option value="1970">1970年</option>
+                  <option value="" disabled="" selected="">年</option>
+                  <option value="1971">1971年</option>
+                  <option value="1972">1972年</option>
+                  <option value="1973">1973年</option>
+                  <option value="1974">1974年</option>
+                  <option value="1975">1975年</option>
+                  <option value="1976">1976年</option>
+                  <option value="1977">1977年</option>
+                  <option value="1978">1978年</option>
+                  <option value="1979">1979年</option>
+                  <option value="1980">1980年</option>
+                  <option value="1981">1981年</option>
+                  <option value="1982">1982年</option>
+                  <option value="1983">1983年</option>
+                  <option value="1984">1984年</option>
+                  <option value="1985">1985年</option>
+                  <option value="1986">1986年</option>
+                  <option value="1987">1987年</option>
+                  <option value="1988">1988年</option>
+                  <option value="1989">1989年</option>
+                  <option value="1990">1990年</option>
+                  <option value="1991">1991年</option>
+                  <option value="1992">1992年</option>
+                  <option value="1993">1993年</option>
+                  <option value="1994">1994年</option>
+                  <option value="1995">1995年</option>
+                  <option value="1996">1996年</option>
+                  <option value="1997">1997年</option>
+                  <option value="1998">1998年</option>
+                  <option value="1999">1999年</option>
+                  <option value="2000">2000年</option>
+                  <option value="2001">2001年</option>
+                  <option value="2002">2002年</option>
+                  <option value="2003">2003年</option>
+                  <option value="2004">2004年</option>
+                  <option value="2005">2005年</option>
+                  <option value="2006">2006年</option>
+                  <option value="2007">2007年</option>
+                  <option value="2008">2008年</option>
+                  <option value="2009">2009年</option>
+                  <option value="2010">2010年</option>
+                  <option value="2011">2011年</option>
+                  <option value="2012">2012年</option>
+                  <option value="2013">2013年</option>
+                  <option value="2014">2014年</option>
+                  <option value="2015">2015年</option>
+                  <option value="2016">2016年</option>
+                  <option value="2017">2017年</option>
+                  <option value="2018">2018年</option>
+                  <option value="2019">2019年</option>
+                  <option value="2020">2020年</option>
+                  <option value="2021">2021年</option>
+                  <option value="2022">2022年</option>
+                  <option value="2023">2023年</option>
+                </select>
+                <select class="form-select" name="month" required>
+                  <option value="" disabled="" selected="" hidden="">月</option>
+                  <option value="1">1月</option>
+                  <option value="2">2月</option>
+                  <option value="3">3月</option>
+                  <option value="4">4月</option>
+                  <option value="5">5月</option>
+                  <option value="6">6月</option>
+                  <option value="7">7月</option>
+                  <option value="8">8月</option>
+                  <option value="9">9月</option>
+                  <option value="10">10月</option>
+                  <option value="11">11月</option>
+                  <option value="12">12月</option>
+                </select>
+                <select class="form-select" name="day" required>
+                  <option value="" disabled="" selected="" hidden="">日</option>
+                  <option value="1">1日</option>
+                  <option value="2">2日</option>
+                  <option value="3">3日</option>
+                  <option value="4">4日</option>
+                  <option value="5">5日</option>
+                  <option value="6">6日</option>
+                  <option value="7">7日</option>
+                  <option value="8">8日</option>
+                  <option value="9">9日</option>
+                  <option value="10">10日</option>
+                  <option value="11">11日</option>
+                  <option value="12">12日</option>
+                  <option value="13">13日</option>
+                  <option value="14">14日</option>
+                  <option value="15">15日</option>
+                  <option value="16">16日</option>
+                  <option value="17">17日</option>
+                  <option value="18">18日</option>
+                  <option value="19">19日</option>
+                  <option value="20">20日</option>
+                  <option value="21">21日</option>
+                  <option value="22">22日</option>
+                  <option value="23">23日</option>
+                  <option value="24">24日</option>
+                  <option value="25">25日</option>
+                  <option value="26">26日</option>
+                  <option value="27">27日</option>
+                  <option value="28">28日</option>
+                  <option value="29">29日</option>
+                  <option value="30">30日</option>
+                  <option value="31">31日</option>
+                </select>
+              </div>
+              <div>
+                <label for="form_userimg" class="form-label">ご自身の写真をアップしてください</label>
+                <input class="form-control mb-2" type="file" id="form_userimg" onChange="f_imgChange(this)" required>
+                <canvas width="1200" height="1200" class="max-280 border mx-auto d-block mb-3 js-canvas"></canvas>
+                <input type="hidden" id="send_userimg">
+              </div>
+              <button class="btn bg-success text-white fw-bold btn-lg rounded-pill d-block col-9 mx-auto max-400 position-relative ls-2 fs-5 my-3" type="button" onClick="f_sendUserData()">送信</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-5 overflow-hidden mb-3 disabled">
+          <h4 class="bg-primary text-white ps-3 ps-md-5 py-2 fs-6 fw-bold mb-0">STEP4 .申込完了</h4>
+          <div class="p-3 px-md-5 small">
+            <p>この度はお申込みありがとうございました。
+              当選はイベント終了後、2023年6月27日（火）に当選者さまにご連絡致します。</p>
+          </div>
+        </div>
+        <dl class="smaller">
+          <dt>■注意事項</dt>
+          <dd class="mb-0">※発送先は日本になります。日本でのお受け取りができる方限定となります。</dd>
+          <dd class="mb-0">※会場で弊社からタグやタグが付いた物をお受け取り頂いた方が参加可能です。</dd>
+          <dd class="mb-0">※おひとり様１回となります。</dd>
+        </dl>
+      </div>
+    </section>
+    <section class="bg-white pt-5 pb-4 px-3">
+      <div class="max-600 mx-auto">
+        <h3 class="fs-2 text-center ld-s-1 fw-bold mb-4">FAQ</h3>
+        <dl>
+          <dt class="btn collapsed bd-gray-200 rounded-5 text-success d-flex align-items-center p-2 px-3 justify-content-between fw-bold" data-bs-toggle="collapse" data-bs-target="#faq-01" aria-expanded="false" aria-controls="faq-01"><span class="d-flex align-items-center pe-2"><span class="fs-3 pe-3">Q</span><span class="small text-start">何故、QRやNFC/RFIDで偽造防止はダメですか？</span></span><i class="bi bi-chevron-up move"></i></dt>
+          <dd id="faq-01" class="accordion-collapse collapse px-3 pb-3 small" aria-labelledby="faq-01">QRコードやNFC/RFIDなどの技術単体では偽造防止を完全に保証することはできません。それぞれの技術には制約や脆弱性が存在し、適切なセキュリティ対策との組み合わせが必要です。もちろん、それぞれの技術には利点もありますが、完全な偽造防止を求める場合は、より包括的なアプローチが必要となります。</dd>
+        </dl>
+        <dl>
+          <dt class="btn collapsed bd-gray-200 rounded-5 text-success d-flex align-items-center p-2 px-3 justify-content-between fw-bold" data-bs-toggle="collapse" data-bs-target="#faq-02" aria-expanded="false" aria-controls="faq-02"><span class="d-flex align-items-center pe-2"><span class="fs-3 pe-3">Q</span><span class="small text-start">ブロックチェーンを使えばいいのでは？</span></span><i class="bi bi-chevron-up move"></i></dt>
+          <dd id="faq-02" class="accordion-collapse collapse px-3 pb-3 small" aria-labelledby="faq-02">ブロックチェーンの利用には以下の注意点があります。まず、コストとスケーラビリティに課題があり、大規模な処理に時間やコストがかかる可能性があります。また、ブロックチェーンのセキュリティはネットワーク全体に依存しており、スマートコントラクトの脆弱性やバグがリスクとなります。さらに、人間の要素も重要で、鍵の管理やアクセス制御に注意を払う必要があります。ただし、ブ　ロックチェーン単体では完全な偽造防止は不可能であり、他のセキュリティ対策との組み合わせが必要です。総合的なアプローチを取ることが重要です。</dd>
+        </dl>
+      </div>
+    </section>
+    <section class="bg-light pt-5 px-3 position-relative">
+      <div class="max-600 mx-auto text-center position-relative pb-4">
+        <div class="position-absolute bottom-0 start-0 w-100"> <img loading="lazy" src="files/img/img11.svg" alt="" width="84" height="150" style="max-height: 360px;margin-left: 3%;width: 45%;height: 50%"></div>
+        <p class="fs-4 fw-bold"><span class="text-marker01">偽造防止判定してみませんか？</span></p>
+        <h3 class="display-3 fw-bold ls-1 mb-3">偽造判定App</h3>
+        <p>偽造防止判定は世界中で使われる<br>
+          判定ソフトを使用します。<br>
+          下記は、世界中のストアで公開されており<br>
+          ダウンロードが可能です。</p>
+        <div class="d-flex gap-3 col-10 mx-auto max-360 mb-4"> <a href="###"> <img loading="lazy" src="files/img/app_store.svg" alt="" width="300" height="110" class="img-fluid"></a> <a href="###"> <img loading="lazy" src="files/img/google_play.svg" alt="" width="300" height="110" class="img-fluid"></a> </div>
+        <div class="bg-white rounded-3 border border-4 border-dark p-3 d-flex align-items-center mb-4">
+          <div class="col-8">
+            <p class="fw-bold fs-5 mb-2"><span class="text-danger fs-4 ls-0">全世界で800社以上</span>に<br>
+              採用されました！</p>
+            <div class="col-4 mx-auto"> <img loading="lazy" src="files/img/img08.png" alt="" width="354" height="104" class="img-fluid"></div>
+          </div>
+          <div> <img loading="lazy" src="files/img/img07.webp" alt="" width="396" height="362" class="img-fluid"></div>
+        </div>
+        <div class="d-flex justify-content-between align-items-end px-1"> <img loading="lazy" src="files/img/img09.svg" alt="" width="103" height="150" class="img-fluid w-25 max-120"> <img loading="lazy" src="files/img/img10.svg" alt="" width="103" height="150" class="img-fluid w-25 max-120"> </div>
+        <a href="####" class="btn btn-primary btn-lg fw-bold rounded-pill d-block fs-2 py-2 ls-2 position-relative" style="z-index: 10">無料ダウンロード</a> </div>
+      <img loading="lazy" src="files/img/msk01.svg" alt="" width="380" height="40" class="position-absolute bottom-1 start-0 w-100" style="height: 10vmin"> </section>
+    <section class="bg-dark-light pt-5 px-3 pb-4">
+      <div class="max-600 mx-auto text-center">
+        <h3 class="display-6 ls-1 mb-4 text-success"><span class="text-marker01 mb-2 d-inline-block">転売や偽物から</span><br>
+          <span class="text-marker01 mb-2 d-inline-block">売上を守り続ける為に</span></h3>
+        <h4 class="text-primary d-flex align-items-center justify-content-center fs-5 mb-4"> <img loading="lazy" src="files/img/deco-l.svg" alt="" width="36" height="30">商品価値と売上を守り続ける <img loading="lazy" src="files/img/deco-r.svg" alt="" width="36" height="30"></h4>
+        <div class="bg-white p-4 rounded-5 position-relative mb-3"> <img loading="lazy" src="files/img/img12.svg" alt="" width="250" height="250" class="w-50 h-auto mb-3"> <span class="ff-akshar text-accent display-1 position-absolute end-0 me-4 top-0 pt-3">01</span>
+          <h5 class="fw-bold text-marker02">転売と横流し</h5>
+          <p class="mb-0">美容サロン専売品などが安売り転売され<br>
+            値崩れが起こっている。</p>
+        </div>
+        <div class="bg-white p-4 rounded-5 position-relative mb-3"> <img loading="lazy" src="files/img/img13.svg" alt="" width="250" height="250" class="w-50 h-auto mb-3"> <span class="ff-akshar text-accent display-1 position-absolute end-0 me-4 top-0 pt-3">02</span>
+          <h5 class="fw-bold text-marker02">偽物対策</h5>
+          <p class="mb-0">偽物が発生し市場を奪われている。<br>
+            購入時に判断してもらいたい。</p>
+        </div>
+        <div class="bg-white p-4 rounded-5 position-relative mb-3"> <img loading="lazy" src="files/img/img14.svg" alt="" width="250" height="250" class="w-50 h-auto mb-3 mt-3"> <span class="ff-akshar text-accent display-1 position-absolute end-0 me-4 top-0 pt-3">03</span>
+          <h5 class="fw-bold text-marker02">産地偽造</h5>
+          <p class="mb-0">産地偽造が発生。<br>
+            原産地が本物か明確に知りたい。</p>
+        </div>
+        <div class="bg-white p-4 rounded-5 position-relative mb-3 pt-5"> <img loading="lazy" src="files/img/fuki01.svg" alt="" width="120" height="50" class="position-absolute top-0 start-0 mt-3 ms-4 h-auto max-200 col-5"> <img loading="lazy" src="files/img/img15.svg" alt="" width="250" height="250" class="w-50 h-auto mb-3 mt-3"> <span class="ff-akshar text-accent display-1 position-absolute end-0 me-4 top-0 pt-3">04</span>
+          <h5 class="fw-bold text-marker02">トレーサビリティ</h5>
+          <p class="mb-0">輸出時の情報をひもづけQC管理や<br>
+            AI学習の為のデータ作成も可能。</p>
+        </div>
+      </div>
+    </section>
+    <section class="bg-dark-light text-center">
+      <h3 class="ls-1 mb-4 text-white bg-primary pt-4 pb-3 position-relative"> <img loading="lazy" src="files/img/icon_arrow.svg" alt="" width="80" height="40" class="position-absolute" style="top: -20px;left: 50%;margin-left: -40px"> <span class="fs-1">日本流通管理支援機構</span>が<br>
+        解決いたします！</h3>
+      <div class="px-3">
+        <div class="max-600 mx-auto">
+          <div class="bg-white rounded-5 position-relative overflow-hidden shadow mb-3">
+            <h4 class="bg-success text-accent py-3 fs-6 mb-0">【失敗例】QRやNFC/RFIDのデータ提供は◎</h4>
+            <div class="d-flex ps-3 pe-1 py-3">
+              <div class="col-7 pt-2">
+                <h5 class="d-flex fs-5 align-items-center text-primary"><span class="bg-primary p-2 border border-primary border-3 rounded-circle blur-primary d-inline-block" style="margin-right: -0.5em"> <img loading="lazy" src="files/img/icon_qr.svg" alt="" width="40" height="40"></span><span class="fw-bold border-bottom d-block w-100 border-3 border-primary py-2 text-start ps-5">QR</span></h5>
+                <p class="text-start small lh-1 pe-2">犯罪者は「本物です」と表示されるWEBサイトのデザインだけをコピーして、QRコードも偽サイトに書き換えてしまいます。</p>
+              </div>
+              <img loading="lazy" src="files/img/img16.svg" alt="" width="227" height="150" class="col-5"> </div>
+            <div class=" px-3">
+              <div class="d-flex border-top border-color-nomal py-3">
+                <div class="col-7 pt-2">
+                  <h5 class="d-flex fs-5 align-items-center text-primary"><span class="bg-primary p-2 border border-primary border-3 rounded-circle blur-primary d-inline-block" style="margin-right: -0.5em"> <img loading="lazy" src="files/img/icon_nfc.svg" alt="" width="40" height="40"></span><span class="fw-bold border-bottom d-block w-100 border-3 border-primary py-2 text-start ps-5">NFC/RFID</span></h5>
+                  <p class="text-start small lh-1 pe-2">韓国では、酒のボトルの栓でNFCタグを用いたものが偽造されたNFCタグに入れ替えられタッチすると偽サイトに誘導されてしまった。</p>
+                </div>
+                <img loading="lazy" src="files/img/img17.svg" alt="" width="186" height="150" class="col-5 px-2"> </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-5 position-relative overflow-hidden shadow">
+            <h4 class="bg-success text-accent py-3 fs-6 mb-4 text-nowrap ls-0">【問題点】商品側タグが簡単に偽造できてしまう。</h4>
+            <div class="p-3">
+              <p class="mb-5 ls-0">流通データを、商品側（実物）と紐づける際に<br>
+                QRやRFIDで行った場合<br>
+                内容を改竄して消費者を騙せてしまいます。</p>
+              <div class="d-flex mb-4">
+                <div class="pe-3 d-flex flex-wrap justify-content-center align-content-between"><span class="bg-white p-2 border border-3 border-white rounded-circle blur-primary d-inline-block"> <img loading="lazy" src="files/img/icon_pc.svg" alt="" width="50" height="50"></span> <img loading="lazy" src="files/img/icon_arrow2.svg" alt="" width="20" height="100"> </div>
+                <div class="text-start pb-2">
+                  <h5 class="text-primary fw-bold ls-0">商品の流通デジタルデータ</h5>
+                  <p class="small mb-2">データの改ざん防止などでブロックチェーンが使われるなど近年でデータの改ざんは容易ではありません。</p>
+                  <div class="text-center"> <img loading="lazy" src="files/img/icon_db.svg" alt="" width="90" height="90" class="img-fluid"> <img loading="lazy" src="files/img/icon_blockchain.svg" alt="" width="90" height="90" class="img-fluid"> </div>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="pe-3"><span class="bg-white p-2 border border-3 border-white rounded-circle blur-primary d-inline-block"> <img loading="lazy" src="files/img/icon_botle.svg" alt="" width="50" height="50"></span> </div>
+                <div class="text-start">
+                  <h5 class="text-primary fw-bold ls-0">物とデータを紐づける技術</h5>
+                  <p class="small mb-1">QRやRFIDはデータを改ざんや偽造が容易。QRは誰でも偽造可能でRFID/NFCは見る事が出来ない為フィッシング詐欺がおこっている。</p>
+                </div>
+              </div>
+              <div class="text-end col-12 col-sm-10"> <img loading="lazy" src="files/img/icon_qr2.svg" alt="" width="90" height="90" class="img-fluid"> <img loading="lazy" src="files/img/icon_rfid.svg" alt="" width="90" height="100" class="img-fluid"> <img loading="lazy" src="files/img/icon_heisyagijutu.svg" alt="" width="100" height="100" class="img-fluid"> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-accent pt-5" style="margin-top: -4em">
+        <p class="mb-0 pt-5">タグ自体が偽造されては意味がありません。<br>
+          <span class="fs-4 fw-bold">この問題を解決します。</span></p>
+        <img loading="lazy" src="files/img/msk02.svg" alt="" width="380" height="40" class="w-100 h-auto"> </div>
+    </section>
+    <section class="bg-white pt-4">
+      <div class="px-3 position-relative">
+        <div class="max-680 mx-auto">
+          <h3 class="text-center fs-2 fw-bold py-4">システム紹介</h3>
+          <p class="ff-akshar text-accent2 text-center mb-4"><span class="text-marker02 d-flex justify-content-center align-items-center"><span class="me-2 mt-1">SYSTEM</span><span class="display-4">01</span></span></p>
+          <h4 class="text-center fs-1 fw-bold mb-3 text-primary">転売と横流し</h4>
+          <p>一度横流しによる安売りが始まると「別にサロンに行かなくても買える」「ネットの方が安い」という情報が広まります。担当者は「横流ししていませんか？」と問屋や流通経路の特定に時間を割く事に。その間に、横流しが特定できない事から他のサロンも転売を始める事も。こうして失われていく価値を守る事で安定的な利益と更なる商品開発が行えます。</p>
+          <img loading="lazy" src="files/img/img18.svg" alt="" width="300" height="300" class="w-100 h-auto mb-4">
+          <div class="bg-white rounded-5 overflow-hidden shadow mb-5 py-3">
+            <div class="d-flex justify-content-center align-items-center"> <img loading="lazy" src="files/img/img19.svg" alt="" width="100" height="100" class="text-primary me-2">
+              <p class="fw-bold mb-0"><span class="small pb-1 d-inline-block">まるっとお任せ！</span><br>
+                <span class="text-primary">どうしていいかわからない。</span></p>
+            </div>
+            <p class="bg-success py-2 text-center"> <span class="text-white">転売や横流しによる値崩れから、</span><br>
+              <span class="text-accent fs-5 ls-0 fw-bold">あなたの会社のブランド価値を守ります。</span> </p>
+            <p class="px-3 small">そんな場合は、コンサルティングから対応可能。大手通販サイトで長期にわたり統制を専門とするチームが対応いたします。</p>
+            <div class="px-2"> <img loading="lazy" src="files/img/img20.webp" alt="" width="1235" height="351" class="img-fluid"></div>
+          </div>
+          <p class="ff-akshar text-accent2 text-center mb-4"><span class="text-marker02 d-flex justify-content-center align-items-center"><span class="me-2 mt-1">SYSTEM</span><span class="display-4">02</span></span></p>
+          <h4 class="text-center fs-1 fw-bold mb-3 text-primary">正規品証明<span class="fs-2">（偽造防止技術）</span></h4>
+          <p>QRコードは技術的に公開されており誰でも作れてしまいます。専用アプリでしか読み込めないQRコードの場合もありますが、その場合はQRコードに偽サイトのURLを入れてしまえば簡単に偽サイトに誘導できます。弊社が採用する技術はエンジンが公開されておらず改竄が難しい技術になります。（国際的特許取得済）</p>
+          <img loading="lazy" src="files/img/img21.svg" alt="" width="300" height="91" class="w-100 h-auto mb-2"> <img loading="lazy" src="files/img/img22.svg" alt="" width="300" height="91" class="w-100 h-auto mb-4">
+          <div class="bg-white rounded-5 overflow-hidden shadow mb-3 py-3">
+            <div class="d-flex justify-content-center align-items-center"> <img loading="lazy" src="files/img/img23.svg" alt="" width="100" height="85" class="text-primary me-2">
+              <p class="fw-bold mb-0 ls-0"><span class="small pb-1 d-inline-block">個品のダイレクト印字で特定可能！</span><br>
+                <span class="text-primary">一点ごとに製品の流通経路を把握</span></p>
+            </div>
+            <p class="bg-success py-2 text-center"> <span class="text-white">偽造品やクレーム品の特定を可能にし、</span><br>
+              <span class="text-accent fs-5 ls-0 fw-bold">会社信用度の低下を防ぎます。</span> </p>
+            <div class="d-flex px-3">
+              <p class="small ls-0">製造ロットのみならず、製品一点単位で正規品を保証するトレーサビリティ管理により、流出した製品ごとに、その流通経路を調べることができます。</p>
+              <img loading="lazy" src="files/img/img24.svg" alt="" width="300" height="140" class="col-5 h-auto"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-accent pt-4 text-center" style="margin-top: -2em">
+        <p class="mb-0 fw-bold pt-2"> <span class="fs-4">続きはダウンロード</span><br>
+          <span class="ls-0">※ダウンロードは先にエントリーが必要です。</span></p>
+        <img loading="lazy" src="files/img/msk03.svg" alt="" width="380" height="40" class="w-100 h-auto"> </div>
+    </section>
+    <section class="bd-gray-800 p-4 sticky-top">
+      <div class="bg-white rounded-5 overflow-hidden mb-4 p-3 max-680 mx-auto">
+        <h3 class="col-10 h-auto mx-auto mb-2"> <img loading="lazy" src="files/img/img25.webp" alt="詳しい資料をダウンロード" width="928" height="672" class="img-fluid"></h3>
+        <a href="####" class="btn btn-primary btn-lg fw-bold rounded-pill d-block fs-2 py-2 ls-1 position-relative">無料ダウンロード</a> </div>
+      <div class="rotation-banner bg-white mb-4 rounded-5" data-bs-toggle="modal" data-bs-target="#modal-company">
+        <div class="rotation-banner-inner"> <img src="files/img/logo_jdmso_kabu.png" alt="..."> <img src="files/img/logo_NRI.png" alt="..."> <img src="files/img/logo_rengo.png" alt="..."> <img src="files/img/logo_tokyoseika.png" alt="..."> <img src="files/img/logo_Wismettac.png" alt="..."> <img src="files/img/logo_jdmso_kabu.png" alt="..."> <img src="files/img/logo_NRI.png" alt="..."> <img src="files/img/logo_rengo.png" alt="..."> <img src="files/img/logo_tokyoseika.png" alt="..."> </div>
+      </div>
+      <div class="max-680 mx-auto">
+        <div class="rounded-5 mb-5 p-4 border border-white border-3 text-white fs-3">
+          <div class="d-flex justify-content-center align-items-center border-bottom border-white pb-3" > <img loading="lazy" src="files/img/icon_phone.svg" alt="" width="30" height="30" class="me-4"><span class="ff-akshar">03-6869-6853</span></div>
+          <div class="d-flex justify-content-center align-items-center pt-3" ><a href="####" class="text-white text-decoration-none"> <img loading="lazy" src="files/img/icon_mail.svg" alt="" width="32" height="32" class="me-4"><span class="">お問い合わせ</span></a></div>
+        </div>
+        <ul class="ps-0 d-md-flex">
+          <li class="d-block mb-3 pe-4"><a href="####" class="text-white text-decoration-none">サービス特徴</a></li>
+          <li class="d-block mb-3 pe-4"><a href="####" class="text-white text-decoration-none">システム紹介</a></li>
+          <li class="d-block mb-3 pe-4"><a href="####" class="text-white text-decoration-none">FAQ</a></li>
+          <li class="d-block mb-3 pe-4"><a href="####" class="text-white text-decoration-none">プライバシーポリシー</a></li>
+          <li class="d-block mb-3"><a href="####" class="text-white text-decoration-none">利用規約</a></li>
+        </ul>
+      </div>
+    </section>
+  </article>
+</main>
+<div class="modal fade" id="modal-company" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fs-6 fw-bold">パートナー企業</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex flex-wrap align-items-center justify-content-center p-0"> <a href="####"><img src="files/img/logo_jdmso_kabu.png" alt="..."></a> <a href="####"><img src="files/img/logo_NRI.png" alt="..."></a> <a href="####"><img src="files/img/logo_rengo.png" alt="..."></a> <a href="####"><img src="files/img/logo_tokyoseika.png" alt="..."></a> <a href="####"><img src="files/img/logo_Wismettac.png" alt="..."></a> <a href="####"><img src="files/img/logo_jdmso_kabu.png" alt="..."></a> <a href="####"><img src="files/img/logo_NRI.png" alt="..."></a> <a href="####"><img src="files/img/logo_rengo.png" alt="..."></a> <a href="####"><img src="files/img/logo_tokyoseika.png" alt="..."></a> </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="bd-gray-800 px-3">
+  <div class=" border-top border-white">
+    <div class="max-680 mx-auto d-flex justify-content-between align-items-center">
+      <div><a href="####" class="pe-3 py-4 d-inline-block"> <img loading="lazy" src="files/img/icon_twitter.svg" alt="" width="30" height="30"></a><a href="####" class="py-4 px-3 d-inline-block"> <img loading="lazy" src="files/img/icon_facebook.svg" alt="" width="30" height="30"></a><a href="####" class="py-4 px-3 d-inline-block"> <img loading="lazy" src="files/img/icon_instagram.svg" alt="" width="30" height="30"></a></div>
+      <span class="text-white small">&copy;2023 JDMSO</span> </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+/*バナースクロール*/
+const e_rotationBanner=document.querySelector('.rotation-banner');
+const e_rotationBannerInner=e_rotationBanner.querySelector('.rotation-banner-inner');
+const e_rotationBannerImgs=e_rotationBannerInner.children;
+const v_rotationBannerAll=e_rotationBannerImgs.length;
+const v_containerHtml = e_rotationBannerInner.innerHTML;
+let v_totalWidth=0;
+for(let v_i=0;v_i<v_rotationBannerAll;v_i++){
+  v_totalWidth+=e_rotationBannerImgs[v_i].offsetWidth;
+}
+// 要素の複製
+e_rotationBannerInner.innerHTML += v_containerHtml + v_containerHtml;
+// ループするアニメーションの作成
+const animation = e_rotationBannerInner.animate(
+  [{ transform: 'translateX(0)' }, { transform: `translateX(-${v_totalWidth}px)` }],
+  {
+    duration: 40000,  // アニメーションの時間（ミリ秒）
+    iterations: Infinity,  // 無限ループ
+    easing: 'linear'  // アニメーションのイージング
+  }
+);
+
+/*ルーレット*/
+/*初期設定*/
+const e_roulette = document.querySelector('.js-roulette');
+let a_noindex;
+let a_prizeA;
+let a_prizeB;
+let a_prizeC;
+let a_prize;
+let v_rouletteAll;
+const v_speedSt = 1800;
+let v_speed = v_speedSt;
+let v_stop = 0;
+let v_step = 0;
+let v_stopPoint;
+let prizeArrayIndex = 0;
+let prizeIndex = 0;
+let a_rouletteItems;
+let v_rouletteIndex = 0;
+let v_rouletteIndexBefore;
+let v_hit;
+/*JSON読み込み*/
+fetch('files/prize_data.json')
+  .then((response) => response.json())
+  .then((data) => {
+if(data.status){
+  a_noindex = data.prize_data.noindex;
+  a_prizeA = data.prize_data.prizeA;
+  a_prizeB = data.prize_data.prizeB;
+  a_prizeC = data.prize_data.prizeC;
+  a_prize = [a_prizeC, a_prizeB, a_prizeA];
+  v_rouletteAll = data.prize_data.rouletteAll;
+  f_set();
+  f_rouletteStart();
+}
+})
+  .catch(error => {
+    console.log('エラーが発生しました:', error);
+  });
+function f_set(){
+  let v_html = "";
+  for (let v_i = 1; v_i <= v_rouletteAll; v_i++) {
+    if (a_noindex[0] == v_i) {
+      v_html += `<span class="bd-gray-500 text-secondary">${v_i}</span>`;
+      a_noindex.shift();
+    } else {
+      v_html += `<span>${v_i}</span>`;
+    }
+  }
+  e_roulette.innerHTML = v_html;
+  a_rouletteItems = e_roulette.querySelectorAll('span');
+  v_rouletteIndexBefore = v_rouletteAll - 1;
+}
+
+
+function f_stopPoint() {
+  v_stopPoint = v_hit - 40;
+  if (v_stopPoint < 0) {
+    v_stopPoint += v_rouletteAll;
+  }
+}
+function f_roulette() {
+  a_rouletteItems[v_rouletteIndexBefore].classList.remove('roulette-on');
+  a_rouletteItems[v_rouletteIndex].classList.add('roulette-on');
+  
+  switch (v_step) {
+    case 0:
+      v_speed -= 20;
+      v_speed = Math.max(v_speed, 5);
+      break;
+    case 1:
+      if (v_rouletteIndex === v_stopPoint) {
+        v_step = 2;
+      }
+      break;
+    case 2:
+      if (v_speed < v_speedSt) {
+        v_speed += 5;
+      }
+      if (v_rouletteIndex === (v_hit - 1)) {
+        flg_roulette = 0;
+        f_setPrize();
+      }
+      break;
+  }
+  v_rouletteIndexBefore = v_rouletteIndex;
+  v_rouletteIndex = (v_rouletteIndex + 1) % v_rouletteAll;
+
+  if (flg_roulette) {
+    setTimeout(f_roulette, v_speed);
+  }
+}
+function f_setPrize() {
+  a_rouletteItems[v_rouletteIndex].classList.remove('roulette-on');
+  if (prizeArrayIndex == 0) {
+    a_rouletteItems[v_rouletteIndex].classList.add('bg_roulette_C');
+  } else if (prizeArrayIndex == 1) {
+    a_rouletteItems[v_rouletteIndex].classList.add('bg_roulette_B');
+  } else if (prizeArrayIndex == 2) {
+    a_rouletteItems[v_rouletteIndex].classList.add('bg_roulette_A');
+  }
+  prizeIndex++;
+  if (prizeIndex >= a_prize[prizeArrayIndex].length) {
+    prizeIndex = 0;
+    prizeArrayIndex++;
+  }
+  if (prizeArrayIndex < a_prize.length) {
+    setTimeout(f_rouletteStart, 1500);
+  }
+}
+
+function f_rouletteStart() {
+  v_hit = a_prize[prizeArrayIndex][prizeIndex];
+  f_stopPoint();
+  v_step = 0;
+  v_stop = 0;
+  flg_roulette = 1;
+  v_speed = 300;
+  f_roulette();
+  setTimeout(function () {
+    v_step = 1;
+  }, 6000);
+}
+
+//f_rouletteStart();
+
+/////
+let e_modalCanvas;
+let e_context;
+let e_img;
+let isDragging = false;
+let startX;
+let startY;
+let lastX = 0;
+let lastY = 0;
+let newX = 0;
+let newY = 0;
+let newWidth;
+let newHeight;
+let scale = 1;
+let ratio = 1;
+let v_width;
+let v_height;
+
+const e_sendUserImg = document.getElementById('send_userimg');
+const e_canvas=document.querySelector('.js-canvas');
+f_canvasSet(e_canvas);
+function f_canvasSet(el) {  
+  e_modalCanvas = el;
+  e_context = e_modalCanvas.getContext('2d');
+  e_img = new Image();
+  e_img.onload = () => {
+    calculateImageDimensions();
+    drawImageOnCanvas();
+    e_modalCanvas.addEventListener('touchstart', handleDragStart);
+    e_modalCanvas.addEventListener('touchmove', handleTouchMove);
+    e_modalCanvas.addEventListener('wheel', handleWheel);
+    e_modalCanvas.addEventListener('mousedown', handleDragStart);
+    ['mouseup', 'mouseout', 'touchend'].forEach(eventName => e_modalCanvas.addEventListener(eventName, handleDragEnd));
+    e_modalCanvas.addEventListener('mousemove', handleMouseMove);
+  };
+  e_img.src = 'files/img/icon_camera.png';
+}
+function calculateImageDimensions() {
+  const { width, height } = e_img;
+  const widthRatio = e_modalCanvas.width / width;
+  const heightRatio = e_modalCanvas.height / height;
+  ratio = Math.max(widthRatio, heightRatio);
+  v_width = width * ratio;
+  v_height = height * ratio;
+  newX = Math.min((e_modalCanvas.width - v_width) / 2, 0);
+  newY = Math.min((e_modalCanvas.height - v_height) / 2, 0);
+  newWidth = v_width;
+  newHeight = v_height;
+}
+
+function drawImageOnCanvas() {
+  const { width, height } = e_modalCanvas;
+  e_context.clearRect(0, 0, width, height);
+  e_context.drawImage(e_img, newX, newY, newWidth, newHeight);
+}
+function handleDragStart(event) {
+  event.preventDefault();
+  isDragging = true;
+  if (event.touches && event.touches.length > 0) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  } else {
+    startX = event.clientX;
+    startY = event.clientY;
+  }
+  lastX = newX;
+  lastY = newY;
+  if (event.touches && event.touches.length > 1) {
+    const [touch1, touch2] = event.touches;
+    startX = (touch1.clientX + touch2.clientX) / 2;
+    startY = (touch1.clientY + touch2.clientY) / 2;
+    v_beforX = startX;
+    v_beforY = startY;
+    initialDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+    initialScale = scale;
+  }
+}
+
+function handleDragEnd() {
+  isDragging = false;
+  initialDistance = 0;
+  initialScale = scale;
+}
+
+function handleTouchMove(event) {
+  event.preventDefault();
+  if (event.touches.length === 1 && isDragging) {
+    const touch = event.touches[0];
+    const clientX = touch.clientX;
+    const clientY = touch.clientY;
+    const deltaX = clientX - startX;
+    const deltaY = clientY - startY;
+    newX = lastX + deltaX * scale * ratio;
+    newY = lastY + deltaY * scale * ratio;
+    const minX = e_modalCanvas.width - newWidth;
+    const minY = e_modalCanvas.height - newHeight;
+    newX = Math.max(Math.min(newX, 0), minX);
+    newY = Math.max(Math.min(newY, 0), minY);
+    drawImageOnCanvas();
+  } else if (event.touches.length > 1) {
+    const [touch1, touch2] = event.touches;
+    const currentDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+    const delta = currentDistance - initialDistance;
+    const zoom = 1 + delta * 0.01;
+    scale = Math.max(initialScale * zoom, 1);
+    const rect = e_modalCanvas.getBoundingClientRect();
+    const offsetX = (touch1.clientX + touch2.clientX) / 2;
+    const offsetY = (touch1.clientY + touch2.clientY) / 2;
+    const preRatioX = (offsetX - newX) / newWidth;
+    const preRatioY = (offsetY - newY) / newHeight;
+    newWidth = v_width * scale;
+    newHeight = v_height * scale;
+    newX = offsetX - preRatioX * newWidth + (offsetX - startX) * scale;
+    newY = offsetY - preRatioY * newHeight + (offsetY - startY) * scale;
+    const minX = e_modalCanvas.width - newWidth;
+    const minY = e_modalCanvas.height - newHeight;
+    drawImageOnCanvas();
+    lastX = newX;
+    lastY = newY;
+    startX = offsetX;
+    startY = offsetY;
+  }
+}
+
+function handleWheel(event) {
+  event.preventDefault();
+  const delta = Math.sign(event.deltaY);
+  const zoom = delta > 0 ? 0.9 : 1.1;
+  scale *= zoom;
+  scale = Math.min(Math.max(scale, 1), 4);
+  const offsetX = event.clientX - e_modalCanvas.getBoundingClientRect().left;
+  const offsetY = event.clientY - e_modalCanvas.getBoundingClientRect().top;
+  const preRatioX = (offsetX - newX) / newWidth;
+  const preRatioY = (offsetY - newY) / newHeight;
+  newWidth = v_width * scale;
+  newHeight = v_height * scale;
+  newX = offsetX - preRatioX * newWidth;
+  newY = offsetY - preRatioY * newHeight;
+  const minX = e_modalCanvas.width - newWidth;
+  const minY = e_modalCanvas.height - newHeight;
+  newX = Math.max(Math.min(newX, 0), minX);
+  newY = Math.max(Math.min(newY, 0), minY);
+  drawImageOnCanvas();
+}
+
+function handleMouseMove(event) {
+  if (!isDragging) return;
+  newX = lastX + (event.clientX - startX) * scale * ratio;
+  newY = lastY + (event.clientY - startY) * scale * ratio;
+  const minX = e_modalCanvas.width - newWidth;
+  const minY = e_modalCanvas.height - newHeight;
+  newX = Math.max(Math.min(newX, 0), minX);
+  newY = Math.max(Math.min(newY, 0), minY);
+  drawImageOnCanvas();
+}
+
+function drawImageOnCanvas() {
+  e_context.clearRect(0, 0, e_modalCanvas.width, e_modalCanvas.height);
+  e_context.drawImage(e_img, newX, newY, newWidth, newHeight);
+}
+function f_imgChange(e_file) {
+  e_modalCanvas = e_file.nextElementSibling;
+  e_context = e_modalCanvas.getContext('2d');
+  e_img = new Image();
+  scale = 1;
+  e_img.onload = () => {
+    const widthRatio = e_modalCanvas.width / e_img.width;
+    const heightRatio = e_modalCanvas.height / e_img.height;
+    ratio = Math.max(widthRatio, heightRatio);
+    v_width = e_img.width * ratio;
+    v_height = e_img.height * ratio;
+    newX = Math.min((e_modalCanvas.width - v_width) / 2, 0);
+    newY = Math.min((e_modalCanvas.height - v_height) / 2, 0);
+    newWidth = v_width;
+    newHeight = v_height;
+    drawImageOnCanvas();
+  };
+  e_img.src = URL.createObjectURL(e_file.files[0]);
+}
+
+/*エントリーの表示制御v_n番目を表示させる*/
+const e_entry=document.querySelectorAll('.js-entry .bg-white');
+function f_step(v_n){
+  e_entry.forEach((element, index) => {
+    element.classList.toggle('disabled', index !== v_n);
+  });
+}
+
+/*ユーザーデータ送信*/
+function f_sendUserData(){
+  e_sendUserImg.value = e_modalCanvas.toDataURL();//canvasの画像をhiddenのid="send_userimg"に格納
+  /*ユーザー情報送信のプログラム*/
+  f_step(3);
+}
+/*タイピング風*/
+const e_typing=document.querySelector('.js-typing');
+const v_typing=e_typing.textContent;
+const a_typing=v_typing.split('');
+const v_typingAll=a_typing.length;
+e_typing.innerHTML="";
+let v_typingNo=0;
+e_typing.style.visibility="visible";
+f_type();
+function f_type(){
+  e_typing.innerHTML+=a_typing[v_typingNo];
+  v_typingNo++;
+  if(v_typingNo<v_typingAll){
+    setTimeout(f_type,150);
+  }else{
+    setTimeout(function(){
+      e_typing.innerHTML="";
+      v_typingNo=0;
+      f_type();
+    },15000);
+  }
+}
+</script>
+</body>
+</html>

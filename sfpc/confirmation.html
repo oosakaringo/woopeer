@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SFPCメンバー登録（確認） | SFPC（NPO法人スポーツフィッシング推進委員会）</title>
+<meta name="robots" content="none">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://unpkg.com/sanitize.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?1" rel="stylesheet" type="text/css">
+<style type="text/css">
+.sfpc-step_wrap {
+  background-color: #e9e9e9;
+  padding-right: 40px;
+}
+.sftc-step {
+  padding: 0.4em 0 0.4em 0.8em;
+  position: relative;
+}
+.sftc-step::before, .sftc-step::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #ccc;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 1;
+}
+.sftc-step::before {
+  border-left-color: #fff;
+  margin-left: 1px;
+}
+.sftc-step.bg-success::after {
+  border-left-color: var(--bs-success);
+}
+.sftc-step:not(.bg-success) {
+  background-color: #ccc;
+  color: var(--bs-gray);
+}
+.sftc-step.bg-success {
+  color: #fff;
+}
+.sftc-step:not(:first-child) {
+  padding-left: 40px;
+}
+.btn-light {
+  background-color: #fff;
+}
+.on-corporation .user-sex {
+  display: none;
+}
+.form-control[readonly] {
+  background-color: #fff;
+}
+</style>
+<script src="files/js/header.js"></script>
+</head>
+<body class="bg-light">
+<header class="navbar sticky-top bg-primary"></header>
+<main>
+  <article>
+    <section class="pt-4 pb-5">
+      <form class="container max-720"  action="completion.html">
+        <h1 class="fw-bold text-primary fs-2">S.F.P.Cメンバー登録</h1>
+        <ul class="sfpc-step_wrap d-flex ps-0 rounded overflow-hidden small">
+          <li class="sftc-step d-block col-4 col-lg-3 bg-success">
+            <div class="fs-5 fw-bold">Step 1</div>
+            <div class="small">ログイン情報</div>
+          </li>
+          <li class="sftc-step d-block col-4 col-lg-3 bg-success">
+            <div class="fs-5 fw-bold">Step 2</div>
+            <div class="small">会員情報</div>
+          </li>
+          <li class="sftc-step d-block col-4 col-lg-3">
+            <div class="fs-5 fw-bold">Step 3</div>
+            <div class="small">完了</div>
+          </li>
+        </ul>
+        <p class="fw-bold text-center">登録内容をご確認ください。</p>
+        <div class="mb-1">個人 / 法人</div>
+        <div class="mb-3 btn-group border rounded overflow-hidden">
+          <label class="form-check-label btn btn-light ps-3">
+            <input name="fspc-user-type" type="radio" class="form-check-input me-1" value="individual" checked="checked">
+            個人 </label>
+          <label class="form-check-label btn btn-light ps-3">
+            <input class="form-check-input me-1" type="radio" name="fspc-user-type" value="corporation" >
+            法人 </label>
+        </div>
+        <div class="mb-1">名前</div>
+        <div class="d-flex mb-3">
+          <div class="form-floating me-3 w-100">
+            <input type="text" class="form-control" id="fspc-user-lastname" placeholder="姓" required value="佐野">
+            <label for="fspc-user-email">姓</label>
+          </div>
+          <div class="form-floating w-100">
+            <input type="text" class="form-control" id="fspc-user-firstname" placeholder="名" required value="マサト">
+            <label for="fspc-user-firstname">名</label>
+          </div>
+        </div>
+        <div class="mb-1">ニックネーム</div>
+        <div class="form-floating mb-3">
+          <input type="text" value="マー君" class="form-control" id="fspc-user-nickname" placeholder="ニックネーム" required>
+          <label for="fspc-user-nickname">ニックネーム</label>
+        </div>
+        <div class="mb-1">誕生日</div>
+        <input type="date" value="2000-01-01" class="form-control form-control-lg mb-3" required>
+        <div class="mb-1 user-sex">性別</div>
+        <div class="user-sex mb-3 btn-group border rounded overflow-hidden">
+          <label class="form-check-label btn btn-light ps-2 pe-3 flex-wrap d-flex">
+            <input name="fspc-user-sex" type="radio" class="form-check-input me-1" value="male" required checked="checked">
+            男性 </label>
+          <label class="form-check-label btn btn-light ps-2 pe-3 flex-wrap d-flex">
+            <input class="form-check-input me-1" type="radio" name="fspc-user-sex" value="female" required>
+            女性 </label>
+          <label class="form-check-label btn btn-light ps-2 pe-3 flex-wrap d-flex">
+            <input class="form-check-input me-1" type="radio" name="fspc-user-sex" value="other" required>
+            その他 </label>
+          <label class="form-check-label btn btn-light ps-2 pe-1 flex-wrap d-flex">
+            <input class="form-check-input me-1" type="radio" name="fspc-user-sex" value="nochoice" required>
+            回答しない </label>
+        </div>
+        <div class="mb-1">私は…</div>
+        <div class="mb-4 col-sm-8 col-md-6 btn-group-vertical border rounded overflow-hidden">
+          <label class="form-check-label btn btn-light ps-3 d-flex">
+            <input name="fspc-user-work" type="radio" class="form-check-input me-2" value="angler" required  checked="checked">
+            アングラーです </label>
+          <label class="form-check-label btn btn-light ps-3 d-flex">
+            <input class="form-check-input me-2" type="radio" name="fspc-user-work" value="captain" required>
+            釣り船船長です </label>
+          <label class="form-check-label btn btn-light ps-3 d-flex">
+            <input class="form-check-input me-2" type="radio" name="fspc-user-work" value="other" required>
+            その他 </label>
+        </div>
+        <div class="d-flex">
+          <button onClick="history.back()" type="button" class="btn btn-light rounded-pill text-nowrap bg-light">修正する </button>
+          <button type="submit" class="btn btn-success d-flex align-items-center btn-lg w-100 rounded-pill"> <i class="bi bi-person-check-fill fs-1" style="margin: -0.3em 0"></i> <span class="text-center w-100 fw-bold">登録する</span> </button>
+        </div>
+      </form>
+    </section>
+  </article>
+</main>
+<footer class="bg-dark pt-5 pb-2 ps-4 pe-4 text-white"></footer>
+<script src="files/js/footer.js"></script> 
+<script>
+var a_input=document.querySelectorAll('input');
+var a_select=document.querySelectorAll('select');
+a_input.forEach(function(e){
+  console.log(e.type);
+  if(e.type=='radio' && !e.checked){
+    e.closest('label').classList.add('d-none');
+  }
+  e.readOnly = true;
+});
+/*a_select.forEach(function(e){
+  e.disabled = true;
+});*/
+var a_fspcUserType=document.getElementsByName('fspc-user-type');
+if(a_fspcUserType[1].checked){
+  document.body.classList.add('on-corporation');
+}
+</script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>折れない竿と、折れない心 剛樹 x 茂木 年間限定生産　世界最強のジギングロッド</title>
+<meta content="telephone=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="折れない竿と、折れない心 剛樹 x 茂木 年間限定生産　世界最強のジギングロッド">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style>
+:root {
+--fog-size-1:400%;
+--fog-size-2:200%;
+--fog-speed:120s;
+}
+.font-serif {
+  font-family: '游明朝 Medium', serif;
+}
+.bg-main {
+  transform: translate3d(0,0,0);
+  background-image: url("files/img/fog01.webp"), url("files/img/fog02.webp"), linear-gradient(to left, #000 0%, transparent 5%, transparent 95%, #000 100%), url("files/img/main_bg_2.webp");
+  background-repeat: repeat-x, repeat-x, no-repeat, no-repeat;
+  background-size: var(--fog-size-1), var(--fog-size-2), min(100%, 1500px) auto, min(100%, 1500px) auto;
+  background-position: 0% 100%, 0% 100%, center 0, center 0;
+  height: min(70vw, 1000px);
+  animation: var(--fog-speed) linear infinite ani-fog;
+}
+.bg-main::after {
+  content: "";
+  width: max(6vmin, 36px);
+  height: max(6vmin, 36px);
+  border-bottom: solid thin var(--bs-primary);
+  border-left: solid thin var(--bs-primary);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(-45deg);
+  margin-left: min(-3vmin, -18px);
+  margin-top: min(20vw, 300px);
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  color: var(--bs-primary);
+}
+.language-select {
+  margin-bottom: -50px;
+}
+.title-1 {
+  line-height: 1.6;
+}
+.title-1::before, .title-1::after {
+  content: "";
+  width: 0.6em;
+  height: 1.2em;
+  border-color: var(--bs-success);
+  border-width: 0.25em;
+  position: absolute;
+  display: inline-block;
+}
+.title-1::before {
+  top: 0.3em;
+  left: 0.5em;
+  border-top-style: solid;
+  border-left-style: solid;
+}
+.title-1::after {
+  bottom: 0.3em;
+  right: 0.5em;
+  border-bottom-style: solid;
+  border-right-style: solid;
+}
+.title-2 {
+  top: calc(50% + 200px);
+  left: min(90%, calc(50vw + 600px));
+  transform: rotate(90deg);
+  white-space: nowrap;
+}
+.title-3 {
+  left: max(-1%, calc(50vw - 800px));
+}
+.title-4 {
+  position: relative;
+}
+.title-4::before {
+  content: "";
+  height: 1px;
+  width: 40px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 20px);
+  background-color: var(--bs-primary);
+}
+.footer-menu svg {
+  width: 40px;
+  height: 40px;
+}
+.drop-shadow {
+  filter: drop-shadow(0px 2px 8px rgba(0,0,0,.3));
+}
+.js-tooltip {
+  position: relative;
+}
+.tooltip {
+  inset: -60px -20px auto auto !important;
+  z-index: 5;
+}
+.tooltip-inner {
+  background-color: var(--bs-primary);
+  font-size: 10px;
+  width: 15em;
+  border-radius: 0;
+}
+.bs-tooltip-top .tooltip-arrow::before {
+  border-top-color: var(--bs-primary);
+  border-width: 1rem .5rem 0 0;
+}
+.tooltip.show {
+  opacity: 1;
+}
+.bg-buy {
+  background-image: url("files/img/bg_04.webp");
+  background-size: 100% auto;
+}
+.multiply {
+  mix-blend-mode: multiply;
+}
+.screen {
+  mix-blend-mode: screen;
+}
+.content-pro-angler {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+}
+.content-pro-angler :nth-child(1) {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+.content-pro-angler :nth-child(2) {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+}
+.content-pro-angler :nth-child(3) {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+.border-md-start {
+  border-left: solid thin;
+}
+.border-md-top {
+  border-top: solid thin;
+}
+.content-world {
+  height: 70%;
+  margin-top: 5%;
+}
+footer {
+  justify-content: space-between
+}
+
+@media (max-width:767px) {
+:root {
+--fog-size-1:1000%;
+--fog-size-2:500%;
+--fog-speed:240s;
+}
+.bg-main {
+  background-size: var(--fog-size-1), var(--fog-size-2), 180% auto, 200% auto;
+  height: 160vw;
+}
+.bg-main::after {
+  margin-top: 55vw;
+}
+.language-select {
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.title-1 {
+  font-size: 150%;
+}
+.title-2 {
+  font-size: 80%;
+  top: 0;
+  left: 10px;
+  transform: rotate(0deg);
+}
+.title-3 {
+  left: auto;
+  right: 1em;
+}
+.js-tooltip {
+  position: inherit;
+}
+/*.tooltip {
+  inset: -100px 0 auto auto !important;
+}*/
+.content-pro-angler {
+  display: block;
+}
+.border-md-start {
+  border-left: none;
+}
+.border-md-top {
+  border-top: none;
+}
+.content-world {
+  height: 100%;
+  margin-top: 0%;
+}
+footer {
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+}
+@keyframes ani-fog {
+0% {
+background-position: 0 100%, 0 100%, center 0, center 0;
+}
+100% {
+background-position: var(--fog-size-1) 100%, var(--fog-size-2) 100%, center 0, center 0;
+}
+}
+</style>
+</head>
+
+<body>
+<header class="d-flex justify-content-between align-items-center sticky-top move">
+  <div class="col-6 col-md-2 col-lg-3 bg-black max-400 h-100 d-flex align-items-center">
+    <h1 class="mb-0 d-flex align-items-center justify-content-evenly w-100"><img src="files/img/logo_mogi.webp" alt="PROSHOP MOGI" width="2023" height="1004" class="w-50 h-auto max-160"><img src="files/img/logo_gouki_co.svg" alt="GOUKI CORPRATION" width="300" height="113" class="w-50 h-auto max-160 px-2"></h1>
+  </div>
+  <div class="d-flex align-items-center glow">
+    <nav aria-label="breadcrumb" class="d-none d-md-block">
+      <ol class="breadcrumb text-center mb-0 me-3">
+        <li class="breadcrumb-item"><a href="#for_fishing" class="text-decoration-none text-white">クロマグロと対戦<span class="d-block small fw-bold">for FISHING</span></a></li>
+        <li class="breadcrumb-item"><a href="#about_gouki" class="text-decoration-none text-white">剛樹について<span class="d-block small fw-bold">about GOUKI</span></a></li>
+        <li class="breadcrumb-item"><a href="#pro_angler" class="text-decoration-none text-white">茂木陽一とは<span class="d-block small fw-bold">Pro angler</span></a></li>
+      </ol>
+    </nav>
+    <a href="#buy" class="btn bg-white text-primary rounded-pill d-none d-md-block">購入はこちら</a>
+    <button class="btn btn-sm text-white dropdown-toggle" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <img src="files/img/language_icon.svg" alt="" width="50" height="40"> <span>JP</span></button>
+    <button class="btn px-2 d-block d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu" aria-label="メニュー表示"><i class="bi bi-list text-primary fs-1 "></i></button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+      <li><a class="dropdown-item" href="#">日本語</a></li>
+      <li><a class="dropdown-item" href="#">English</a></li>
+      <li><a class="dropdown-item" href="#">中文</a></li>
+    </ul>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-80 max-400 bg-black border-start" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1">
+    <h5 class="mb-0 d-flex align-items-center justify-content-evenly w-50 mx-auto"><img loading="lazy" src="files/img/logo_mogi.webp" alt="PROSHOP MOGI" width="2023" height="1004" class="w-50 h-auto max-160"><img loading="lazy" src="files/img/logo_gouki_co.svg" alt="GOUKI CORPRATION" width="300" height="113" class="w-50 h-auto max-160 px-2"></h5>
+    <button type="button" class="btn p-0 text-primary fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body"> <img loading="lazy" src="files/img/main_s.svg" alt="" width="300" height="60" class="mx-auto d-block mb-5">
+    <div class="d-grid gap-2 mb-3"> <a href="#for_fishing" class="btn text-white" data-bs-dismiss="offcanvas" aria-label="Close"><span class="fs-4">クロマグロと対戦</span><span class="fw-bold d-block text-white-50">for FISHING</span> </a> <a href="#about_gouki" class="btn text-white" data-bs-dismiss="offcanvas" aria-label="Close"><span class="fs-4">剛樹について</span><span class="fw-bold d-block text-white-50">about GOUKI</span> </a><a href="#pro_angler" class="btn text-white" data-bs-dismiss="offcanvas" aria-label="Close"><span class="fs-4">茂木陽一とは</span><span class="fw-bold d-block text-white-50">Pro angler</span> </a> <a href="#buy" class="btn bg-white btn-lg rounded-pill text-primary my-5" data-bs-dismiss="offcanvas" aria-label="Close">購入はこちら<i class="bi bi-chevron-right ms-3"></i></a> </div>
+    <div class="small d-flex gap-2 justify-content-center"> <span class="bg-primary py-1 px-4">日本語</span> <a href="###" class="text-white text-decoration-none py-1 px-3 border">English</a> <a href="###" class="text-white text-decoration-none py-1 px-3 border">中文簡体</a> </div>
+  </div>
+</div>
+<main>
+  <article class="overflow-hidden">
+    <section class="bg-main d-flex align-items-center justify-content-center position-relative">
+      <h2 class="col-8 col-md-8 max-880 m-0 glow">
+        <picture>
+          <source srcset="files/img/main_sp.svg" media="(max-width:767px)">
+          <img src="files/img/main.svg" alt="折れない竿と、折れない心 剛樹 x 茂木 年間限定生産　世界最強のジギングロッド"> </picture>
+      </h2>
+    </section>
+    <section class="position-relative">
+      <p class="container text-end mb-5">この釣り竿の販売は当サイト限定です。</p>
+      <div class="container small ls-2 d-flex gap-2 language-select"> <span class="bg-primary py-1 px-4">日本語</span> <a href="#" class="text-white text-decoration-none py-1 px-3 border">English</a> <a href="#" class="text-white text-decoration-none py-1 px-3 border">中文簡体</a> </div>
+      <div class="position-relative" style="margin-bottom:min(-50px,-7.5vw)" id="for_fishing"> <span class="fw-bold position-absolute ls-1 title-2">for FISHING</span>
+        <picture>
+          <source srcset="files/img/bg_01_sp.webp" width="1051" height="748" media="(max-width:767px)">
+          <img src="files/img/bg_01.webp" width="3040" height="1108" alt="" class="img-fluid"> </picture>
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+          <h3 class="max-880 col-10 col-md-8 col-xl-7 col-xxl-6 mb-0 mx-auto font-serif text-success text-center ffs-palt ls-2 display-5 title-1 position-relative glow">日本刀のように<br>
+            鍛えられた釣り竿</h3>
+        </div>
+      </div>
+      <div class="container d-block d-md-flex position-relative mb-5">
+        <div class="w-100"><img loading="lazy" src="files/img/fishing01.webp" alt="" width="1500" height="1000" class="img-fluid mb-4"></div>
+        <div class="w-100 ffs-palt ls-1 px-md-4">
+          <h3 class="fw-bold fs-2 mb-4">世界最強のジギングロッドで<br class="d-md-none d-lg-inline">
+            クロマグロと対戦！</h3>
+          <div class="position-relative">
+            <p class="small mb-5">300kg以上のクロマグロを<span class="js-tooltip"><span class="text-primary text-decoration-underline">ハーネス</span>なしの<span class="text-primary text-decoration-underline">スタンディング</span> <span class="tooltip fade bs-tooltip-top"><span class="tooltip-arrow position-absolute" style="position: absolute; left: 50%;bottom: -1px"></span><span class="tooltip-inner d-block text-start">ロッドを手に持ってスタンディングスタイルで魚を狙う釣法。</span></span> </span>スタイルで釣るために、日本で開発された最強のジギングロッドです。<br>
+              ただ固いだけでは人間の体力が削られ続け、柔らかい竿では引き寄せることができません。<br>
+              カナダやアメリカでの数々の実践によって「日本刀のように鍛えられた」この釣り竿は、剛性と柔軟性を最大限に活かしたスポーツフィッシングを存分に楽しむために作られた逸品です。<br>
+              アングラーの体にも魚にも優しいこの釣竿は、世界の大物と戦う人々に次のステージの釣りを提供します。</p>
+          </div>
+          <a href="#####" class="d-flex align-items-center border border-1 text-white text-decoration-none max-400 mx-auto">
+          <div class="col-4"><img loading="lazy" src="files/img/fishing02.webp" alt="" width="780" height="480" class="img-fluid"> </div>
+          <div class="d-flex align-items-center w-100 px-3 justify-content-evenly"> <img loading="lazy" src="files/img/icon_youtube.svg" width="40" height="30" alt="" class=""> <span class="ls-2">play movie</span> </div>
+          </a> </div>
+      </div>
+      <div class="tooltip bs-tooltip-top" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner"> Some tooltip text! </div>
+      </div>
+    </section>
+    <section class="position-relative mb-5" id="about_gouki">
+      <div class="position-relative" style="margin-bottom:min(-50px,-7.5vw)"> <span class="fw-bold position-absolute ls-1 title-2 title-3">about GOUKI</span>
+        <picture>
+          <source srcset="files/img/bg_02_sp.webp" width="751" height="374" media="(max-width:767px)">
+          <img loading="lazy" src="files/img/bg_02.webp" width="3040" height="1108" alt="" class="img-fluid"> </picture>
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+          <h3 class="max-880 col-10 col-md-8 col-xl-7 col-xxl-6 mb-0 mx-auto font-serif text-success text-center ffs-palt ls-2 display-5 title-1 position-relative glow">釣りに魅せられた<br>
+            一流の職人たち</h3>
+        </div>
+      </div>
+      <div class="container d-block d-md-flex position-relative flex-row-reverse">
+        <div class="w-100"><img loading="lazy" src="files/img/fishing03.webp" alt="" width="985" height="674" class="img-fluid mb-4 col-9">
+          <div class="d-flex gap-3 mb-3">
+            <div class="w-50"><img loading="lazy" src="files/img/fishing04.webp" alt="" width="1197" height="804" class="img-fluid"></div>
+            <div class="w-50"> <img loading="lazy" src="files/img/fishing05.webp" alt="" width="1197" height="804" class="img-fluid"> </div>
+          </div>
+        </div>
+        <div class="w-100 ffs-palt ls-1 px-md-4">
+          <h3 class="fw-bold fs-2 mb-4">釣り人のポテンシャルを<br class="d-md-none d-lg-inline">
+            最大限に活かす柔軟さが特徴</h3>
+          <p class="small mb-5">剛樹（GOUKI）は、「ただ固く折れない竿であればよい」という概念を変え、竿の機能や性能はもちろん釣り人の体への負担を軽減し、限界を知らないハイパフォーマンスを提供する“日本の釣り竿メーカー”です。<br>
+            一対一で魚と対等に戦うことを釣りのポリシーとしており、クロマグロのような巨大魚から真鯛のような繊細な魚までいろいろな釣り竿を製作しています。<br>
+            剛樹は新たな素材とともに、今も成長しています。</p>
+          <a href="#####" class="d-flex align-items-center border border-1 text-white text-decoration-none max-400 mx-auto">
+          <div class="col-4"><img loading="lazy" src="files/img/logo_gouki_co_bg.svg" alt="" width="244" height="150" class="img-fluid"> </div>
+          <div class="d-flex align-items-center w-100 justify-content-center"><span class="ls-2">GOUKI website</span> </div>
+          </a> </div>
+      </div>
+      <div class="tooltip bs-tooltip-top" role="tooltip">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-inner"> Some tooltip text! </div>
+      </div>
+    </section>
+    <section class="position-relative pb-5" id="pro_angler">
+      <div class="position-relative" style="margin-bottom:min(-50px,-7.5vw)"> <span class="fw-bold position-absolute ls-1 title-2">Pro angler</span>
+        <picture>
+          <source srcset="files/img/bg_03_sp.webp" width="751" height="374" media="(max-width:767px)">
+          <img loading="lazy" src="files/img/bg_03.webp" width="3040" height="1108" alt="" class="img-fluid"> </picture>
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+          <h3 class="max-880 col-10 col-md-8 col-xl-7 col-xxl-6 mb-0 mx-auto font-serif text-success text-center ffs-palt ls-2 display-5 title-1 position-relative glow fw-lighter">世界を釣る<br>
+            プロアングラー</h3>
+        </div>
+      </div>
+      <div class="container content-pro-angler position-relative">
+        <div>
+          <div><img loading="lazy" src="files/img/fishing06.webp" alt="" width="985" height="674" class="img-fluid pe-md-4"></div>
+          <div><em class="fw-bold text-success fs-3 ls-2 ffs-palt me-3">Yoichi Mogi</em><span class="fw-bold ls-2">茂木陽一</span></div>
+        </div>
+        <div class="w-100 ffs-palt ls-1 px-md-4">
+          <h3 class="fw-bold fs-2 mb-4">世界中の海を股にかけ<br class="d-md-none d-lg-inline">
+            ワールドワイドに活躍！</h3>
+          <p class="small mb-4">若い頃は住み込みで働き、お金が貯まったら釣りの遠征に行くという経験をし、1990年代からプロの釣り師として活躍。<br>
+            2023年現在、海外渡航歴350回以上・113カ国を訪れ、世界中の海を舞台に釣りをしています。<br>
+            また、スポーツフィッシング推進委員会の代表や、NPO法人「水生生物の資源と環境を守る会」の理事長の他、一般社団法人「海の幸を未来に残す会」の顧問も務め、クロマグロの資源保護管理にも力を注いでいます。</p>
+          <div class="d-flex align-items-center justify-content-center border border-1 text-white text-decoration-none max-400 mx-auto gap-3 p-4 mb-3"> <span class="ls-2">Social</span> <a href="####"><img loading="lazy" src="files/img/icon_facebook.svg" alt="facebook" width="50" height="50"></a> <a href="####"><img loading="lazy" src="files/img/icon_instagram.svg" alt="instagram" width="50" height="50"></a> <a href="####"><img loading="lazy" src="files/img/icon_twetter.svg" alt="twetter" width="50" height="50"></a> <a href="####"><img loading="lazy" src="files/img/icon_yuotube_2.svg" alt="yuotube" width="50" height="50"></a> </div>
+        </div>
+        <dl>
+          <dt class="fw-normal ls-1 mb-2">PROFILE</dt>
+          <dd class="smaller ffs-palt ls-1">群馬県出身、 「プロショップ MOGI」代表で釣具店を運営。<br>
+            スポーツフィッシング推進委員会代表<br>
+            NPO法人「水生生物の資源と環境を守る会」理事長<br>
+            一般社団法人「海の幸を未来に残す会」顧問</dd>
+        </dl>
+      </div>
+      <dl class="container">
+        <dt class="text-center mb-3 pb-2 ls-2 title-4">主な渡航歴</dt>
+        <dd class="col-12 col-lg-8 mx-auto">
+          <table class="container bg-white small ffs-palt">
+            <tbody>
+              <tr class="bg-primary">
+                <th colspan="2" scope="col" class="fw-normal p-2 ps-4">クロマグロ遠征（国内外）</th>
+              </tr>
+              <tr class="border-bottom border-dark">
+                <td class="bd-gray-200 text-primary fw-bold p-2 text-center">2022.00.0-0</td>
+                <td class="text-dark d-md-flex justify-content-between ps-3"><div class="py-md-2">カナダ・プリンスエドワード島</div>
+                  <div class="px-md-4 py-md-2 border-md-start border-dark">250kg リリース</div></td>
+              </tr>
+              <tr class="border-bottom border-dark">
+                <td class="bd-gray-200 text-primary fw-bold p-2 text-center">2022.00.0-0</td>
+                <td class="text-dark d-md-flex justify-content-between ps-3"><div class="py-md-2">カナダ・プリンスエドワード島</div>
+                  <div class="px-md-4 py-md-2 border-md-start border-dark">250kg リリース</div></td>
+              </tr>
+              <tr class="border-bottom border-dark">
+                <td class="bd-gray-200 text-primary fw-bold p-2 text-center">2022.00.0-0</td>
+                <td class="text-dark d-md-flex justify-content-between ps-3"><div class="py-md-2">カナダ・プリンスエドワード島</div>
+                  <div class="px-md-4 py-md-2 border-md-start border-dark">250kg リリース</div></td>
+              </tr>
+            </tbody>
+          </table>
+        </dd>
+      </dl>
+    </section>
+    <section class="bg-body text-body bg-buy pb-5" id="buy">
+      <h3 class="text-center display-6 font-serif text-white py-4 bg-primary multiply ffs-palt ls-2">ご購入はこちら</h3>
+      <div class="container d-md-flex mb-4">
+        <div class="col-md-5"><img loading="lazy" src="files/img/fishing07.webp" alt="" width="1500" height="1080" class="img-fluid"> <span class="fw-bold">身長180cm男性の場合</span> </div>
+        <div class="col-md-7 ps-md-5">
+          <div class="fw-bold ffs-palt mb-2"><span>【年間限定生産】</span><span class="fs-4 ms-3">世界最強のジギングロッド</span></div>
+          <div class="mb-1"><span class="badge bg-danger fs-5">2023モデル</span></div>
+          <div class="fw-bold fs-2">GOUKI MOGI-SPECIAL MHH16BW</div>
+          <div class="fw-bold fs-3 text-decoration-line-through">250,000JPY</div>
+          <div class="fw-bold text-danger"><span class="fs-2">200,000JPY</span><span class="fs-3"> / 2000USD</span></div>
+          <div class="fw-bold ffs-palt mb-3 mb-md-4"><span>（国際送料別）</span><span class="smaller ms-2">※海外配送用のロッド保護資材を含む</span></div>
+          <a href="####" class="btn btn-lg btn-success rounded-pill w-100 position-relative max-480 ls-2 fs-4 fw-bold">購入はこちら<i class="bi bi-chevron-right position-absolute end-0 me-3"></i></a> </div>
+      </div>
+      <div class="container d-md-flex pb-5">
+        <div class="col-md-5">
+          <div class="d-flex gap-3">
+            <div><img loading="lazy" src="files/img/fishing08.webp" alt="" width="912" height="721" class="img-fluid"></div>
+            <div><img loading="lazy" src="files/img/fishing09.webp" alt="" width="912" height="721" class="img-fluid"></div>
+          </div>
+          <p class="fw-bold">グリップエンドアルミジンバル</p>
+        </div>
+        <div class="col-md-7 ps-md-5">
+          <div>SPEC</div>
+          <div class="d-md-flex gap-4">
+            <div class="col-md-6">
+              <dl class="d-flex mb-0">
+                <dt class="col-5 col-md-4 border-top border-bottom border-primary py-2 fw-normal">長さ</dt>
+                <dd class="col-7 border-top border-bottom py-2 ps-3 mb-0 border-secondary">1600mm</dd>
+              </dl>
+              <dl class="d-flex mb-0">
+                <dt class="col-5 col-md-4 border-bottom border-primary py-2 fw-normal">道糸</dt>
+                <dd class="col-7 border-bottom py-2 ps-3 mb-0 border-secondary">PE12</dd>
+              </dl>
+              <dl class="d-flex mb-0">
+                <dt class="col-5 col-md-4 border-bottom border-primary py-2 fw-normal">ドラグ</dt>
+                <dd class="col-7 border-bottom py-2 ps-3 mb-0 border-secondary">MAX30kg</dd>
+              </dl>
+            </div>
+            <div class="col-md-6">
+              <dl class="d-flex mb-0">
+                <dt class="col-5 col-md-4 border-md-top border-bottom border-primary py-2 fw-normal">グリップ</dt>
+                <dd class="col-7 border-md-top border-bottom py-2 ps-3 mb-0 border-secondary">860mm</dd>
+              </dl>
+              <dl class="d-flex mb-0">
+                <dt class="col-5 col-md-4 border-bottom border-primary py-2 fw-normal">フロント</dt>
+                <dd class="col-7 border-bottom py-2 ps-3 mb-0 border-secondary">EVA 255mm</dd>
+              </dl>
+              <dl class="d-flex mb-0">
+                <dt class="col-5 col-md-4 border-bottom border-primary py-2 fw-normal">リア</dt>
+                <dd class="col-7 border-bottom py-2 ps-3 mb-0 border-secondary">EVA 370mm</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-relative py-5 py-md-0">
+        <div class="bg-primary multiply position-absolute top-0 start-0 w-100 content-world"> </div>
+        <img loading="lazy" src="files/img/bg_05.svg" alt="" width="1276.2" height="657.4" class="img-fluid screen position-relative my-md-0 my-5 py-5 py-md-0 ">
+        <div class="w-100 py-5+ position-absolute top-0 text-white fw-bold text-center h-100 d-flex align-items-center justify-content-center">
+          <div class="px-3">
+            <h3 class="d-inline-block fw-bold pb-2 border-bottom border-2 ls-2 ffs-palt mb-4">世界の公式アングラー&amp;<span class="d-inline-block">釣り船紹介</span></h3>
+            <ul class="d-flex justify-content-between mx-auto container mb-0 mb-md-5 flex-wrap">
+              <li class="col-4 col-md-2 p-3 d-block"><img loading="lazy" src="files/img/user_01.webp" alt="" width="1000" height="1500" class="img-square max-140 h-auto rounded-circle glow mb-2">
+                <div>中山</div>
+              </li>
+              <li class="col-4 col-md-2 p-3 d-block"><img loading="lazy" src="files/img/user_02.webp" alt="" width="1000" height="1500" class="img-square max-140 h-auto rounded-circle glow mb-2">
+                <div>ジョン</div>
+              </li>
+              <li class="col-4 col-md-2 p-3 d-block"><img loading="lazy" src="files/img/user_03.webp" alt="" width="1000" height="1500" class="img-square max-140 h-auto rounded-circle glow mb-2">
+                <div>ボブ</div>
+              </li>
+              <li class="col-4 col-md-2 p-3 d-block"><img loading="lazy" src="files/img/ship_01.webp" alt="" width="1000" height="1500" class="img-square max-140 h-auto rounded-circle glow mb-2">
+                <div>Tony</div>
+              </li>
+              <li class="col-4 col-md-2 p-3 d-block"><img loading="lazy" src="files/img/ship_02.webp" alt="" width="1000" height="1500" class="img-square max-140 h-auto rounded-circle glow mb-2">
+                <div>Max</div>
+              </li>
+              <li class="col-4 col-md-2 p-3 d-block"><img loading="lazy" src="files/img/ship_03.webp" alt="" width="1000" height="1500" class="img-square max-140 h-auto rounded-circle glow mb-2">
+                <div>Ted</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="p-3">
+        <dl class="container p-3 border border-primary">
+          <dt class="text-center mb-2">購入に関する注意事項</dt>
+          <dd class="text-break small"> □□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□ </dd>
+        </dl>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="sticky-top p-3 d-flex align-items-center">
+  <div class="max-160 mb-3 mb-md-0"><img loading="lazy" src="files/img/logo_mogi.svg" alt="" width="300" height="77" class="img-fluid"></div>
+  <span class="smaller py-3">&copy;C2005-2023 PROSHOP MOGI All rights reserved</span> </footer>
+<div id="menu_top" class="move bg-primary p-3 lh-1 js-menutop shadow" style="z-index: 1040"> <i class="bi bi-chevron-up"></i> </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let a_tooltip=document.querySelectorAll('.js-tooltip');
+let v_show=0;
+a_tooltip.forEach(function(e){
+  const e_tooltip = e.querySelector('.tooltip');
+  e.addEventListener('mouseover', function() {
+    e_tooltip.classList.add('show');
+  });
+  e.addEventListener('mouseout', function() {
+    e_tooltip.classList.remove('show');
+  });
+});
+
+let e_header=document.querySelector('header');
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  if(document.body.scrollTop > 120 || document.documentElement.scrollTop > 120 ){
+    e_header.classList.add('bg-black');
+  }else{
+    e_header.classList.remove('bg-black');
+  }
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 ) && r_footer.top > 500){
+    e_menuTop.style.bottom = "100px";
+  } else {
+    e_menuTop.style.bottom = "-150px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 10,
+  left: 10,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

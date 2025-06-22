@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>WEB乗船名簿-船長用画面-プロフィール</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WEB乗船名簿-船長用画面-プロフィール">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style>
+header .container, .bg-main, .bg-primary-gradient {
+  background-image: linear-gradient(to right, #283c73, #172642);
+}
+.bg-main {
+  height: 100vmin;
+  max-height: 320px;
+  padding-top: 1.5em;
+  padding-bottom: 5em;
+}
+.bg-secondary-gradient {
+  background-image: linear-gradient(to top, #29abe2, #89b9d8);
+}
+.wbl-captain-card {
+  border-radius: 0.5em;
+  background-image: linear-gradient(to right, rgba(80, 220, 255,0.85), rgba(200,240,255,0.85));
+  position: relative;
+  margin-bottom: -90px;
+  top: -90px;
+}
+.wbl-top-bg-icon {
+  top: calc(50px + 1em);
+  max-height: 30vmin;
+}
+[aria-label="Close"] {
+  margin: -10px 0;
+}
+.wbl-img-gold {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.618 / 1;
+}
+.img-resize {
+  overflow: hidden;
+}
+[data-bs-toggle="modal"] {
+  cursor: pointer
+}
+[onmousedown] {
+  cursor: move
+}
+.img-resize > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #ccc;
+}
+.size-square {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+.size-gold {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.618 / 1;
+}
+
+@media (min-width:768px) {
+}
+</style>
+</head>
+
+<body>
+<script src="files/js/header.js"></script>
+<header class="sticky-top"></header>
+<main>
+  <article class="pb-0 pb-sm-5">
+    <section class="container bg-main d-flex align-content-center flex-wrap text-center text-white position-relative px-0"> <img src="files/img/captain_img02.svg" alt="" width="200" height="200" class="position-absolute wbl-top-bg-icon w-100">
+      <div class="w-100 position-relative">
+        <h2 class="fw-bold ls-2 fs-1">船長用画面</h2>
+        <em class="ls-4">For CAPTAIN</em> </div>
+      <div class="position-absolute start-0 bottom-1 w-100">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='%23fff'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="w-100 small">
+          <ol class="breadcrumb justify-content-center small mb-0 fw-bold">
+            <li class="breadcrumb-item"><a href="for_captain.html" class="text-white text-decoration-none">HOME</a></li>
+            <li class="breadcrumb-item" aria-current="page">プロフィール</li>
+          </ol>
+        </nav>
+        <img src="files/img/bg_msk.svg" width="375" height="100" alt="" class="w-100"> </div>
+    </section>
+    <section class="container bg-white px-3 position-relative pb-5">
+      <div class="p-sm-4 px-sm-5 max-480 mx-auto mb-4">
+        <div class="d-flex wbl-captain-card p-2">
+          <div class="col-4 position-relative" onClick="f_canvasSet(this)">
+            <img src="files/img/captain.png" alt="" width="1200" height="1200" class="img-fluid">
+            <button class="btn position-absolute end-0 bottom-0 p-2" data-bs-toggle="modal" data-bs-target="#modal_userimg_edit"><img src="files/img/icon_camera.svg" alt="写真変更" width="30" height="30" class=""></button>
+          </div>
+          <div class="w-100 ms-2 fw-bold text-primary pt-1">
+            <dl class="d-flex align-items-center mb-0">
+              <dt class="smaller">船名：</dt>
+              <dd class="mb-0">トリッパー</dd>
+            </dl>
+            <dl class="d-flex align-items-center mb-0">
+              <dt class="smaller">船長：</dt>
+              <dd class="mb-0">林　雅美<span class="smaller fw-normal">(Hayashi Masami)</span></dd>
+            </dl>
+            <dl class="d-flex align-items-center mb-0">
+              <dt class="smaller">番号：</dt>
+              <dd class="mb-0">沖縄1234</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <h3 class="fs-5 d-flex align-items-center mb-2"><span class="d-flex align-items-center"><img src="files/img/icon_ship3.svg" alt="" width="40" height="40" class="me-2">船の写真</span> </h3>
+      <ul class="d-flex gap-1 gap-sm-2 gap-md-3 ps-0 text-center">
+        <li class="d-block w-100 bg-light" data-bs-toggle="modal" data-bs-target="#modal_shipimg_edit_01" onClick="f_canvasSet(this)">
+          <img src="files/img/captain_bg_img.png" alt="" width="1200" height="740" class="img-fluid">
+          <p class="mb-0 small">走行中</p>
+          <button class="btn btn-sm btn-primary fw-bold px-3 lh-1 bg-primary-gradient mb-2"><small>編集</small></button>
+        </li>
+        <li class="d-block w-100 bg-light" data-bs-toggle="modal" data-bs-target="#modal_shipimg_edit_02" onClick="f_canvasSet(this)">
+           <img src="files/img/movie_img.png" alt="" width="1200" height="740" class="img-fluid">
+          <p class="mb-0 small">甲板から</p>
+          <button class="btn btn-sm btn-primary fw-bold px-3 lh-1 bg-primary-gradient mb-2"><small>編集</small></button>
+        </li>
+        <li class="d-block w-100 bg-light" data-bs-toggle="modal" data-bs-target="#modal_shipimg_edit_03" onClick="f_canvasSet(this)">
+          <img src="files/img/icon_camera.png" alt="" width="1200" height="740" class="img-fluid">
+          <p class="mb-0 small">-----</p>
+          <button class="btn btn-sm btn-primary fw-bold px-3 lh-1 bg-primary-gradient mb-2"><small>編集</small></button>
+        </li>
+      </ul>
+    </section>
+    <section class="container px-3 py-5 bg-light position-relative">
+      <h3 class="fs-5 d-flex align-items-center mb-3"><img src="files/img/icon_files.svg" alt="" width="40" height="40" class="me-2">詳細情報 </h3>
+      <form action="for_captain.html">
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">入力１</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">入力２</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">完了</button>
+        </div>
+      </form>
+    </section>
+  </article>
+</main>
+<div class="modal fade" id="modal_shipimg_edit_01" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-primary-gradient text-white">
+        <h5 class="modal-title fw-bold">船の画像</h5>
+        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+      </div>
+      <div class="modal-body pb-0">
+        <label for="preview_form_shipimg_01" class="form-label">画像を選択してください</label>
+        <input class="form-control mb-3" type="file" id="preview_form_shipimg_01" onChange="f_imgChange(this)">
+        <canvas width="1200" height="740" class="w-100"></canvas>
+        <input type="text" class="form-control" id="form_shipimg_title_01" placeholder="タイトルを入力してください" value="走行中">
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-primary" onClick="f_sendImg(this)" data-bs-dismiss="modal">設定する</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal_shipimg_edit_02" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-primary-gradient text-white">
+        <h5 class="modal-title fw-bold">船の画像</h5>
+        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+      </div>
+      <div class="modal-body pb-0">
+        <label for="preview_form_shipimg_02" class="form-label">画像を選択してください</label>
+        <input class="form-control mb-3" type="file" id="preview_form_shipimg_02" onChange="f_imgChange(this)">
+        <canvas width="1200" height="740" class="w-100"></canvas>
+        <input type="text" class="form-control" id="form_shipimg_title_02" placeholder="タイトルを入力してください" value="甲板から">
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-primary" onClick="f_sendImg(this)" data-bs-dismiss="modal">設定する</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal_shipimg_edit_03" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-primary-gradient text-white">
+        <h5 class="modal-title fw-bold">船の画像</h5>
+        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+      </div>
+      <div class="modal-body pb-0">
+        <label for="preview_form_shipimg_03" class="form-label">画像を選択してください</label>
+        <input class="form-control mb-3" type="file" id="preview_form_shipimg_03" onChange="f_imgChange(this)">
+        <canvas width="1200" height="740" class="w-100"></canvas>
+        <input type="text" class="form-control" id="form_shipimg_title_03" placeholder="タイトルを入力してください">
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-primary" onClick="f_sendImg(this)" data-bs-dismiss="modal">設定する</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal_userimg_edit" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-primary-gradient text-white">
+        <h5 class="modal-title fw-bold">プロフィール画像</h5>
+        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+      </div>
+      <div class="modal-body pb-0">
+        <label for="form_userimg" class="form-label">画像を選択してください</label>
+        <input class="form-control mb-3" type="file" id="form_userimg" onChange="f_imgChange(this)">
+        <canvas width="1200" height="1200" class="w-100"></canvas>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-primary" onClick="f_sendImg(this)" data-bs-dismiss="modal">設定する</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="sticky-top pt-4 bd-gray-800 text-white"></footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<script src="files/js/footer.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_modalCanvas;
+let e_context;
+let e_img;
+let isDragging = false;
+let startX;
+let startY;
+let lastX = 0;
+let lastY = 0;
+let newX = 0;
+let newY = 0;
+let newWidth;
+let newHeight;
+let scale = 1;
+let ratio = 1;
+let v_width;
+let v_height;
+let e_imgTarget;
+
+function f_canvasSet(el) {
+  e_modalCanvas = document.querySelector((el.getAttribute('data-bs-target') || el.querySelector('[data-bs-target]').getAttribute('data-bs-target')) + ' canvas');
+  e_context = e_modalCanvas.getContext('2d');
+  e_img = new Image();
+  e_img.onload = () => {
+    calculateImageDimensions();
+    drawImageOnCanvas();
+    e_modalCanvas.addEventListener('touchstart', handleDragStart);
+    e_modalCanvas.addEventListener('touchmove', handleTouchMove);
+    e_modalCanvas.addEventListener('wheel', handleWheel);
+    e_modalCanvas.addEventListener('mousedown', handleDragStart);
+    ['mouseup', 'mouseout', 'touchend'].forEach(eventName => e_modalCanvas.addEventListener(eventName, handleDragEnd));
+    e_modalCanvas.addEventListener('mousemove', handleMouseMove);
+  };
+  e_imgTarget = el.querySelector('img');
+  e_img.src = e_imgTarget.getAttribute('src');
+}
+
+function calculateImageDimensions() {
+  const { width, height } = e_img;
+  const widthRatio = e_modalCanvas.width / width;
+  const heightRatio = e_modalCanvas.height / height;
+  ratio = Math.max(widthRatio, heightRatio);
+  v_width = width * ratio;
+  v_height = height * ratio;
+  newX = Math.min((e_modalCanvas.width - v_width) / 2, 0);
+  newY = Math.min((e_modalCanvas.height - v_height) / 2, 0);
+  newWidth = v_width;
+  newHeight = v_height;
+}
+
+function drawImageOnCanvas() {
+  const { width, height } = e_modalCanvas;
+  e_context.clearRect(0, 0, width, height);
+  e_context.drawImage(e_img, newX, newY, newWidth, newHeight);
+}
+
+function handleDragStart(event) {
+  event.preventDefault();
+  isDragging = true;
+  if (event.touches && event.touches.length > 0) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  } else {
+    startX = event.clientX;
+    startY = event.clientY;
+  }
+  lastX = newX;
+  lastY = newY;
+  if (event.touches && event.touches.length > 1) {
+    const [touch1, touch2] = event.touches;
+    startX = (touch1.clientX + touch2.clientX) / 2;
+    startY = (touch1.clientY + touch2.clientY) / 2;
+    v_beforX = startX;
+    v_beforY = startY;
+    initialDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+    initialScale = scale;
+  }
+}
+
+function handleDragEnd() {
+  isDragging = false;
+  initialDistance = 0;
+  initialScale = scale;
+}
+
+function handleTouchMove(event) {
+  event.preventDefault();
+  if (event.touches.length === 1 && isDragging) {
+    const touch = event.touches[0];
+    const clientX = touch.clientX;
+    const clientY = touch.clientY;
+    const deltaX = clientX - startX;
+    const deltaY = clientY - startY;
+    newX = lastX + deltaX * scale * ratio;
+    newY = lastY + deltaY * scale * ratio;
+    const minX = e_modalCanvas.width - newWidth;
+    const minY = e_modalCanvas.height - newHeight;
+    newX = Math.max(Math.min(newX, 0), minX);
+    newY = Math.max(Math.min(newY, 0), minY);
+    drawImageOnCanvas();
+  } else if (event.touches.length > 1) {
+    const [touch1, touch2] = event.touches;
+    const currentDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+    const delta = currentDistance - initialDistance;
+    const zoom = 1 + delta * 0.01;
+    scale = Math.max(initialScale * zoom, 1);
+    const rect = e_modalCanvas.getBoundingClientRect();
+    const offsetX = (touch1.clientX + touch2.clientX) / 2;
+    const offsetY = (touch1.clientY + touch2.clientY) / 2;
+    const preRatioX = (offsetX - newX) / newWidth;
+    const preRatioY = (offsetY - newY) / newHeight;
+    newWidth = v_width * scale;
+    newHeight = v_height * scale;
+    newX = offsetX - preRatioX * newWidth + (offsetX - startX) * scale;
+    newY = offsetY - preRatioY * newHeight + (offsetY - startY) * scale;
+    const minX = e_modalCanvas.width - newWidth;
+    const minY = e_modalCanvas.height - newHeight;
+    drawImageOnCanvas();
+    lastX = newX;
+    lastY = newY;
+    startX = offsetX;
+    startY = offsetY;
+  }
+}
+
+function handleWheel(event) {
+  event.preventDefault();
+  const delta = Math.sign(event.deltaY);
+  const zoom = delta > 0 ? 0.9 : 1.1;
+  scale *= zoom;
+  scale = Math.min(Math.max(scale, 1), 4);
+  const offsetX = event.clientX - e_modalCanvas.getBoundingClientRect().left;
+  const offsetY = event.clientY - e_modalCanvas.getBoundingClientRect().top;
+  const preRatioX = (offsetX - newX) / newWidth;
+  const preRatioY = (offsetY - newY) / newHeight;
+  newWidth = v_width * scale;
+  newHeight = v_height * scale;
+  newX = offsetX - preRatioX * newWidth;
+  newY = offsetY - preRatioY * newHeight;
+  const minX = e_modalCanvas.width - newWidth;
+  const minY = e_modalCanvas.height - newHeight;
+  newX = Math.max(Math.min(newX, 0), minX);
+  newY = Math.max(Math.min(newY, 0), minY);
+  drawImageOnCanvas();
+}
+
+function handleMouseMove(event) {
+  if (!isDragging) return;
+  newX = lastX + (event.clientX - startX) * scale * ratio;
+  newY = lastY + (event.clientY - startY) * scale * ratio;
+  const minX = e_modalCanvas.width - newWidth;
+  const minY = e_modalCanvas.height - newHeight;
+  newX = Math.max(Math.min(newX, 0), minX);
+  newY = Math.max(Math.min(newY, 0), minY);
+  drawImageOnCanvas();
+}
+
+function drawImageOnCanvas() {
+  e_context.clearRect(0, 0, e_modalCanvas.width, e_modalCanvas.height);
+  e_context.drawImage(e_img, newX, newY, newWidth, newHeight);
+}
+function f_imgChange(e_file) {
+  e_modalCanvas = e_file.nextElementSibling;
+  e_context = e_modalCanvas.getContext('2d');
+  e_img = new Image();
+  scale = 1;
+  e_img.onload = () => {
+    const widthRatio = e_modalCanvas.width / e_img.width;
+    const heightRatio = e_modalCanvas.height / e_img.height;
+    ratio = Math.max(widthRatio, heightRatio);
+    v_width = e_img.width * ratio;
+    v_height = e_img.height * ratio;
+    newX = Math.min((e_modalCanvas.width - v_width) / 2, 0);
+    newY = Math.min((e_modalCanvas.height - v_height) / 2, 0);
+    newWidth = v_width;
+    newHeight = v_height;
+    drawImageOnCanvas();
+  };
+  e_img.src = URL.createObjectURL(e_file.files[0]);
+}
+
+/*画像送信*/
+const sendUrl = "https://www.send_img.com"; // 送信先のURL
+function f_sendImg(el) {
+  var e_modalFadeId=el.closest('.modal.fade').getAttribute('id');
+  
+  var e_canvas = document.querySelector('#'+e_modalFadeId+' canvas');
+  var e_image = e_canvas.toDataURL("image/png");
+  e_imgTarget.src = e_image; // 元の画像を上書き
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log("画像が送信されました。");
+      // 送信が成功した後の処理をここに追加する
+    }
+  };
+  xhr.open("POST", sendUrl, true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.send("image=" + encodeURIComponent(e_image));
+}
+/*/////*/
+
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "0px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+
+</script>
+</body>
+</html>

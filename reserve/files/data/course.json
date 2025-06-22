@@ -1,0 +1,30 @@
+{
+  "message": "success",
+  "userId": 1,
+  "places": {
+    "1": {
+      "id": 1,
+      "name": "場所1",
+      "courses": [
+        {
+          "id": 1,
+          "place_id": 1,
+          "name": "60分コース",
+          "duration": 60
+        },
+        {
+          "id": 2,
+          "place_id": 1,
+          "name": "90分コース",
+          "duration": 90
+        },
+        {
+          "id": 3,
+          "place_id": 1,
+          "name": "120分コース",
+          "duration": 120
+        }
+      ]
+    }
+  }
+}

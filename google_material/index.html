@@ -1,250 +1,238 @@
 <!doctype html>
 <html lang="ja">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="Google Material Designをwebサイトで使用する実例集">
-  <meta property="og:title" content="Google Material Designをwebサイトで使用する実例集">
-  <meta property="og:description" content="Google Material Designをwebサイトで使用する実例集">
-  <meta property="og:image" content="https://woopeer.com/image.jpg">
-  <meta property="og:image:alt" content="woopeer.com">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:url" content="https://woopeer.com/google_material/">
-  <meta name="theme-color" content="#000000">
-
-  <title>Google Material Design</title>
-  <link href="../css/base.css?" rel="stylesheet" type="text/css">
-  <noscript class="deferred-styles">
-    <link href="../css/ripple.css?" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../css/print.css" media="print">
-  </noscript>
-  <style type="text/css">
-    :root {
-      --main-color: #6200ee;
-    }
-
-    body {
-      word-break: normal;
-    }
-
-    .tabele-swip {
-      scroll-snap-type: x mandatory;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      overflow-scrolling: touch;
-      white-space: nowrap;
-    }
-
-    .tabele-swip>* {
-      white-space: normal;
-    }
-
-    td {
-      padding: 1rem;
-      min-width: 230px;
-    }
-
-    td:first-child {
-      max-width: 24vw;
-    }
-
-    pre {
-      margin: 0;
-      overflow: auto;
-      font-size: 80%;
-    }
-
-    .arrow-r {
-      padding-right: 1.5rem;
-      position: relative;
-    }
-
-    .arrow-r::before {
-      content: "";
-      -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"/></svg>');
-      background-color: currentColor;
-      position: absolute;
-      top: 50%;
-      right: .5rem;
-      width: 1rem;
-      height: 1rem;
-      margin-top: -.5rem;
-    }
-
-    @media screen and (max-width:920px) {
-      .tabele-swip {
-        margin: 0 -1rem;
-        padding: 0 1rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Google Material Designをwebサイトで使用する実例集">
+<meta property="og:title" content="Google Material Designをwebサイトで使用する実例集">
+<meta property="og:description" content="Google Material Designをwebサイトで使用する実例集">
+<meta property="og:image" content="https://woopeer.com/image.jpg">
+<meta property="og:image:alt" content="woopeer.com">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:url" content="https://woopeer.com/google_material/">
+<meta name="theme-color" content="#000000">
+<title>Google Material Design</title>
+<link href="../css/base.css?1" rel="stylesheet" type="text/css">
+<noscript class="deferred-styles">
+<link href="../css/ripple.css?1" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/print.css" media="print">
+</noscript>
+<style type="text/css">
+:root {
+--main-color: #6200ee;
+}
+body {
+  word-break: normal;
+}
+.tabele-swip {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  white-space: nowrap;
+}
+.tabele-swip>* {
+  white-space: normal;
+}
+td {
+  padding: 1rem;
+  min-width: 230px;
+}
+td:first-child {
+  max-width: 24vw;
+}
+pre {
+  margin: 0;
+  overflow: auto;
+  font-size: 90%;
+}
+.arrow-r {
+  padding-right: 1.5rem;
+  position: relative;
+}
+.arrow-r::before {
+  content: "";
+  -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"/></svg>');
+  background-color: currentColor;
+  position: absolute;
+  top: 50%;
+  right: .5rem;
+  width: 1rem;
+  height: 1rem;
+  margin-top: -.5rem;
+}
+@media screen and (max-width:920px) {
+.tabele-swip {
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+}
+</style>
 </head>
 
 <body>
-  <header class="pos-sticky-top base-bg-color">
-    <h1 class="max-w cam-border-bottom pd05 mt0">Google Material Design for web</h1>
-    <nav>
-    </nav>
-  </header>
-  <main>
-    <article>
-      <section class="pl10 pr10">
-        <h2>テキスト</h2>
-        <div class="tabele-swip">
-          <table class="tabel-border bg-white w100">
-            <thead>
-              <tr>
-                <th>表示</th>
-                <th>実装例</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="font-bigger">テキスト特大</span></td>
-                <td>
-                  <pre><code>&lt;span class="font-bigger"&gt;テキスト特大&lt;/span&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="font-big">テキスト大</span></td>
-                <td>
-                  <pre><code>&lt;span class="font-big"&gt;テキスト大&lt;/span&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="fb">テキスト太字</span></td>
-                <td>
-                  <pre><code>&lt;span class="fb"&gt;テキスト太字&lt;/span&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="small">テキスト小</span></td>
-                <td>
-                  <pre><code>&lt;span class="small"&gt;テキスト小&lt;/span&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="smaller">テキスト極小</span></td>
-                <td>
-                  <pre><code>&lt;span class="smaller"&gt;テキスト極小&lt;/span&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td><span class="sans-serif">テキスト明朝体</span></td>
-                <td>
-                  <pre><code>&lt;span class="sans-serif"&gt;テキスト明朝体&lt;/span&gt;</code></pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section class="pl10 pr10">
-        <h2>ボタン・リンク</h2>
-        <div class="tabele-swip">
-          <table class="tabel-border bg-white w100">
-            <thead>
-              <tr>
-                <th>表示</th>
-                <th>実装例</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><button class="btn ripple">テキストボタン</button></td>
-                <td>
-                  <pre><code>&lt;button class="btn ripple"&gt;テキストボタン&lt;/button&gt;<br>&lt;a href="######" class="btn ripple"&gt;テキストボタン&lt;/a&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td><button class="btn btn-raised ripple-white ripple">カラーボタン</button></td>
-                <td>
-                  <pre><code>&lt;button class="btn ripple"&gt;カラーボタン&lt;/button&gt;<br>&lt;a href="######" class="btn btn-raised ripple-white ripple"&gt;カラーボタン&lt;/a&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td><button class="btn btn-outlined ripple">ボーダーボタン</button></td>
-                <td>
-                  <pre><code>&lt;button class="btn btn-outlined ripple"&gt;ボーダーボタン&lt;/button&gt;<br>&lt;a href="######" class="btn btn-outlined ripple"&gt;ボーダーボタン&lt;/a&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td><a href="######" class="pd05 ripple block-link base-color">
-                    <div>
-                      <p class="fb mg0">ブロックリンク</p>
-                      <p class="mg0">ブロックリンクブロックリンクブロックリンクブロックリンクブロックリンクブロックリンク</p>
-                    </div>
-                  </a></td>
-                <td>
-                  <pre><code>&lt;a href="######" class="pd05 ripple block-link base-color"&gt;<br>  &lt;div&gt;<br>    &lt;p class="fb mg0"&gt;ブロックリンク&lt;/p&gt;<br>    &lt;p class="mg0"&gt;ブロックリンクブロックリンクブロックリンクブロックリンクブロックリンクブロックリンク&lt;/p&gt;<br>  &lt;/div&gt;<br>&lt;/a&gt;</code></pre>
-                </td>
-              </tr>
-              <tr>
-                <td class="pd0">
-                  <ul class="pd0 mg0">
-                    <li class="ripple">
-                      <a href="######" class="list-link base-color point-reader">リストリンクリストリンク</a>
-                    </li>
-                    <li class="ripple"><a href="######"
-                        class="list-link base-color point-reader">リストリンクリストリンクリストリンクリストリンクリストリンクリストリンク</a></li>
-                    <li class="ripple"><a href="######" class="list-link arrow-r base-color point-reader">矢印付きリストリンク</a>
-                    </li>
-                    <li class="ripple"><a href="######"
-                        class="list-link arrow-r base-color point-reader">矢印付きリストリンクリストリンクリストリンクリストリンク</a>
-                    </li>
-                  </ul>
-                </td>
-                <td>
-                  <pre><code>&lt;ul class="pd0 mg0"&gt;<br> &lt;li class="ripple"&gt;&lt;a href="######" class="list-link base-color point-reader"&gt;リストリンクリストリンク&lt;/a&gt;&lt;/li&gt;<br> &lt;li class="ripple"&gt;&lt;a href="######" class="list-link base-color point-reader arrow-r"&gt;矢印付きリストリンク&lt;/a&gt;&lt;/li&gt;<br>&lt;/ul&gt;</code></pre>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-      <section>
-      </section>
-      <section>
-      </section>
-    </article>
-  </main>
-  <footer class="main-bg-color text-center pd20">- Yoshiaki Nakao 2021 -</footer>
-  <script>
-    'use strict';
-    const a_loadDeferredJs = ["../js/ripple.js", "https://www.googletagmanager.com/gtag/js?id=UA-185861202-1"];
-    let loadDeferredContent = function () {
-      let v_addStylesNode = "";
-      let a_deferredStyles = document.querySelectorAll(".deferred-styles");
-      let v_deferredStylesAll = a_deferredStyles.length;
-      for (var v_i = 0; v_i < v_deferredStylesAll; v_i++) {
-        v_addStylesNode += a_deferredStyles[v_i].textContent;
-        a_deferredStyles[v_i].parentElement.removeChild(a_deferredStyles[v_i]);
-      }
-      var replacement = document.createElement("div");
-      replacement.innerHTML = v_addStylesNode;
-
-      let v_loadDeferredJsAll = a_loadDeferredJs.length;
-      for (var v_i = 0; v_i < v_loadDeferredJsAll; v_i++) {
-        var e_script = document.createElement('script');
-        e_script.src = a_loadDeferredJs[v_i];
-        replacement.appendChild(e_script);
-      }
-      document.body.appendChild(replacement);
-    };
-    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-      window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    if (raf) raf(function () { window.setTimeout(loadDeferredContent, 0); });
-    else window.addEventListener('load', loadDeferredContent);
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-185861202-1');
-  </script>
+<header class="pos-sticky-top base-bg-color">
+  <h1 class="max-w cam-border-bottom pd05 mt0">Google Material Design for web</h1>
+  <nav> </nav>
+</header>
+<main>
+  <article>
+    <section class="pl10 pr10">
+      <h2>テキスト</h2>
+      <div class="tabele-swip">
+        <table class="tabel-border bg-white w100">
+          <thead>
+            <tr>
+              <th>表示</th>
+              <th>実装例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="font-bigger">テキスト特大</span></td>
+              <td><pre><code>&lt;span class="font-bigger"&gt;テキスト特大&lt;/span&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td><span class="font-big">テキスト大</span></td>
+              <td><pre><code>&lt;span class="font-big"&gt;テキスト大&lt;/span&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td><span class="fb">テキスト太字</span></td>
+              <td><pre><code>&lt;span class="fb"&gt;テキスト太字&lt;/span&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td><span class="small">テキスト小</span></td>
+              <td><pre><code>&lt;span class="small"&gt;テキスト小&lt;/span&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td><span class="smaller">テキスト極小</span></td>
+              <td><pre><code>&lt;span class="smaller"&gt;テキスト極小&lt;/span&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td><span class="sans-serif">テキスト明朝体</span></td>
+              <td><pre><code>&lt;span class="sans-serif"&gt;テキスト明朝体&lt;/span&gt;</code></pre></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pl10 pr10">
+      <h2>ボタン・リンク</h2>
+      <div class="tabele-swip">
+        <table class="tabel-border bg-white w100">
+          <thead>
+            <tr>
+              <th>表示</th>
+              <th>実装例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button class="btn ripple">テキストボタン</button></td>
+              <td><pre><code>&lt;button class="btn ripple"&gt;テキストボタン&lt;/button&gt;<br>&lt;a href="######" class="btn ripple"&gt;テキストボタン&lt;/a&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td><button class="btn btn-raised ripple-white ripple">カラーボタン</button></td>
+              <td><pre><code>&lt;button class="btn ripple"&gt;カラーボタン&lt;/button&gt;<br>&lt;a href="######" class="btn btn-raised ripple-white ripple"&gt;カラーボタン&lt;/a&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td><button class="btn btn-outlined ripple">ボーダーボタン</button></td>
+              <td><pre><code>&lt;button class="btn btn-outlined ripple"&gt;ボーダーボタン&lt;/button&gt;<br>&lt;a href="######" class="btn btn-outlined ripple"&gt;ボーダーボタン&lt;/a&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td><a href="######" class="pd05 ripple block-link base-color">
+                <div>
+                  <p class="fb mg0">ブロックリンク</p>
+                  <p class="mg0">ブロックリンクブロックリンクブロックリンクブロックリンクブロックリンクブロックリンク</p>
+                </div>
+                </a></td>
+              <td><pre><code>&lt;a href="######" class="pd05 ripple block-link base-color"&gt;<br>  &lt;div&gt;<br>    &lt;p class="fb mg0"&gt;ブロックリンク&lt;/p&gt;<br>    &lt;p class="mg0"&gt;ブロックリンクブロックリンクブロックリンクブロックリンクブロックリンクブロックリンク&lt;/p&gt;<br>  &lt;/div&gt;<br>&lt;/a&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td class="pd0"><ul class="pd0 mg0">
+                  <li class="ripple"><a href="######" class="list-link base-color point-reader">リストリンクリストリンク</a> </li>
+                  <li class="ripple"><a href="######" class="list-link base-color point-reader">リストリンクリストリンクリストリンクリストリンクリストリンクリストリンク</a></li>
+                  <li class="ripple"><a href="######" class="list-link arrow-r base-color point-reader">矢印付きリストリンク</a> </li>
+                  <li class="ripple"><a href="######" class="list-link arrow-r base-color point-reader">矢印付きリストリンクリストリンクリストリンクリストリンク</a> </li>
+                </ul></td>
+              <td><pre><code>&lt;ul class="pd0 mg0"&gt;<br> &lt;li class="ripple"&gt;&lt;a href="######" class="list-link base-color point-reader"&gt;リストリンクリストリンク&lt;/a&gt;&lt;/li&gt;<br> &lt;li class="ripple"&gt;&lt;a href="######" class="list-link base-color point-reader arrow-r"&gt;矢印付きリストリンク&lt;/a&gt;&lt;/li&gt;<br>&lt;/ul&gt;</code></pre></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="pl10 pr10">
+      <h2>カード</h2>
+      <div class="tabele-swip">
+        <table class="tabel-border bg-white w100">
+          <thead>
+            <tr>
+              <th>表示</th>
+              <th>実装例</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="radius03 shadow-lv1">
+                  <div><img src="/img/blog_btn.jpg" width="600" height="450" alt=""></div>
+                  <p class="fb pd05 mg0 point-reader">カードタイトルカードタイトル</p>
+                  <p class="pl05 pr05 mg0">カードテキストカードテキストカードテキストカードテキストカードテキストカードテキストカードテキストカードテキスト</p>
+                  <div class="flex pd025"><button class="btn ripple pd025 fb">アクション1</button><button class="btn ripple pd025 ml0 fb">アクション2</button></div>
+                </div>
+              </td>
+              <td><pre><code>&lt;a href="######" class="pd05 ripple block-link base-color"&gt;<br>  &lt;div&gt;<br>    &lt;p class="fb mg0"&gt;ブロックリンク&lt;/p&gt;<br>    &lt;p class="mg0"&gt;ブロックリンクブロックリンクブロックリンクブロックリンクブロックリンクブロックリンク&lt;/p&gt;<br>  &lt;/div&gt;<br>&lt;/a&gt;</code></pre></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="radius03 cam-border">
+                  <div><img src="/img/blog_btn.jpg" width="600" height="450" alt=""></div>
+                  <p class="fb pd05 mg0 point-reader">カードタイトルカードタイトル</p>
+                  <p class="pl05 pr05 mg0">カードテキストカードテキストカードテキストカードテキストカードテキストカードテキストカードテキストカードテキスト</p>
+                  <div class="flex pd025"><button class="btn ripple pd025 fb">アクション1</button><button class="btn ripple pd025 ml0 fb">アクション2</button></div>
+                </div>
+              </td>
+              <td><pre><code>&lt;a href="######" class="pd05 ripple block-link base-color"&gt;<br>  &lt;div&gt;<br>    &lt;p class="fb mg0"&gt;ブロックリンク&lt;/p&gt;<br>    &lt;p class="mg0"&gt;ブロックリンクブロックリンクブロックリンクブロックリンクブロックリンクブロックリンク&lt;/p&gt;<br>  &lt;/div&gt;<br>&lt;/a&gt;</code></pre></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="main-bg-color text-center pd20">- Yoshiaki Nakao 2021 -</footer>
+<script>
+'use strict';
+const a_loadDeferredJs = ["../js/ripple.js", "https://www.googletagmanager.com/gtag/js?id=UA-185861202-1"];
+let loadDeferredContent = function () {
+  let v_addStylesNode = "";
+  let a_deferredStyles = document.querySelectorAll(".deferred-styles");
+  let v_deferredStylesAll = a_deferredStyles.length;
+  for (var v_i = 0; v_i < v_deferredStylesAll; v_i++) {
+    v_addStylesNode += a_deferredStyles[v_i].textContent;
+    a_deferredStyles[v_i].parentElement.removeChild(a_deferredStyles[v_i]);
+  }
+  var replacement = document.createElement("div");
+  replacement.innerHTML = v_addStylesNode;
+  let v_loadDeferredJsAll = a_loadDeferredJs.length;
+  for (var v_i = 0; v_i < v_loadDeferredJsAll; v_i++) {
+    var e_script = document.createElement('script');
+    e_script.src = a_loadDeferredJs[v_i];
+    replacement.appendChild(e_script);
+  }
+  document.body.appendChild(replacement);
+};
+var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+if (raf) raf(function () { window.setTimeout(loadDeferredContent, 0); });
+else window.addEventListener('load', loadDeferredContent);
+</script> 
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', 'UA-185861202-1');
+</script>
 </body>
-
 </html>

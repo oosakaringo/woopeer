@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>日本地理的表示協議会（JGIC） - Japan Geographical Indication Council LP</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="日本地理的表示協議会（JGIC） - Japan Geographical Indication Council LP">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Noto+Sans+JP:wght@400;600&display=swap');
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+html:not(.offcanvasOP) {
+  scroll-padding-top: 70px
+}
+.bg-main-title {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("files/img/bg-content_02.webp");
+  background-position: center 60%;
+  background-size: cover;
+  padding: min(5em, 15vw) 0;
+}
+.jp-map {
+  top: 50px;
+  left: 50%;
+  margin-left: 300px;
+}
+/*カルーセル*/
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42.94 42.94'%3e%3ccircle fill='%23d7323a' cx='21.47' cy='21.47' r='21.47'/%3e%3cpolyline stroke='%23fff' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.7' points='19.68 13.94 26.71 21.88 19.68 29'/%3e%3c/svg%3e");
+}
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42.94 42.94'%3e%3ccircle fill='%23d7323a' cx='21.47' cy='21.47' r='21.47'/%3e%3cpolyline stroke='%23fff' fill='none' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.7' points='23.25 14.23 16.22 22.17 23.25 29.29'/%3e%3c/svg%3e");
+}
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #ddd;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.carousel-indicators .active {
+  background-color: var(--bs-primary);
+}
+.carousel-indicators {
+  margin-bottom: -2.5em;
+  z-index: 1000;
+}
+.carousel {
+  margin-bottom: 3em;
+}
+.carousel-inner img {
+  object-fit: cover;
+  height: clamp(200px, 40vh, 50vw);
+}
+/*youtube*/
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (min-width:768px) {
+/*カルーセル*/
+.carousel {
+  max-width: 800px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-control-next {
+  right: -7.5%;
+}
+.carousel-control-prev {
+  left: -7.5%;
+}
+}
+
+@media (max-width:991px) {
+.jp-map {
+  top: 10px;
+  left: auto;
+  right: 10px;
+  margin-left: 0;
+}
+}
+
+@media (max-width:767px) {
+}
+</style>
+</head>
+
+<body>
+<header class="sticky-top">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="max-200 col-5 ps-2 py-1"><a href="index.html"><img src="files/img/logo_jgic.webp" alt="" width="1111" height="321" class="img-fluid"></a></div>
+    <div class="d-flex">
+      <div class="align-items-center small gap-3 d-none d-lg-flex"> <a href="###" class="text-body text-decoration-none border-bottom border-primary">地理的表示とは</a> <a href="#information" class="text-body text-decoration-none border-bottom border-primary">お知らせ</a><a href="###" class="text-body text-decoration-none border-bottom border-primary">産品検索</a><a href="###" class="text-body text-decoration-none border-bottom border-primary">登録申請</a><a href="###" class="text-body text-decoration-none border-bottom border-primary">偽造防止について</a> <a href="#contact" class="btn btn-primary btn-sm rounded-pill">お問い合わせ</a> </div>
+      <button class="btn btn-sm text-primary px-2 d-flex align-items-center" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <img src="files/img/icon_language.svg" alt="" width="24" height="24"> <span class="d-grid px-2 lh-1 small"><span>JP</span><i class="bi bi-caret-down-fill"></i></span></button>
+      <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+        <li><a class="dropdown-item" href="#">日本語</a></li>
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">中文簡体</a></li>
+      </ul>
+      <button class="btn p-3 lh-1 fs-3 text-primary border-start border-primary border-0 rounded-0 d-lg-none" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-480 bg-black border-start" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1 justify-content-end">
+    <button type="button" class="btn p-0 text-primary fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body d-grid align-content-between px-0"> <img src="files/img/bg-menu.svg" alt="" class="img-fluid position-absolute mt-4">
+    <div class="col-10 mx-auto position-relative">
+      <h5 class="text-center fs-2 text-primary ls-2 ffs-palt mb-5 border-bottom border-primary pb-3">日本の特産品を<br>
+        世界へ</h5>
+      <div class="d-grid pt-4"> <a href="#import" class="btn fs-5 border-bottom py-3 fw-bold" data-bs-dismiss="offcanvas" aria-label="Close">輸入したい</a> <a href="#scanning" class="btn fs-5 border-bottom py-3 fw-bold" data-bs-dismiss="offcanvas" aria-label="Close">日本産証明</a><a href="#information" class="btn fs-5 py-3 fw-bold" data-bs-dismiss="offcanvas" aria-label="Close">お知らせ</a>
+        <div class="d-flex gap-3"> <a href="###" class="border-bottom py-2 fw-bold text-body text-decoration-none w-50" data-bs-dismiss="offcanvas" aria-label="Close">地理的表示とは </a><a href="###" class="border-bottom py-2 fw-bold text-body text-decoration-none w-50" data-bs-dismiss="offcanvas" aria-label="Close">登録申請</a> </div>
+        <div class="d-flex gap-3"> <a href="###" class="py-2 fw-bold text-body text-decoration-none w-50" data-bs-dismiss="offcanvas" aria-label="Close">産品検索</a><a href="###" class="py-2 fw-bold text-body text-decoration-none w-50" data-bs-dismiss="offcanvas" aria-label="Close">偽造防止について</a> </div>
+        <a href="#contact" class="btn btn-primary btn-lg rounded-pill my-3">お問い合わせ</a> </div>
+    </div>
+    <div class="small d-flex gap-1 justify-content-center text-center ls-1 px-4 mb-3"> <span class="py-1 px-3 text-white bd-gray-800 flex-fill">日本語</span> <a href="###" class="text-decoration-none py-1 px-3 border text-body flex-fill">English</a> <a href="###" class="text-decoration-none py-1 px-3 border text-body flex-fill">中文簡体</a> </div>
+  </div>
+</div>
+<main>
+  <article>
+    <section class="position-relative">
+      <div class="bg-main-title"> <img src="files/img/japan_map.svg" alt="" width="134" height="150" class="position-absolute col-4 col-sm-3 col-lg-2 max-200 h-auto jp-map">
+        <h2 class="fw-bold text-white text-center m-0 ls-3 filter-drop-shadow">北海道</h2>
+      </div>
+      <div class="small d-flex gap-2 justify-content-center text-center ls-1 bg-primary py-4 py-sm-5"> <span class="py-1 text-white bd-gray-800 col-3 max-160">日本語</span> <a href="###" class="text-decoration-none py-1 border text-white col-3 max-160">English</a> <a href="###" class="text-decoration-none py-1 border text-white col-3 max-160">中文簡体</a> </div>
+    </section>
+    <section>
+      <div class="container px-0 pt-4 pb-5 position-relative">
+        <div class="position-absolute col-5 col-md-3 start-0" style="top:-7%;"> <img src="files/img/map_light/japan_map_1.svg" alt="" width="1000" height="1000" class="img-fluid"> </div>
+        <div class="d-flex justify-content-between align-items-center py-4 py-lg-5 my-1 max-800 mx-md-auto mx-3">
+          <h3 class="fw-bold fs-4 d-flex align-items-center position-relative filter-drop-shadow-white"><span class="badge bg-success fs-6 me-2">山梨県</span>東根さくらんぼ</h3>
+          <a href="files/foods_information.pdf" download="株式会社明野九州屋ファーム.pdf" class="btn btn-primary p-2"><img src="files/img/icon_pfd_download_w.svg" alt="" width="30" height="30"></a> </div>
+        <div id="carousel_foods" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel_foods" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel_foods" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel_foods" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carousel_foods" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active"> <img src="files/img/carousel_01.jpg" class="d-block w-100" alt=""> </div>
+            <div class="carousel-item"> <img src="files/img/carousel_02.jpg" class="d-block w-100" alt=""> </div>
+            <div class="carousel-item"> <img src="files/img/carousel_03.jpg" class="d-block w-100" alt=""> </div>
+            <div class="carousel-item"> <img src="files/img/carousel_04.jpg" class="d-block w-100" alt=""> </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel_foods" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel_foods" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="d-flex justify-content-center fs-5 fw-bold py-4">農林水産物等の情報と生産地</h3>
+      <div class="container d-lg-flex gap-4">
+        <table class="flex-fill w-100">
+          <tbody>
+            <tr class="border-bottom">
+              <th scope="row" class="col-3 border-top border-primary p-2 text-align-justify-all">登録番号</th>
+              <td class="col-9 border-top py-2 px-3">30</td>
+            </tr>
+            <tr class="border-bottom">
+              <th scope="row" class="col-3 p-2 text-align-justify-all">名称</th>
+              <td class="col-9 py-2 px-3">東根さくらんぼ、HIGASHINE CHERRY</td>
+            </tr>
+            <tr class="border-bottom">
+              <th scope="row" class="col-3 p-2 text-align-justify-all">分類</th>
+              <td class="col-9 py-2 px-3">果物</td>
+            </tr>
+            <tr class="border-bottom">
+              <th scope="row" class="col-3 p-2 text-align-justify-all">登録日</th>
+              <td class="col-9 py-2 px-3">2017/10/20</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="flex-fill w-100">
+          <tbody>
+            <tr class="border-bottom">
+              <th scope="row" class="col-3 border-lg-top border-primary p-2 text-align-justify-all">生産地</th>
+              <td class="col-9 border- py-2 px-3 border-lg-top">山形県<br>
+                東根市及び隣接市町の一部</td>
+            </tr>
+            <tr class="border-bottom">
+              <th scope="row" class="col-3 p-2 text-align-justify-all">連絡先</th>
+              <td class="col-9 py-2 px-3">果樹王国ひがしね6次産業化推進協議会<br>
+                山形県東根市中央一丁目1番1号<br>
+                <a href="https://www.higashine-cherry.jp/">https://www.higashine-cherry.jp/</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center my-5 py-5"> <a href="area.html" class="btn btn-primary btn-lg col-10 max-400">同じ県の商品を見る</a> </div>
+      <div class="bg-light container p-4">
+        <h4 class="d-md-flex justify-content-center fw-bold fs-5">紹介ビデオ</h4>
+        <div class="max-800 mx-auto">
+          <div class="youtube">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/onpRcPivQv4?si=LrEf59th0ERI0z5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <p class="d-flex justify-content-center fw-bold mt-3 mb-0">※提供元：果樹王国ひがしね6次産業化推進協議会</p>
+      </div>
+      <div class="text-center my-5 pt-5"> <a href="###" class="btn btn-primary btn-lg col-10 max-400">お問い合わせ</a> </div>
+      <div class="text-center mb-5">
+        <button class="btn btn-outline-primary rounded-pill px-5" onClick="history.back()">前に戻る</button>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="bg-light pt-4">
+  <div class="d-lg-flex justify-content-center align-items-center p-4">
+    <div class="d-flex gap-4 justify-content-evenly col-12 col-lg-5">
+      <ul class="footer-link ps-0 max-240 w-100">
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">HOME<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">地理的表示とは<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">お知らせ<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">産品検索<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">関連リンク<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">お問い合わせ<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">登録申請<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+      </ul>
+      <ul class="footer-link ps-0 max-240 w-100">
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Japanese<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">English<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Chinese<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Thai<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">French<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Italian<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Spanish<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-lg-5"> <a href="https://www.jgic.jp/" target="_blank" rel="noopener" class="col-10 max-360 d-block mx-auto my-4 mt-lg-0"><img src="files/img/logo_jgic.png" alt="" width="1039" height="189" class="img-fluid" style="mix-blend-mode:darken"></a>
+      <div class="d-flex justify-content-evenly align-items-center gap-2"> <a href="https://www.jetro.go.jp/" class="col-3 max-120" target="_blank" rel="noopener"><img src="files/img/logo_jetro.webp" alt="" width="344" height="166" class="blend-screen img-fluid" style="mix-blend-mode:darken"></a> <a href="https://www.maff.go.jp/" class="col-4 max-200" target="_blank" rel="noopener"><img src="files/img/logo_ci_head.jpg" alt="" width="280" height="53" class="blend-screen img-fluid" style="mix-blend-mode:darken"></a> <a href="https://jdmso.co.jp/" class="col-4 max-160" target="_blank" rel="noopener"><img src="files/img/logo_jdmso_kabu.png" alt="" width="457" height="143" class="blend-screen img-fluid" style="mix-blend-mode:darken"></a> </div>
+    </div>
+  </div>
+  <p class="text-center small py-3 mb-0 border-top border-color-nomal">Copyright&copy;地理的表示産品.All rights reserved.</p>
+</footer>
+<div id="menu_top" class="move js-menutop col-2 max-120" style="z-index: 1040"> <img src="files/img/icon_menu_top.svg" alt="" width="204" height="150" class="img-fluid"> </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+const e_html=document.querySelector('html');
+const e_offcanvas=document.querySelector('[data-bs-toggle="offcanvas"]');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+e_offcanvas.addEventListener('click',function(){
+  e_html.classList.add('offcanvasOP');
+});
+console.log(a_offcanvasHash);
+a_offcanvasHash.forEach(function(e){
+  e.addEventListener('click',function(){
+    setTimeout(function(){
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

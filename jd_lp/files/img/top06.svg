@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.89 90.64">
+  <defs>
+    <style>
+
+      .cls-3 {
+        fill: #040000;
+      }
+      .cls-4 {
+        fill: #fff;
+      }
+      .cls-9 {
+        fill: #231815;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 700;
+        font-size: 11.34px;
+      }
+      .cls-9, .cls-10 {
+        font-weight: 700;
+      }
+      .cls-15, .cls-17 {
+        fill: #e11c24;
+      }
+      .cls-10 {
+        font-family:'Noto Sans JP', sans-serif;
+        font-weight: 700;
+        font-size: 14.84px;
+      }
+    </style>
+  </defs>
+  <g id="_01" data-name="01">
+    <g>
+      <g>
+        <rect class="cls-4" x="0" y="58.01" width="188.85" height="28.67"/>
+        <path class="cls-3" d="m194.89,84.04H27.12c-.57,0-1.04-.46-1.04-1.04,0-.57.46-1.04,1.04-1.04h0s165.69,0,165.69,0v-26.6s-186.78,0-186.78,0v26.6s10.17,0,10.17,0c.57,0,1.04.46,1.04,1.04,0,.57-.46,1.04-1.04,1.04H3.96v-30.74h190.93v30.74Z"/>
+        <path class="cls-3" d="m20.07,80.7l6.26,6.26c.4.41.4,1.06,0,1.47-.41.4-1.06.4-1.47,0l-6.26-6.26c-.4-.41-.4-1.06,0-1.47.4-.4,1.06-.4,1.47,0Z"/>
+      </g>
+
+      <text x="97" y="10" textLength="130" text-anchor="middle" class="cls-9">簡単なエントリーだけで</text>
+      <text x="97" y="25" textLength="90" text-anchor="middle" class="cls-9">賞品が当たる！</text>
+      <text x="97" y="40" textLength="150" text-anchor="middle" class="cls-9">楽しんでいってくださいね！</text>
+      <text x="97" y="75" textLength="130" text-anchor="middle" class="cls-10"><tspan class="cls-17">個人・法人</tspan> <tspan class="cls-13">歓迎！</tspan></text>
+    </g>
+  </g>
+</svg>

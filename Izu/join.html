@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Izu 一流のライフスタイルは一流のウェルネスマネジメントから。</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Izu 一流のライフスタイルは一流のウェルネスマネジメントから。">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+.img-top {
+  height: min(35vmax, 800px);
+  object-position: 50% 70%;
+  padding: 1px 0;
+}
+.fs-top-title {
+  font-size: clamp(130%, 3.2vw, 240%);
+}
+.grid-2, .grid-2-4-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.special-content, .special-content-2 {
+  flex-wrap: wrap
+}
+.special-content > :nth-child(n+2) {
+  background-color: var(--bs-gray-900);
+  height: 120px;
+}
+.js-nav {
+  top: 60px;
+  z-index: 2
+}
+.icon-arrow {
+  margin-left: -10px;
+  top: var(--top, auto);
+  bottom: var(--bottom, auto);
+  height: var(--height, 75px);
+  object-position: 50% 100%;
+  z-index: 2
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+.grid-2-4-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+}
+
+@media (min-width:992px) {/*PC*/
+.special-content, .special-content-2 {
+  flex-wrap: nowrap;
+}
+.special-content:nth-child(2n+1) {
+  background-color: var(--bs-gray-900);
+}
+.special-content > :nth-child(n+2) {
+  background-color: transparent;
+  height: 160px;
+}
+.js-nav {
+  top: 90px;
+}
+.fs-lg-5 {
+  font-size: 1.25rem
+}
+.special-content-2 > :not(:last-child) {
+  border-right: thin solid rgba(200,200,200,.5);
+}
+.bg-gradient {
+  background-image: linear-gradient(transparent, transparent)!important
+}
+.last-arrow {
+--bottom: -140%!important;
+--height: 150%!important;
+}
+}
+
+@media (max-width:767px) {/*SP*/
+}
+</style>
+</head>
+
+<body>
+<header class="ps-1 top-0 w-100 position-fixed">
+  <div class="d-flex justify-content-between align-items-center move max-2000 mx-auto h-100"> <a href="/Izu/" class="d-flex align-items-center gap-2 h-100 text-body text-decoration-none"> <img src="files/images/logo.webp" alt="" width="86" height="86" class="square-w h-100 w-auto mt-1">
+    <div>一流のライフスタイルは<br>
+      一流のウェルネスマネジメントから。</div>
+    </a>
+    <div class="d-flex h-100"> <a href="/Izu/" class="bg-primary text-white square-w h-100 text-decoration-none text-center d-flex align-items-center justify-content-center">ご予約<br>
+      →</a>
+      <button class="btn bg-body text-white rounded-0 p-0 d-flex justify-content-center square-w h-100 align-items-center" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><i class="bi bi-list fs-3"></i></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-1200 bg-body" tabindex="-1" id="offcanvas_menu"> <img src="files/images/bg-menu.webp" alt="" width="1500" height="1000" class="img-cover h-100 w-auto position-absolute" loading="lazy">
+  <div class="offcanvas-header py-1 justify-content-between position-relative"> <img src="files/images/logo.webp" alt="" width="60" height="60" class="">
+    <button type="button" class="btn p-0 text-white fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body position-relative d-lg-flex justify-content-center">
+    <div class="d-grid grid-2 gap-2 col-md-10 mx-auto col-lg-8 max-720 mx-lg-0 mb-5 align-content-start"> <a href="/Izu/" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">HOME</span><span class="text-white small">ホーム</span></a> <a href="/Izu/about.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">About Izu</span><span class="text-white small">Izuについて</span></a> <a href="/Izu/service.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">Service </span><span class="text-white small">サービス</span></a> <a href="#partner" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">Partner</span><span class="text-white small">パートナー募集</span></a> <a href="/Izu/#faq" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">FAQ</span><span class="text-white small">よくある質問</span></a> <a href="/Izu/service.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">ISC</span><span class="text-white small">エリート幹細胞ISCについて</span></a> <a href="/Izu/join.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">JOIN LEGRAN</span><span class="text-white small">ご入会について</span></a> </div>
+    <div class="d-grid col-10 mx-auto gap-3 align-content-start col-lg-4 max-360 mx-lg-0"> <a href="/Izu/" class="btn btn-primary rounded-0 position-relative fw-bold">ご予約はこちら <i class="bi bi-arrow-right position-absolute end-0 me-2"></i></a> <a href="/Izu/contact.html" class="btn bg-white rounded-0 position-relative fw-bold">お問い合わせ <i class="bi bi-arrow-right position-absolute end-0 me-2"></i></a> </div>
+  </div>
+</div>
+<main>
+  <article>
+    <section>
+      <div class="max-2000 mx-auto position-relative mt-4 mt-lg-0"> <img src="files/images/join_top.webp" alt="" width="2000" height="1200" class="w-100 img-cover img-top"> <img src="files/images/msk_top_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0"> <img src="files/images/msk_top_02.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0">
+        <div class="d-flex flex-column align-items-center position-absolute w-100 h-100 top-0 start-0 justify-content-center gap-2 text-center">
+          <h2 class="d-grid mb-4"><span class="ff-serif text-primary display-3 ls-1">JOIN LEGRAN</span> <span class="fs-6 ls-1">ご入会について</span> </h2>
+        </div>
+      </div>
+    </section>
+    <nav class="position-sticky js-nav py-0 blur">
+      <ol class="container ps-0 d-grid fw-bold text-center grid-2-4-4 gap-3 py-1">
+        <li class="d-block"><a href="#kinds" class="text-decoration-none text-body py-1 border-bottom border-primary border-2">会員の種類</a></li>
+        <li class="d-block"><a href="#cost" class="text-decoration-none text-body py-1">費用について</a></li>
+        <li class="d-block"><a href="#join" class="text-decoration-none text-body py-1">入会の流れ</a></li>
+        <li class="d-block"><a href="/Izu/signup.html" class="text-decoration-none text-body py-1">お申込みはこちら</a></li>
+      </ol>
+    </nav>
+    <section id="kinds" class="py-5 px-3">
+      <div class="container">
+        <h2 class="ff-serif ffs-palt d-grid gap-1 mb-3 d-lg-flex align-items-baseline"><span class="fs-4 ls-2">会員の種類</span><span class="fs-6 ls-1">（サービス内容の比較）</span></h2>
+        <div class="d-grid gap-4 gap-lg-5 d-lg-flex mb-5">
+          <div class="bg-white text-center ffs-palt ls-1 w-100">
+            <h3 class="bg-primary text-white ff-serif py-3 mb-0">LEGRAN VIP会員</h3>
+            <div class="py-4">
+              <div class="ff-serif text-primary fs-4">月額<span class="display-2 ls-1 ps-2">11,000</span>円</div>
+              <div class="text-gray-900 mb-3">※法人契約可能</div>
+              <button class="btn rounded-0 position-relative btn-primary max-200 col-10" data-bs-toggle="modal" data-bs-target="#modal-vip"> 詳細はこちら<i class="bi bi-arrow-right position-absolute end-0 me-2"></i> </button>
+            </div>
+          </div>
+          <div class="bg-white text-center ffs-palt ls-1 w-100">
+            <h3 class="bg-primary text-white ff-serif py-3 mb-0">LEGRAN スタンダード会員</h3>
+            <div class="py-4">
+              <div class="ff-serif text-primary fs-4">月額<span class="display-2 ls-2 ps-2">無料</span></div>
+              <div class="text-gray-900 mb-3">※法人契約可能</div>
+              <button class="btn rounded-0 position-relative btn-primary max-200 col-10" data-bs-toggle="modal" data-bs-target="#modal-standard"> 詳細はこちら<i class="bi bi-arrow-right position-absolute end-0 me-2"></i> </button>
+            </div>
+          </div>
+        </div>
+        <h3 class="ff-serif ffs-palt d-grid gap-1 mb-3 d-lg-flex align-items-baseline fs-5"><span>LEGRAN 会員様特典</span><span> 【不死化エリート幹細胞ISC点滴】</span></h3>
+        <div class="mb-4">
+          <div class="bg-primary ff-serif text-center d-flex fs-5 py-3 py-lg-2"> <span class="d-none d-lg-block col-lg-3"></span>
+            <div class="d-grid d-lg-flex justify-content-center w-50 gap-lg-1"><span>LEGRAN</span><span>VIP</span><span>会員</span></div>
+            <div class="d-grid d-lg-flex justify-content-center w-50 gap-lg-1"><span>LEGRAN</span><span>スタンダード</span><span>会員</span></div>
+          </div>
+          <div class="d-flex border-bottom border-primary special-content align-items-center mb-3 mb-lg-0">
+            <div class="col-12 col-lg-3 ff-serif py-2 ps-lg-3">不死化点滴<span class="d-inline-block">初回限定特別会員割引</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><span class="ff-serif fs-5">初回限定</span><span class="ff-serif fs-2">50%オフ</span><span class="smaller">※会員ご本人様のみ適用<br>
+              ※単品のみ適用</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><span class="ff-serif fs-5">初回限定</span><span class="ff-serif fs-2">15%オフ</span><span class="smaller">※会員ご本人様のみ適用<br>
+              ※単品のみ適用</span></div>
+          </div>
+          <div class="d-flex border-bottom border-primary special-content align-items-center mb-3 mb-lg-0">
+            <div class="col-12 col-lg-3 ff-serif py-2 ps-lg-3">不死化点滴<span class="d-inline-block">クリニック予約サービス利用</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><i class="bi bi-circle fs-1"></i></div>
+            <div class="d-grid w-50 text-center align-content-center"><i class="bi bi-circle fs-1"></i></div>
+          </div>
+          <div class="d-flex border-bottom border-primary special-content align-items-center mb-3 mb-lg-0">
+            <div class="col-12 col-lg-3 ff-serif py-2 ps-lg-3">LEGRAN会員様限定<span class="d-inline-block">不死化点滴特別会員割引</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><span class="ff-serif fs-5">全メニュー</span><span class="ff-serif fs-2">20%オフ</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><span class="ff-serif fs-5">全メニュー</span><span class="ff-serif fs-2">15%オフ</span></div>
+          </div>
+          <div class="d-flex border-bottom border-primary special-content align-items-center mb-3 mb-lg-0">
+            <div class="col-12 col-lg-3 ff-serif py-2 ps-lg-3">同時施術者様への<span class="d-inline-block">特別会員割引の適用</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><i class="bi bi-circle fs-1"></i><span class="smaller">※会員様と同時施術様<br>
+              全メニュー20%オフ適用</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><i class="bi bi-circle fs-1"></i><span class="smaller">※会員様と同時施術様<br>
+              全メニュー5%オフ適用</span></div>
+          </div>
+          <div class="d-flex border-bottom border-primary special-content align-items-center mb-3 mb-lg-0">
+            <div class="col-12 col-lg-3 ff-serif py-2 ps-lg-3">ホテルへのドクター派遣<span class="d-inline-block">サービスの利用</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><i class="bi bi-circle fs-1"></i></div>
+            <div class="d-grid w-50 text-center align-content-center"><i class="bi bi-x-lg fs-1"></i></div>
+          </div>
+          <div class="d-flex border-bottom border-primary special-content align-items-center mb-3 mb-lg-0">
+            <div class="col-12 col-lg-3 ff-serif py-2 ps-lg-3">企業へのドクター派遣<span class="d-inline-block">サービスの利用</span></div>
+            <div class="d-grid w-50 text-center align-content-center"><i class="bi bi-circle fs-1"></i></div>
+            <div class="d-grid w-50 text-center align-content-center"><i class="bi bi-x-lg fs-1"></i></div>
+          </div>
+        </div>
+        <p class="ff-serif text-align-justify ffs-palt ls-1">その他、VIP会員様限定で「エグゼクティブ美⾷会」のご案内や、⾼級賃貸ガレージハウス、⾼級ファッションサブスやギフトのご案内など、エグゼクティブな皆様へ様々なコンテンツをご⽤意しております。</p>
+        <div class="small">
+          <dl>
+            <dt>≪会員期間≫</dt>
+            <dd>会員期間は会員ID発⾏⽇から、退会申請⽉末⽇までとなります</dd>
+          </dl>
+          <dl>
+            <dt>≪退会≫</dt>
+            <dd>ご退会に関しましてはメール（info@izuinc.jp）、公式LINEのいずれか残る形でご⼀報下さいますよう、お願いいたします。その際は必ず下記1〜3をお書き添えの上、送信くださいませ。
+              <ol class="mb-0">
+                <li>会員ID</li>
+                <li>ご登録のお名前or会社名</li>
+                <li>ご登録住所</li>
+              </ol>
+              <p> ご退会⼿続き完了後、完了の旨のご案内メッセージをお送りいたします。<br>
+                また、お預かりしておりました個⼈情報は速やかに削除いたします。 </p>
+              <p> VIP会員の皆様につきましては、退会申請受理後、⽉会費の引き落としを停⽌致しますので、退会希望⽉の20 ⽇までに退会のご連絡をお願い致します。（21 ⽇以降の退会申請につきましては、翌⽉分からの引き落とし停⽌処理となりますので、お気をつけ下さい。） </p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-vip" tabindex="-1" aria-labelledby="modal-vip" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-0">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body py-0 text-dark">
+            <h4 class="bg-primary text-white ff-serif py-2 text-center">LEGRAN VIP会員</h4>
+            <div class="ff-serif text-primary text-center border-bottom border-primary mb-3">月額<span class="fs-1 ls-2 ps-2">11,000</span>円<span class="ms-2">※法人契約可能</span></div>
+            <div class="d-grid justify-content-center gap-2">
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>ISC点滴のクリニック予約の手配<br>
+                  （Izuに連絡してIzuからクリニックを予約するサービス）<br>
+                  <span class="small">※日程候補3つと希望クリニックをもらう仕組みにしたい</span> </div>
+              </div>
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>いつでも何度でも不死化幹細胞ISC点滴が会員特別価格20%割引適用</div>
+              </div>
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>初回限定50%割引<span class="small">※本人のみ適用</span></div>
+              </div>
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>同時施術でパートナー様も会員特別価格適用可能</div>
+              </div>
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>5つ星ホテル限定ドクター派遣サービス利用可能<br>
+                  <span class="small">※40万円以下のご契約の場合は別途ドクターの交通費、それ以上は無料</span></div>
+              </div>
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>企業へのドクター派遣サービス利用可能</div>
+              </div>
+            </div>
+            <a href="/Izu/signup.html" class="btn rounded-0 position-relative btn-primary max-280 col-10 mx-auto d-block my-4"> お申し込みフォームへ<i class="bi bi-arrow-right position-absolute end-0 me-2"></i> </a> </div>
+          <div class="modal-footer border-0 pt-0"> <a href="/Izu/join.html" class="text-decoration-none text-dark fw-bold border-bottom border-primary border-2 pb-1">もっと詳しく知りたい</a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="modal-standard" tabindex="-1" aria-labelledby="modal-standard" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content rounded-0">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body py-0 text-dark">
+            <h4 class="bg-primary text-white ff-serif py-2 text-center">LEGRAN スタンダード会員</h4>
+            <div class="ff-serif text-primary text-center border-bottom border-primary mb-3">月額<span class="fs-1 ls-2 ps-2">無料</span><span class="ms-2">※法人契約可能</span></div>
+            <div class="d-grid justify-content-center gap-2">
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>ISC点滴のクリニック予約の手配<br>
+                  （Izuに連絡してIzuからクリニックを予約するサービス）<br>
+                  <span class="small">※日程候補3つと希望クリニックをもらう仕組みにしたい</span> </div>
+              </div>
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>いつでも何度でも不死化幹細胞ISC点滴が会員特別価格5%割引適用</div>
+              </div>
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>初回限定20%割引<span class="small">※本人のみ適用</span></div>
+              </div>
+              <div class="d-flex ffs-palt small gap-1"> <i class="bi bi-circle-fill text-primary"></i>
+                <div>同時施術でパートナー様も5%割引適用可能</div>
+              </div>
+            </div>
+            <a href="/Izu/signup.html" class="btn rounded-0 position-relative btn-primary max-280 col-10 mx-auto d-block my-4"> お申し込みフォームへ<i class="bi bi-arrow-right position-absolute end-0 me-2"></i> </a> </div>
+          <div class="modal-footer border-0 pt-0"> <a href="/Izu/join.html" class="text-decoration-none text-dark fw-bold border-bottom border-primary border-2 pb-1">もっと詳しく知りたい</a> </div>
+        </div>
+      </div>
+    </div>
+    <section id="cost" class="py-5 px-3 bg-gray-900">
+      <div class="container ffs-palt ls-1">
+        <h2 class="ff-serif ls-2 fs-4 mb-3">費用について</h2>
+        <div class="ff-serif mb-2">LEGRAN入会費用</div>
+        <div class="bg-primary ff-serif text-center d-flex fs-5  special-content-2"> <span class="d-none d-lg-block col-lg-3"></span>
+          <div class="d-grid d-lg-flex justify-content-center w-50 gap-lg-1 py-2"><span>VIP</span><span>会員</span></div>
+          <div class="d-grid d-lg-flex justify-content-center w-50 gap-lg-1 py-2"><span>スタンダード</span><span>会員</span></div>
+        </div>
+        <div class="d-flex border-bottom special-content-2 pb-3 pb-lg-0 mb-2 mb-lg-0 ff-serif text-center border-color-nomal">
+          <div class="col-12 col-lg-3 py-2 fs-lg-5">入会金</div>
+          <div class="w-50 fs-5 py-lg-2">無料</div>
+          <div class="w-50 fs-5 py-lg-2">無料</div>
+        </div>
+        <div class="d-flex border-bottom special-content-2 pb-3 pb-lg-0 mb-2 mb-lg-0 ff-serif text-center border-color-nomal">
+          <div class="col-12 col-lg-3 py-2 fs-lg-5">年会費</div>
+          <div class="w-50 fs-5 py-lg-2">無料</div>
+          <div class="w-50 fs-5 py-lg-2">無料</div>
+        </div>
+        <div class="d-flex border-bottom special-content-2 pb-3 pb-lg-0 ff-serif text-center border-color-nomal mb-4">
+          <div class="col-12 col-lg-3 py-2 fs-lg-5">月会費</div>
+          <div class="w-50 fs-5 py-lg-2">11,000<span class="small">円（税込）</span></div>
+          <div class="w-50 fs-5 py-lg-2">無料</div>
+        </div>
+        <div class="small">
+          <dl>
+            <dt>≪お⽀払い⽅法≫</dt>
+            <dd>クレジットカードでのお⽀払いとなります。</dd>
+          </dl>
+          <dl>
+            <dt>◆LEGRANご⼊会時</dt>
+            <dd class="text-align-justify">会員申込フォーム送信後、クレジットカードのお⽀払に関するご案内をメールにてお送り致します。内容をご確認の上、VIP会員ご希望の会員様は、7⽇以内にお⽀払い⽅法のご登録をお願い申し上げます。<br>
+              ※期⽇を過ぎましてもご登録のお⼿続きが完了しなかった場合は、VIP会員へのご希望は⾃動延期となり、お⼿続きが完了するまではスタンダード会員のご登録とさせて頂きます。<br>
+              （お⼿続き完了後にVIP専⽤の会員IDを発⾏しお渡しいたします。） </dd>
+          </dl>
+          <dl>
+            <dt>◆VIP会員様の⽉会費のお⽀払い</dt>
+            <dd class="text-align-justify">⼊会時ご登録のクレジットカードから、⼊会⽉の27⽇より、毎⽉27⽇にVIP⽉会費11,000円をお引き落とし致します。（スタンダード会員様は⽉会費はかかりません） </dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section id="join" class="pt-5 ffs-palt ls-1">
+      <div class="px-3 pb-5 pb-lg-0">
+        <div class="container">
+          <h2 class="ff-serif ls-2 fs-4 mb-3">入会の流れ</h2>
+          <div class="p-4 border border-primary bg-gray-900 mb-5 mb-lg-0 position-relative">
+            <h3 class="ff-serif text-primary d-flex align-items-center gap-3 mb-3 fs-4 col-lg-10 mx-auto"><img src="files/images/icon_form.svg" alt="" width="52" height="52">申し込みフォーム</h3>
+            <p class="text-align-justify ff-serif lh-lg col-lg-10 mx-auto">LEGRANご⼊会ご希望の⽅は会員規約に同意の上、正確なデータを⼊会申込フォームにご⼊⼒後、送信下さい。当社にて受付後、お申込内容をもとに簡単な審査を⾏い、24時間以内にメールにてご案内をお送り致します。</p>
+            <a href="/Izu/signup.html" class="btn btn-primary max-320 mx-auto mb-3 rounded-0 d-block btn-lg">入会申し込みはこちら</a>
+            <div class="d-flex w-100 position-absolute bottom-0 start-0 gap-4">
+              <div class="w-50 position-relative"><img src="files/images/icon_arrow.svg" alt="" width="20" height="510" class="img-cover position-absolute start-50 icon-arrow" style="--bottom:-65px;--height:80px"></div>
+              <div class="w-50 position-relative"><img src="files/images/icon_arrow.svg" alt="" width="20" height="510" class="img-cover position-absolute start-50 icon-arrow" style="--bottom:-65px;--height:80px"></div>
+            </div>
+          </div>
+          <div class="text-center d-flex gap-4 ff-serif d-lg-none"> <a href="#vip" class="w-50 border border-primary bg-gray-900 py-4 px-3 d-grid align-content-center text-decoration-none text-body"> VIP会員 </a> <a href="#standard" class="w-50 border border-primary bg-gray-900 py-4 px-3 d-grid align-content-center text-decoration-none text-body"> <span>スタンダード</span><span>会員</span> </a> </div>
+        </div>
+      </div>
+      <div class="d-lg-flex gap-4 container-lg px-0">
+        <div class="bg-gradient py-5 px-3 px-lg-0" id="vip">
+          <div class="container">
+            <h3 class="ff-serif text-center text-lg-start">VIP会員</h3>
+            <div class="p-4 border border-primary bg-gray-900 mb-5 position-relative">
+              <h4 class="ff-serif text-primary d-flex align-items-center gap-3 mb-3 fs-4 col-xxl-10 mx-auto"><img src="files/images/icon_pay.svg" alt="" width="52" height="52">お支払い方法</h4>
+              <p class="text-align-justify ff-serif lh-lg col-xxl-10 mx-auto">メール記載の内容をご確認の上、VIP会員様の⽉額費11,000円のお⽀払い⽅法を7⽇以内にご登録ください。</p>
+              <img src="files/images/icon_arrow.svg" alt="" width="20" height="510" class="img-cover position-absolute start-50 icon-arrow" style="--bottom:-45px;--height:60px"> </div>
+            <div class="p-4 border border-primary bg-gray-900 mb-5 position-relative">
+              <h4 class="ff-serif text-primary d-flex align-items-center gap-3 mb-3 fs-4 col-xxl-10 mx-auto"><img src="files/images/icon_id.svg" alt="" width="52" height="52">会員ID発⾏</h4>
+              <p class="text-align-justify ff-serif lh-lg col-xxl-10 mx-auto">当社にて、お⽀払い⽅法のご登録の確認後、「VIP専⽤会員ID」を発⾏し、通常2営業⽇以内にメールにて会員IDをお送り致します。</p>
+              <img src="files/images/icon_arrow.svg" alt="" width="20" height="510" class="img-cover position-absolute start-50 icon-arrow" style="--bottom:-45px;--height:60px"> </div>
+            <div class="bg-primary ff-serif text-center py-3 fs-3 text-gray-900"> サービス利用開始</div>
+          </div>
+        </div>
+        <div class="bg-gradient py-5 px-3 px-lg-0" id="standard">
+          <div class="container h-100 d-grid align-content-between">
+            <div>
+              <h3 class="ff-serif text-center text-lg-start">スタンダード会員</h3>
+              <div class="p-4 border border-primary bg-gray-900 mb-5 position-relative" style="max-height: 280px;">
+                <h4 class="ff-serif text-primary d-flex align-items-center gap-3 mb-3 fs-4 col-xxl-10 mx-auto"><img src="files/images/icon_id.svg" alt="" width="52" height="52">会員ID発⾏</h4>
+                <p class="text-align-justify ff-serif lh-lg col-xxl-10 mx-auto">メール記載の内容をご確認の上、「会員ID」を発⾏し、通常2営業⽇以内に会員IDをメールにてお送り致しますので、メール記載の内容をご確認下さい。</p>
+                <img src="files/images/icon_arrow.svg" alt="" width="20" height="510" class="img-cover position-absolute start-50 icon-arrow last-arrow" style="--bottom:-45px;--height:60px"> </div>
+            </div>
+            <div class="bg-primary ff-serif text-center py-3 fs-3 text-gray-900"> サービス利用開始</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-900 pb-5 position-relative overflow-hidden pt-lg-5" id="partner">
+      <div class="text-center position-absolute top-0 w-100"> <img src="files/images/footer.webp" alt="" width="2500" height="1000" class="img-cover img-fluid bg-partner" loading="lazy"> <img src="files/images/msk_top_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0" style="max-height: 300PX;"> <img src="files/images/msk_top_03.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0" style="max-height: 300PX;"> </div>
+      <nav aria-label="breadcrumb" class="position-absolute w-100 ps-3">
+        <ol class="breadcrumb max-2000 mx-auto">
+          <li class="breadcrumb-item"><a href="/Izu/" class="text-body text-decoration-none">HOME</a></li>
+          <li class="breadcrumb-item text-body active" aria-current="page">Izuについて</li>
+        </ol>
+      </nav>
+      <div class="container position-relative py-5 mt-5 text-center">
+        <h2 class="py-5 fs-top-title ff-serif ffs-palt ls-1 d-grid d-lg-flex justify-content-center" style="margin-top:10vmin"><span>パートナーを</span><span>募集しています</span></h2>
+        <p class="text-primary ff-serif display-1 ls-1 mb-5">Partner</p>
+        <p class="ffs-palt ls-2 col-xxl-10 mx-xxl-auto">Izuでは、エグゼクティブなお客様へ<span class="d-inline-block">最先端医療やラグジュアリーな</span> <span class="d-inline-block">サービスをご提供するために、</span> <span class="d-inline-block">共に取り組んでいただける</span> <span class="d-inline-block">パートナーを募集しています。</span></p>
+      </div>
+      <div class="d-grid gap-3 gap-md-0 d-md-flex container px-3 px-md-0"> <a href="/Izu/" class="d-block position-relative text-center text-white text-decoration-none w-100 hover-scale"> <img src="files/images/top_009.webp" alt="" width="1280" height="600" class="img-cover img-fluid h-100 position-absolute start-0" loading="lazy">
+        <div class="py-5 d-grid position-relative ffs-palt ls-1"> <span>私は施設運営者です</span> <span class="ff-serif fs-2">提携したい</span> </div>
+        </a> <a href="/Izu/" class="d-block position-relative text-center text-white text-decoration-none w-100 hover-scale"> <img src="files/images/top_010.webp" alt="" width="1280" height="600" class="img-cover img-fluid h-100 position-absolute start-0" loading="lazy">
+        <div class="py-5 d-grid position-relative ffs-palt ls-1"> <span>私はクリニックです</span> <span class="ff-serif fs-2">提携したい</span> </div>
+        </a> </div>
+    </section>
+  </article>
+</main>
+<footer>
+  <div class="py-5 container px-5 d-lg-flex px-lg-0 align-items-lg-start justify-content-lg-between footer-order">
+    <div class="d-grid gap-3 col-lg-3 col-12"> <a href="/Izu/" class="btn rounded-0 position-relative btn-primary d-block w-100 fw-bold px-0">ご予約はこちら<span class="position-absolute end-0 me-2 top-0 h-100 d-flex align-items-center"><i class="bi bi-arrow-right fs-4"></i></span></a> <a href="/Izu/contact.html" class="btn rounded-0 position-relative d-block w-100 bg-white fw-bold px-0">お問い合わせ<span class="position-absolute end-0 me-2 top-0 h-100 d-flex align-items-center"><i class="bi bi-arrow-right fs-4"></i></span></a> </div>
+    <div class="d-flex align-items-start gap-2 py-3 py-lg-0 col-lg-3"> <img src="files/images/logo.png" alt="" width="500" height="500" class="img-fluid col-3 col-lg-4" loading="lazy">
+      <div>
+        <div class="pt-4 mt-1 pb-3 ps-2 fw-bold">株式会社Izu</div>
+        <div class="d-flex"> <a href="####" class="col-6 p-2"><img src="files/images/icon_facebook.svg" alt="Facebook" width="36" height="36" class="img-fluid" loading="lazy"></a> <a href="####" class="col-6 p-2"><img src="files/images/icon_Instagram.svg" alt="Instagram" width="36" height="36" class="img-fluid" loading="lazy"></a> </div>
+      </div>
+    </div>
+    <div class="d-flex">
+      <ul class="ps-0 mb-0 w-50">
+        <li class="d-block"><a href="/Izu/" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>HOME</a></li>
+        <li class="d-block"><a href="/Izu/service.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>サービス</a></li>
+        <li class="d-block"><a href="/Izu/#faq" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>FAQ</a></li>
+        <li class="d-block"><a href="/Izu/join.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>ご入会について</a></li>
+      </ul>
+      <ul class="ps-0 mb-0 w-50">
+        <li class="d-block"><a href="/Izu/about.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>Izuについて</a></li>
+        <li class="d-block"><a href="#partner" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>パートナー募集</a></li>
+        <li class="d-block"><a href="/Izu/service.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i><span>エリート幹細胞<span class="d-inline-block">ISCについて</span></span></a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="small pb-3 mb-0 container ff-serif">copyright 2023 Izu. All rights reserved.</p>
+</footer>
+<a href="#top" id="menu_top" class="move js-menutop col-3 col-md-2 col-lg-1" style="z-index: 1040"><img src="files/images/icon_top.svg" alt="" width="100" height="100" class="img-fluid" loading="lazy"> </a> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script>
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.js-nav a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach((link) => {
+    link.classList.remove('border-bottom', 'border-primary', 'border-2');
+    if (link.getAttribute('href').includes(current)) {
+      link.classList.add('border-bottom', 'border-primary', 'border-2');
+    }
+  });
+});
+
+const e_offcanvasMenu = new bootstrap.Offcanvas('#offcanvas_menu');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href*="#"]');
+a_offcanvasHash.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    e_offcanvasMenu.hide();
+  });
+});
+const e_header=document.querySelector('header');
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  const v_y=window.pageYOffset;
+  if(v_y > 10){
+    e_header.classList.add('blur');
+  }else{
+    e_header.classList.remove('blur');
+  }
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((v_y > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+</script>
+</body>
+</html>

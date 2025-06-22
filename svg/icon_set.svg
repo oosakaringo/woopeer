@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="search-clip" clipPathUnits="objectBoundingBox">
+      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" transform="scale(0.04166)" />
+    </clipPath>
+    
+    <mask-source id="search-clip-mask" viewBox="0 0 24 24">
+      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+    </mask-source>
+    
+    
+    <symbol id="search-svg" viewBox="0 0 24 24">
+      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+    </symbol>
+    <symbol id="home-svg" viewBox="0 0 24 24">
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+    </symbol>
+    <symbol id="person-svg" viewBox="0 0 28 28">
+      <circle cx="14" cy="14" r="14" opacity=".3"></circle>
+      <circle cx="14" cy="9.71" r="5.01"></circle>
+      <path d="M14,15.81a8.35,8.35,0,0,0-8.31,8.31v1.13a13.92,13.92,0,0,0,16.62,0V24.12A8.35,8.35,0,0,0,14,15.81Z"></path>
+    </symbol>
+    <symbol id="refresh-svg" viewBox="0 0 24 24">
+      <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
+    </symbol>
+    <symbol id="heart-svg" viewBox="0 0 24 24">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+    </symbol>
+    <symbol id="up-svg" viewBox="0 0 100 60">
+      <rect x="0" y="0" width="100" height="60" rx="15" ry="15" />
+      <text x="50" y="30" dominant-baseline="central" text-anchor="middle" font-size="40" font-weight="bold" fill="#fff">UP</text>
+    </symbol>
+    <symbol id="special-svg" viewBox="0 0 220 60">
+      <rect x="2" y="2" width="216" height="56" rx="15" ry="15" fill="#fff" stroke-width="4" />
+      <g font-size="36" font-weight="bold">
+        <text x="110" y="30" dominant-baseline="central" text-anchor="middle">スペシャル</text>
+      </g>
+    </symbol>
+    <linearGradient id="gradient-pink" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fbe2f0" />
+      <stop offset="1" stop-color="#ee0290" />
+    </linearGradient>
+    <linearGradient id="gradient-blue" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d4bff9" />
+      <stop offset="1" stop-color="#6002ee" />
+    </linearGradient>
+    <linearGradient id="gradient-orange" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffc77d" />
+      <stop offset="1" stop-color="#ee6002" />
+    </linearGradient>
+    <linearGradient id="gradient-green" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#c6f68d" />
+      <stop offset="1" stop-color="#09af00" />
+    </linearGradient>
+  </defs>
+</svg>

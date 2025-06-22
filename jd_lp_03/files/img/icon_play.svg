@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #4673be;
+      }
+    </style>
+  </defs>
+  <g id="_モバイル" data-name="モバイル">
+    <g>
+      <circle class="cls-1" cx="25" cy="25" r="25"/>
+      <polygon class="cls-2" points="20.53 17.24 34.81 25.81 20.53 34.38 20.53 17.24"/>
+    </g>
+  </g>
+</svg>

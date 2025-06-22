@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>プロフィール編集|子供食堂</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="プロフィール編集|子供食堂">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.ff-zen_maru {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+.max-1800 {
+  max-width: 1800px;
+}
+.main-img {
+  height: 30vmax;
+  max-height: 450px;
+  width: 100%;
+}
+.user-img {
+  margin-top: max(-50%, -80px);
+}
+.top-icons {
+  left: var(--icon-left, auto);
+  right: var(--icon-right, auto);
+  top: var(--icon-top, auto);
+  bottom: var(--icon-bottom, auto);
+  width: var(--icon-width, auto);
+  height: auto;
+}
+.line-title {
+  background-image : linear-gradient(to right, var(--bs-border-color) 8px, transparent 8px);
+  background-size: 16px 2.5px;
+  background-repeat: repeat-x;
+  background-position: left 50%;
+}
+.btn[data-bs-target="#modal_main_bg_edit"], .btn[data-bs-target="#modal_userimg_edit"] {
+  background-color: rgba(0,0,0,.3);
+}
+.btn[data-bs-target="#modal_userimg_edit"] {
+  margin-bottom: -10px;
+  margin-right: -10px
+}
+.msk-circle canvas {
+  mix-blend-mode: darken;
+}
+.msk-circle {
+  background-image: radial-gradient(circle closest-side, transparent 99%, #999 100%);
+}
+.grid-title {
+  grid-template-columns: 48px 1fr;
+}
+.grid-title :first-child {
+  grid-row: 1 / 3;
+  width: 90%;
+  height: auto;
+}
+.bg-beige {
+  background-color: #c9a063;
+}
+.grid-1-2-border li:not(:last-child) {
+  border-bottom: thin dashed var(--bs-border-color);
+}
+.page-link {
+  width: 2.5em;
+  line-height: 2.5em;
+  color: var(--bs-secondary);
+}
+.page-item.active .page-link {
+  background-color: var(--bs-secondary);
+}
+.page-item.disabled .page-link {
+  background-color: var(--bs-gray-200);
+  color: var(--bs-gray-400);
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+body {
+  font-size: 1.2rem
+}
+.main-img {
+  border-radius: 1em;
+}
+.btn[data-bs-target="#modal_userimg_edit"] {
+  margin-bottom: 0;
+  margin-right: 0
+}
+.grid-title {
+  grid-template-columns: 60px 1fr;
+}
+}
+
+@media (min-width:992px) {/*PC*/
+.top-icons:nth-child(n+5) {
+  top: calc(var(--icon-top, auto) - 80px);
+}
+.grid-1-2-border {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-1-2-border li:not(:last-child) {
+  border-bottom: none;
+}
+.grid-1-2-border li:nth-last-child(n+3), .grid-1-2-border li:nth-child(2n):nth-last-child(2) {
+  border-bottom: thin dashed var(--bs-border-color);
+}
+.grid-1-2-border li:nth-child(2n+1) {
+  border-right: thin dashed var(--bs-border-color);
+}
+:nth-last-child(2
+}
+@media (min-width:2001px) {
+footer {
+margin-top: 100px;
+}
+}
+
+@media (max-width:767px) {/*SP*/
+}
+</style>
+</head>
+
+<body class="bg-light">
+<header class="ps-2 w-100 position-sticky">
+  <div class="rounded-bottom-100 overflow-hidden move">
+    <h1 class="text-center col-10 col-lg-6 mx-auto bg-primary text-white ffs-palt fw-bold mb-0">子供たちのための子ども食堂検索サイト</h1>
+  </div>
+  <div class="d-flex justify-content-between move max-1800 mx-auto align-items-lg-end">
+    <div class="col-5 col-md-6 col-lg-3 max-280 text-center mb-1 move"><img src="files/img/logo.svg" alt="" width="300" height="107" class="img-fluid"></div>
+    <div class="d-none d-lg-flex p-0 small w-100 justify-content-evenly max-720 top-menu align-items-center mb-3"> <a href="###" class="text-decoration-none text-body small">はじめのページ</a>| <a href="###" class="text-decoration-none text-body small">利用規約（ルール）</a>| <a href="###" class="text-decoration-none text-body small">使い方（つかいかた）</a>| <a href="###" class="text-decoration-none text-body small">お問い合わせ</a> </div>
+    <div class="d-flex align-items-center gap-1 gap-lg-2 col-7 col-lg-2 gap-1 justify-content-end pe-2 filter-drop-shadow pt-3 move max-280"> <a href="###" class="btn btn-success rounded-circle p-0 d-flex flex-column justify-content-center square-w col-3 col-md-5 max-80">
+      <div><img src="files/img/icon_group_w.svg" alt="" width="32" height="28"></div>
+      <div class="smaller fw-bold">団体様へ</div>
+      </a> <a href="###" class="btn btn-primary rounded-circle p-0 d-flex flex-column justify-content-center square-w col-3 col-md-5 max-80">
+      <div><img src="files/img/icon_user_w.svg" alt="" width="32" height="28"></div>
+      <div class="smaller fw-bold">ログイン</div>
+      </a>
+      <button class="btn bg-white rounded-circle p-0 d-flex justify-content-center align-items-center square-w col-3 col-md-5 max-80 d-lg-none" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu" aria-controls="offcanvas_menu"><img src="files/img/icon_hamburger.svg" alt="" width="28" height="28"></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-560 bg-light" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1 justify-content-end">
+    <button type="button" class="btn p-0 fs-3 text-primary" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body text-center">
+    <div class="col-8 max-320 mb-1 mx-auto"><img src="files/img/logo.svg" alt="" width="400" height="200" class="img-fluid"></div>
+    <p class="small ff-zen_maru">子供たちのための子ども食堂検索サイト</p>
+    <div class="d-flex justify-content-center mb-5 pb-4"> <a href="index.html" class="d-flex align-items-center flex-column pe-5 border-end text-decoration-none text-body" data-bs-dismiss="offcanvas">
+      <div class="mb-2 btn-success p-4 rounded-circle"><img src="files/img/icon_group_w.svg" alt="" width="50" height="50"></div>
+      <span class="fs-5">団体様へ</span></a> <a href="index.html" data-bs-dismiss="offcanvas" class="d-flex align-items-center flex-column ps-5 text-decoration-none text-body">
+      <div class="mb-2 btn-primary p-4 rounded-circle"><img src="files/img/icon_user_w.svg" alt="" width="50" height="50"></div>
+      <span class="fs-5">ログイン</span></a> </div>
+    <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto border-bottom">はじめのページ</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto border-bottom">利用規約（ルール）</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto">使い方（つかいかた）</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn ff-zen_maru bg-danger-subtle text-danger d-flex gap-3 col-8 justify-content-center align-items-center mx-auto filter-drop-shadow my-4"><img src="files/img/icon_donation.svg" alt="" width="40" height="40">寄付の申し込み</a> </div>
+</div>
+<main>
+  <article>
+    <section class="pt-3 overflow-hidden">
+      <h2 class="btn-primary text-white ff-zen_maru text-center py-3 ffs-palt mb-0">Kidsプロフィール編集</h2>
+      <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="container py-2">
+        <ol class="breadcrumb mb-0 ffs-palt align-items-center">
+          <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-body py-1">Home</a></li>
+          <li class="breadcrumb-item"><a href="mypage.html" class="text-decoration-none text-body py-1">マイページ</a></li>
+          <li class="breadcrumb-item active text-body" aria-current="page">Kidsプロフィール編集</li>
+        </ol>
+      </nav>
+      <div class="container px-0 position-relative" onClick="f_canvasSet(this)"> <img src="files/img/user_top.webp" alt="" width="1000" height="667" class="main-img img-cover">
+        <button class="btn position-absolute end-0 bottom-0 px-3 py-2 mb-2 me-2 lh-1" data-bs-toggle="modal" data-bs-target="#modal_main_bg_edit"><img src="files/img/icon_camera_w.svg" alt="写真変更" width="20" height="16" class=""></button>
+      </div>
+    </section>
+    <section>
+      <div class="container py-5 mb-5">
+        <div class="d-flex align-items-center gap-2 mb-3"> <span class="btn-primary d-block p-2 rounded-circle"><img src="files/img/icon_group_w.svg" alt="" width="30" height="30"></span>
+          <div class="border-bottom py-1 w-100 d-flex justify-content-between align-items-end">
+            <h3 class="fw-bold fs-5 mb-0">Kidsプロフィール</h3>
+            <span class="small fw-bold text-primary ffs-palt">ファミリーID:1234</span></div>
+        </div>
+        <form class="max-800 mx-auto" action="user.html">
+  <!-- 名前 -->
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="first_name" class="form-label">名:</label>
+      <input name="first_name" type="text" required class="form-control" id="first_name" value="山田">
+    </div>
+    <div class="col-md-6">
+      <label for="last_name" class="form-label">姓:</label>
+      <input name="last_name" type="text" required class="form-control" id="last_name" value="太郎">
+    </div>
+  </div>
+
+  <!-- ニックネーム -->
+  <div class="mb-3">
+    <label for="nickname" class="form-label">ニックネーム:</label>
+    <input name="nickname" type="text" class="form-control" id="nickname" value="たーくん">
+  </div>
+
+  <!-- 性別 -->
+  <div class="mb-3">
+    <label class="form-label">性別:</label>
+    <div class="form-check">
+      <input name="gender" type="radio" required class="form-check-input" id="male" value="male" checked="checked">
+      <label for="male" class="form-check-label">男性</label>
+    </div>
+    <div class="form-check">
+      <input name="gender" type="radio" required class="form-check-input" id="female" value="female">
+      <label for="female" class="form-check-label">女性</label>
+    </div>
+  </div>
+
+  <!-- 生年月日 -->
+  <div class="mb-3">
+    <label for="birthdate" class="form-label">生年月日:</label>
+    <input name="birthdate" type="date" required class="form-control" id="birthdate" value="2020-12-12">
+  </div>
+
+  <button type="submit" class="btn bg-primary text-white">登録/更新</button>
+</form>
+
+      </div>
+    </section>
+  </article>
+</main>
+<div class="modal fade" id="modal_main_bg_edit" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-primary text-white">
+        <h5 class="modal-title fw-bold">メインの画像</h5>
+        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+      </div>
+      <div class="modal-body pb-0">
+        <label for="preview_form_main_bg" class="form-label">画像を選択してください</label>
+        <input class="form-control mb-3" type="file" id="preview_form_main_bg" onChange="f_imgChange(this)">
+        <canvas width="1320" height="450" class="w-100"></canvas>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn bg-primary text-white" onClick="f_sendImg(this)" data-bs-dismiss="modal">設定する</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal_userimg_edit" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-primary text-white">
+        <h5 class="modal-title fw-bold">プロフィール画像</h5>
+        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+      </div>
+      <div class="modal-body pb-0">
+        <label for="form_userimg" class="form-label">画像を選択してください</label>
+        <input class="form-control mb-3" type="file" id="form_userimg" onChange="f_imgChange(this)">
+        <div class="msk-circle">
+          <canvas width="500" height="500" class="w-100"></canvas>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn bg-primary text-white" onClick="f_sendImg(this)" data-bs-dismiss="modal">設定する</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="">
+  <div class="d-lg-flex align-items-center container mb-lg-4">
+    <div class="mx-auto d-flex align-items-end gap-2 justify-content-center max-600 mb-4 col-lg-5 justify-content-lg-start">
+      <div class="col-5 col-lg-6"><img src="files/img/logo.svg" alt="" width="300" height="107" class="img-fluid"></div>
+      <span class="ff-zen_maru small lh-sm">子供たちのための<br>
+      子ども食堂検索サイト</span></div>
+    <div class="d-flex container px-lg-0 mb-4 mb-lg-0 flex-lg-column small justify-content-evenly">
+      <ul class="footer-link ps-0 mb-0 fw-bold d-lg-flex justify-content-evenly">
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">はじめのページ</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">利用規約（ルール）</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">使い方（つかいかた）</a></li>
+      </ul>
+      <ul class="footer-link ps-0 mb-0 fw-bold d-lg-flex">
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">個人情報保護方針</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">プライバシーポリシー</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-center small py-3 mb-0 border-top">Copyright&copy;こども食堂.All rights reserved.</p>
+</footer>
+<div id="menu_top" class="move js-menutop col-4 max-80 pe-4" style="z-index: 1040">
+  <div class="rounded-circle filter-drop-shadow bg-white square-w d-flex justify-content-center align-items-center"> <i class="bi bi-arrow-up fs-2"></i></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script>
+/*画像操作*/
+let e_modalCanvas;
+let e_context;
+let e_img;
+let isDragging = false;
+let startX;
+let startY;
+let lastX = 0;
+let lastY = 0;
+let newX = 0;
+let newY = 0;
+let newWidth;
+let newHeight;
+let scale = 1;
+let ratio = 1;
+let v_width;
+let v_height;
+let e_imgTarget;
+
+function f_canvasSet(el) {
+  e_modalCanvas = document.querySelector((el.getAttribute('data-bs-target') || el.querySelector('[data-bs-target]').getAttribute('data-bs-target')) + ' canvas');
+  e_context = e_modalCanvas.getContext('2d');
+  e_img = new Image();
+  e_img.onload = () => {
+    calculateImageDimensions();
+    drawImageOnCanvas();
+    e_modalCanvas.addEventListener('touchstart', handleDragStart);
+    e_modalCanvas.addEventListener('touchmove', handleTouchMove);
+    e_modalCanvas.addEventListener('wheel', handleWheel);
+    e_modalCanvas.addEventListener('mousedown', handleDragStart);
+    ['mouseup', 'mouseout', 'touchend'].forEach(eventName => e_modalCanvas.addEventListener(eventName, handleDragEnd));
+    e_modalCanvas.addEventListener('mousemove', handleMouseMove);
+  };
+  e_imgTarget = el.querySelector('img');
+  e_img.src = e_imgTarget.getAttribute('src');
+}
+
+function calculateImageDimensions() {
+  const { width, height } = e_img;
+  const widthRatio = e_modalCanvas.width / width;
+  const heightRatio = e_modalCanvas.height / height;
+  ratio = Math.max(widthRatio, heightRatio);
+  v_width = width * ratio;
+  v_height = height * ratio;
+  newX = Math.min((e_modalCanvas.width - v_width) / 2, 0);
+  newY = Math.min((e_modalCanvas.height - v_height) / 2, 0);
+  newWidth = v_width;
+  newHeight = v_height;
+}
+
+function drawImageOnCanvas() {
+  const { width, height } = e_modalCanvas;
+  e_context.clearRect(0, 0, width, height);
+  e_context.drawImage(e_img, newX, newY, newWidth, newHeight);
+}
+
+function handleDragStart(event) {
+  event.preventDefault();
+  isDragging = true;
+  if (event.touches && event.touches.length > 0) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  } else {
+    startX = event.clientX;
+    startY = event.clientY;
+  }
+  lastX = newX;
+  lastY = newY;
+  if (event.touches && event.touches.length > 1) {
+    const [touch1, touch2] = event.touches;
+    startX = (touch1.clientX + touch2.clientX) / 2;
+    startY = (touch1.clientY + touch2.clientY) / 2;
+    v_beforX = startX;
+    v_beforY = startY;
+    initialDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+    initialScale = scale;
+  }
+}
+
+function handleDragEnd() {
+  isDragging = false;
+  initialDistance = 0;
+  initialScale = scale;
+}
+
+function handleTouchMove(event) {
+  event.preventDefault();
+  if (event.touches.length === 1 && isDragging) {
+    const touch = event.touches[0];
+    const clientX = touch.clientX;
+    const clientY = touch.clientY;
+    const deltaX = clientX - startX;
+    const deltaY = clientY - startY;
+    newX = lastX + deltaX * scale * ratio;
+    newY = lastY + deltaY * scale * ratio;
+    const minX = e_modalCanvas.width - newWidth;
+    const minY = e_modalCanvas.height - newHeight;
+    newX = Math.max(Math.min(newX, 0), minX);
+    newY = Math.max(Math.min(newY, 0), minY);
+    drawImageOnCanvas();
+  } else if (event.touches.length > 1) {
+    const [touch1, touch2] = event.touches;
+    const currentDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+    const delta = currentDistance - initialDistance;
+    const zoom = 1 + delta * 0.01;
+    scale = Math.max(initialScale * zoom, 1);
+    const rect = e_modalCanvas.getBoundingClientRect();
+    const offsetX = (touch1.clientX + touch2.clientX) / 2;
+    const offsetY = (touch1.clientY + touch2.clientY) / 2;
+    const preRatioX = (offsetX - newX) / newWidth;
+    const preRatioY = (offsetY - newY) / newHeight;
+    newWidth = v_width * scale;
+    newHeight = v_height * scale;
+    newX = offsetX - preRatioX * newWidth + (offsetX - startX) * scale;
+    newY = offsetY - preRatioY * newHeight + (offsetY - startY) * scale;
+    const minX = e_modalCanvas.width - newWidth;
+    const minY = e_modalCanvas.height - newHeight;
+    drawImageOnCanvas();
+    lastX = newX;
+    lastY = newY;
+    startX = offsetX;
+    startY = offsetY;
+  }
+}
+
+function handleWheel(event) {
+  event.preventDefault();
+  const delta = Math.sign(event.deltaY);
+  const zoom = delta > 0 ? 0.9 : 1.1;
+  scale *= zoom;
+  scale = Math.min(Math.max(scale, 1), 4);
+  const offsetX = event.clientX - e_modalCanvas.getBoundingClientRect().left;
+  const offsetY = event.clientY - e_modalCanvas.getBoundingClientRect().top;
+  const preRatioX = (offsetX - newX) / newWidth;
+  const preRatioY = (offsetY - newY) / newHeight;
+  newWidth = v_width * scale;
+  newHeight = v_height * scale;
+  newX = offsetX - preRatioX * newWidth;
+  newY = offsetY - preRatioY * newHeight;
+  const minX = e_modalCanvas.width - newWidth;
+  const minY = e_modalCanvas.height - newHeight;
+  newX = Math.max(Math.min(newX, 0), minX);
+  newY = Math.max(Math.min(newY, 0), minY);
+  drawImageOnCanvas();
+}
+
+function handleMouseMove(event) {
+  if (!isDragging) return;
+  newX = lastX + (event.clientX - startX) * scale * ratio;
+  newY = lastY + (event.clientY - startY) * scale * ratio;
+  const minX = e_modalCanvas.width - newWidth;
+  const minY = e_modalCanvas.height - newHeight;
+  newX = Math.max(Math.min(newX, 0), minX);
+  newY = Math.max(Math.min(newY, 0), minY);
+  drawImageOnCanvas();
+}
+
+function drawImageOnCanvas() {
+  e_context.clearRect(0, 0, e_modalCanvas.width, e_modalCanvas.height);
+  e_context.drawImage(e_img, newX, newY, newWidth, newHeight);
+}
+function f_imgChange(e_file) {
+  const e_parent=e_file.parentNode;
+  e_modalCanvas=e_parent.querySelector('canvas');
+  e_context = e_modalCanvas.getContext('2d');
+  e_img = new Image();
+  scale = 1;
+  e_img.onload = () => {
+    const widthRatio = e_modalCanvas.width / e_img.width;
+    const heightRatio = e_modalCanvas.height / e_img.height;
+    ratio = Math.max(widthRatio, heightRatio);
+    v_width = e_img.width * ratio;
+    v_height = e_img.height * ratio;
+    newX = Math.min((e_modalCanvas.width - v_width) / 2, 0);
+    newY = Math.min((e_modalCanvas.height - v_height) / 2, 0);
+    newWidth = v_width;
+    newHeight = v_height;
+    drawImageOnCanvas();
+  };
+  e_img.src = URL.createObjectURL(e_file.files[0]);
+}
+
+/*画像送信*/
+const sendUrl = "https://www.send_img.com"; // 送信先のURL
+function f_sendImg(el) {
+  var e_modalFadeId=el.closest('.modal.fade').getAttribute('id');
+  
+  var e_canvas = document.querySelector('#'+e_modalFadeId+' canvas');
+  var e_image = e_canvas.toDataURL("image/png");
+  e_imgTarget.src = e_image; // 元の画像を上書き
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log("画像が送信されました。");
+      // 送信が成功した後の処理をここに追加する
+    }
+  };
+  xhr.open("POST", sendUrl, true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.send("image=" + encodeURIComponent(e_image));
+}
+/*/////*/
+
+
+
+const e_html=document.querySelector('html');
+const e_offcanvas=document.querySelector('[data-bs-toggle="offcanvas"]');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+e_offcanvas.addEventListener('click',()=>{
+  e_html.classList.add('offcanvasOP');
+});
+console.log(a_offcanvasHash);
+a_offcanvasHash.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    setTimeout(()=>{
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+const e_header=document.querySelector('header');
+let r_footer;
+window.onscroll = function () {  
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if(window.pageYOffset > 20){
+    e_header.classList.add('blur-w');
+  }else{
+    e_header.classList.remove('blur-w');
+  }
+  if ((window.pageYOffset > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+
+const backToTop=()=>{
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+js_menutop.addEventListener("click", backToTop);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68.54 68.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2d518a;
+        stroke: #595757;
+        stroke-width: .51px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #fce333;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 700;
+        font-size: 11.91px;
+        letter-spacing: .03em;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #3da6df;
+        stroke-width: 2.04px;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 700;
+        font-size: 7.65px;
+        letter-spacing: .03em;
+      }
+    </style>
+  </defs>
+  <g id="_01" data-name="01">
+    <g>
+      <rect class="cls-1" x=".26" y=".26" width="68.03" height="68.03" rx="5.67" ry="5.67"/>
+      <circle class="cls-2" cx="34.28" cy="54.01" r="8.5"/>
+      <text class="cls-3" transform="translate(9.22 16.78)"><tspan x="0" y="0">弊社技術</tspan></text>
+      <text class="cls-4" transform="translate(15.04 28.91)"><tspan x="0" y="0">世界800社</tspan><tspan x="2.97" y="9.35">以上採用</tspan></text>
+    </g>
+  </g>
+</svg>

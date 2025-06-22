@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SCAN SPICARE | バーコードスキャナー | 日本流通管理支援機構</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="日本流通管理支援機構">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+.btn {
+  border-radius: 0.5em 0 0.5em 0;
+}
+</style>
+<!-- jsQR.jsの読み込み --> 
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+</head>
+<body>
+<header class="sticky-top shadow border-top border-4 border-primary">
+  <div class="small ps-3 pt-1">バーコードスキャナー</div>
+  <div class="d-flex justify-content-between align-items-center px-3 pb-2"> <a href="index.html" class="max-160"> <img src="files/img/header-logo.png" alt="SPICARE" width="310" height="70" class="img-fluid"></a>
+    <div>
+      <button class="btn btn-sm dropdown-toggle px-2" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <img src="files/img/icon_language.svg" alt="" width="40" height="30"> <span>JP</span></button>
+      <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+        <li><a class="dropdown-item" href="#">日本語</a></li>
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">中文簡体</a></li>
+      </ul>
+      <button class="btn rounded-circle p-1 lh-1 fs-1" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end bg-black border-start" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-3 border-top border-4 border-primary">
+    <h5 class="d-flex align-items-center mx-auto">
+      <div class="max-160"><img src="files/img/header-logo.png" alt="SPICARE" width="310" height="70" class="img-fluid"></div>
+    </h5>
+    <button type="button" class="btn p-0 text-primary fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-grid gap-3 mb-3"> <a href="mypage_profile.html" class="btn fs-5" data-bs-dismiss="offcanvas" aria-label="Close">HOME </a> <a href="mypage_supplier.html" class="btn fs-5" data-bs-dismiss="offcanvas" aria-label="Close">利用規約</a><a href="mypage_buyer.html" class="btn fs-5" data-bs-dismiss="offcanvas" aria-label="Close">お問合せ</a><a href="####" class="btn fs-5" data-bs-dismiss="offcanvas" aria-label="Close">運営会社</a> </div>
+  </div>
+</div>
+<main>
+  <article>
+    <section class="container px-0 pb-5 mt-md-5 max-680">
+      <div class="p-3 bg-light w-100 text-center">
+        <p>QRコードを読み取ってください。</p>
+        <canvas id="canvas" style="width:100%"></canvas>
+        <div id="result_items" class="text-start+"></div>
+      </div>
+      <div id="outputMessage"></div>
+      <form>
+        <input name="box" type="hidden" id="box">
+        <input name="items" type="hidden" id="items">
+        <div class="d-flex justify-content-center gap-4 mt-3">
+          <button type="reset" class="btn btn-outline-primary" onClick="f_resetQR()">最初から</button>
+          <button type="button" class="btn btn-success col-4 js-scan-submit" onClick="jsonToCsv(9)" disabled><i class="bi bi-filetype-csv fs-5 me-2"></i>保存</button>
+        </div>
+      </form>
+    </section>
+  </article>
+</main>
+<footer class="bg-light pt-3 px-2 position-sticky top-100">
+  <div class="container">
+    <div class="d-md-flex justify-content-evenly mb-2">
+      <div class="d-flex mb-2">
+        <div class="max-200 col-5 me-4 mt-1"> <img src="files/img/logo_jdmso_kabu.png" class="img-fluid" alt="日本流通管理支援機構（株）"> </div>
+        <ul class="mb-0 small">
+          <li><a href="index.html" class="text-decoration-none text-body">HOME</a></li>
+          <li><a href="####" class="text-decoration-none text-body">利用規約</a></li>
+          <li><a href="####" class="text-decoration-none text-body">お問合せ</a></li>
+          <li><a href="####" class="text-decoration-none text-body" target="_blank" rel="noopener">運営会社</a> </li>
+        </ul>
+      </div>
+      <dl class="small mb-0">
+        <dt>日本流通管理支援機構（株）</dt>
+        <dd class="smaller">
+          <div>〒155-0031</div>
+          東京都世田谷区北沢２-３０-８<br>
+          クレセント下北沢２Ｆ </dd>
+      </dl>
+    </div>
+    <div class="small text-center fw-bold">&copy;2023 JDMSO</div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<!-- jsQR.jsの設定 --> 
+<script>
+const video = document.createElement("video");
+const canvasElement = document.getElementById("canvas");
+const canvas = canvasElement.getContext("2d");
+const e_resultItems=document.getElementById('result_items');
+const error_message=document.getElementById("outputMessage");
+const e_scanSubmit=document.querySelector('.js-scan-submit');
+//const apiUrl='http://18.183.98.11/api/code/';/*本番はこちら*/
+const apiUrl='files/data/';/*テスト用*/
+const apiKey='4f67a9ad0a439b7e4eac9c34b39b0e6d';
+let v_code;
+let v_send;
+let a_send = new Array;
+let a_get = new Array;
+
+
+function drawLine(begin, end, color) {
+  canvas.beginPath();
+  canvas.moveTo(begin.x, begin.y);
+  canvas.lineTo(end.x, end.y);
+  canvas.lineWidth = 4;
+  canvas.strokeStyle = color;
+  canvas.stroke();
+}
+navigator.mediaDevices.getUserMedia({
+  video: {
+    facingMode: "environment"
+  }
+}).then(function (stream) {
+  video.srcObject = stream;
+  video.setAttribute("playsinline", true);
+  video.play();
+  requestAnimationFrame(tick);
+});
+
+function tick() {
+  if (video.readyState === video.HAVE_ENOUGH_DATA) {
+    canvasElement.height = video.videoHeight;
+    canvasElement.width = video.videoWidth;
+    canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+    var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
+    var code = jsQR(imageData.data, imageData.width, imageData.height, {
+      inversionAttempts: "dontInvert",
+    });
+    if (code) {
+      drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#ba1a1a");
+      drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#ba1a1a");
+      drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#ba1a1a");
+      drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#ba1a1a");
+      if(v_code != code.data){
+        v_code=code.data;
+        f_check();
+      }
+    } else {
+      /*/document.getElementById("outputMessage").value = "No QR code detected.";*/
+    }
+  }
+  requestAnimationFrame(tick);
+}
+function f_check(){
+  if(v_code.length<10){
+    return;
+  }
+  if(!a_send.includes(v_code)){
+    v_send=apiUrl+v_code;
+    fetch(v_send, {
+      method: 'GET',
+      headers: {
+        'X-API-KEY': apiKey
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      const v_customerCode=data.data.customer_code;
+      if(v_customerCode && !a_send.includes(v_code)){
+        e_resultItems.innerHTML+=`
+<div class="fw-bold px-3 py-1 bg-white d-flex"><i class="bi bi-key me-2"></i> <span>${v_customerCode}</span></div>
+`;
+        a_get.push(data.data);
+        a_send.push(v_code);
+      }
+    })
+    .catch(error => {
+        console.error('APIリクエストに失敗:', error);
+    });
+  }
+  if(a_send.length>0 || a_get.length>0){
+    e_scanSubmit.disabled=false;
+    console.log(a_get);
+  }
+}
+function f_resetQR(){
+  a_send.splice(0);
+  a_get.splice(0);
+  e_resultItems.innerHTML='';
+  e_scanSubmit.disabled=true;
+  v_code="";
+}
+function jsonToCsv() {
+  const now = new Date();
+  const v_fileName='jdmso_data'+now.getFullYear()+(now.getMonth() + 1)+now.getDate()+now.getDay()+now.getHours()+now.getMinutes()+now.getSeconds()+'.csv';
+  const header = Object.keys(a_get[0]);
+  const headerString = header.join(',');
+  const replacer = (key, value) => value ?? '';
+  const rowItems = a_get.map((row) =>
+    header.map((fieldName) => JSON.stringify(row[fieldName], replacer)).join(',')
+  );
+  const csv = [headerString, ...rowItems].join('\r\n');
+  const blob =new Blob([csv],{type:"text/csv"});
+  const link =document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download =v_fileName;
+  link.click();
+}
+</script>
+</body>
+</html>

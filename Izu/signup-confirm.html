@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Izu 一流のライフスタイルは一流のウェルネスマネジメントから。</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Izu 一流のライフスタイルは一流のウェルネスマネジメントから。">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+.contact-step::before {
+  content: "";
+  width: 64%;
+  height: 1px;
+  background-color: var(--bs-gray-700);
+  position: absolute;
+  left: 18%;
+  display: block;
+  top: 7px;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.form-floating>.form-control:-webkit-autofill~label {
+transform: scale(.7) translateY(-0.5rem) translateX(0.15rem);
+}
+.form-check-input[type=radio] {
+  border-radius: 0%;
+}
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.form-check-input:checked[type=radio] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%23000' d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z' stroke='%23fff' stroke-width='2'/%3e%3c/svg%3e");
+  background-size: 100% 100%;
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+}
+
+@media (min-width:992px) {/*PC*/
+}
+
+@media (max-width:767px) {/*SP*/
+}
+</style>
+</head>
+
+<body>
+<header class="ps-1 top-0 w-100 position-sticky">
+  <div class="d-flex justify-content-between align-items-center move max-2000 mx-auto h-100"> <a href="/Izu/" class="d-flex align-items-center gap-2 h-100 text-body text-decoration-none"> <img src="files/images/logo.webp" alt="" width="86" height="86" class="square-w h-100 w-auto mt-1">
+    <div>一流のライフスタイルは<br>
+      一流のウェルネスマネジメントから。</div>
+    </a> </div>
+</header>
+<main>
+  <article class="bg-gray-900 pt-4 pb-2 ffs-palt ls-1">
+    <ol class="container d-flex text-center small ff-serif text-gray-700 contact-step position-relative">
+      <li class="d-grid w-100 gap-2 text-primary position-relative"><i class="bi bi-circle-fill smaller"></i>入力フォーム</li>
+      <li class="d-grid w-100 gap-2 text-primary position-relative"><i class="bi bi-circle-fill smaller"></i>確認画面</li>
+      <li class="d-grid w-100 gap-2"><i class="bi bi-circle-fill smaller"></i>入会申込送信</li>
+    </ol>
+    <section>
+      <div class="container ff-serif mb-5 pb-5">
+        <h2 class="fs-4 d-grid text-center gap-2 border-bottom border-color-nomal py-3 mb-5 ls-2">
+          <div><img src="files/images/icon_form.svg" alt="" width="50" height="50"></div>
+          確認画面 </h2>
+        <form action="/Izu/signup-completed.html" class="mb-5">
+          <!-- 法人名 -->
+          <div class="mb-4 d-lg-flex align-items-center">
+            <label for="corporateName" class="form-label col-lg-3 mb-lg-0">法人名</label>
+            <input name="corporateName" type="text" class="form-control rounded-0" id="corporateName" value="株式会社美容未来" readonly>
+          </div>
+          <!-- お名前 -->
+          <div class="mb-4 d-lg-flex align-items-center">
+            <label for="fullName" class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>お名前</label>
+            <input name="fullName" type="text" required class="form-control rounded-0" id="fullName" value="未来 美来" readonly>
+          </div>
+          <!-- Email -->
+          <div class="mb-4 d-lg-flex align-items-center">
+            <label for="emailAddress" class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>Email</label>
+            <input name="emailAddress" type="email" required class="form-control rounded-0" id="emailAddress" value="miku_m@mail.com" readonly>
+          </div>
+          <!-- 電話番号 -->
+          <div class="mb-4 d-lg-flex align-items-center">
+            <label for="phoneNumber" class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>電話番号</label>
+            <input name="phoneNumber" type="tel" required class="form-control rounded-0" id="phoneNumber" value="03-1234-5678" readonly>
+          </div>
+          <!-- 郵便番号 -->
+          <div class="mb-4 d-lg-flex">
+            <label for="postalCode" class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>郵便番号</label>
+            <div class="d-grid gap-2 w-100">
+              <div class="col-6">
+                <input name="postalCode" type="text" required class="form-control rounded-0" id="postalCode" value="107-0062" readonly>
+              </div>
+              <div class="col-6">
+                <input name="prefecture" type="text" required class="form-control rounded-0" id="prefecture" value="東京都" readonly>
+              </div>
+              <div class="text-gray-900">
+                <input name="city" type="text" required class="form-control rounded-0" id="city" value="港区南青山" readonly>
+              </div>
+              <div class="text-gray-900">
+                <input name="streetAddress" type="text" required class="form-control rounded-0" id="streetAddress" value="3-5-7 美容未来ビル" readonly>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 生年月日 -->
+          
+          <div class="mb-4 d-lg-flex align-items-center">
+            <label for="birthDate" class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>生年月日</label>
+            <div class="d-flex gap-2 w-100">
+              <select name="birthYear" required class="form-select rounded-0" id="birthYear" readonly>
+                <option value="1995">1995</option>
+              </select>
+              <select name="birthMonth" required class="form-select rounded-0" id="birthMonth" readonly>
+                <option value="4">04</option>
+              </select>
+              <select name="birthDay" required class="form-select rounded-0" id="birthDay" readonly>
+                <option value="15">15</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- 職業 -->
+          <div class="mb-4 d-lg-flex align-items-center">
+            <label for="occupation" class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>職業</label>
+            <input type="text" required class="form-control rounded-0" id="occupation" value="スキンケア商品の製造販売" readonly>
+          </div>
+          <hr class="mb-4 my-lg-5">
+          
+          <!-- 契約形態のラジオボタン -->
+          <div class="mb-4 d-lg-flex">
+            <label class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>契約形態：</label>
+            <div class="w-100">
+              <div class="d-flex">
+                <div class="form-check w-50">
+                  <input name="contractType" type="radio" required class="form-check-input" id="corporateContract" value="法人契約" readonly checked="checked">
+                  <label class="form-check-label" for="corporateContract">法人契約</label>
+                </div>
+                <div class="form-check w-50">
+                  <input class="form-check-input" type="radio" name="contractType" id="personalContract" value="個人契約" disabled>
+                  <label class="form-check-label" for="personalContract">個人契約</label>
+                </div>
+              </div>
+              <span class="small">(※必須)</span></div>
+          </div>
+          
+          <!-- LEGRAN会員希望のラジオボタン -->
+          <div class="mb-4 d-lg-flex">
+            <label class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>LEGRAN会員希望：</label>
+            <div class="w-100">
+              <div class="d-flex">
+                <div class="form-check w-50">
+                  <input class="form-check-input" type="radio" name="legranMembership" id="standardMembership" value="スタンダード" required disabled>
+                  <label class="form-check-label" for="standardMembership">スタンダード</label>
+                </div>
+                <div class="form-check w-50">
+                  <input name="legranMembership" type="radio" class="form-check-input" id="vipMembership" value="VIP" readonly checked="checked">
+                  <label class="form-check-label" for="vipMembership">VIP</label>
+                </div>
+              </div>
+              <span class="small">(※必須)</span></div>
+          </div>
+          <div class="mb-5 d-lg-flex">
+            <label for="remarks" class="form-label col-lg-3 mb-lg-0">備考欄：</label>
+            <textarea name="remarks" rows="6" readonly class="form-control rounded-0" id="remarks"></textarea>
+          </div>
+          
+          <!-- 送信ボタン -->
+          <div class="d-flex gap-3 justify-content-center">
+            <button type="button" onclick="history.back()" class="btn rounded-0 d-block btn-lg btn-outline-light px-0 col-4 max-200">修正する</button>
+            <button type="submit" class="btn btn-primary px-0 rounded-0 col-7 col-lg-10 d-block btn-lg max-400">上記内容で送信する</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="position-sticky top-100">
+  <p class="small py-3 mb-0 container ff-serif">copyright 2023 Izu. All rights reserved.</p>
+</footer>
+<a href="#top" id="menu_top" class="move js-menutop col-3 col-md-2 col-lg-1" style="z-index: 1040"><img src="files/images/icon_top.svg" alt="" width="100" height="100" class="img-fluid" loading="lazy"> </a> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script>
+const e_header=document.querySelector('header');
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  const v_y=window.pageYOffset;
+  if(v_y > 10){
+    e_header.classList.add('blur');
+  }else{
+    e_header.classList.remove('blur');
+  }
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((v_y > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+</script>
+</body>
+</html>

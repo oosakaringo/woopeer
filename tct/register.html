@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>新規会員登録 | Trust Chain Trade 流通経路評価システム</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Trust Chain Trade 流通経路評価システム">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style></style>
+</head>
+<body class="bg-light">
+<header class="sticky-top">
+  <div class="d-flex justify-content-between align-items-center px-2 py-1">
+    <div class="d-flex align-items-center"> <img src="files/img/logo_tst.png" alt="" width="42" height="42" class="img-fluid me-2"><span class="lh-1 text-secondary">Trust Chain<br class="d-md-none">
+      Trade</span></div>
+    <div>
+      
+      <button class="btn rounded-circle p-1 lh-1 fs-1 text-primary" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-80 max-400 bg-black border-start" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1">
+    <h5 class="d-flex align-items-center"> <img src="files/img/logo_tst.png" alt="" width="50" height="50" class="img-fluid me-2"><span class="lh-1 text-secondary">Trust Chain Trade</span></h5>
+    <button type="button" class="btn p-0 text-primary fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-grid gap-3 mb-3"> <a href="####" class="btn fs-5" data-bs-dismiss="offcanvas" aria-label="Close">使い方（FAQ）</a>
+      <div class="text-end mt-5">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<main>
+  <article>
+    <section class="container py-4 max-600">
+      <h2 class="fw-bold fs-4 mb-4">新規会員登録</h2>
+      <form action="Register_success.html" class="d-grid gap-3 h-adr">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="corporate_identification_number" placeholder="法人番号" required>
+          <label for="corporate_identification_number">法人番号</label>
+        </div>
+        <div class="row g-2">
+          <div class="form-floating col-6">
+            <input type="text" class="form-control" id="company_name" placeholder="会社名" required>
+            <label for="company_name">会社名</label>
+          </div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control" id="company_name_kana" placeholder="会社名カナ" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" required>
+            <label for="company_name_kana">会社名カナ</label>
+          </div>
+        </div>
+        <div class="row g-2">
+          <div>代表者名</div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control" id="representative_last_name" placeholder="姓" required>
+            <label for="representative_last_name">姓</label>
+          </div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control" id="representative_first_name" placeholder="名" required>
+            <label for="representative_first_name">名</label>
+          </div>
+        </div>
+        <div class="row g-2">
+          <div>担当責任者</div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control" id="responsible_person_last_name" placeholder="姓" required>
+            <label for="responsible_person_last_name">姓</label>
+          </div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control" id="responsible_person_first_name" placeholder="名" required>
+            <label for="responsible_person_first_name">名</label>
+          </div>
+        </div>
+        <div class="form-floating">
+          <input type="tel" class="form-control" id="contact_tel" placeholder="連絡先TEL" required>
+          <label for="contact_tel">連絡先TEL</label>
+        </div>
+        <div class="row g-2"> <span class="p-country-name" style="display:none;">Japan</span>
+          <div>本店所在地</div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control p-postal-code" id="postal_code" placeholder="郵便番号" pattern="\d{3}-?\d{4}" required>
+            <label for="postal_code">郵便番号</label>
+          </div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control p-region" id="state" placeholder="都道府県" required>
+            <label for="state">都道府県</label>
+          </div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control p-locality" id="city" placeholder="都道府県" required>
+            <label for="city">市区町村</label>
+          </div>
+          <div class="form-floating col-6">
+            <input type="text" class="form-control p-street-address p-extended-address" id="address" placeholder="都道府県" required>
+            <label for="address">番地・ビル</label>
+          </div>
+        </div>
+        <div>
+          <label for="" class="form-label">登記簿謄本（ファイルアップロード）</label>
+          <input class="form-control form-control-lg fs-6" id="" type="file" required>
+        </div>
+        <div>
+          <p class="mb-2">同意内容</p>
+          <div class="card">
+            <div class="card-body overflow-auto small" style="max-height: 10em">
+              <dl>
+                <dt class="mb-2">利用規約</dt>
+                <dd>
+                  <ol>
+                    <li>サービス利用者は、本利用規約に同意した上で、当社が提供するサービスを利用することができます。利用者は、本規約に違反する行為や法的な制限に反する行為を行わないものとします。</li>
+                    <li> 利用者は、本サービスの利用に際し、他の利用者や当社の権利を侵害する行為を行わないものとします。また、利用者は、提供された情報が正確であることを確保し、他の利用者に対して誤解を招かないよう努めます。</li>
+                    <li> 当社は、利用者が本規約に違反した場合、必要な措置を講じる権利を有します。また、当社は、サービスの内容や提供条件を変更する権利を有するものとします。</li>
+                    <li> 本サービスの利用に関連して発生したいかなる損害に対しても、当社は一切の責任を負いません。利用者は、自己の責任においてサービスを利用するものとし、必要な保護措置を講じるものとします。</li>
+                  </ol>
+                </dd>
+              </dl>
+              <dl>
+                <dt class="mb-2">プライバシーポリシー</dt>
+                <dd>
+                  <ol>
+                    <li>当社は、利用者から提供される個人情報を、サービスの提供および改善、および関連する目的のために使用します。個人情報は適切なセキュリティ対策を講じて保護されます。</li>
+                    <li> 当社は、利用者の個人情報を第三者に提供することはありません。ただし、法的要件や関連する法規制に基づき、情報提供が必要とされる場合があります。</li>
+                    <li> 利用者は、提供された個人情報に関して、必要な修正や削除を要求することができます。また、当社によって収集された情報は、利用者の同意なしに第三者と共有されることはありません。</li>
+                    <li> 当社は、Cookieや類似の技術を使用して、利用者のウェブサイト上での操作履歴や利用状況を追跡することがあります。これにより、サービスの改善やパーソナライズされたコンテンツの提供が可能となります。</li>
+                  </ol>
+                </dd>
+              </dl>
+            </div>
+            <div class="card-footer">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" value="consent_check" id="consent">
+                  私は、利用規約およびプライバシーポリシーに同意します。提供された個人情報は、当社のサービス提供と関連する目的にのみ使用されます。 </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-lg btn-primary w-100 mb-4 py-3 lh-1">登録申請</button>
+      </form>
+    </section>
+  </article>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+</body>
+</html>

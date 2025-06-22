@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+<head>
+<meta content="telephone=no" name="format-detection">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta charset="UTF-8">
+<title>web_app</title>
+<link href="files/css/base-color.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto, "Noto Sans JP", Helvetica, Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--on-surface);
+  margin: 0;
+}
+table {
+  margin: 0 1em;
+}
+table, td, th {
+  border-collapse: collapse;
+  position: relative;
+  font-size: 10px;
+  min-width: 6em;
+}
+td:not(.not-deco), th:not(.not-deco) {
+  border: thin solid var(--hairline);
+}
+th:not(.not-deco) {
+  background-color: var(--textfield-surface);
+}
+tr:not(:last-child) td:not(.not-deco) {
+  border-bottom-color: var(--chip-hover);
+}
+tr:nth-child(2n+1) td:not(.not-deco):not(:nth-child(3n+2)), tr:nth-child(2n) td:not(:nth-child(3n+1)) {
+border-right-color:var(--chip-hover);
+height: 6em;
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+.task {
+  position: absolute;
+  border-radius: 5px;
+  min-width: 100%;
+  left: 0;
+  color: var(--background);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 2px 0.5em;
+  border: 2px solid rgba(255,255,255,0.6);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.3;
+  height: 33px;
+  cursor: pointer;
+  z-index: 1;
+}
+.desc-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.active {
+  z-index: 10;
+  height: 56px;
+}
+#j-projects {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1em 0 1.3em;
+}
+.sticky-left-0, .sticky-left-6 {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+}
+.sticky-left-6 {
+  left: 6em;
+}
+.sticky-left-0::before, .sticky-left-6::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: thin solid var(--hairline);
+  top: -1px;
+  left: -1px;
+  z-index: -1;
+}
+.icon-edit {
+  width: 50%;
+  height: 100%;
+  fill: var(--background);
+  position: absolute;
+  top: 0;
+  display: none;
+  padding-top: 28px;
+}
+.icon-left {
+  left: 0;
+  padding-right: calc(50% - 20px);
+}
+.icon-right {
+  right: 0;
+  padding-left: calc(50% - 20px);
+}
+.active .icon-edit {
+  display: inherit;
+}
+/*base css*/
+.w-100 {
+  width: 100%;
+}
+.d-flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-content-between {
+  align-content: space-between;
+}
+</style>
+</head>
+
+<body>
+<div id="j-projects"></div>
+<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1">
+  <symbol viewBox="0 -960 960 960" id="swipe_right_alt">
+    <path d="M360-280q-82 0-141-58.5T160-480q0-82 59-141t141-59q82 0 133.5 50.5T559-510h207l-89-89 42-42 161 161-161 161-42-42 89-89H559q-14 69-65.5 119.5T360-280Z"/>
+  </symbol>
+  <symbol viewBox="0 -960 960 960" id="swipe_left_alt">
+    <path xmlns="http://www.w3.org/2000/svg" d="M600-280q-82 0-133.5-50.5T401-450H194l89 89-42 42L80-480l161-161 42 42-89 89h207q14-69 65.5-119.5T600-680q83 0 141.5 58T800-480q0 82-58.5 141T600-280Z"/>
+  </symbol>
+  <symbol viewBox="0 -960 960 960" id="swap_horiz">
+    <path xmlns="http://www.w3.org/2000/svg" d="M273-160 80-353l193-193 42 42-121 121h316v60H194l121 121-42 42Zm414-254-42-42 121-121H450v-60h316L645-758l42-42 193 193-193 193Z"/>
+  </symbol>
+</svg>
+<script>
+const e_projects=document.getElementById('j-projects');
+const projectDisplayPeriod = {
+  display_start: "2023-01",
+  display_end: "2024-12"
+};
+const a_data={
+  "projects": [
+    {
+      "task_name": "山田邸新築工事",
+      "task_data": [
+        {
+          "line_name": "基礎工事",
+          "line_data": [
+            {"name": "地盤調査", "start_period": "2023-01-0", "end_period": "2023-01-1","bg_color":"wine"},
+            {"name": "地盤の整地", "start_period": "2023-01-1", "end_period": "2023-01-2","bg_color":"tangerine"},
+            {"name": "掘削", "start_period": "2023-01-2", "end_period": "2023-02-3","bg_color":"lemon"},
+            {"name": "鉄筋の設置", "start_period": "2023-03-1", "end_period": "2023-03-1","bg_color":"basil"},
+            {"name": "コンクリートの流し込み", "start_period": "2023-04-1", "end_period": "2023-04-1","bg_color":"blueberry"},
+            {"name": "フィニッシング", "start_period": "2023-04-2", "end_period": "2023-04-2","bg_color":"grapes"}
+          ]
+        },
+        {
+          "line_name": "骨組み工事",
+          "line_data": [
+            {"name": "棟上げ工事", "start_period": "2023-01-1", "end_period": "2023-01-1","bg_color":"rose"},
+            {"name": "床の設置", "start_period": "2023-01-2", "end_period": "2023-01-2","bg_color":"pumpkin"},
+            {"name": "屋根の設置", "start_period": "2023-02-1", "end_period": "2023-02-1","bg_color":"avocado"},
+            {"name": "ブレースの設置", "start_period": "2023-03-1", "end_period": "2023-03-1","bg_color":"eucalyptus"},
+            {"name": "断熱材や防音材の設置", "start_period": "2023-04-1", "end_period": "2023-04-1","bg_color":"lavender"}
+          ]
+        }
+      ]
+    },
+    {
+      "task_name": "数田邸リフォーム工事",
+      "task_data": [
+        {
+          "line_name": "解体工事",
+          "line_data": [
+            {"name": "解体準備", "start_period": "2023-01-1", "end_period": "2023-01-1","bg_color":"cocoa"},
+            {"name": "解体作業", "start_period": "2023-01-2", "end_period": "2023-01-2","bg_color":"tomato"}
+          ]
+        },
+        {
+          "line_name": "構造改修工事",
+          "line_data": [
+            {"name": "柱の補強", "start_period": "2023-02-1", "end_period": "2023-02-1","bg_color":"mango"},
+            {"name": "床の補強", "start_period": "2023-02-2", "end_period": "2023-02-2","bg_color":"pistachio"}
+          ]
+        }
+      ]
+    },
+    {
+      "task_name": "佐々木邸新築工事",
+      "task_data": [
+        {
+          "line_name": "基礎工事",
+          "line_data": [
+            {"name": "地盤調査", "start_period": "2023-01-0", "end_period": "2023-01-1","bg_color":"peacock"},
+            {"name": "地盤の整地", "start_period": "2023-01-1", "end_period": "2023-01-2","bg_color":"lilac"},
+            {"name": "掘削", "start_period": "2023-01-2", "end_period": "2023-02-3","bg_color":"graphite"},
+            {"name": "鉄筋の設置", "start_period": "2023-03-1", "end_period": "2023-03-1","bg_color":"flamingo"},
+            {"name": "コンクリートの流し込み", "start_period": "2023-04-1", "end_period": "2023-04-1","bg_color":"banana"},
+            {"name": "フィニッシング", "start_period": "2023-04-2", "end_period": "2023-04-2","bg_color":"sage"}
+          ]
+        },
+        {
+          "line_name": "骨組み工事",
+          "line_data": [
+            {"name": "棟上げ工事", "start_period": "2023-01-1", "end_period": "2023-01-1","bg_color":"cobalt"},
+            {"name": "床の設置", "start_period": "2023-01-2", "end_period": "2023-01-2","bg_color":"amethyst"},
+            {"name": "屋根の設置", "start_period": "2023-02-1", "end_period": "2023-02-1","bg_color":"birch"},
+            {"name": "ブレースの設置", "start_period": "2023-03-1", "end_period": "2023-03-1","bg_color":""},
+            {"name": "断熱材や防音材の設置", "start_period": "2023-04-1", "end_period": "2023-04-1","bg_color":""}
+          ]
+        }
+      ]
+    }
+  ]
+}
+const a_projects=a_data.projects;
+let v_projectsAll=a_projects.length;
+const a_projectsHtml=[];
+for(let v_i=0;v_i<v_projectsAll;v_i++){
+  const a_data=a_projects[v_i].task_data;
+  const v_dataAll=a_data.length;
+  for (let v_ii = 0; v_ii < v_dataAll; v_ii++) {
+    const line_data = a_data[v_ii].line_data;
+    let html;
+    if(v_ii==0){
+      html = `<tr><th rowspan="${v_dataAll}" scope="col" class="sticky-left-0">${a_projects[v_i].task_name}</th><th scope="row" class="sticky-left-6">${a_data[v_ii].line_name}</th>`;
+    }else{
+      html = `<th scope="row" class="sticky-left-6">${a_data[v_ii].line_name}</th>`;
+    }
+    a_projectsHtml.push({html,data:line_data,data_number:v_i+"-"+v_ii});
+  }
+}
+let v_projectsHtmlAll=a_projectsHtml.length;
+const displayStartDate = new Date(projectDisplayPeriod.display_start);
+const displayEndDate = new Date(projectDisplayPeriod.display_end);
+const currentDate = new Date(displayStartDate);
+let v_html='<table><tbody><tr>';
+let v_htmlTh01='<th scope="col" class="not-deco">&nbsp;</th><th scope="col" class="not-deco">&nbsp;</th>';
+let v_htmlTh02='<th scope="col" class="not-deco">&nbsp;</th><th scope="col" class="not-deco">&nbsp;</th>'
+while (currentDate <= displayEndDate) {
+  const year = currentDate.getFullYear();
+  const month = (currentDate.getMonth() + 1).toString().padStart(2, "0");
+  v_htmlTh01+=`<th colspan="3" scope="col">${year}年${month}月</th>`;
+  v_htmlTh02+='<th scope="col">初旬</th><th scope="col">中旬</th><th scope="col">下旬</th>';
+  for(let v_i=0;v_i<v_projectsHtmlAll;v_i++){
+    for(let v_ii=0;v_ii<3;v_ii++){
+      const v_celName=`${year}-${month}-${v_ii}`;
+      const index = a_projectsHtml[v_i].data.findIndex(item => item.start_period === v_celName);
+      const top=(index % 3)*12;
+      if(index !== -1) {
+        let lineData = a_projectsHtml[v_i].data[index];
+        let startFrame = lineData.start_period.split('-');
+        let endFrame = lineData.end_period.split('-');        
+        let numFrames = ((endFrame[0] - startFrame[0])*12*3+(endFrame[1] - startFrame[1])*3+(endFrame[2] - startFrame[2])+1)*100;
+        let bg_color=a_projectsHtml[v_i].data[index].bg_color;
+        if(bg_color==""){
+          bg_color="primary";
+        }
+        a_projectsHtml[v_i].html+=`<td data-period="${v_celName}"><span class="task bg-${bg_color}" style="width:${numFrames}%;top:${top}px" data-line="${a_projectsHtml[v_i].data_number}-${index}"><span class="desc-2">${a_projectsHtml[v_i].data[index].name}</span><svg class="icon-edit icon-left"><use xlink:href="#swap_horiz"></use></svg><svg class="icon-edit icon-right"><use xlink:href="#swap_horiz"></use></svg></span></td>`;
+      } else {
+        a_projectsHtml[v_i].html+=`<td data-period="${v_celName}">&nbsp;</td>`;
+      }
+    }
+  }
+  currentDate.setMonth(currentDate.getMonth() + 1);
+}
+let finalHtml = '';
+for (let i = 0; i < a_projectsHtml.length; i++) {
+  finalHtml += a_projectsHtml[i].html;
+  finalHtml += '</tr>';
+}
+finalHtml += '</tbody></table>';
+v_html+=v_htmlTh01+'</tr><tr>'+v_htmlTh02+'</tr>'+finalHtml+'</tbody></table>';
+e_projects.innerHTML=v_html;
+let e_projectsTarget;
+let a_task=document.querySelectorAll('.task');
+a_task.forEach(function(e) {
+  e.addEventListener('click', function() {
+    removeActive();
+    e.classList.add('active');
+    let dataLine = e.getAttribute('data-line');
+    let a_dataLine=dataLine.split('-');
+    e_projectsTarget=a_projects[a_dataLine[0]].task_data[a_dataLine[1]].line_data[a_dataLine[2]];
+    console.log(e_projectsTarget);
+  });
+});
+function removeActive() {
+  a_task.forEach(function(e) {
+    e.classList.remove('active');
+  });
+}
+document.addEventListener('click', function(event) {
+  if (!event.target.closest('.task')) {
+    removeActive();
+  }
+});
+</script>
+</body>
+</html>

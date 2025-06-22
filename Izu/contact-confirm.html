@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Izu 一流のライフスタイルは一流のウェルネスマネジメントから。</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Izu 一流のライフスタイルは一流のウェルネスマネジメントから。">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+.contact-step::before {
+  content: "";
+  width: 64%;
+  height: 1px;
+  background-color: var(--bs-gray-700);
+  position: absolute;
+  left: 18%;
+  display: block;
+  top: 7px;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+}
+
+@media (min-width:992px) {/*PC*/
+}
+
+@media (max-width:767px) {/*SP*/
+}
+</style>
+</head>
+
+<body>
+<header class="ps-1 top-0 w-100 position-sticky">
+  <div class="d-flex justify-content-between align-items-center move max-2000 mx-auto h-100"> <a href="/Izu/" class="d-flex align-items-center gap-2 h-100 text-body text-decoration-none"> <img src="files/images/logo.webp" alt="" width="86" height="86" class="square-w h-100 w-auto mt-1">
+    <div>一流のライフスタイルは<br>
+      一流のウェルネスマネジメントから。</div>
+    </a>
+  </div>
+</header>
+<main>
+  <article class="bg-gray-900 pt-4 pb-2 ffs-palt ls-1 h-100">
+    <ol class="container d-flex text-center small ff-serif text-gray-700 contact-step position-relative">
+      <li class="d-grid w-100 gap-2 text-primary position-relative"><i class="bi bi-circle-fill smaller"></i>お問い合わせ</li>
+      <li class="d-grid w-100 gap-2 text-primary position-relative"><i class="bi bi-circle-fill smaller"></i>確認画面</li>
+      <li class="d-grid w-100 gap-2"><i class="bi bi-circle-fill smaller"></i>お問い合せ送信</li>
+    </ol>
+    <section>
+      <div class="container ff-serif pb-5 mb-5">
+        <h2 class="fs-4 d-grid text-center gap-2 border-bottom border-color-nomal py-3 mb-5">
+          <div><img src="files/images/icon_mail.svg" alt="" width="50" height="50"></div>
+          確認画面 </h2>
+        <form action="/Izu/contact-completed.html" class="mb-5">
+          <div class="mb-3 d-lg-flex align-items-center">
+            <label for="corporateName" class="form-label col-lg-3 mb-lg-0">法人名</label>
+            <input name="corporateName" type="text" class="form-control rounded-0" id="corporateName" value="株式会社美容未来" readonly>
+          </div>
+          <div class="mb-3 d-lg-flex align-items-center">
+            <label for="fullName" class="form-label col-3 mb-lg-0"><span class="text-primary">*</span>お名前</label>
+            <input name="fullName" type="text" class="form-control rounded-0" id="fullName" value="未来 美来" readonly="readonly">
+          </div>
+          <div class="mb-3 d-lg-flex align-items-center">
+            <label for="emailAddress" class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>Email</label>
+            <input name="emailAddress" type="email" class="form-control rounded-0" id="emailAddress" value="miku_m@mail.com" readonly="readonly">
+          </div>
+          <div class="mb-3 d-lg-flex align-items-center">
+            <label for="phoneNumber" class="form-label col-lg-3 mb-lg-0"><span class="text-primary">*</span>電話番号</label>
+            <input name="phoneNumber" type="tel" class="form-control rounded-0" id="phoneNumber" value="03-1234-5678" readonly="readonly">
+          </div>
+          <div class="mb-5 d-lg-flex">
+            <label for="inquiryContent" class="form-label col-lg-3"><span class="text-primary">*</span>お問い合わせ内容</label>
+            <textarea name="inquiryContent" rows="6" readonly="readonly" class="form-control rounded-0" id="inquiryContent">是非とも御社のお話を伺いたく存じます。</textarea>
+          </div>
+          <div class="d-flex gap-3 justify-content-center">
+            <button type="button" onclick="history.back()" class="btn rounded-0 d-block btn-lg btn-outline-light px-0 col-4 max-200">修正する</button>
+            <button type="submit" class="btn btn-primary px-0 rounded-0 col-7 col-lg-10 d-block btn-lg max-400">上記内容で送信する</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="position-sticky top-100">
+  <p class="small py-3 mb-0 container ff-serif">copyright 2023 Izu. All rights reserved.</p>
+</footer>
+<a href="#top" id="menu_top" class="move js-menutop col-3 col-md-2 col-lg-1" style="z-index: 1040"><img src="files/images/icon_top.svg" alt="" width="100" height="100" class="img-fluid" loading="lazy"> </a> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script>
+const e_header=document.querySelector('header');
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  const v_y=window.pageYOffset;
+  if(v_y > 10){
+    e_header.classList.add('blur');
+  }else{
+    e_header.classList.remove('blur');
+  }
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((v_y > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+</script>
+</body>
+</html>

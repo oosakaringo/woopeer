@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>WEB乗船名簿-遊漁船の情報</title>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="WEB乗船名簿-遊漁船の情報">
@@ -121,6 +122,21 @@
 }
 }
 </style>
+<script>
+function initMap() {
+  const myLatlng = { lat: 26.244441695385305,lng: 127.67965661103514 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: myLatlng,
+  });
+  const marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title:"TRIPPERトリッパー UF51",
+  });
+}
+window.initMap = initMap; 
+</script>
 </head>
 
 <body>
@@ -250,8 +266,23 @@
           </ol>
           <h3 class="wbl-title fs-6 mb-3 text-warning fw-bold position-relative overflow-hidden d-flex align-items-center">母港</h3>
           <div class="d-flex justify-content-center px-2 mb-4">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17926.093618457428!2d139.77260088004854!3d35.628086217203375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018618a89a85b99%3A0xe816648aa4be4d1c!2z5p2x5Lqs5riv!5e0!3m2!1sja!2sjp!4v1679364575952!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+            <!--iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17926.093618457428!2d139.77260088004854!3d35.628086217203375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018618a89a85b99%3A0xe816648aa4be4d1c!2z5p2x5Lqs5riv!5e0!3m2!1sja!2sjp!4v1679364575952!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe-->
           </div>
+          
+          
+          
+          <div class="d-flex justify-content-center px-2 mb-4">
+          
+          <div id="map" style="height: 400px; width: 100%"></div>
+          
+          
+          </div>
+          
+          
+          
+          
+          
+          
           <div class="text-center mb-3"><a href="check.html" class="btn btn-warning col-8 col-lg-6">乗船名簿を記入</a></div>
           <div class="text-center mb-3"><a href="find.html" class="btn btn-warning col-8 col-lg-6">戻る</a></div>
         </div>
@@ -285,5 +316,18 @@ window.scrollTo({
 });
 }
 </script>
+  <!--script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyAa1NA-nU72Ds9p2IrYNa7GilepSuK37hc"></script>
+<script>
+    window.onload = function () {
+        var myLatlng = new google.maps.LatLng(26.244441695385305,127.67965661103514);
+        map = new google.maps.Map(document.getElementById("map"), { zoom: 15, center: myLatlng });
+        var marker = new google.maps.Marker({ position: myLatlng, title:"TRIPPERトリッパー UF51"});
+        marker.setMap(map);
+    };
+
+</script-->
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa1NA-nU72Ds9p2IrYNa7GilepSuK37hc&callback=initMap"></script>
 </body>
 </html>

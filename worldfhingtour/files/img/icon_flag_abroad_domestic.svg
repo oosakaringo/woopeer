@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.03 36.14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #caa86e;
+      }
+      .cls-2 {
+        fill: #fff;
+        font-family: SourceHanSansJP-Bold-83pv-RKSJ-H, 'Source Han Sans JP',sans-serif;
+        font-size: 12.6px;
+        font-weight: 700;
+        letter-spacing: .03em;
+      }
+    </style>
+  </defs>
+  <g id="_01" data-name="01">
+    <path class="cls-1" d="m47.97,23.63l-3.9-9.51,3.91-10.92c.12-.32.02-.68-.24-.9-.26-.22-.63-.26-.93-.1-.04.02-3.94,2.12-7.61,2.12s-14.64-2.04-14.71-2.07c0,0,0,0,0,0-.18-.09-11.36-2.25-15.45-2.25S1.15,2.05.68,2.3c-.38.07-.68.4-.68.81v33.03h1.65v-11.46c.88-.44,4.21-2.01,7.39-2.01,3.67,0,14.62,2.03,14.71,2.07,0,0,0,0,0,0,.18.09,11.36,2.25,15.45,2.25s8.23-2.23,8.4-2.33c.37-.2.53-.65.37-1.04Z"/>
+    <text class="cls-2" transform="translate(10.69 16.82)"><tspan x="0" y="0">国内</tspan></text>
+  </g>
+</svg>

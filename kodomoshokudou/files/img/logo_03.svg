@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237.84 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        font-family: Avenir-Medium, Avenir;
+        font-size: 35.43px;
+        font-weight: 500;
+        letter-spacing: .18em;
+      }
+
+      .cls-2 {
+        fill: #858585;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="pc">
+    <rect class="cls-2" width="237.84" height="64"/>
+    <text class="cls-1" transform="translate(60.34 46.7)"><tspan x="0" y="0">LOGO</tspan></text>
+  </g>
+</svg>

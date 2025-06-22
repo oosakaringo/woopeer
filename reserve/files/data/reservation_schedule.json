@@ -1,0 +1,406 @@
+{
+  "message": "success",
+  "userId": 1,
+  "duration": 90,
+  "data": [
+    {
+      "date": "2024/03/25",
+      "timeslots": [
+        {
+          "hour": "09:00",
+          "status": 1
+        },
+        {
+          "hour": "10:00",
+          "status": 1
+        },
+        {
+          "hour": "11:00",
+          "status": 1
+        },
+        {
+          "hour": "12:00",
+          "status": 1
+        },
+        {
+          "hour": "13:00",
+          "status": 1
+        },
+        {
+          "hour": "14:00",
+          "status": 1
+        },
+        {
+          "hour": "15:00",
+          "status": 1
+        },
+        {
+          "hour": "16:00",
+          "status": 1
+        },
+        {
+          "hour": "17:00",
+          "status": 1
+        },
+        {
+          "hour": "18:00",
+          "status": 1
+        },
+        {
+          "hour": "19:00",
+          "status": 1
+        },
+        {
+          "hour": "20:00",
+          "status": 1
+        },
+        {
+          "hour": "21:00",
+          "status": 1
+        }
+      ]
+    },
+    {
+      "date": "2024/03/26",
+      "timeslots": [
+        {
+          "hour": "09:00",
+          "status": 1
+        },
+        {
+          "hour": "10:00",
+          "status": 1
+        },
+        {
+          "hour": "11:00",
+          "status": 1
+        },
+        {
+          "hour": "12:00",
+          "status": 1
+        },
+        {
+          "hour": "13:00",
+          "status": 1
+        },
+        {
+          "hour": "14:00",
+          "status": 1
+        },
+        {
+          "hour": "15:00",
+          "status": 1
+        },
+        {
+          "hour": "16:00",
+          "status": 1
+        },
+        {
+          "hour": "17:00",
+          "status": 1
+        },
+        {
+          "hour": "18:00",
+          "status": 1
+        },
+        {
+          "hour": "19:00",
+          "status": 1
+        },
+        {
+          "hour": "20:00",
+          "status": 1
+        },
+        {
+          "hour": "21:00",
+          "status": 1
+        }
+      ]
+    },
+    {
+      "date": "2024/03/27",
+      "timeslots": [
+        {
+          "hour": "09:00",
+          "status": 1
+        },
+        {
+          "hour": "10:00",
+          "status": 1
+        },
+        {
+          "hour": "11:00",
+          "status": 1
+        },
+        {
+          "hour": "12:00",
+          "status": 1
+        },
+        {
+          "hour": "13:00",
+          "status": 1
+        },
+        {
+          "hour": "14:00",
+          "status": 1
+        },
+        {
+          "hour": "15:00",
+          "status": 1
+        },
+        {
+          "hour": "16:00",
+          "status": 1
+        },
+        {
+          "hour": "17:00",
+          "status": 1
+        },
+        {
+          "hour": "18:00",
+          "status": 1
+        },
+        {
+          "hour": "19:00",
+          "status": 1
+        },
+        {
+          "hour": "20:00",
+          "status": 1
+        },
+        {
+          "hour": "21:00",
+          "status": 1
+        }
+      ]
+    },
+    {
+      "date": "2024/03/28",
+      "timeslots": [
+        {
+          "hour": "09:00",
+          "status": 1
+        },
+        {
+          "hour": "10:00",
+          "status": 1
+        },
+        {
+          "hour": "11:00",
+          "status": 1
+        },
+        {
+          "hour": "12:00",
+          "status": 1
+        },
+        {
+          "hour": "13:00",
+          "status": 1
+        },
+        {
+          "hour": "14:00",
+          "status": 1
+        },
+        {
+          "hour": "15:00",
+          "status": 1
+        },
+        {
+          "hour": "16:00",
+          "status": 1
+        },
+        {
+          "hour": "17:00",
+          "status": 1
+        },
+        {
+          "hour": "18:00",
+          "status": 1
+        },
+        {
+          "hour": "19:00",
+          "status": 1
+        },
+        {
+          "hour": "20:00",
+          "status": 1
+        },
+        {
+          "hour": "21:00",
+          "status": 1
+        }
+      ]
+    },
+    {
+      "date": "2024/03/29",
+      "timeslots": [
+        {
+          "hour": "09:00",
+          "status": 1
+        },
+        {
+          "hour": "10:00",
+          "status": 1
+        },
+        {
+          "hour": "11:00",
+          "status": 1
+        },
+        {
+          "hour": "12:00",
+          "status": 1
+        },
+        {
+          "hour": "13:00",
+          "status": 1
+        },
+        {
+          "hour": "14:00",
+          "status": 1
+        },
+        {
+          "hour": "15:00",
+          "status": 1
+        },
+        {
+          "hour": "16:00",
+          "status": 1
+        },
+        {
+          "hour": "17:00",
+          "status": 1
+        },
+        {
+          "hour": "18:00",
+          "status": 1
+        },
+        {
+          "hour": "19:00",
+          "status": 1
+        },
+        {
+          "hour": "20:00",
+          "status": 1
+        },
+        {
+          "hour": "21:00",
+          "status": 1
+        }
+      ]
+    },
+    {
+      "date": "2024/03/30",
+      "timeslots": [
+        {
+          "hour": "09:00",
+          "status": 1
+        },
+        {
+          "hour": "10:00",
+          "status": 1
+        },
+        {
+          "hour": "11:00",
+          "status": 1
+        },
+        {
+          "hour": "12:00",
+          "status": 1
+        },
+        {
+          "hour": "13:00",
+          "status": 1
+        },
+        {
+          "hour": "14:00",
+          "status": 1
+        },
+        {
+          "hour": "15:00",
+          "status": 1
+        },
+        {
+          "hour": "16:00",
+          "status": 1
+        },
+        {
+          "hour": "17:00",
+          "status": 1
+        },
+        {
+          "hour": "18:00",
+          "status": 1
+        },
+        {
+          "hour": "19:00",
+          "status": 1
+        },
+        {
+          "hour": "20:00",
+          "status": 1
+        },
+        {
+          "hour": "21:00",
+          "status": 1
+        }
+      ]
+    },
+    {
+      "date": "2024/03/31",
+      "timeslots": [
+        {
+          "hour": "09:00",
+          "status": 1
+        },
+        {
+          "hour": "10:00",
+          "status": 1
+        },
+        {
+          "hour": "11:00",
+          "status": 1
+        },
+        {
+          "hour": "12:00",
+          "status": 1
+        },
+        {
+          "hour": "13:00",
+          "status": 1
+        },
+        {
+          "hour": "14:00",
+          "status": 1
+        },
+        {
+          "hour": "15:00",
+          "status": 1
+        },
+        {
+          "hour": "16:00",
+          "status": 1
+        },
+        {
+          "hour": "17:00",
+          "status": 1
+        },
+        {
+          "hour": "18:00",
+          "status": 1
+        },
+        {
+          "hour": "19:00",
+          "status": 1
+        },
+        {
+          "hour": "20:00",
+          "status": 1
+        },
+        {
+          "hour": "21:00",
+          "status": 1
+        }
+      ]
+    }
+  ]
+}

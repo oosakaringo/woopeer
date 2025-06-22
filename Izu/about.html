@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Izu 一流のライフスタイルは一流のウェルネスマネジメントから。</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Izu 一流のライフスタイルは一流のウェルネスマネジメントから。">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+.img-top, .img-title {
+  height: min(50vmax, 800px);
+  object-position: 50% 20%;
+  padding: 1px 0;
+}
+.img-title {
+  height: 32vmax;
+  object-position: 50% 30%;
+}
+.fs-top-title {
+  font-size: clamp(130%, 3.2vw, 240%);
+}
+.about-title::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  border-top: solid thin rgba(200,200,200,.5);
+}
+.grid-2, .grid-2-3-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.voice-card {
+  border-radius: 0.8em 0 0.8em 0;
+}
+.voice-card::before, .voice-card::after {
+  font-size: 90px;
+  color: var(--bs-primary);
+  position: absolute;
+  font-family: serif;
+  line-height: 1;
+  height: 50px;
+}
+.voice-card::before {
+  content: "“";
+  top: -25px;
+}
+.voice-card::after {
+  content: "”";
+  bottom: -34px;
+  right: 20px
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+.grid-2-3-4 {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (min-width:992px) {/*PC*/
+.grid-2-3-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+}
+
+@media (max-width:767px) {/*SP*/
+}
+</style>
+</head>
+
+<body>
+<header class="ps-1 top-0 w-100 position-fixed">
+  <div class="d-flex justify-content-between align-items-center move max-2000 mx-auto h-100"> <a href="/Izu/" class="d-flex align-items-center gap-2 h-100 text-body text-decoration-none"> <img src="files/images/logo.webp" alt="" width="86" height="86" class="square-w h-100 w-auto mt-1">
+    <div>一流のライフスタイルは<br>
+      一流のウェルネスマネジメントから。</div>
+    </a>
+    <div class="d-flex h-100"> <a href="/Izu/" class="bg-primary text-white square-w h-100 text-decoration-none text-center d-flex align-items-center justify-content-center">ご予約<br>
+      →</a>
+      <button class="btn bg-body text-white rounded-0 p-0 d-flex justify-content-center square-w h-100 align-items-center" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><i class="bi bi-list fs-3"></i></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-1200 bg-body" tabindex="-1" id="offcanvas_menu"> <img src="files/images/bg-menu.webp" alt="" width="1500" height="1000" class="img-cover h-100 w-auto position-absolute" loading="lazy">
+  <div class="offcanvas-header py-1 justify-content-between position-relative"> <img src="files/images/logo.webp" alt="" width="60" height="60" class="">
+    <button type="button" class="btn p-0 text-white fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body position-relative d-lg-flex justify-content-center">
+    <div class="d-grid grid-2 gap-2 col-md-10 mx-auto col-lg-8 max-720 mx-lg-0 mb-5 align-content-start"> <a href="/Izu/" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">HOME</span><span class="text-white small">ホーム</span></a> <a href="/Izu/about.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">About Izu</span><span class="text-white small">Izuについて</span></a> <a href="/Izu/service.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">Service </span><span class="text-white small">サービス</span></a> <a href="#partner" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">Partner</span><span class="text-white small">パートナー募集</span></a> <a href="/Izu/#faq" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">FAQ</span><span class="text-white small">よくある質問</span></a> <a href="/Izu/service.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">ISC</span><span class="text-white small">エリート幹細胞ISCについて</span></a> <a href="/Izu/join.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">JOIN LEGRAN</span><span class="text-white small">ご入会について</span></a> </div>
+    <div class="d-grid col-10 mx-auto gap-3 align-content-start col-lg-4 max-360 mx-lg-0"> <a href="/Izu/" class="btn btn-primary rounded-0 position-relative fw-bold">ご予約はこちら <i class="bi bi-arrow-right position-absolute end-0 me-2"></i></a> <a href="/Izu/contact.html" class="btn bg-white rounded-0 position-relative fw-bold">お問い合わせ <i class="bi bi-arrow-right position-absolute end-0 me-2"></i></a> </div>
+  </div>
+</div>
+<main>
+  <article>
+    <section>
+      <div class="max-2000 mx-auto position-relative mt-4 mt-lg-0"> <img src="files/images/about_top.webp" alt="" width="2000" height="1200" class="w-100 img-cover img-top"> <img src="files/images/msk_top_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0"> <img src="files/images/msk_top_02.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0">
+        <div class="d-flex flex-column align-items-center position-absolute w-100 h-100 top-0 start-0 justify-content-center gap-2 text-center">
+          <h2 class="d-grid mb-4"><span class="ff-serif text-primary display-3 ls-1">About Izu</span> <span class="fs-6 ls-1">Izuについて</span> </h2>
+          <div class="d-grid d-md-flex ff-serif ffs-palt ls-1 fs-2">一流の<span>ライフスタイルは、</span></div>
+          <div class="d-grid d-md-flex ff-serif ffs-palt ls-1 fs-2">一流の<span>ウェルネスマネジメントから。</span></div>
+        </div>
+      </div>
+      <div class="container position-relative">
+        <div class="d-md-flex gap-2 pb-5">
+          <div>
+            <h3 class="d-grid gap-2 py-4 about-title position-relative"><span class="ff-serif text-primary">CEO Message.</span><span class="fs-6"><span class="small">代表メッセージ</span></span></h3>
+            <p class="ff-serif ffs-palt ls-1 text-align-justify lh-180 mb-4">はじめまして、株式会社 Izu 室井香南と申します。<br>
+              ホームページをご覧いただき、誠にありがとうございます。<br>
+              日々会社を支え、社員を守り、ビジネス発展のため大きな夢やビジョンを描き続けるエグゼクティブの皆様。その頼もしく素晴らしい人生の「ウェルネス+α」となる様々な“プレミアム・ウェルネスマネジメント”をご提供し、何よりの資本となる身体の健康、こころの充実、ワンランク上のプライベート、その全てを実現していくための、人生の Supporterとなることが私たちの存在の目指すところです。<br>
+              <span class="d-lg-block py-lg-3">「一流のライフスタイルは、一流のウェルネスマネジメントから。」</span>をカタチにすべく、「プレミアム・ウェルネスマネジメントの提供」をMissionとし、繊細かつパワフルなエグゼクティブの皆様の人生を、より健康でこころまで充実したものしていくため、これからも様々なサービスとサポートを展開して参ります。 </p>
+            <div class="d-grid gap-1">
+              <div class="small">株式会社Izu 代表取締役</div>
+              <div class="ff-serif fs-3">室井 香南</div>
+              <div class="small">株式会社Ltlyl役員</div>
+            </div>
+          </div>
+          <picture class="col-5 max-480">
+            <source media="(min-width:768px)" srcset="files/images/about_ceo_pc.webp" width="800" height="500">
+            <img src="files/images/about_ceo_sp.webp" width="1260" height="480" alt="" class="img-fluid" style="margin-top: -50px"> </picture>
+        </div>
+        <div class="border-top pt-4 border-color-nomal d-md-flex ffs-palt ls-1">
+          <h4 class="fw-bold fs-6 p-2 col-3">経歴</h4>
+          <table width="100%" cellpadding="8">
+            <tbody>
+              <tr>
+                <td width="16%">2014 </td>
+                <td width="16%">3月</td>
+                <td>青山学院女子短期大学卒業</td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td>4月</td>
+                <td>東芝メディカルシステムズ（株）入社</td>
+              </tr>
+              <tr>
+                <td>2018</td>
+                <td>10月</td>
+                <td>（株）SREM入社</td>
+              </tr>
+              <tr>
+                <td>2022</td>
+                <td>1月</td>
+                <td>（株）Ltlyl設立</td>
+              </tr>
+              <tr>
+                <td>2023</td>
+                <td>2月</td>
+                <td>（株）Izu設立</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white pb-5">
+      <div class="position-relative mt-4 mt-lg-0"> <img src="files/images/about_001.webp" alt="" width="2000" height="1000" class="w-100 img-cover img-title"> <img src="files/images/msk_top_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0" style="margin-top: -1px;"> <img src="files/images/msk_top_w_02.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0"> </div>
+      <div class="container text-gray-900 ffs-palt ls-1 pt-3 pt-md-0 position-relative">
+        <h3 class="d-flex justify-content-between border-bottom border-color-nomal align-items-end mb-0"> <span class="d-grid gap-2 py-4 about-title position-relative"> <span class="ff-serif text-primary">CEO Message.</span><span class="fs-6"><span class="small">代表メッセージ</span></span> </span> <img src="files/images/logo.webp" alt="" width="86" height="86" class="square-w col-3 max-200" style="margin-top: -50px"> </h3>
+        <div class="d-grid py-4 border-bottom border-color-nomal">
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">会社名</dt>
+            <dd>株式会社Izu</dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">英文表記 </dt>
+            <dd>Izu Inc. </dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">代表取締役 </dt>
+            <dd>室井　香南　（Muroi Kanami) </dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">設立日</dt>
+            <dd>2023年 2月6日 </dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">本店所在地 </dt>
+            <dd>東京都江東区佐賀1-14-8 </dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">TEL</dt>
+            <dd>090-7718-2061</dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">Email</dt>
+            <dd>info@izuinc.jp</dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">資本金</dt>
+            <dd>100万円 </dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">所属団体</dt>
+            <dd>REDBOX JAPAN </dd>
+          </dl>
+          <dl class="mb-1 d-md-flex">
+            <dt class="col-3">事業内容</dt>
+            <dd class="lh-lg">エグゼクティブ向けサービスの展開、不死化エリート幹細胞ISC点滴による治療・美容の提供、「膣美容液」⾃社開発・販売</dd>
+          </dl>
+        </div>
+        <div class="d-md-flex pt-4">
+          <h4 class="fs-6 col-md-3 mb-4">提携先クリニック</h4>
+          <div class="d-grid grid-2 gap-4 align-items-center text-center flex-fill">
+            <div><img src="files/images/logo_central_medical_club.svg" alt="" width="296" height="150" class="img-fluid w-100 max-200"></div>
+            <div>スターセルクリニック代々木</div>
+            <div><img src="files/images/logo_komorebiclinic.png" alt="" width="715" height="115" class="img-fluid w-100 max-320"></div>
+            <div><img src="files/images/logo_tpc.png" alt="" width="150" height="124" class="img-fluid w-100 max-120"></div>
+          </div>
+          <div class="col-md-1 d-flex justify-content-end align-items-end">など</div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-gray-900 pb-5 position-relative overflow-hidden pt-lg-5" id="partner">
+      <div class="text-center position-absolute top-0 w-100"> <img src="files/images/footer.webp" alt="" width="2500" height="1000" class="img-cover img-fluid bg-partner" loading="lazy"> <img src="files/images/msk_top_w_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0" style="max-height: 300PX;"> <img src="files/images/msk_top_03.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0" style="max-height: 300PX;"> </div>
+      <nav aria-label="breadcrumb" class="position-absolute w-100 ps-3">
+        <ol class="breadcrumb max-2000 mx-auto">
+          <li class="breadcrumb-item"><a href="/Izu/" class="text-gray-900 text-decoration-none">HOME</a></li>
+          <li class="breadcrumb-item text-gray-900 active" aria-current="page">Izuについて</li>
+        </ol>
+      </nav>
+      <div class="container position-relative py-5 mt-5 text-center">
+        <h2 class="py-5 fs-top-title ff-serif ffs-palt ls-1 d-grid d-lg-flex justify-content-center" style="margin-top:10vmin"><span>パートナーを</span><span>募集しています</span></h2>
+        <p class="text-primary ff-serif display-1 ls-1 mb-5">Partner</p>
+        <p class="ffs-palt ls-2 col-xxl-10 mx-xxl-auto">Izuでは、エグゼクティブなお客様へ<span class="d-inline-block">最先端医療やラグジュアリーな</span> <span class="d-inline-block">サービスをご提供するために、</span> <span class="d-inline-block">共に取り組んでいただける</span> <span class="d-inline-block">パートナーを募集しています。</span></p>
+      </div>
+      <div class="d-grid gap-3 gap-md-0 d-md-flex container px-3 px-md-0"> <a href="/Izu/" class="d-block position-relative text-center text-white text-decoration-none w-100 hover-scale"> <img src="files/images/top_009.webp" alt="" width="1280" height="600" class="img-cover img-fluid h-100 position-absolute start-0" loading="lazy">
+        <div class="py-5 d-grid position-relative ffs-palt ls-1"> <span>私は施設運営者です</span> <span class="ff-serif fs-2">提携したい</span> </div>
+        </a> <a href="/Izu/" class="d-block position-relative text-center text-white text-decoration-none w-100 hover-scale"> <img src="files/images/top_010.webp" alt="" width="1280" height="600" class="img-cover img-fluid h-100 position-absolute start-0" loading="lazy">
+        <div class="py-5 d-grid position-relative ffs-palt ls-1"> <span>私はクリニックです</span> <span class="ff-serif fs-2">提携したい</span> </div>
+        </a> </div>
+    </section>
+  </article>
+</main>
+<footer>
+  <div class="py-5 container px-5 d-lg-flex px-lg-0 align-items-lg-start justify-content-lg-between footer-order">
+    <div class="d-grid gap-3 col-lg-3 col-12"> <a href="/Izu/" class="btn rounded-0 position-relative btn-primary d-block w-100 fw-bold px-0">ご予約はこちら<span class="position-absolute end-0 me-2 top-0 h-100 d-flex align-items-center"><i class="bi bi-arrow-right fs-4"></i></span></a> <a href="/Izu/contact.html" class="btn rounded-0 position-relative d-block w-100 bg-white fw-bold px-0">お問い合わせ<span class="position-absolute end-0 me-2 top-0 h-100 d-flex align-items-center"><i class="bi bi-arrow-right fs-4"></i></span></a> </div>
+    <div class="d-flex align-items-start gap-2 py-3 py-lg-0 col-lg-3"> <img src="files/images/logo.png" alt="" width="500" height="500" class="img-fluid col-3 col-lg-4" loading="lazy">
+      <div>
+        <div class="pt-4 mt-1 pb-3 ps-2 fw-bold">株式会社Izu</div>
+        <div class="d-flex"> <a href="####" class="col-6 p-2"><img src="files/images/icon_facebook.svg" alt="Facebook" width="36" height="36" class="img-fluid" loading="lazy"></a> <a href="####" class="col-6 p-2"><img src="files/images/icon_Instagram.svg" alt="Instagram" width="36" height="36" class="img-fluid" loading="lazy"></a> </div>
+      </div>
+    </div>
+    <div class="d-flex">
+      <ul class="ps-0 mb-0 w-50">
+        <li class="d-block"><a href="/Izu/" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>HOME</a></li>
+        <li class="d-block"><a href="/Izu/service.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>サービス</a></li>
+        <li class="d-block"><a href="/Izu/#faq" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>FAQ</a></li>
+        <li class="d-block"><a href="/Izu/join.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>ご入会について</a></li>
+      </ul>
+      <ul class="ps-0 mb-0 w-50">
+        <li class="d-block"><a href="/Izu/about.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>Izuについて</a></li>
+        <li class="d-block"><a href="#partner" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>パートナー募集</a></li>
+        <li class="d-block"><a href="/Izu/service.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i><span>エリート幹細胞<span class="d-inline-block">ISCについて</span></span></a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="small pb-3 mb-0 container ff-serif">copyright 2023 Izu. All rights reserved.</p>
+</footer>
+<a href="#top" id="menu_top" class="move js-menutop col-3 col-md-2 col-lg-1" style="z-index: 1040"><img src="files/images/icon_top.svg" alt="" width="100" height="100" class="img-fluid" loading="lazy"> </a> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script>
+const e_offcanvasMenu = new bootstrap.Offcanvas('#offcanvas_menu');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href*="#"]');
+a_offcanvasHash.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    e_offcanvasMenu.hide();
+  });
+});
+const e_header=document.querySelector('header');
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  const v_y=window.pageYOffset;
+  if(v_y > 10){
+    e_header.classList.add('blur');
+  }else{
+    e_header.classList.remove('blur');
+  }
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((v_y > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+</script>
+</body>
+</html>

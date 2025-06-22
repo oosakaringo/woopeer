@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>予約サービス </title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="予約サービス">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+.reserve-step .rounded-circle {
+  border: solid 2px;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+  background-color: var(--bs-light);
+}
+.reserve-step li {
+  position: relative;
+}
+.reserve-step li:not(.active ~ li):not(.active) .rounded-circle {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+  border-color: var(--bs-dark);
+}
+.reserve-step li:not(:first-child)::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 25vw;
+  border-top: 2px solid;
+  position: absolute;
+  top: 14px;
+  right: 50%;
+  margin-right: 14px
+}
+.reserve-step li.active ~ li:not(.active) {
+  color: var(--bs-gray-400);
+}
+.reserve-step li.active ~ li:not(.active)::before {
+  border-top-style: dotted;
+}
+.modal-select > .btn:not(:last-child) {
+  border-bottom: thin solid var(--bs-border-color);
+}
+.schedule th, .schedule td {
+  border: solid thin var(--bs-border-color);
+  padding: 0.5em 0;
+  background-color: #fff;
+}
+.schedule table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 80%;
+  line-height: 1.2;
+}
+.schedule svg {
+  width: 50%;
+  max-width: 32px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+.schedule tr:nth-child(1) {
+  position: sticky;
+  top: 100px;
+}
+.schedule tr:nth-child(2) {
+  font-size: 120%;
+  font-weight: bold;
+  position: sticky;
+  top: 130px;
+}
+.schedule tr:nth-child(2) td, .schedule tr:nth-child(1) th {
+  position: relative;
+}
+.schedule tr:nth-child(2) td::before, .schedule tr:nth-child(1) th::before {
+  content: "";
+  display: block;
+  width: calc(100% + 1px);
+  height: 1.5px;
+  position: absolute;
+  background-color: var(--bs-border-color);
+  bottom: -0.9px;
+  left: -0.5px;
+}
+.schedule tr:nth-child(1) th:nth-child(1)::before, .schedule tr:nth-child(2) td::before {
+  background-color: var(--bs-gray-400);
+}
+.schedule tr:nth-child(2) > td::after {
+  display: block;
+  font-size: 60%;
+}
+.btn-outline-dark.disabled, .btn-outline-dark:disabled {
+  background-color: var(--bs-gray-300);
+  border-color: var(--bs-gray-500);
+}
+.date-picker-label {
+  z-index: 1;
+}
+.form-control.js-date {
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+  min-width: 10em;
+}
+
+@media (min-width:576px) {
+.reserve-step li:not(:first-child)::before {
+  max-width: 150px;
+}
+}
+
+@media (min-width:768px) {
+.reserve-step li:not(:first-child)::before {
+  width: 25vw;
+  max-width: 200px;
+}
+}
+
+@media (min-width:992px) {
+.reserve-step li:not(:first-child)::before {
+  width: 28vw;
+  max-width: 280px
+}
+}
+
+@media (min-width:1200px) {
+.reserve-step li:not(:first-child)::before {
+  max-width: 350px
+}
+}
+
+@media (min-width:1400px) {
+.reserve-step li:not(:first-child)::before {
+  max-width: 400px
+}
+}
+</style>
+</head>
+
+<body class="bg-white">
+<header class="position-sticky d-flex align-items-center gap-3 pt-2 px-2 bg-light">
+  <button class="btn btn-outline-dark btn-sm px-2 py-0 square-h" onClick="history.back()"><i class="bi bi-chevron-left"></i></button>
+  <h1 class="m-0 fs-5 fw-bold">予約システム</h1>
+</header>
+<nav class="position-sticky bg-light py-2 border-bottom">
+  <ol class="container d-flex justify-content-between smaller fw-bold reserve-step text-center mb-0">
+    <li class="d-flex flex-column align-items-center"><span class="fs-6 rounded-circle">1</span>予約対象</li>
+    <li class="d-flex flex-column align-items-center active"><span class="fs-6 rounded-circle">2</span>日時の選択</li>
+    <li class="d-flex flex-column align-items-center"><span class="fs-6 rounded-circle">3</span>お客様情報</li>
+    <li class="d-flex flex-column align-items-center"><span class="fs-6 rounded-circle">4</span>内容確認</li>
+  </ol>
+</nav>
+<main>
+  <article>
+    <section class="py-3">
+      <div class="container">
+        <ul class="px-2 border-bottom border-top">
+          <li class="btn d-flex justify-content-between align-items-center px-2 py-3 text-start border-bottom" data-bs-toggle="modal" data-bs-target="#modal-cours">
+            <div class="fw-bold js-cours"> コースを選択してください </div>
+            <button class="btn btn-sm btn-outline-primary smaller">変更</button>
+          </li>
+          <li class="d-flex py-1 justify-content-between align-items-center px-2 py-2 gap-3">
+            <button class="btn btn-outline-dark px-2 py-0 square-h js-prev-week" disabled><i class="bi bi-chevron-left"></i></button>
+            <div class="position-relative text-center">
+              <input class="form-control js-date position-relative" type="date">
+              <label class="btn btn-outline-dark date-picker-label fw-bold btn-sm position-absolute top-0 start-0 w-100" for="js-date">今日</label>
+            </div>
+            <button class="btn btn-outline-dark px-2 py-0 square-h js-next-week"><i class="bi bi-chevron-right"></i></button>
+          </li>
+        </ul>
+      </div>
+      <div id="load_schedule" class="schedule text-center max-600 mx-auto"> </div>
+    </section>
+  </article>
+</main>
+<div class="modal fade" id="modal-cours" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalCoursLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">コースを選択してください</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0 modal-select"> </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-send" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalPlacesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5">予約確認</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="js-results p-3 rounded-3 mb-3 border"></div>
+        <div class="bg-gray-200 p-3 smaller mb-2" style="height: 20vh;overflow-y: auto">
+          <h3 class="fs-6 fw-bold">利用規約</h3>
+          <ol>
+            <li>
+              <dl>
+                <dt>総則</dt>
+                <dd>本規約は、[サービス名]（以下、「本サービス」といいます）を提供する[会社名]（以下、「当社」といいます）と、本サービスの利用者（以下、「ユーザー」といいます）との間の権利義務関係を定めるものです。ユーザーは、本サービスの利用にあたり、本規約に同意したものとみなされます。</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>アカウント登録</dt>
+                <dd>ユーザーは、本サービスを利用するために、登録手続きを行うことができます。
+                  登録手続きにおいてユーザーが提供した情報に虚偽があった場合、当社はユーザーに対して事前に通知することなく、アカウントを停止または削除することができます。</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>禁止事項</dt>
+                <dd>ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。
+                  <ul>
+                    <li> 法令または公序良俗に違反する行為</li>
+                    <li> 犯罪行為に関連する行為</li>
+                    <li> 当社、他のユーザー、または第三者の知的財産権を侵害する行為</li>
+                    <li> 当社のサービスの運営を妨害する行為</li>
+                    <li> その他、当社が不適切と判断する行為</li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>免責事項</dt>
+                <dd>ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません。
+                  <ol>
+                    <li> 当社は、本サービスに関連してユーザーが被った損害について、故意または重大な過失がない限り、一切の責任を負わないものとします。</li>
+                    <li> 当社は、ユーザー間またはユーザーと第三者間の取引、連絡、紛争等について、一切責任を負いません。</li>
+                  </ol>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>著作権</dt>
+                <dd>本サービスに含まれるコンテンツの著作権は当社または正当な権利を有する第三者に帰属しています。ユーザーは無断でこれらのコンテンツを複製、送信、譲渡、貸与、翻訳、翻案することはできません。</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>変更と通知</dt>
+                <dd>当社は、本規約の内容をユーザーへの事前通知なしに変更することがあります。変更後の本規約は、本サービス内に表示された時点で効力を発生します。</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt>準拠法・管轄裁判所</dt>
+                <dd>本規約の解釈にあたっては、[管轄国]の法律を準拠法とします。本サービスに関連して紛争が生じた場合、[管轄裁判所]を専属的合意管轄</dd>
+              </dl>
+            </li>
+          </ol>
+        </div>
+        <div class="form-check d-flex justify-content-center gap-2">
+          <input class="form-check-input" type="checkbox" value="" id="check-kiyaku">
+          <label class="form-check-label" for="check-kiyaku"> 利用規約を確認しました。 </label>
+        </div>
+        <div class="text-center py-3">
+          <button type="button" class="btn btn-secondary js-send-button" data-bs-dismiss="modal" disabled>予約する</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class=""> </footer>
+<svg style="display:none;">
+  <symbol id="icon_valid" viewBox="0 0 40 40" stroke-width="3" stroke="#34a853" fill="none">
+    <circle cx="20" cy="20" r="18"/>
+    <circle cx="20" cy="20" r="11"/>
+  </symbol>
+  <symbol id="icon_invalid" viewBox="0 0 40 40" stroke-width="4" stroke="#999" fill="none">
+    <line x1="10" y1="10" x2="30" y2="30"/>
+    <line x1="30" y1="10" x2="10" y2="30"/>
+  </symbol>
+</svg>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+<script>
+const idToken = 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImJhNjI1OTZmNTJmNTJlZDQ0MDQ5Mzk2YmU3ZGYzNGQyYzY0ZjQ1M2UiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoi5L2Q6YeO5q2j55m7IiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xBVDh4MlMxN0VLWG81ajZ6azJJal9WazEyeldkZU04c1hCU3JzNllpQzZjQTM9czk2LWMiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmVob21hLW1lIiwiYXVkIjoiYmVob21hLW1lIiwiYXV0aF90aW1lIjoxNzExNzUwMzQ0LCJ1c2VyX2lkIjoicWFLWERpeUFFY1l6RkpKNHoyanE0NXN4NmtSMiIsInN1YiI6InFhS1hEaXlBRWNZekZKSjR6MmpxNDVzeDZrUjIiLCJpYXQiOjE3MTE3NTAzNDQsImV4cCI6MTcxMTc1Mzk0NCwiZW1haWwiOiJzYW5vQHNvbGlkLm1zIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMDgyNDgyMDExNzg3NjMxNzUyNDEiXSwiZW1haWwiOlsic2Fub0Bzb2xpZC5tcyJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.YYPL_pYrI7e3LIeHU7egOhU2_8TjgTu0kmSXhXlLRwztdpYopgC64-rZdzck1ObMQjH8xWS7xgj14kqQUo3h3bSoPKz39TlyR3BfTuql_3Svp1DB5yfcUvZi7U5CWbk3rHoUP7m6sHVtFHO8QEfJJT7omdL6iuM1HCzd8kwNcqS-zG_pxokQK71zvnXXwDw8YFpGQsk61tX_Ufk8nZiQbgG6FcVk9jZBN4v83PFZ_t4Rldpxz3_eot56zulAXwOrquIZI6UjwUs3M7Tan7tZTRg03CNGnYQymEmtb7LZ3kdBBRmSEytxjxX_AlsmnVDXN65O5By43-oqudAb5O4RXw';
+
+const e_modalCours = document.querySelector('#modal-cours .modal-select');
+const e_modalSend = document.querySelector('#modal-send .js-results');
+const modalSend = new bootstrap.Modal(document.getElementById('modal-send'));
+const e_jsCours = document.querySelector('.js-cours');
+const e_loadSchedule = document.getElementById('load_schedule');
+const e_jsDate = document.querySelector('.js-date');
+const e_jsNextWeek = document.querySelector('.js-next-week');
+const e_jsPrevWeek = document.querySelector('.js-prev-week');
+const e_datePickerLabel = document.querySelector('.date-picker-label');
+const e_checkKiyaku = document.getElementById('check-kiyaku');
+const e_jsSendButton = document.querySelector('.js-send-button');
+const daysOfWeek = ["日", "月", "火", "水", "木", "金", "土"];//（変更点）
+let e_course;
+let e_courseOrg;
+let e_send = {};
+let e_reservations={};
+function toLocalDateISOString(date) {
+  const tzOffset = date.getTimezoneOffset() * 60000;
+  const localDate = new Date(date.getTime() - tzOffset);
+  return localDate.toISOString().slice(0, 10);
+}
+
+function getJSTDate(date) {
+  const localDate = new Date(date);//（変更点）
+  localDate.setHours(0, 0, 0, 0); // ローカルタイムゾーンで日付のみにする（変更点）
+  const jstOffset = 9 * 60 * 60 * 1000; // JSTはUTC+9時間
+  const jstDate = new Date(localDate.getTime() + jstOffset);//（変更点）
+  return jstDate;
+}
+
+e_jsDate.addEventListener('click', function () {
+  if (e_jsDate.showPicker) {
+    e_jsDate.showPicker();
+  } else {
+    e_jsDate.focus();
+    e_jsDate.click();
+  }
+});
+
+e_jsDate.addEventListener('change', function () {
+  const selectedDate = new Date(e_jsDate.value);
+  const todayJST = getJSTDate(new Date());
+  selectedDate.setHours(0, 0, 0, 0);
+  if (selectedDate <= todayJST) {
+    e_jsDate.valueAsDate = todayJST;
+    e_datePickerLabel.textContent = "今日";
+  } else {
+    e_datePickerLabel.textContent = toLocalDateISOString(selectedDate);
+  }
+
+  updateButtonState();
+});
+
+window.addEventListener('DOMContentLoaded', function () {//（変更点） このブロック全体
+  const todayJST = getJSTDate(new Date());
+  todayJST.setHours(0, 0, 0, 0);
+  e_jsDate.value = toLocalDateISOString(todayJST);
+  e_jsDate.min = toLocalDateISOString(todayJST);
+  updateButtonState();
+  loadCourseData();
+});
+
+e_jsNextWeek.addEventListener('click', function () {
+  changeWeek(1);
+});
+
+e_jsPrevWeek.addEventListener('click', function () {
+  changeWeek(-1);
+});
+
+function updateButtonState() {
+  const currentDate = new Date(e_jsDate.value);
+  currentDate.setHours(0, 0, 0, 0);
+  const todayJST = getJSTDate(new Date());
+  e_jsPrevWeek.disabled = currentDate <= todayJST;
+  f_loadSchedule();
+}
+
+function changeWeek(weeks) {
+  const currentDate = new Date(e_jsDate.value);
+  const newDate = new Date(currentDate.getTime() + weeks * 7 * 24 * 60 * 60 * 1000);
+  const todayJST = getJSTDate(new Date());
+  if (newDate <= todayJST) {//（変更点）
+    e_jsDate.valueAsDate = todayJST;
+    e_datePickerLabel.textContent = "今日";
+  } else {
+    e_jsDate.valueAsDate = newDate;
+    e_datePickerLabel.textContent = toLocalDateISOString(newDate);
+    //console.log(newDate)
+    //console.log(toLocalDateISOString(newDate));
+  }
+  updateButtonState();
+}
+
+function loadCourseData() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'files/data/course.json', true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      e_courseOrg = JSON.parse(xhr.responseText);
+      for (const placeKey in e_courseOrg.places) {
+        e_course = e_courseOrg.places[placeKey];
+      }
+      e_modalCours.innerHTML = e_course.courses.map((course, index) => `
+        <button class="btn rounded-0 text-start w-100" data-bs-dismiss="modal" onClick="f_cours(${index})">
+          <div>${course.name}</div>
+          <div>${course.duration}分</div>
+        </button>
+      `).join('');
+    }
+  };
+  xhr.send();
+}
+
+function f_cours(index) {
+  e_send = e_course.courses[index];
+  e_jsCours.textContent = `${e_send.name} (${e_send.duration}分)`;
+  f_loadSchedule();
+}
+
+function f_loadSchedule() {
+  if (e_send.id) {
+    e_loadSchedule.innerHTML = '<div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Loading...</span></div>';//（変更点）
+    const url = 'https://behoma.me/api/v1/availability';
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + idToken);
+    
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+        //console.log(xhr.responseText);
+        if (xhr.status == 200) {
+          const response = JSON.parse(xhr.responseText);
+          console.log(response);
+          generateSchedule(response);
+        } else {
+          console.error('Error during the request:', xhr.status, xhr.statusText);
+        }
+      }
+    };
+    const startDate = new Date(e_jsDate.value);
+    const data = {
+      "place": e_send.place_id+"",
+      "startDate": toLocalDateISOString(startDate),
+      "lenge": "7",//（変更点）
+      "duration": e_send.duration,
+      "interval": 60
+    };
+    //console.log(data);
+    
+    xhr.send(JSON.stringify(data));
+  }
+}
+function generateSchedule(jsonData) {//（変更点）
+  //console.log(jsonData);
+  e_loadSchedule.innerHTML = '';
+  const table = document.createElement('table');
+  table.width = "100%";
+  const tbody = document.createElement('tbody');
+
+  // 日付ヘッダーを生成
+  const headerRow1 = document.createElement('tr');
+  const headerRow2 = document.createElement('tr');
+  const timeColumn = document.createElement('th');
+  timeColumn.rowSpan = "2";
+  timeColumn.textContent = "日時";
+  headerRow1.appendChild(timeColumn);
+
+  // 日付と月を抽出
+  let lastMonth = null;
+  jsonData.data.forEach(day => {
+    const date = new Date(day.date);
+    const month = date.getMonth() + 1;
+    const dayOfMonth = date.getDate();
+    const dayOfWeek = daysOfWeek[date.getDay()]; // 曜日を取得
+
+    if (lastMonth !== month) {
+      lastMonth = month;
+      const monthTh = document.createElement('th');
+      monthTh.colSpan = jsonData.data.filter(d => (new Date(d.date)).getMonth() + 1 === month).length;
+      monthTh.textContent = `${date.getFullYear()}年${month}月`;
+      headerRow1.appendChild(monthTh);
+    }
+
+    const dayTh = document.createElement('td');//（変更点）
+    dayTh.innerHTML = `${dayOfMonth} <div class="smaller">(${dayOfWeek})</div>`; // 日付と曜日を表示//（変更点）
+    if (dayOfWeek === '土') {//（変更点）
+      dayTh.classList.add('text-primary'); // 土曜日は青色//（変更点）
+    } else if (dayOfWeek === '日') {//（変更点）
+      dayTh.classList.add('text-danger'); // 日曜日は赤色//（変更点）
+    }//（変更点）
+    headerRow2.appendChild(dayTh);
+  });
+
+  tbody.appendChild(headerRow1);
+  tbody.appendChild(headerRow2);
+
+  // 時間帯を取得し、ユニークなリストを生成
+  let timeslots = [];
+  jsonData.data.forEach(day => {
+    day.timeslots.forEach(slot => {
+      if (!timeslots.includes(slot.hour)) {
+        timeslots.push(slot.hour);
+      }
+    });
+  });
+
+  // 現在の日時を取得
+  const now = new Date();
+
+  // 時間帯に応じた行を生成
+  timeslots.forEach(time => {
+    const row = document.createElement('tr');
+    const timeTh = document.createElement('th');
+    timeTh.scope = "row";
+    timeTh.textContent = time;
+    row.appendChild(timeTh);
+    jsonData.data.forEach(day => {
+      const cell = document.createElement('td');
+      const timeslot = day.timeslots.find(ts => ts.hour === time);
+      if (timeslot) {
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+        use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', timeslot.status === 1 ? '#icon_valid' : '#icon_invalid');
+        svg.setAttribute('data-date', day.date);
+        svg.setAttribute('data-time', timeslot.hour);
+        svg.appendChild(use);
+        cell.appendChild(svg);
+
+        // 過去の時間帯を無効化
+        const timeslotDate = new Date(day.date);
+        const [hour, minute] = timeslot.hour.split(':').map(Number);
+        timeslotDate.setHours(hour, minute, 0, 0);
+        if (timeslot.status === 1 && timeslotDate > now) {
+          svg.addEventListener('click', function (event) {
+            const clickedDate = event.currentTarget.getAttribute('data-date');
+            const clickedTime = event.currentTarget.getAttribute('data-time');
+
+            // modal-sendに情報を表示
+            e_modalSend.innerHTML = `
+              <p>Place ID: ${e_course.id}</p>
+              <p>コース: ${e_jsCours.textContent}</p>
+              <p class="mb-0">日時: ${clickedDate} ${clickedTime}</p>
+            `;
+            e_reservations.place=e_course.id;
+            e_reservations.startTime=clickedDate+' '+clickedTime;
+            e_reservations.duration=e_send.duration
+
+            // modal-sendをオープン
+            modalSend.show();
+          });
+        } else {
+          // 過去の時間帯のスタイルを変更
+          cell.classList.add('bg-gray-200');
+        }
+      }
+      row.appendChild(cell);
+    });
+    tbody.appendChild(row);
+  });
+
+  table.appendChild(tbody);
+  e_loadSchedule.appendChild(table);
+}
+
+// チェックボックスでボタン活性化
+e_checkKiyaku.addEventListener('change', function() {
+  e_jsSendButton.disabled = !this.checked;
+});
+e_jsSendButton.addEventListener('click',()=>{
+  const url = 'https://behoma.me/api/v1/reservations';
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', url, true);
+  xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+  xhr.setRequestHeader('Authorization', 'Bearer ' + idToken);
+  
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+      //console.log(xhr.responseText);
+      if (xhr.status == 200) {
+        const response = JSON.parse(xhr.responseText);
+        //console.log(response);
+        generateSchedule(response);
+      } else {
+        console.error('Error during the request:', xhr.status, xhr.statusText);
+      }
+    }
+  };
+    
+  const selectedDate = new Date(e_jsDate.value);
+  const startDate = getMonday(selectedDate);  
+  xhr.send(JSON.stringify(e_reservations));
+});
+
+</script>
+</body>
+</html>

@@ -13,7 +13,7 @@
 .bg-main {
   background-image: linear-gradient(rgba(0,0,0,0) calc(50px + 1em), rgba(0,0,0,0.4) calc(50px + 1em), rgba(0,0,0,0.3)), url("files/img/check_bg_img.webp");
   background-position: top, 80% 35%;
-  height: 50vmin;
+  height: 40vmin;
   max-height: 240px;
   padding-top: 1.5em;
   background-repeat: no-repeat;
@@ -105,9 +105,7 @@
           <div class="p-3 bg-white w-100 text-center">
             <canvas id="canvas" style="width:100%"></canvas>
           </div>
-          <div id="output">
-            <input id="outputMessage" value="No QR code detected." type="text">
-          </div>
+          <div id="outputMessage" class="text-danger fw-bold text-center"></div>
         </div>
       </div>
     </section>
@@ -143,6 +141,9 @@ window.scrollTo({
 var video = document.createElement("video");
 var canvasElement = document.getElementById("canvas");
 var canvas = canvasElement.getContext("2d");
+const v_checkCode="https://meibo.passport.fishing/checkin/entry/";
+const error_message=document.getElementById("outputMessage");
+let v_code;
 
 function drawLine(begin, end, color) {
   canvas.beginPath();
@@ -177,18 +178,23 @@ function tick() {
       drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#ba1a1a");
       drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#ba1a1a");
       drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#ba1a1a");
-      document.getElementById("outputMessage").value = code.data;
-      f_check(code.data);
+      if(v_code != code.data){
+        v_code=code.data;
+        f_check();
+      }
     } else {
-      //document.getElementById("outputMessage").value = "No QR code detected.";
+      /*/document.getElementById("outputMessage").value = "No QR code detected.";*/
     }
   }
   requestAnimationFrame(tick);
 }
-function f_check(v_n){
-  setTimeout(function(){
+function f_check(){
+  error_message.innerHTML="";
+  if(v_code.startsWith(v_checkCode)){
     window.location.href = 'check2.html';
-  },2000);
+  }else{
+    error_message.innerHTML="QRのフォーマットが違います。";
+  }
 }
 </script>
 </body>

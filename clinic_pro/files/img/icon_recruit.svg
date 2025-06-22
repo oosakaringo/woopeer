@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_新規グラデーションスウォッチ_1);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: #63b5a3;
+        font-family: 'KozGoPr6N-Regular-83pv-RKSJ-H','Noto Sans Japanese',sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="_新規グラデーションスウォッチ_1" data-name="新規グラデーションスウォッチ 1" x1="0" y1="40" x2="80" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#64c0ab"/>
+      <stop offset="1" stop-color="#718cc7"/>
+    </linearGradient>
+  </defs>
+  <g id="pc">
+    <path class="cls-1" d="m40,80c22.06,0,40-17.94,40-40S62.06,0,40,0,0,17.94,0,40s17.94,40,40,40Z"/>
+    <circle class="cls-2" cx="40" cy="40" r="35"/>
+    <!--text class="cls-3" transform="translate(22.93 36.08)"><tspan x="0" y="0">採用</tspan><tspan x="0" y="19.84">多数</tspan></text-->
+
+    <text class="cls-3" text-anchor="middle" x="40" y="33" textLength="32" dominant-baseline="middle">採用</text>
+    <text class="cls-3" text-anchor="middle" x="40" y="51" textLength="32" dominant-baseline="middle">多数</text>
+
+
+  </g>
+</svg>

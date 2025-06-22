@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>子供食堂</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="子供食堂">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #eeeae1;
+}
+.max-1600 {
+  max-width: 1600px
+}
+.lh-16 {
+  line-height: 1.6;
+}
+.ff-zen_maru {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+.lp-img-top {
+  height: clamp(300px, 72vh, 640px);
+  object-position: 70% 40%;
+  margin-top: clamp(50px, 16vw, 160px);
+}
+.lp-img-bottom {
+  height: clamp(300px, 55vh, 520px);
+  object-position: 52% 40%;
+}
+.lp-bg-stripe {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 4px, #fff 4px, #fff 6px)
+}
+.lp-bg-stripe-ye {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 3px, #fbef50 3px, #fbef50 4px);
+}
+.lp-bg-stripe-ye img {
+  bottom: 6px;
+  right: 6px;
+  position: relative;
+}
+.lp-img-top-side {
+  top: 100px
+}
+.lp-fuki {
+  background-color: #dc7430;
+  position: relative;
+}
+.lp-fuki::after {
+  position: absolute;
+  bottom: -0.8em;
+  content: "";
+  border-top: solid 1em #dc7430;
+  border-right: solid 1em transparent;
+  border-left: solid 1em transparent;
+  display: block;
+  left: 50%;
+  margin-left: -1em;
+}
+h1 {
+  font-size: clamp(20px, 7vw, 40px);
+}
+.lp-title-1 {
+  font-size: clamp(14px, 4vw, 24px);
+}
+.lp-title-2 {
+  font-size: clamp(14px, 5vw, 32px);
+}
+.lp-marker {
+  background: linear-gradient(transparent 40%, #ffe100 40%, #ffe100 94%, transparent 94%);
+  padding: 0 0.3em;
+  margin: 0 -0.3em;
+}
+.lp-content-1 {
+  grid-template-rows: 0.8fr 0.4fr;
+  grid-template-columns: 1fr 0.7fr;
+}
+.lp-content-1 > :nth-child(1) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+.lp-content-1 > :nth-child(2) {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+}
+.lp-content-1 > :nth-child(3) {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+footer {
+  padding-top: max(25vh, 200px);
+  margin-top: min(-200px, -25vh);
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+}
+
+@media (min-width:992px) {/*PC*/
+.lp-img-top-side {
+  top: 50px
+}
+.start-0.lp-img-top-side, .lp-img-bottom-side.bottom-0.start-0 {
+  left: -100px!important;
+}
+.end-0.lp-img-top-side, .lp-img-bottom-side.bottom-0.end-0 {
+  right: -100px!important;
+}
+.lp-content-1 > :nth-child(2) {
+  margin-top: -50px
+}
+footer {
+  padding-top: max(16vh, 160px);
+  margin-top: min(-160px, -16vh);
+}
+}
+
+@media (min-width:2001px) {
+}
+
+@media (max-width:767px) {/*SP*/
+}
+</style>
+</head>
+
+<body>
+<main>
+  <article class="overflow-hidden">
+    <section class="container position-relative pb-4 mb-4">
+      <div class="text-center position-absolute w-100 start-0 px-4"><img src="files/img/lp_top01.svg" alt="" width="750" height="280" class="img-fluid"></div>
+      <div class="position-absolute start-0 lp-img-top-side w-25"><img src="files/img/lp_top02.svg" alt="" width="300" height="163" class=" img-fluid"></div>
+      <div class="position-absolute end-0 lp-img-top-side col-4"> <img src="files/img/lp_top03.svg" alt="" width="422" height="158" class="img-fluid"> </div>
+      <div class="position-absolute lp-img-bottom-side start-0 bottom-0 col-4"> <img src="files/img/lp_top04.svg" alt="" width="303" height="191" class="img-fluid"> </div>
+      <div class="position-absolute lp-img-bottom-side end-0 bottom-0 col-4"> <img src="files/img/lp_top05.svg" alt="" width="344" height="205" class="img-fluid"> </div>
+      <div class="p-3"> <img src="files/img/lp_top.webp" alt="" width="2000" height="1600" class="img-cover w-100 rounded-10 lp-img-top mb-md-5"> </div>
+      <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center justify-content-lg-start">
+        <div class="text-center pt-5 mt-5 col-lg-7 filter-drop-shadow">
+          <div class="col-6 mx-auto"><img src="files/img/lp_top_logo.svg" width="215" height="162" class="img-fluid" alt="logo"></div>
+          <div class="py-4 my-2"> <span class="fw-bold text-white lp-fuki px-4 py-2 rounded-pill fs-5">子育て世代</span> </div>
+          <h1 class="text-white fw-bold ffs-palt ls-2 pt-2 lh-sm">みんなで情報を<br>
+            共有しませんか？</h1>
+        </div>
+      </div>
+    </section>
+    <section class="container mb-5 pb-5">
+      <div class="d-grid justify-items-center gap-1 gap-md-3"> <img src="files/img/lp_icon_01.svg" alt="よくある悩み" width="136" height="150" class="max-120 col-2 h-auto">
+        <h2 class="d-flex align-items-center gap-1 ffs-palt justify-content-center"><img src="files/img/lp_title_left.svg" alt="" width="50" height="50" class="col-md-1 h-auto"><span class="d-grid justify-items-center gap-1"><span class="fs-md-5 ls-1 lp-title-1">リンク集など一覧で表示されても</span><span class="fw-bold lp-title-2">距離感がわからない…。</span></span><img src="files/img/lp_title_right.svg" alt="" width="50" height="50" class="col-md-1 h-auto"></h2>
+        <img src="files/img/lp_content_01.svg" alt="" width="614" height="339" class="max-600 col-10 h-auto"> </div>
+      <div class="d-lg-flex col-lg-11 col-xl-9 mx-auto">
+        <div class="fw-bold d-grid justify-items-center gap-1 gap-lg-2 py-2 col-lg-5 justify-items-lg-start align-content-lg-center"> <span class="lp-title-1">googleマップを拡張して</span> <span class="lp-title-1">表示されるから</span> <span class="lp-title-2 lp-marker">距離感がわかる！</span> <span class="lp-title-1">計画が立てやすく</span> <span class="lp-title-1">自分のマップに星もつけれる！</span> </div>
+        <div> <img src="files/img/lp_content_02.webp" alt="" width="1281" height="721" class="img-fluid"> </div>
+      </div>
+    </section>
+    <section class="container mb-5 pb-5">
+      <div class="d-grid justify-items-center gap-1 gap-md-3"> <img src="files/img/lp_icon_01.svg" alt="よくある悩み" width="136" height="150" class="max-120 col-2 h-auto">
+        <h3 class="d-flex align-items-center gap-1 ffs-palt justify-content-center"><img src="files/img/lp_title_left.svg" alt="" width="50" height="50" class="col-md-1 h-auto"><span class="d-grid justify-items-center gap-1"><span class="fs-md-5 ls-1 lp-title-1">私の家の近くには</span><span class="fw-bold lp-title-2">施設やお店が何もない…。</span></span><img src="files/img/lp_title_right.svg" alt="" width="50" height="50" class="col-md-1 h-auto"></h3>
+        <img src="files/img/lp_content_03.svg" alt="" width="970" height="343" class="max-680 col-11 h-auto"> </div>
+      <div class="d-lg-girid col-lg-11 col-xl-9 mx-auto lp-content-1 d-lg-grid">
+        <div class="fw-bold d-grid justify-items-center gap-1 gap-lg-2 py-2 justify-items-lg-start align-content-lg-center"> <span class="lp-title-1">町中華や、近くの公園など</span> <span class="lp-title-1">大きな施設じゃなくても</span> <span class="lp-title-1">近隣の世代が</span> <span class="lp-title-2 lp-marker">どこにいっているか</span> <span class="lp-title-2 lp-marker">わかる！</span> </div>
+        <div> <img src="files/img/lp_content_04.svg" alt="" width="1281" height="721" class="img-fluid mb-3 pe-lg-4"> </div>
+        <div class="text-center text-lg-start">企業が提供する施設でなくても登録できます。</div>
+      </div>
+    </section>
+    <section class="container position-relative">
+      <h3 class="fw-bold ffs-palt text-center ff-zen_maru lp-title-2 lh-16 mb-4 py-lg-5 mb-lg-0"><span class=" lp-marker">子どもにやさしいスポット</span>を<br>
+        みつけて共有しませんか？</h3>
+      <div class="lp-bg-stripe p-3 rounded-10 position-relative"> <img src="files/img/lp_content_05.webp" alt="" width="2000" height="1600" class="img-cover w-100 lp-img-bottom rounded-10">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+          <div class="d-grid text-center gap-3 filter-drop-shadow">
+            <div><img src="files/img/lp_bottom03.svg" alt="教えて！探して！" width="317" height="92" class="col-8 max-320 h-auto"></div>
+            <div class="d-grid fw-bold text-white lp-title-2 ffs-palt ls-2 d-lg-flex justify-content-center"> <span>子ども連れに</span> <span>やさしい店舗や施設</span></div>
+            <div class="ffs-palt ls-1 d-grid gap-3 d-lg-flex gap-lg-5"> <a href="###" class="btn btn-lg bg-primary text-white rounded-pill fw-bold align-items-center d-flex px-4 py-3 shadow-lg gap-3"><span class="w-100 d-flex align-items-center gap-3 lp-title-1"><img src="files/img/lp_icon_place.svg" alt="" width="30" height="35">場所をおしえる</span><i class="bi bi-chevron-right fs-4"></i></a> <a href="###" class="btn btn-lg bg-white rounded-pill fw-bold align-items-center d-flex px-4 py-3 shadow-lg position-relative gap-3"><span class="w-100 d-flex align-items-center gap-3 lp-title-1"><img src="files/img/lp_icon_search.svg" alt="" width="30" height="35">近くの場所を見る</span><i class="bi bi-chevron-right fs-4 text-primary"></i> <span class="position-absolute smaller bottom-0 start-0 w-100 pb-1">GPSを有効にしてください</span> </a> </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute top-0 start-0 col-2 h-auto pt-5 mt-4 ms-3 pt-lg-0"> <img src="files/img/lp_bottom01.svg" alt="" width="222" height="212" class="img-fluid"></div>
+      <div class="position-absolute top-0 end-0 col-2 h-auto pt-5 mt-3 pe-3 ps-1 ps-md-4 pt-lg-0"> <img src="files/img/lp_bottom02.svg" alt="" width="140" height="180" class="img-fluid"></div>
+    </section>
+  </article>
+</main>
+<footer class="bg-black pb-2 text-white overflow-hidden">
+  <div class="mt-5 d-flex gap-4 justify-content-evenly max-1600 mx-auto">
+    <div class="d-none d-lg-block">
+      <div class="lp-bg-stripe-ye rounded-5"> <img src="files/img/lp_footer_03.webp" alt="" width="140" height="140" class="rounded-5 img-fluid"> </div>
+    </div>
+    <div class="d-none d-lg-flex align-items-end pb-5">
+      <div class="lp-bg-stripe-ye mb-5 rounded-10"> <img src="files/img/lp_footer_01.webp" alt="" width="200" height="200" class="rounded-10 img-fluid"> </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="mb-5 text-center col-7 mx-auto"><img src="files/img/lp_top_logo.svg" width="286" height="215" class="img-fluid" alt="logo"></div>
+      <a href="###" class="btn bg-gray-800 text-white rounded-pill fw-bold py-4 col-10 max-400 mx-auto d-block mb-5">お問い合わせ</a> </div>
+    <div class="d-none d-lg-flex align-items-end pb-5">
+      <div class="lp-bg-stripe-ye mb-5 rounded-5"> <img src="files/img/lp_footer_04.webp" alt="" width="140" height="140" class="rounded-5 img-fluid"></div>
+    </div>
+    <div class="d-none d-lg-block">
+      <div class="lp-bg-stripe-ye"> <img src="files/img/lp_footer_02.webp" alt="" width="200" height="200" class="rounded-10 img-fluid"></div>
+    </div>
+  </div>
+  <p class="smaller ffs-palt ls-1 text-center">Copyright&copy;SODATE KIDS.All rights reserved.</p>
+</footer>
+<div id="menu_top" class="move js-menutop col-4 max-80 pe-4" style="z-index: 1040">
+  <div class="rounded-circle bg-black square-w d-grid justify-items-center align-content-center text-white"> <i class="bi bi-caret-up-fill"></i><span class="smaller lh-1 mb-2">PAGE TOP</span></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script>
+const e_html=document.querySelector('html');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+a_offcanvasHash.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    setTimeout(()=>{
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+const e_header=document.querySelector('header');
+let r_footer;
+window.onscroll = function () {  
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  const v_scrollTop=document.documentElement.scrollTop;
+  const v_offsetHeight=document.body.offsetHeight-window.innerHeight;
+  if(v_scrollTop > (v_offsetHeight - 200)) {
+    e_menuTop.style.bottom = "300px";
+  }　else if (v_scrollTop > 400 ){
+    e_menuTop.style.bottom = "50px";
+  } else{
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+
+const backToTop=()=>{
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+}
+js_menutop.addEventListener("click", backToTop);
+/*カルーセル移動*/
+
+</script>
+</body>
+</html>

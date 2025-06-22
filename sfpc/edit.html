@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>SFPCメンバー登録（会員情報） | SFPC（NPO法人スポーツフィッシング推進委員会）</title>
+<meta name="robots" content="none">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://unpkg.com/sanitize.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?1" rel="stylesheet" type="text/css">
+<style type="text/css">
+.sfpc-step_wrap {
+  background-color: #e9e9e9;
+  padding-right: 40px;
+}
+.sftc-step {
+  padding: 0.4em 0 0.4em 0.8em;
+  position: relative;
+}
+.sftc-step::before, .sftc-step::after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid #ccc;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 1;
+}
+.sftc-step::before {
+  border-left-color: #fff;
+  margin-left: 1px;
+}
+.sftc-step.bg-success::after {
+  border-left-color: var(--bs-success);
+}
+.sftc-step:not(.bg-success) {
+  background-color: #ccc;
+  color: var(--bs-gray);
+}
+.sftc-step.bg-success {
+  color: #fff;
+}
+.sftc-step:not(:first-child) {
+  padding-left: 40px;
+}
+.btn-light {
+  background-color: #fff;
+}
+.on-corporation .user-sex {
+  display: none;
+}
+label:where(:active, :checked, :focus, :hover) {
+border-color: #86b7fe;
+outline: 0;
+box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%)
+}
+</style>
+<script src="files/js/header.js"></script> 
+</head>
+<body class="bg-light">
+<header class="navbar sticky-top bg-primary"></header>
+<main>
+  <article>
+    <section class="pt-4 pb-5">
+      <form class="container max-720" action="confirmation.html">
+        <h1 class="fw-bold text-primary fs-2">S.F.P.Cメンバー登録</h1>
+        <ul class="sfpc-step_wrap d-flex ps-0 rounded overflow-hidden small">
+          <li class="sftc-step d-block col-4 col-lg-3 bg-success">
+            <div class="fs-5 fw-bold">Step 1</div>
+            <div class="small">ログイン情報</div>
+          </li>
+          <li class="sftc-step d-block col-4 col-lg-3 bg-success">
+            <div class="fs-5 fw-bold">Step 2</div>
+            <div class="small">会員情報</div>
+          </li>
+          <li class="sftc-step d-block col-4 col-lg-3">
+            <div class="fs-5 fw-bold">Step 3</div>
+            <div class="small">完了</div>
+          </li>
+        </ul>
+        <div class="mb-1">個人 / 法人</div>
+        <div class="mb-3 btn-group border rounded">
+          <label class="form-check-label btn btn-light ps-3">
+            <input name="fspc-user-type" type="radio" class="form-check-input me-1" value="individual" required>
+            個人 </label>
+          <label class="form-check-label btn btn-light ps-3">
+            <input class="form-check-input me-1" type="radio" name="fspc-user-type" value="corporation" required>
+            法人 </label>
+        </div>
+        <div class="mb-1">名前</div>
+        <div class="d-flex mb-3">
+          <div class="form-floating me-3 w-100">
+            <input type="text" class="form-control" id="fspc-user-lastname" placeholder="姓" required>
+            <label for="fspc-user-email">姓</label>
+          </div>
+          <div class="form-floating w-100">
+            <input type="text" class="form-control" id="fspc-user-firstname" placeholder="名" required>
+            <label for="fspc-user-firstname">名</label>
+          </div>
+        </div>
+        <div class="mb-1">ニックネーム</div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="fspc-user-nickname" placeholder="ニックネーム" required>
+          <label for="fspc-user-nickname">ニックネーム</label>
+        </div>
+        <div class="mb-1">誕生日</div>
+        <input type="date" class="form-control form-control-lg mb-3" required>
+        <!--div class="d-flex mb-3">
+          <select aria-label="年" name="sfpc-birthday-year" id="js-user-bd-year" title="年" class="form-select form-select-lg me-3">
+          </select>
+          <select aria-label="月" name="sfpc-birthday-month" id="js-user-bd-month" title="月" class="form-select form-select-lg me-3">
+          </select>
+          <select aria-label="日" name="sfpc-birthday-day" id="js-user-bd-day" title="日" class="form-select form-select-lg">
+          </select>
+        </div-->
+        <div class="mb-1 user-sex">性別</div>
+        <div class="user-sex mb-3 btn-group border rounded">
+          <label class="form-check-label btn btn-light ps-2 pe-3 flex-wrap d-flex">
+            <input name="fspc-user-sex" type="radio" class="form-check-input me-1" value="male" required>
+            男性 </label>
+          <label class="form-check-label btn btn-light ps-2 pe-3 flex-wrap d-flex">
+            <input class="form-check-input me-1" type="radio" name="fspc-user-sex" value="female" required>
+            女性 </label>
+          <label class="form-check-label btn btn-light ps-2 pe-3 flex-wrap d-flex">
+            <input class="form-check-input me-1" type="radio" name="fspc-user-sex" value="other" required>
+            その他 </label>
+          <label class="form-check-label btn btn-light ps-2 pe-1 flex-wrap d-flex">
+            <input class="form-check-input me-1" type="radio" name="fspc-user-sex" value="nochoice" required>
+            回答しない </label>
+        </div>
+        <div class="mb-1">私は…</div>
+        <div class="mb-4 col-sm-8 col-md-6 btn-group-vertical border rounded">
+          <label class="form-check-label btn btn-light ps-3 d-flex">
+            <input name="fspc-user-work" type="radio" class="form-check-input me-2" value="angler" required>
+            アングラーです </label>
+          <label class="form-check-label btn btn-light ps-3 d-flex">
+            <input class="form-check-input me-2" type="radio" name="fspc-user-work" value="captain" required>
+            釣り船船長です </label>
+          <label class="form-check-label btn btn-light ps-3 d-flex">
+            <input class="form-check-input me-2" type="radio" name="fspc-user-work" value="other" required>
+            その他 </label>
+        </div>
+        <button type="submit" class="btn btn-success d-flex align-items-center btn-lg w-100 rounded-pill"> <i class="bi bi-person-check-fill fs-1" style="margin: -0.3em 0"></i> <span class="text-center w-100 fw-bold">入力確認</span> </button>
+      </form>
+    </section>
+  </article>
+</main>
+<footer class="bg-dark pt-5 pb-2 ps-4 pe-4 text-white"></footer>
+<script src="files/js/footer.js"></script> 
+<script>
+/*let d_now=new Date();
+var v_yearHtml="";
+var v_monthHtml="";
+var v_dayHtml="";
+var v_yearAll=d_now.getFullYear()-1;
+var v_yearMin=v_yearAll-116;
+var v_month=d_now.getMonth()+1;
+var v_day=d_now.getDate();
+var v_dayAll;
+var d_setday;
+var e_year=document.getElementById('js-user-bd-year');
+var e_month=document.getElementById('js-user-bd-month');
+var e_day=document.getElementById('js-user-bd-day');
+var e_body=document.body;
+var a_fspcUserType=document.getElementsByName('fspc-user-type');
+var a_fspcUserSex=document.querySelectorAll('[name="fspc-user-sex"]');
+v_yearHtml+='<option value="'+(v_yearAll+1)+'" selected="1">'+(v_yearAll+1)+'</option>';
+for(var v_i=v_yearAll;v_i>v_yearMin;v_i--){
+  v_yearHtml+='<option value="'+v_i+'">'+v_i+'</option>'
+}
+e_year.innerHTML=v_yearHtml;
+for(var v_i=1;v_i<=12;v_i++){
+  if(v_i==v_month){
+     v_monthHtml+='<option value="'+v_i+'" selected="1">'+v_i+'月</option>'
+  }else{
+     v_monthHtml+='<option value="'+v_i+'">'+v_i+'月</option>'
+  }
+}
+e_month.innerHTML=v_monthHtml;
+function f_setday(){
+  v_dayHtml="";
+  d_setday=new Date(e_year.value,e_month.value, 0);
+  v_dayAll=d_setday.getDate();
+    for(var v_i=1;v_i<=v_dayAll;v_i++){
+    if(v_i==v_day){
+      v_dayHtml+='<option value="'+v_i+'" selected="1">'+v_i+'日</option>';
+    }else{
+      v_dayHtml+='<option value="'+v_i+'">'+v_i+'日</option>';
+    }
+  }
+  e_day.innerHTML=v_dayHtml;
+}
+f_setday();
+
+e_year.addEventListener('change',f_setday,false);
+e_month.addEventListener('change',f_setday,false);*/
+var a_fspcUserSex=document.querySelectorAll('[name="fspc-user-sex"]');
+function f_fspcUserSex(v_on){
+  a_fspcUserSex.forEach(function(e){
+    e.required=v_on;
+  });
+}
+var e_body=document.body;
+var a_fspcUserType=document.getElementsByName('fspc-user-type');
+a_fspcUserType[0].addEventListener('change',function(){
+  e_body.classList.remove('on-corporation');
+  f_fspcUserSex(true);
+},false);
+a_fspcUserType[1].addEventListener('change',function(){
+  e_body.classList.add('on-corporation');
+  f_fspcUserSex(false);
+},false);
+</script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

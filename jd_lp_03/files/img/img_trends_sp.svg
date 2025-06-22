@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 291.13 241.13">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 0 0 2.72 2.72;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-6, .cls-9 {
+        stroke-width: 1.13px;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6, .cls-8, .cls-9, .cls-10 {
+        fill: none;
+      }
+
+      .cls-1, .cls-6, .cls-9 {
+        stroke: #f08300;
+      }
+
+      .cls-11 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-2 {
+        stroke: #e5e7ed;
+      }
+
+      .cls-2, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-12 {
+        letter-spacing: -.15em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.17em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-16 {
+        letter-spacing: .08em;
+      }
+
+      .cls-16, .cls-17, .cls-18, .cls-19 {
+        fill: #1a1a1a;
+      }
+
+      .cls-16, .cls-18, .cls-19 {
+        font-family: SourceHanSansJP-Medium-83pv-RKSJ-H, 'Source Han Sans JP';
+        font-weight: 500;
+      }
+
+      .cls-16, .cls-18, .cls-20 {
+        font-size: 8.5px;
+      }
+
+      .cls-3, .cls-5, .cls-7, .cls-10 {
+        stroke-width: .85px;
+      }
+
+      .cls-3, .cls-5, .cls-10 {
+        stroke: #d3d3d3;
+      }
+
+      .cls-21 {
+        fill: #f08300;
+      }
+
+      .cls-18 {
+        letter-spacing: .08em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-23 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-4 {
+        stroke-width: 1.7px;
+      }
+
+      .cls-4, .cls-8 {
+        stroke: #1a1a1a;
+      }
+
+      .cls-24 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-19 {
+        font-size: 7.09px;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 0 0 1.41 1.41;
+      }
+
+      .cls-25 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-26 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-28 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-29 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-6 {
+        stroke-dasharray: 0 0 2.87 2.87;
+      }
+
+      .cls-30 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-7 {
+        stroke: #4673be;
+      }
+
+      .cls-31 {
+        letter-spacing: -.12em;
+      }
+
+      .cls-32 {
+        letter-spacing: -.12em;
+      }
+
+      .cls-8 {
+        stroke-width: .57px;
+      }
+
+      .cls-33 {
+        font-size: 9.07px;
+      }
+
+      .cls-33, .cls-34 {
+        fill: #4673be;
+      }
+
+      .cls-33, .cls-20 {
+        font-family: SourceHanSansJP-Bold-83pv-RKSJ-H, 'Source Han Sans JP';
+        font-weight: 700;
+      }
+
+      .cls-35 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-36 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-10 {
+        stroke-dasharray: 0 0 1.41 1.41;
+      }
+
+      .cls-37 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-38 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-34, .cls-39 {
+        stroke-width: 0px;
+      }
+
+      .cls-39 {
+        fill: #fce6cc;
+      }
+    </style>
+  </defs>
+  <g id="_モバイル" data-name="モバイル">
+    <g>
+      <rect class="cls-2" x=".57" y=".57" width="290" height="240" rx="6" ry="6"/>
+      <g>
+        <rect class="cls-39" x="120.94" y="41.01" width="65.4" height="172"/>
+        <g>
+          <polyline class="cls-9" points="186.34 211.59 186.34 213.01 184.92 213.01"/>
+          <line class="cls-1" x1="182.2" y1="213.01" x2="123.72" y2="213.01"/>
+          <polyline class="cls-9" points="122.36 213.01 120.94 213.01 120.94 211.59"/>
+          <line class="cls-6" x1="120.94" y1="208.72" x2="120.94" y2="43.86"/>
+          <polyline class="cls-9" points="120.94 42.43 120.94 41.01 122.36 41.01"/>
+          <line class="cls-1" x1="125.08" y1="41.01" x2="183.56" y2="41.01"/>
+          <polyline class="cls-9" points="184.92 41.01 186.34 41.01 186.34 42.43"/>
+          <line class="cls-6" x1="186.34" y1="45.29" x2="186.34" y2="210.16"/>
+        </g>
+      </g>
+      <g>
+        <line class="cls-8" x1="209.61" y1="223.9" x2="190.19" y2="223.9"/>
+        <line class="cls-8" x1="190.19" y1="217.9" x2="190.19" y2="229.9"/>
+        <line class="cls-8" x1="277.38" y1="217.9" x2="277.38" y2="229.9"/>
+        <line class="cls-8" x1="277.38" y1="223.9" x2="253.66" y2="223.9"/>
+      </g>
+      <g>
+        <line class="cls-8" x1="134.32" y1="223.9" x2="124.37" y2="223.9"/>
+        <line class="cls-8" x1="124.37" y1="217.9" x2="124.37" y2="229.9"/>
+        <line class="cls-8" x1="184" y1="217.9" x2="184" y2="229.9"/>
+        <line class="cls-8" x1="184" y1="223.9" x2="177.61" y2="223.9"/>
+      </g>
+      <g>
+        <line class="cls-8" x1="21.05" y1="223.9" x2="14.76" y2="223.9"/>
+        <line class="cls-8" x1="14.76" y1="217.9" x2="14.76" y2="229.9"/>
+        <line class="cls-8" x1="73.33" y1="217.9" x2="73.33" y2="229.9"/>
+        <line class="cls-8" x1="73.33" y1="223.9" x2="67.3" y2="223.9"/>
+      </g>
+      <g>
+        <line class="cls-8" x1="85.05" y1="223.9" x2="78.76" y2="223.9"/>
+        <line class="cls-8" x1="78.76" y1="217.9" x2="78.76" y2="229.9"/>
+        <line class="cls-8" x1="120.77" y1="217.9" x2="120.77" y2="229.9"/>
+        <line class="cls-8" x1="120.77" y1="223.9" x2="114.73" y2="223.9"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="275.12" y1="44.84" x2="274.42" y2="44.84"/>
+        <line class="cls-10" x1="273" y1="44.84" x2="16.54" y2="44.84"/>
+        <line class="cls-3" x1="15.83" y1="44.84" x2="15.12" y2="44.84"/>
+      </g>
+      <text class="cls-16" transform="translate(15.19 205.38)"><tspan x="0" y="0">1月</tspan></text>
+      <text class="cls-16" transform="translate(35.52 205.38)"><tspan x="0" y="0">2月</tspan></text>
+      <text class="cls-19" transform="translate(29.78 227.93)"><tspan x="0" y="0">早期購入</tspan></text>
+      <text class="cls-19" transform="translate(92.3 223.33)"><tspan x="0" y="0">流通</tspan><tspan x="-6.96" y="9.21">及</tspan><tspan class="cls-38" x=".12" y="9.21">び</tspan><tspan x="6.96" y="9.21">拡散</tspan></text>
+      <text class="cls-19" transform="translate(136.15 223.33)"><tspan class="cls-11" x="0" y="0">モ</tspan><tspan class="cls-26" x="6.8" y="0">ニ</tspan><tspan class="cls-12" x="13.21" y="0">タ</tspan><tspan class="cls-14" x="19.22" y="0">リ</tspan><tspan class="cls-28" x="25.14" y="0">ン</tspan><tspan class="cls-37" x="31.7" y="0">グ</tspan><tspan x="9.22" y="9.21">取</tspan><tspan class="cls-15" x="16.31" y="9.21">締</tspan><tspan class="cls-25" x="22.96" y="9.21">り</tspan></text>
+      <text class="cls-18" transform="translate(214.33 227.97)"><tspan x="0" y="0">注文上昇</tspan></text>
+      <text class="cls-16" transform="translate(59.08 205.38)"><tspan x="0" y="0">3月</tspan></text>
+      <text class="cls-18" transform="translate(81.26 205.38)"><tspan x="0" y="0">4月</tspan></text>
+      <text class="cls-16" transform="translate(103.28 205.38)"><tspan x="0" y="0">5月</tspan></text>
+      <text class="cls-18" transform="translate(125.3 205.38)"><tspan x="0" y="0">6月</tspan></text>
+      <text class="cls-16" transform="translate(148.18 205.38)"><tspan x="0" y="0">7月</tspan></text>
+      <text class="cls-16" transform="translate(168.55 205.38)"><tspan x="0" y="0">8月</tspan></text>
+      <text class="cls-16" transform="translate(191.46 205.38)"><tspan x="0" y="0">9月</tspan></text>
+      <text class="cls-16" transform="translate(210.76 205.38)"><tspan x="0" y="0">10月</tspan></text>
+      <text class="cls-16" transform="translate(236.22 205.38)"><tspan x="0" y="0">11月</tspan></text>
+      <text class="cls-16" transform="translate(259.13 205.38)"><tspan x="0" y="0">12月</tspan></text>
+      <rect class="cls-7" x="14.07" y="13.38" width="88" height="20"/>
+      <text class="cls-33" transform="translate(20.05 26.93)"><tspan x="0" y="0">HiddenTag注文量</tspan></text>
+      <rect class="cls-34" x="261.7" y="44.84" width="8.66" height="147.73"/>
+      <rect class="cls-34" x="239.2" y="74.35" width="8.66" height="118.22"/>
+      <rect class="cls-34" x="217.79" y="120.24" width="8.66" height="72.32"/>
+      <rect class="cls-34" x="195.38" y="148.69" width="8.66" height="43.88"/>
+      <rect class="cls-34" x="173.38" y="188.57" width="8.66" height="4"/>
+      <rect class="cls-34" x="151.66" y="188.57" width="8.66" height="4"/>
+      <rect class="cls-34" x="129.95" y="188.57" width="8.66" height="4"/>
+      <rect class="cls-34" x="108.23" y="188.57" width="8.66" height="4"/>
+      <rect class="cls-34" x="86.52" y="187.05" width="8.66" height="5.52"/>
+      <rect class="cls-34" x="64.3" y="186.32" width="8.66" height="6.24"/>
+      <rect class="cls-34" x="42.08" y="179.58" width="8.66" height="12.99"/>
+      <rect class="cls-34" x="20.36" y="179.58" width="8.66" height="12.99"/>
+      <line class="cls-4" x1="275.12" y1="192.57" x2="15.12" y2="192.57"/>
+      <g>
+        <line class="cls-3" x1="275.12" y1="163.02" x2="274.42" y2="163.02"/>
+        <line class="cls-5" x1="273" y1="163.02" x2="16.54" y2="163.02"/>
+        <line class="cls-3" x1="15.83" y1="163.02" x2="15.12" y2="163.02"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="275.12" y1="133.48" x2="274.42" y2="133.48"/>
+        <line class="cls-5" x1="273" y1="133.48" x2="16.54" y2="133.48"/>
+        <line class="cls-3" x1="15.83" y1="133.48" x2="15.12" y2="133.48"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="275.12" y1="103.93" x2="274.42" y2="103.93"/>
+        <line class="cls-5" x1="273" y1="103.93" x2="16.54" y2="103.93"/>
+        <line class="cls-3" x1="15.83" y1="103.93" x2="15.12" y2="103.93"/>
+      </g>
+      <g>
+        <line class="cls-3" x1="275.12" y1="74.39" x2="274.42" y2="74.39"/>
+        <line class="cls-5" x1="273" y1="74.39" x2="16.54" y2="74.39"/>
+        <line class="cls-3" x1="15.83" y1="74.39" x2="15.12" y2="74.39"/>
+      </g>
+      <text class="cls-20" transform="translate(132.76 112.88)"><tspan class="cls-17"><tspan x="0" y="0">HiddenTag</tspan></tspan><tspan class="cls-17"><tspan class="cls-30" x="-5.16" y="9.92">モ</tspan><tspan class="cls-35" x="3.23" y="9.92">ニ</tspan><tspan class="cls-31" x="11.35" y="9.92">タ</tspan><tspan class="cls-22" x="18.85" y="9.92">リ</tspan><tspan class="cls-35" x="26.27" y="9.92">ン</tspan><tspan class="cls-23" x="34.39" y="9.92">グ</tspan><tspan class="cls-24" x="42.39" y="9.92">を</tspan></tspan><tspan class="cls-17"><tspan class="cls-36" x="10.72" y="19.84">通</tspan><tspan class="cls-29" x="18.85" y="19.84">じ</tspan><tspan class="cls-13" x="26.74" y="19.84">た</tspan></tspan><tspan class="cls-21"><tspan x="2.53" y="29.76">取</tspan><tspan class="cls-27" x="11.04" y="29.76">締</tspan><tspan class="cls-32" x="18.73" y="29.76">り</tspan><tspan x="26.24" y="29.76">時点</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>釣りパス-ツアーへのお申込み</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="釣りパス-ツアーへのお申込み">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style>
+.bg-main {
+  background-image: linear-gradient(rgba(0,0,0,0) calc(50px + 1em), rgba(0,0,0,0.4) calc(50px + 1em), transparent 85%), url("files/img/find_bg_img.webp");
+  background-position: top, 50% 80%;
+  height: 65vmin;
+  max-height: 360px;
+  padding-top: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover, 110%;
+}
+.wft-tour-img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 14;
+  max-height: 380px;
+}
+#menu_top {
+  bottom: -200px;
+}
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23008a8e' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+.btn-check:checked+.btn-outline-primary {
+  color: #fff!important;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-outline-primary {
+  color: #888!important
+}
+.bg-yellow {
+  background-color: #ffd600;
+}
+.rotate-20 {
+  transform: rotate(-20deg);
+}
+.rounded-3 {
+  border-radius: 1em!important;
+}
+.list-group-horizontal.rounded-3>.list-group-item:first-child {
+  border-bottom-left-radius: 1em;
+}
+.list-group-horizontal.rounded-3>.list-group-item:last-child {
+  border-top-right-radius: 1em;
+}
+.wft-step-header :not(.wft-step-active) em {
+  color: var(--bs-primary);
+}
+.wft-step-active {
+  background-image: linear-gradient(to right, #008a8e, #28501e);
+  color: #fff;
+}
+.wbl-title::before {
+  content: "";
+  width: 2.1em;
+  height: 1.25em;
+  display: inline-block;
+  background-color: var(--bs-warning);
+  transform: skewX(-25deg) translate(-10px, 0);
+}
+.minus-top {
+  position: relative;
+  top: -20px;
+  margin-bottom: -20px;
+  z-index: 1;
+}
+.minus-bottom {
+  position: relative;
+  bottom: -50px;
+  margin-top: -50px;
+  z-index: 1
+}
+.btn-outline-primary {
+  border-color: #ced4da!important;
+}
+.bg-gradation {
+  background-image: linear-gradient(-45deg, rgba(0,0,0,0.08) 40%, transparent 60%);
+}
+
+@media (min-width:992px) {
+.bg-main {
+  background-position: top, 0 70%;
+  background-size: cover, cover;
+}
+}
+</style>
+</head>
+
+<body>
+<script src="files/js/header.js"></script>
+<header class="sticky-top"></header>
+<main>
+  <article class="pb-0 pb-sm-5">
+    <section class="container bg-main d-flex align-items-end text-center px-0 position-relative">
+      <div class="w-100 position-relative" style="bottom:-40px">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='%23fff'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="small text-white">
+          <ol class="breadcrumb justify-content-center small mb-2 fw-bold filter-drop-shadow">
+            <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
+            <li class="breadcrumb-item">釣りツア/釣りツアー/スリランカ/お申込み</li>
+          </ol>
+        </nav>
+        <div class="bg-white col-10 mx-auto fw-bold pt-4 ls-2 px-3">
+          <h2 class="fw-bold ls-2 mb-0">ツアーを探す</h2>
+          <p class="text-primary fst-italic border-bottom border-4 border-primary pb-3 mb-0">Find Tour</p>
+        </div>
+      </div>
+    </section>
+    <section class="container text-center bg-white px-0 pb-4 pt-5">
+      <h3 class="fw-bold text-primary py-4"> ツアーへのお申込み</h3>
+      <ul class="list-group list-group-horizontal col-11 mx-auto smaller rounded-3 wft-step-header max-400 mb-3">
+        <li class="list-group-item d-flex align-items-center col-4 pe-0 wft-step-active"><em class="fs-3">1</em><span class="w-100 fw-bold">必要事項記入</span></li>
+        <li class="list-group-item d-flex align-items-center col-4 pe-0"><em class="fs-3">2</em><span class="w-100 fw-bold">確認と同意事項</span></li>
+        <li class="list-group-item d-flex align-items-center col-4 pe-4"><em class="fs-3">3</em><span class="w-100 fw-bold">完了</span></li>
+      </ul>
+    </section>
+    <section class="container bg-white px-0">
+      <div class="px-3 minus-bottom">
+        <h3 class="fw-bold fs-6 mb-0 max-480 mx-auto"><span class="p-3 rounded-circle bg-white filter-drop-shadow d-inline-block me-3"><img src="files/img/icon_edit2.svg" alt="" width="25" height="25" class=""></span>必要事項記入</h3>
+      </div>
+      <div class="position-relative bottom-1"> <img src="files/img/bg_msk4.svg" width="375" height="100" alt="" class="w-100"> </div>
+      <div class="bg-light pb-5 px-3">
+        <form action="find_04.html" method="get" class="col-12 max-480 mx-auto bg-white minus-top pb-4">
+          <div class="d-flex text-body text-decoration-none position-relative mb-4">
+            <div class="col-5 position-relative"> <img src="files/img/img_worldfhingtour_08.webp" alt="" width="1500" height="1080" class="wft-tour-img"></div>
+            <dl class="col-7 mb-0 px-2 pt-2 lh-1">
+              <dt class="text-warning mb-1">マレーシア</dt>
+              <dd class="small border-bottom border-dark-light mb-1 pb-1 text-truncate"><small>2025年 3月5日〜10日｜5日間</small></dd>
+              <dd class="fw-bold mb-1 small"><span class="text-primary small">概算費用：</span><span class="fs-5 text-danger">50万円〜</span></dd>
+              <dd class="mb-1"> <span class="badge smaller bg-yellow text-body rounded-0 px-3"><img src="files/img/icon_building.svg" alt="" width="14" height="14" class="align-text-top me-1">トラベルプロ</span> </dd>
+              <dd class="smaller"><span class="badge bg-dark-light text-primary me-1">トーマンフィッシング</span></dd>
+            </dl>
+            <img src="files/img/icon_limited.svg" alt="限定公開" width="80" height="20" class="position-absolute end-0 bottom-0"> </div>
+          <h3 class="wbl-title fs-6 mb-3 text-warning fw-bold position-relative overflow-hidden d-flex align-items-center">参加者情報の登録</h3>
+          <div class="px-4">
+            <p class="border-bottom border-4 border-primary small py-2 fw-bold">代表者情報</p>
+            <label class="small fw-bold">名前</label>
+            <div class="d-flex gap-3 mb-3">
+              <input type="text" class="form-control" id="surname" placeholder="姓" required>
+              <input type="text" class="form-control" id="given_name" placeholder="名" required>
+            </div>
+            <label class="small fw-bold">生年月日</label>
+            <div class="d-flex gap-2 mb-3">
+              <select class="form-select" name="year" required>
+                <option value="" disabled hidden>年</option>
+                <option value="1920">1920年</option>
+                <option value="1921">1921年</option>
+                <option value="1922">1922年</option>
+                <option value="1923">1923年</option>
+                <option value="1924">1924年</option>
+                <option value="1925">1925年</option>
+                <option value="1926">1926年</option>
+                <option value="1927">1927年</option>
+                <option value="1928">1928年</option>
+                <option value="1929">1929年</option>
+                <option value="1930">1930年</option>
+                <option value="1931">1931年</option>
+                <option value="1932">1932年</option>
+                <option value="1933">1933年</option>
+                <option value="1934">1934年</option>
+                <option value="1935">1935年</option>
+                <option value="1936">1936年</option>
+                <option value="1937">1937年</option>
+                <option value="1938">1938年</option>
+                <option value="1939">1939年</option>
+                <option value="1940">1940年</option>
+                <option value="1941">1941年</option>
+                <option value="1942">1942年</option>
+                <option value="1943">1943年</option>
+                <option value="1944">1944年</option>
+                <option value="1945">1945年</option>
+                <option value="1946">1946年</option>
+                <option value="1947">1947年</option>
+                <option value="1948">1948年</option>
+                <option value="1949">1949年</option>
+                <option value="1950">1950年</option>
+                <option value="1951">1951年</option>
+                <option value="1952">1952年</option>
+                <option value="1953">1953年</option>
+                <option value="1954">1954年</option>
+                <option value="1955">1955年</option>
+                <option value="1956">1956年</option>
+                <option value="1957">1957年</option>
+                <option value="1958">1958年</option>
+                <option value="1959">1959年</option>
+                <option value="1960">1960年</option>
+                <option value="1961">1961年</option>
+                <option value="1962">1962年</option>
+                <option value="1963">1963年</option>
+                <option value="1964">1964年</option>
+                <option value="1965">1965年</option>
+                <option value="1966">1966年</option>
+                <option value="1967">1967年</option>
+                <option value="1968">1968年</option>
+                <option value="1969">1969年</option>
+                <option value="1970">1970年</option>
+                <option value="" disabled selected>年</option>
+                <option value="1971">1971年</option>
+                <option value="1972">1972年</option>
+                <option value="1973">1973年</option>
+                <option value="1974">1974年</option>
+                <option value="1975">1975年</option>
+                <option value="1976">1976年</option>
+                <option value="1977">1977年</option>
+                <option value="1978">1978年</option>
+                <option value="1979">1979年</option>
+                <option value="1980">1980年</option>
+                <option value="1981">1981年</option>
+                <option value="1982">1982年</option>
+                <option value="1983">1983年</option>
+                <option value="1984">1984年</option>
+                <option value="1985">1985年</option>
+                <option value="1986">1986年</option>
+                <option value="1987">1987年</option>
+                <option value="1988">1988年</option>
+                <option value="1989">1989年</option>
+                <option value="1990">1990年</option>
+                <option value="1991">1991年</option>
+                <option value="1992">1992年</option>
+                <option value="1993">1993年</option>
+                <option value="1994">1994年</option>
+                <option value="1995">1995年</option>
+                <option value="1996">1996年</option>
+                <option value="1997">1997年</option>
+                <option value="1998">1998年</option>
+                <option value="1999">1999年</option>
+                <option value="2000">2000年</option>
+                <option value="2001">2001年</option>
+                <option value="2002">2002年</option>
+                <option value="2003">2003年</option>
+                <option value="2004">2004年</option>
+                <option value="2005">2005年</option>
+                <option value="2006">2006年</option>
+                <option value="2007">2007年</option>
+                <option value="2008">2008年</option>
+                <option value="2009">2009年</option>
+                <option value="2010">2010年</option>
+                <option value="2011">2011年</option>
+                <option value="2012">2012年</option>
+                <option value="2013">2013年</option>
+                <option value="2014">2014年</option>
+                <option value="2015">2015年</option>
+                <option value="2016">2016年</option>
+                <option value="2017">2017年</option>
+                <option value="2018">2018年</option>
+                <option value="2019">2019年</option>
+                <option value="2020">2020年</option>
+                <option value="2021">2021年</option>
+                <option value="2022">2022年</option>
+                <option value="2023">2023年</option>
+              </select>
+              <select class="form-select" name="month" required>
+                <option value="" disabled selected hidden>月</option>
+                <option value="1">1月</option>
+                <option value="2">2月</option>
+                <option value="3">3月</option>
+                <option value="4">4月</option>
+                <option value="5">5月</option>
+                <option value="6">6月</option>
+                <option value="7">7月</option>
+                <option value="8">8月</option>
+                <option value="9">9月</option>
+                <option value="10">10月</option>
+                <option value="11">11月</option>
+                <option value="12">12月</option>
+              </select>
+              <select class="form-select" name="day" required>
+                <option value="" disabled selected hidden>日</option>
+                <option value="1">1日</option>
+                <option value="2">2日</option>
+                <option value="3">3日</option>
+                <option value="4">4日</option>
+                <option value="5">5日</option>
+                <option value="6">6日</option>
+                <option value="7">7日</option>
+                <option value="8">8日</option>
+                <option value="9">9日</option>
+                <option value="10">10日</option>
+                <option value="11">11日</option>
+                <option value="12">12日</option>
+                <option value="13">13日</option>
+                <option value="14">14日</option>
+                <option value="15">15日</option>
+                <option value="16">16日</option>
+                <option value="17">17日</option>
+                <option value="18">18日</option>
+                <option value="19">19日</option>
+                <option value="20">20日</option>
+                <option value="21">21日</option>
+                <option value="22">22日</option>
+                <option value="23">23日</option>
+                <option value="24">24日</option>
+                <option value="25">25日</option>
+                <option value="26">26日</option>
+                <option value="27">27日</option>
+                <option value="28">28日</option>
+                <option value="29">29日</option>
+                <option value="30">30日</option>
+                <option value="31">31日</option>
+              </select>
+            </div>
+            <label class="small fw-bold">性別</label>
+            <div class="d-flex gap-3 mb-2">
+              <input type="radio" class="btn-check" name="gender" id="gender_male" required>
+              <label class="btn btn-outline-primary" for="gender_male">男性</label>
+              <input type="radio" class="btn-check" name="gender" id="gender_female" required>
+              <label class="btn btn-outline-primary" for="gender_female">女性</label>
+            </div>
+            <p class="smaller">※代表者はアカウント情報から自動で入力されます。</p>
+            <button class="btn d-flex align-items-center my-4 mx-auto fw-bold"><i class="bi bi-plus fs-1 text-warning rounded-circle bg-white filter-drop-shadow d-inline-block me-3 lh-1"></i>他のメンバー追加</button>
+            <button class="btn btn-warning bg-gradation col-6 d-block mx-auto" type="submit"> 次へ</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="sticky-top pt-4 bd-gray-800 text-white"></footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<script src="files/js/footer.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "0px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

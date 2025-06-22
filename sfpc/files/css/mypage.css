@@ -1,0 +1,110 @@
+@charset "UTF-8";
+.user-thumbnail {
+  object-fit: cover;
+  width: clamp(70px, 20vw, 140px);
+  height: clamp(70px, 20vw, 140px);
+  border-radius: 100%;
+  margin-top: clamp(-40px, -5vw, -20px);
+}
+.sfpc-main {
+  height: var(--main-height);
+  margin: 0;
+}
+.sfpc-icon {
+  height: 1.4em;
+  width: 1.4em;
+  display: inline-block;
+}
+.sfpc-thumbnail, .sfpc-thumbnail_100, .sfpc-banner {
+  object-fit: cover;
+  width: 100%;
+}
+.sfpc-thumbnail_100 {
+  height: var(--thumbnail-100);
+}
+.sfpc-thumbnail_text {
+  position: absolute;
+  top: calc(50% - 2.7em);
+  left: 0;
+  width: 100%;
+  display: block;
+  text-shadow: 0 0 10px #000, 0 0 50px #000;
+}
+.sfpc-banner {
+  height: clamp(120px, 20vw, 200px);
+}
+.sfpc-footer-nav {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+  background-color: var(--bs-primary);
+  text-align: center;
+}
+.sfpc-footer-nav .btn :not(.bi) {
+  font-size: 10px;
+}
+.sfpc-active {
+  color: var(--bs-success);
+}
+.sfpc-comming-soon {
+  position: relative;
+  overflow: hidden;
+}
+.sfpc-comming-soon::after {
+  content: "comming soon";
+  background-color: #dc3545;
+  color: #fff;
+  display: inline-block;
+  position: absolute;
+  top: 0.2em;
+  left: -0.5em;
+  padding: 0.4em 4em 0.4em 0.8em;
+  transform: skew(10deg, -25deg);
+  font-size: 12px;
+}
+@media (min-width: 992px) {
+article {
+  grid-template-columns: 240px 1fr;
+}
+.sfpc-footer-nav {
+  position: relative;
+  margin: 0;
+  background-color: transparent;
+  padding-top: 80px;
+  padding-right: 0.75em;
+  ;
+}
+.sfpc-footer-nav .small {
+  font-size: 16px!important;
+  margin-left: 10px;
+}
+.sfpc-footer-nav .btn {
+  margin-bottom: 0.5em;
+}
+article > :nth-child(1) {
+  grid-row: 1/2;
+  grid-column: 1/4;
+}
+article > :nth-child(2) {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+article > :nth-child(3) {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.sfpc-active::after {
+  content: "\F4F4";
+  font-family: bootstrap-icons !important;
+  position: absolute;
+  right: 1.5em;
+  font-size: 150%;
+}
+}
+
+@media (min-width: 1400px) {
+article {
+  grid-template-columns: 240px 1fr 240px;
+}
+}

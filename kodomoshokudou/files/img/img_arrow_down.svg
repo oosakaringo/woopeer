@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 68.64 34.32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_新規グラデーションスウォッチ_1);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="_新規グラデーションスウォッチ_1" data-name="新規グラデーションスウォッチ 1" x1="34.32" y1="-6.06" x2="34.32" y2="27.56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe100"/>
+      <stop offset="1" stop-color="#e67800"/>
+    </linearGradient>
+  </defs>
+  <g id="_モバイル" data-name="モバイル">
+    <polygon class="cls-1" points="0 0 68.64 0 34.32 34.32 0 0"/>
+  </g>
+</svg>

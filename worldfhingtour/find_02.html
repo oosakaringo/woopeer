@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>釣りパス-ツアー情報</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="釣りパス-ツアー情報">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style>
+.bg-main {
+  background-image: linear-gradient(rgba(0,0,0,0) calc(50px + 1em), rgba(0,0,0,0.4) calc(50px + 1em), transparent 85%), url("files/img/find_bg_img.webp");
+  background-position: top, 50% 80%;
+  height: 65vmin;
+  max-height: 360px;
+  padding-top: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover, 110%;
+}
+.wft-tour-img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.618 / 1;
+  max-height: 380px;
+}
+#menu_top {
+  bottom: -200px;
+}
+.carousel-inner img {
+  object-fit: cover;
+  height: 50vmin;
+  max-width: 800px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+.carousel-indicators {
+  bottom: -30px;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: var(--bs-warning);
+}
+.carousel-indicators [data-bs-target] {
+  height: 6px;
+}
+.wbl-title::before {
+  content: "";
+  width: 2.1em;
+  height: 1.25em;
+  display: inline-block;
+  background-color: var(--bs-warning);
+  transform: skewX(-25deg) translate(-10px, 0);
+}
+.wbl-plan dd+dd {
+  border-top: solid thin #ddd;
+  padding-top: 1em
+}
+.width-2em {
+  width: 2em;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+  max-height: 10em;
+}
+.btn-warning.disabled, .btn-warning:disabled {
+  color: #fff;
+  background-color: #ccc;
+  border-color: #ccc!important;
+}
+.minus-top {
+  position: relative;
+  top: -20px;
+  margin-bottom: -20px;
+  z-index: 1;
+}
+.minus-bottom {
+  position: relative;
+  bottom: -20px;
+  margin-top: -20px;
+  z-index: 1
+}
+.bg-gradation {
+  background-image: linear-gradient(-45deg, rgba(0,0,0,0.08) 40%, transparent 60%);
+}
+
+@media (min-width:992px) {
+.bg-main {
+  background-position: top, 0 70%;
+  background-size: cover, cover;
+}
+.wbl-plan .small {
+  font-size: 100%;
+}
+}
+</style>
+</head>
+
+<body>
+<script src="files/js/header.js"></script>
+<header class="sticky-top"></header>
+<main>
+  <article class="pb-0 pb-sm-5">
+    <section class="container bg-main d-flex align-items-end text-center px-0 position-relative">
+      <div class="w-100 position-relative" style="bottom:-40px">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='%23fff'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb" class="small text-white">
+          <ol class="breadcrumb justify-content-center small mb-2 fw-bold filter-drop-shadow">
+            <li class="breadcrumb-item"><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
+            <li class="breadcrumb-item"><a href="find_01.html" class="text-white text-decoration-none">釣りツアーを探す</a></li>
+            <li class="breadcrumb-item">スリランカ・GTフィッシング5日間</li>
+          </ol>
+        </nav>
+        <div class="bg-white col-10 mx-auto fw-bold pt-4 ls-2 px-3">
+          <h2 class="fw-bold ls-2 mb-0">ツアーを探す</h2>
+          <p class="text-primary fst-italic border-bottom border-4 border-primary pb-3 mb-0">Find Tour</p>
+        </div>
+      </div>
+    </section>
+    <section class="container px-0 bg-white pt-5">
+      <h3 class="fs-4 fw-bold text-center my-4">ツアー情報</h3>
+      <h4 class="bg-primary text-white text-center fw-bold fs-5 py-3 mb-0">スリランカ・GTフィッシング5日間</h4>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide mb-4" data-bs-ride="carousel" data-bs-interval="10000">
+        <div class="carousel-indicators mb-0">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active"> <img src="files/img/img_worldfhingtour_09.webp" class="d-block w-100" alt="..."> </div>
+          <div class="carousel-item"> <img src="files/img/img_worldfhingtour_05.webp" class="d-block w-100" alt="..."> </div>
+          <div class="carousel-item"> <img src="files/img/img_worldfhingtour_04.webp" class="d-block w-100" alt="..."> </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span> </button>
+        <img src="files/img/icon_limited.svg" alt="限定公開" width="90" height="25" class="position-absolute end-0 mt-1 me-1"> </div>
+      <p class="text-primary text-center pt-2"><img src="files/img/icon_airplane.svg" alt="" width="25" height="25" class="me-2">出発日：2023年3月2日（木）</p>
+      <p class="col-9 mx-auto bg-warning text-white fw-bold text-center py-2 rounded-3 mb-0 minus-bottom">3名募集</p>
+      <div class="position-relative bottom-1"> <img src="files/img/bg_msk4.svg" width="375" height="100" alt="" class="w-100"> </div>
+      <div class="bg-light pb-4 px-3">
+        <div class="col-12 col-lg-10 col-xl-6 mx-auto bg-white py-4 minus-top">
+          <h3 class="wbl-title fs-6 mb-3 text-warning fw-bold position-relative overflow-hidden d-flex align-items-center">ツアー概算費用</h3>
+          <dl class="px-4 mb-4">
+            <dt class="border-bottom pb-2 mb-2 fw-normal">予定遠征費用：未定</dt>
+            <dd class="small"><small>過去実績 約¥368,000（3名参加1艇乗船の場合）</small></dd>
+          </dl>
+          <dl class="px-4 mb-4">
+            <dt class="border-bottom pb-2 mb-2 fw-normal">発着：中部・成田・関西</dt>
+            <dd></dd>
+          </dl>
+          <dl class="px-4 mb-4">
+            <dt class="border-bottom pb-2 mb-2 fw-normal">ツアーに含まれるもの</dt>
+            <dd class="small d-flex align-items-center"><img src="files/img/icon_check.svg" alt="" width="20" height="20" class="me-2"><small>往復航空代金（エコノミークラス利用）</small></dd>
+            <dd class="small d-flex align-items-center"><img src="files/img/icon_check.svg" alt="" width="20" height="20" class="me-2"><small>ホテル宿泊費（1名1室利用）</small></dd>
+            <dd class="small d-flex align-items-center"><img src="files/img/icon_check.svg" alt="" width="20" height="20" class="me-2"><small>現地でのお食事（移動時は含まない）</small></dd>
+            <dd class="small d-flex align-items-center"><img src="files/img/icon_check.svg" alt="" width="20" height="20" class="me-2"><small>ボートチャーター3日間</small></dd>
+          </dl>
+          <dl class="px-4 mb-4">
+            <dt class="border-bottom pb-2 mb-2 fw-normal">ツアーに含まれないもの</dt>
+            <dd class="small d-flex align-items-center"><img src="files/img/icon_cross.svg" alt="" width="20" height="20" class="me-2"><small>日本国内及び海外空港諸税 </small></dd>
+            <dd class="small d-flex align-items-center"><img src="files/img/icon_cross.svg" alt="" width="20" height="20" class="me-2"><small>燃料サーチャージ</small></dd>
+            <dd class="small d-flex align-items-center"><img src="files/img/icon_cross.svg" alt="" width="20" height="20" class="me-2"><small>スリランカ査証取得費用</small></dd>
+            <dd class="smaller sentence">※当企画は募集型企画旅行（パッケージツアー）ではありません。概算費用は、下記基本プラン日程での目安金額となります。また、予約時間にうより航空代金等の変動により費用が異なる場合　がございます。</dd>
+          </dl>
+          <h3 class="wbl-title fs-6 mb-3 text-warning fw-bold position-relative overflow-hidden d-flex align-items-center">基本プラ / 日程</h3>
+          <dl class="px-4 mb-4">
+            <dt class="border-bottom pb-1 mb-1 fw-normal">GTフィッシング｜3日間</dt>
+            <dd class="small fw-bold"><small>2023年3月2日（木）-6日（月）</small></dd>
+          </dl>
+          <dl class="px-4 mb-4 small wbl-plan">
+            <dt class="bd-gray-200 py-2 px-3 mb-3 rounded-3 small">1日目<span class="fw-normal ms-3">2023年3月2日（木）</span></dt>
+            <dd class="small d-flex"> <img src="files/img/icon_ticket.svg" alt="" width="30" height="20">
+              <div class="d-grid ps-3">
+                <p class="d-flex mb-1"><span>午前：</span><span>本各地（成田・中部・関空）→<br>
+                  アジア内都市にて乗り継ぎ→</span></p>
+                <p class="d-flex mb-1"><span>深夜：</span><span>コロンボ</span></p>
+              </div>
+            </dd>
+            <dd class="small d-flex"> <img src="files/img/icon_bed.svg" alt="" width="30" height="20">
+              <div class="d-grid ps-3">
+                <p class="d-flex mb-1"><span>到着後：</span><span>ホテルへご案内</span></p>
+              </div>
+            </dd>
+          </dl>
+          <dl class="px-4 mb-4 small wbl-plan">
+            <dt class="bd-gray-200 py-2 px-3 mb-3 rounded-3 small">2日目<span class="fw-normal ms-3">2023年3月3日（金）</span></dt>
+            <dd class="small d-flex"> <img src="files/img/icon_ship2.svg" alt="" width="30" height="20">
+              <div class="d-grid ps-3">
+                <p class="d-flex mb-1"><span>終日：</span><span>GTフィッシング</span></p>
+              </div>
+            </dd>
+          </dl>
+          <dl class="px-4 mb-4 small wbl-plan">
+            <dt class="bd-gray-200 py-2 px-3 mb-3 rounded-3 small">3日目<span class="fw-normal ms-3">2023年3月4日（土）</span></dt>
+            <dd class="small d-flex"> <img src="files/img/icon_ship2.svg" alt="" width="30" height="20">
+              <div class="d-grid ps-3">
+                <p class="d-flex mb-1"><span>終日：</span><span>GTフィッシング</span></p>
+              </div>
+            </dd>
+          </dl>
+          <dl class="px-4 mb-4 small wbl-plan">
+            <dt class="bd-gray-200 py-2 px-3 mb-3 rounded-3 small">3日目<span class="fw-normal ms-3">2023年3月4日（土）</span></dt>
+            <dd class="small d-flex"> <img src="files/img/icon_ship2.svg" alt="" width="30" height="20">
+              <div class="d-grid ps-3">
+                <p class="d-flex mb-1"><span>終日：</span><span>GTフィッシング</span></p>
+                <p class="smaller mb-1 ffs-palt">（フィッシング終了後にお部屋はチャックアウトになります）</p>
+              </div>
+            </dd>
+            <dd class="small d-flex"> <img src="files/img/icon_airplane2.svg" alt="" width="30" height="20">
+              <div class="d-grid ps-3">
+                <p class="d-flex mb-1"><span>終夜：</span><span>空港へご案内</span></p>
+              </div>
+            </dd>
+          </dl>
+          <dl class="px-4 mb-4 small wbl-plan">
+            <dt class="bd-gray-200 py-2 px-3 mb-3 rounded-3 small">5日目<span class="fw-normal ms-3">2023年3月6日（月）</span></dt>
+            <dd class="small d-flex"> <img src="files/img/icon_ticket.svg" alt="" width="30" height="20">
+              <div class="d-grid ps-3">
+                <p class="d-flex mb-1"><span>深夜：</span><span>コロンボ→アジア内都市にて乗り継ぎ→</span></p>
+                <p class="d-flex mb-1"><span>午後：</span><span>日本各地（成田・中部・関空）</span></p>
+              </div>
+            </dd>
+          </dl>
+          <div class="px-4 my-5">
+            <h3 class="fs-6">現地で使用するフィッシングボート</h3>
+            <img src="files/img/TRIPPERE_UF52.webp" alt="" width="1500" height="1000" class="wft-tour-img">
+            <p class="small mb-0">常時3名のキャスティングが可能です。</p>
+            <p class="smaller">※当社のスリランカGTフィッシングのアングラー募集は、3名となります。</p>
+          </div>
+          <div class="px-4 mb-4">
+            <h3 class="fs-6">釣りパスの安心なお手続き</h3>
+            <dl class="border rounded-3 px-3 mb-0">
+              <dt class="text-primary d-flex align-items-center mb-2 pt-2"><span class="img-square d-flex bg-primary text-white rounded-circle align-items-center justify-content-center fw-bold width-2em me-2">1</span>お客様のご希望</dt>
+              <dd class="small"><small>お電話、Eメールなどにてお客様のご希望スケジュール・フィールド・フィッシングスタイル等のご希望をお伺いします。</small></dd>
+            </dl>
+            <div class="text-center text-primary fs-4"><i class="bi bi-caret-down-fill"></i></div>
+            <dl class="border rounded-3 px-3 mb-0">
+              <dt class="text-primary d-flex align-items-center mb-2 pt-2"><span class="img-square d-flex bg-primary text-white rounded-circle align-items-center justify-content-center fw-bold width-2em me-2">2</span>日程の作成・お見積もり</dt>
+              <dd class="small"><small>お客様のご希望の日程、フィッシングスタイルを考慮しながらプランを作成し、旅行代金のお見積もりをさせていただきます。</small></dd>
+            </dl>
+            <div class="text-center text-primary fs-4"><i class="bi bi-caret-down-fill"></i></div>
+            <dl class="border rounded-3 px-3 mb-0">
+              <dt class="text-primary d-flex align-items-center mb-2 pt-2"><span class="img-square d-flex bg-primary text-white rounded-circle align-items-center justify-content-center fw-bold width-2em me-2">3</span>お申し込み</dt>
+              <dd class="small"><small>ご希望されたプランのお見積もりをご確認いただいた後、ご納得いただけましたら正式にお申込の手続きをお願いいたします。</small></dd>
+            </dl>
+            <div class="text-center text-primary fs-4"><i class="bi bi-caret-down-fill"></i></div>
+            <dl class="border rounded-3 px-3 mb-0">
+              <dt class="text-primary d-flex align-items-center mb-2 pt-2"><span class="img-square d-flex bg-primary text-white rounded-circle align-items-center justify-content-center fw-bold width-2em me-2">4</span>手配</dt>
+              <dd class="small"><small>旅行のお申込の手続きが完了されましたら、手配を開始させていただきます。通常は手配開始後1週間程度で完了いたします。</small></dd>
+            </dl>
+            <div class="text-center text-primary fs-4"><i class="bi bi-caret-down-fill"></i></div>
+            <dl class="border rounded-3 px-3 mb-0">
+              <dt class="text-primary d-flex align-items-center mb-2 pt-2"><span class="img-square d-flex bg-primary text-white rounded-circle align-items-center justify-content-center fw-bold width-2em me-2">5</span>日程表のご送付</dt>
+              <dd class="small"><small>旅行の7〜10日前までに、最終日程表をお送りします。</small></dd>
+            </dl>
+            <div class="text-center text-primary fs-4"><i class="bi bi-caret-down-fill"></i></div>
+            <dl class="border rounded-3 px-3 mb-0">
+              <dt class="text-primary d-flex align-items-center mb-2 pt-2"><span class="img-square d-flex bg-primary text-white rounded-circle align-items-center justify-content-center fw-bold width-2em me-2">6</span>ご出発</dt>
+              <dd class="small"><small>お気を付けて行ってらっしゃいませ。</small></dd>
+            </dl>
+            <div class="overflow-y-scroll border rounded-3 p-2 small mt-4">
+              <p class="text-center mt-3">【同意事項】</p>
+              <p class="small"> 下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。
+                下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。下記のボタンを押す事で乗船名簿に記入されます。 </p>
+            </div>
+            <div class="form-check d-flex justify-content-center align-items-center pt-4 pb-3">
+              <input class="form-check-input me-2" type="checkbox" value="" id="js-entry-check">
+              <label class="form-check-label small" for="js-entry-check">上記注意事項を熟読し同意します。 </label>
+            </div>
+            <div class="text-center"><a href="find_03.html" class="btn btn-lg btn-warning bg-gradation disabled js-entry">エントリーする</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="sticky-top pt-4 bd-gray-800 text-white"></footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<script src="files/js/footer.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_entryCheck=document.getElementById("js-entry-check");
+let e_entry=document.querySelector(".js-entry");
+e_entryCheck.addEventListener('change',function(){
+  if(this.checked){
+    e_entry.classList.remove('disabled');
+  }else{
+    e_entry.classList.add('disabled');
+  }
+})
+
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "0px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

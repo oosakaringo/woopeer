@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Izu 一流のライフスタイルは一流のウェルネスマネジメントから。</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Izu 一流のライフスタイルは一流のウェルネスマネジメントから。">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+.img-top, .img-title {
+  height: min(50vmax, 800px);
+  object-position: 50% 20%;
+  padding: 1px 0;
+}
+.img-title {
+  height: 32vmax;
+  object-position: 50% 0;
+}
+.fs-top-title {
+  font-size: clamp(130%, 3.2vw, 240%);
+}
+.grid-2, .grid-2-3-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.voice-card {
+  border-radius: 0.8em 0 0.8em 0;
+}
+.voice-card::before, .voice-card::after {
+  font-size: 90px;
+  color: var(--bs-primary);
+  position: absolute;
+  font-family: serif;
+  line-height: 1;
+  height: 50px;
+}
+.voice-card::before {
+  content: "“";
+  top: -25px;
+}
+.voice-card::after {
+  content: "”";
+  bottom: -34px;
+  right: 20px
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+.grid-2-3-4 {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (min-width:992px) {/*PC*/
+.grid-2-3-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+}
+
+@media (max-width:767px) {/*SP*/
+}
+</style>
+</head>
+
+<body>
+<header class="ps-1 top-0 w-100 position-fixed">
+  <div class="d-flex justify-content-between align-items-center move max-2000 mx-auto h-100"> <a href="/Izu/" class="d-flex align-items-center gap-2 h-100 text-body text-decoration-none"> <img src="files/images/logo.webp" alt="" width="86" height="86" class="square-w h-100 w-auto mt-1">
+    <div>一流のライフスタイルは<br>
+      一流のウェルネスマネジメントから。</div>
+    </a>
+    <div class="d-flex h-100"> <a href="/Izu/" class="bg-primary text-white square-w h-100 text-decoration-none text-center d-flex align-items-center justify-content-center">ご予約<br>
+      →</a>
+      <button class="btn bg-body text-white rounded-0 p-0 d-flex justify-content-center square-w h-100 align-items-center" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><i class="bi bi-list fs-3"></i></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-1200 bg-body" tabindex="-1" id="offcanvas_menu"> <img src="files/images/bg-menu.webp" alt="" width="1500" height="1000" class="img-cover h-100 w-auto position-absolute" loading="lazy">
+  <div class="offcanvas-header py-1 justify-content-between position-relative"> <img src="files/images/logo.webp" alt="" width="60" height="60" class="">
+    <button type="button" class="btn p-0 text-white fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body position-relative d-lg-flex justify-content-center">
+    <div class="d-grid grid-2 gap-2 col-md-10 mx-auto col-lg-8 max-720 mx-lg-0 mb-5 align-content-start"> <a href="/Izu/" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">HOME</span><span class="text-white small">ホーム</span></a> <a href="/Izu/about.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">About Izu</span><span class="text-white small">Izuについて</span></a> <a href="/Izu/service.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">Service </span><span class="text-white small">サービス</span></a> <a href="#partner" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">Partner</span><span class="text-white small">パートナー募集</span></a> <a href="/Izu/#faq" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">FAQ</span><span class="text-white small">よくある質問</span></a> <a href="/Izu/service.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">ISC</span><span class="text-white small">エリート幹細胞ISCについて</span></a> <a href="/Izu/join.html" class="text-decoration-none d-grid mb-3"><span class="ff-serif text-primary fs-4">JOIN LEGRAN</span><span class="text-white small">ご入会について</span></a> </div>
+    <div class="d-grid col-10 mx-auto gap-3 align-content-start col-lg-4 max-360 mx-lg-0"> <a href="/Izu/" class="btn btn-primary rounded-0 position-relative fw-bold">ご予約はこちら <i class="bi bi-arrow-right position-absolute end-0 me-2"></i></a> <a href="/Izu/contact.html" class="btn bg-white rounded-0 position-relative fw-bold">お問い合わせ <i class="bi bi-arrow-right position-absolute end-0 me-2"></i></a> </div>
+  </div>
+</div>
+<main>
+  <article>
+    <section class="pb-5">
+      <div class="max-2000 mx-auto position-relative mt-4 mt-lg-0"> <img src="files/images/service_top.webp" alt="" width="2000" height="1200" class="w-100 img-cover img-top"> <img src="files/images/msk_top_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0"> <img src="files/images/msk_top_02.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0">
+        <h2 class="d-flex flex-column align-items-center position-absolute w-100 h-100 top-0 start-0 justify-content-center gap-2"><span class="ff-serif text-primary display-3 ls-1">Service</span> <span class="fs-6 ls-1">サービス</span> </h2>
+      </div>
+      <h3 class="ff-serif ffs-palt ls-2 text-center mb-4">エリート幹細胞ISC<br>
+        <span class="fs-6 ls-1">（不死化幹細胞培養上清液）</span></h3>
+      <div class="container">
+        <p>正式名称を『不死化ヒト由来歯髄幹細胞培養上清』と言い、名古屋大学の再生医療研究で生みだされた世界特許取得の特別な幹細胞培養上清液（ISC）です。<br>
+          健康認定済の日本人小児ドナーの歯髄から、「最も優秀なエリート幹細胞を選抜」し、世界特許技術である“不死化技術”によって半永久的に老化・劣化しない新世代のISCが完成。<br>
+          最高の効果と、最も安定した品質のご提供を可能にしました。<br>
+          エリート幹細胞ISCは、細胞レベルでの健康管理とアンチエイジングに効果を発揮します。</p>
+      </div>
+    </section>
+    <section class="py-5 bg-gray-900">
+      <div class="container">
+        <h3 class="ff-serif ffs-palt ls-1 text-center fs-4 mb-4">疾患や美容として期待される効果</h3>
+        <ul class="d-grid grid-2-3-4 ps-0 gap-2 text-center ffs-palt">
+          <li class="d-grid bg-white text-primary align-content-center py-3">がんの予防</li>
+          <li class="d-grid bg-white text-primary align-content-center"><span>肌の老化による症状</span> <span class="small">（しみ、シワ、くすみ、たるみ）</span></li>
+          <li class="d-grid bg-white text-primary align-content-center py-3">体内の抗酸化・抗糖化</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3">糖尿病の予防・改善</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3 ls-1">ED</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3 ls-1">AGA</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3 ls-1">高血糖</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3 ls-1">動脈硬化</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3">アトピー性皮膚炎</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3">脳・神経疾患</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3">末梢神経障害</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3">自己免疫疾患</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3">慢性疼痛・関節痛</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3 ls-1">骨粗鬆症</li>
+          <li class="d-grid bg-white text-primary align-content-center py-3">肝機能障害</li>
+          <li class="d-grid bg-white text-primary align-content-center"><span>様々な病気の</span><span>予防・改善</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="pt-5">
+      <div class="container">
+        <h2 class="d-flex flex-column align-items-center justify-content-center gap-2 mb-4"><span class="ff-serif text-primary display-3 ls-1">Users Voice</span> <span class="fs-6 ls-1">お客様の声</span> </h2>
+        <p class="text-center ff-serif ffs-palt ls-1 fs-5 mb-4">Izuの魅力をより実感してください。</p>
+        <div class="d-md-flex gap-4 gap-lg-5">
+          <dl class="d-grid ps-0 gap-4 w-100 mb-5 mb-md-0">
+            <dt class="ff-serif ffs-palt ls-2 text-center fw-normal">女性の声</dt>
+            <dd class="d-flex bg-white text-gray-900 position-relative px-3 px-lg-4 pb-3 pt-4 ffs-palt text-align-justify gap-3 voice-card mb-lg-4 align-items-center"><span class="position-absolute top-0 end-0 small fw-bold bg-primary px-4 py-1 lh-sm">健康</span>
+              <div class="col-3"> <img src="files/images/user_w_01.webp" alt="" width="600" height="400" class="img-cover rounded-circle w-100 square-w h-auto">
+                <div class="small text-center">70代・大阪</div>
+              </div>
+              <div class="small lh-180">「ご飯がおいしい！」一番感じたのは食事の時でした。私はそんなに食べるほうでは無いのですが最近は前にもまして小食でした。</div>
+            </dd>
+            <dd class="d-flex bg-white text-gray-900 position-relative px-3 px-lg-4 pb-3 pt-4 ffs-palt text-align-justify gap-3 voice-card mb-lg-4 align-items-center"><span class="position-absolute top-0 end-0 small fw-bold bg-primary px-4 py-1 lh-sm">薄毛</span>
+              <div class="col-3"> <img src="files/images/user_w_01.webp" alt="" width="600" height="400" class="img-cover rounded-circle w-100 square-w h-auto">
+                <div class="small text-center">70代・大阪</div>
+              </div>
+              <div class="small lh-180">「ご飯がおいしい！」一番感じたのは食事の時でした。私はそんなに食べるほうでは無いのですが最近は前にもまして小食でした。</div>
+            </dd>
+            <dd class="d-flex bg-white text-gray-900 position-relative px-3 px-lg-4 pb-3 pt-4 ffs-palt text-align-justify gap-3 voice-card mb-lg-4 align-items-center"><span class="position-absolute top-0 end-0 small fw-bold bg-primary px-4 py-1 lh-sm">ED</span>
+              <div class="col-3"> <img src="files/images/user_w_01.webp" alt="" width="600" height="400" class="img-cover rounded-circle w-100 square-w h-auto">
+                <div class="small text-center">70代・大阪</div>
+              </div>
+              <div class="small lh-180">「ご飯がおいしい！」一番感じたのは食事の時でした。私はそんなに食べるほうでは無いのですが最近は前にもまして小食でした。</div>
+            </dd>
+          </dl>
+          <dl class="d-grid ps-0 gap-4 w-100 mb-md-0">
+            <dt class="ff-serif ffs-palt ls-2 text-center fw-normal">男性の声</dt>
+            <dd class="d-flex bg-white text-gray-900 position-relative px-3 px-lg-4 pb-3 pt-4 ffs-palt text-align-justify gap-3 voice-card mb-lg-4 align-items-center"><span class="position-absolute top-0 end-0 small fw-bold bg-primary px-4 py-1 lh-sm">健康</span>
+              <div class="col-3"> <img src="files/images/user_m_01.webp" alt="" width="600" height="400" class="img-cover rounded-circle w-100 square-w h-auto">
+                <div class="small text-center">70代・大阪</div>
+              </div>
+              <div class="small lh-180">「ご飯がおいしい！」一番感じたのは食事の時でした。私はそんなに食べるほうでは無いのですが最近は前にもまして小食でした。</div>
+            </dd>
+            <dd class="d-flex bg-white text-gray-900 position-relative px-3 px-lg-4 pb-3 pt-4 ffs-palt text-align-justify gap-3 voice-card mb-lg-4 align-items-center"><span class="position-absolute top-0 end-0 small fw-bold bg-primary px-4 py-1 lh-sm">薄毛</span>
+              <div class="col-3"> <img src="files/images/user_m_01.webp" alt="" width="600" height="400" class="img-cover rounded-circle w-100 square-w h-auto">
+                <div class="small text-center">70代・大阪</div>
+              </div>
+              <div class="small lh-180">「ご飯がおいしい！」一番感じたのは食事の時でした。私はそんなに食べるほうでは無いのですが最近は前にもまして小食でした。</div>
+            </dd>
+            <dd class="d-flex bg-white text-gray-900 position-relative px-3 px-lg-4 pb-3 pt-4 ffs-palt text-align-justify gap-3 voice-card mb-lg-4 align-items-center"><span class="position-absolute top-0 end-0 small fw-bold bg-primary px-4 py-1 lh-sm">ED</span>
+              <div class="col-3"> <img src="files/images/user_m_01.webp" alt="" width="600" height="400" class="img-cover rounded-circle w-100 square-w h-auto">
+                <div class="small text-center">70代・大阪</div>
+              </div>
+              <div class="small lh-180">「ご飯がおいしい！」一番感じたのは食事の時でした。私はそんなに食べるほうでは無いのですが最近は前にもまして小食でした。</div>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white">
+      <div class="position-relative mt-4 mt-lg-0"> <img src="files/images/service_001.webp" alt="" width="2000" height="1000" class="w-100 img-cover img-title"> <img src="files/images/msk_top_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0" style="margin-top: -1px;"> <img src="files/images/msk_top_w_02.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0">
+        <h2 class="d-flex align-items-center justify-content-center position-absolute w-100 h-100 top-0 start-0 ff-serif text-center lh-180 ffs-palt px-4 ls-2 fs-4"><span>他社の幹細胞培養上清液<span class="d-inline-block">(ISC)との違い</span></span></h2>
+      </div>
+      <div class="container text-gray-900 ffs-palt ls-1">
+        <nav class="p-3">
+          <ol class="ps-0 d-grid d-lg-flex gap-3 mb-4">
+            <li class="d-block w-100"><a href="#point01" class="btn btn-outline-primary rounded-0 d-flex justify-content-between align-items-center py-3 pe-3"><span class="text-gray-900">エリート細胞のみ選別</span><img src="files/images/icon_arrow_down.svg" alt="" width="10" height="30"></a></li>
+            <li class="d-block w-100"><a href="#point02" class="btn btn-outline-primary rounded-0 d-flex justify-content-between align-items-center py-3 pe-3"><span class="text-gray-900">2000種の再生因子のMIX</span><img src="files/images/icon_arrow_down.svg" alt="" width="10" height="30"></a></li>
+            <li class="d-block w-100"><a href="#point03" class="btn btn-outline-primary rounded-0 d-flex justify-content-between align-items-center py-3 pe-3"><span class="text-gray-900">国際特許技術「不死化」</span><img src="files/images/icon_arrow_down.svg" alt="" width="10" height="30"></a></li>
+          </ol>
+        </nav>
+        <img src="files/images/point_line.svg" alt="" width="1540" height="18" class="img-cover w-100 mb-4" id="point01">
+        <h3 class="d-flex gap-2 align-items-center ff-serif justify-content-md-center fs-4 mb-3"><span class="text-primary display-4">1.</span>エリート幹細胞のみを選抜</h3>
+        <p class="text-align-justify lh-180">一般的な幹細胞のとても大きな課題として、採取する人や幹細胞の個体によって能力差があることで「効果や品質にもばらつきが出てしまう」ことが挙げられていました。<br>
+          しかし、不死化幹細胞では、健康認定済の日本人小児ドナーから乳歯（歯髄）の提供を受けており、成長（再生）する力に満ちた小児の細胞の中からさらに、最も優秀な細胞である「エリート幹細胞」を選び抜いています。<br>
+          そして、世界特許の「不死化技術」により、そのエリート幹細胞を培養したISC（培養上清液）自体を培養し続けているため、能力差もISCの品質のばらつきもなく、最高品質で安定した効果を発揮できるのです。</p>
+        <div class="text-center d-grid gap-4 d-md-flex align-items-end mb-5">
+          <div> <img src="files/images/service_003.webp" alt="" width="1500" height="840" class="img-fluid">
+            <p class="small text-accent">採取するドナーによって個体差</p>
+          </div>
+          <div> <img src="files/images/service_004.webp" alt="" width="1500" height="840" class="img-fluid">
+            <p class="small text-accent">優秀なエリート幹細胞のみを使用</p>
+          </div>
+        </div>
+        <img src="files/images/point_line.svg" alt="" width="1540" height="18" class="img-cover w-100 mb-4" id="point02">
+        <h3 class="d-flex gap-2 align-items-center ff-serif justify-content-md-center fs-4 mb-3"><span class="text-primary display-4">2.</span>新生代の細胞『再生因子』</h3>
+        <div class="d-lg-flex gap-5 mb-5">
+          <p class="text-align-justify lh-180 w-100 mb-3">エクソソームをはじめ、EGF、FGF等の成長因子は幹細胞が分裂の過程で分泌する生理活性物質です。 一般的な幹細胞商品に含まれる幹細胞はそれらの一部を「一部（単体）」や「複合体（組合せ）」によって使用しています（第三世代まで）。<br>
+            一方で「不死化幹細胞」は、エリート幹細胞を由来とすることで、それらの「完全体」を生み出すことに成功しているため、大変効果の高い、新世代の幹細胞として世界的に注目されています。</p>
+          <div class="w-100"> <img src="files/images/service_005.webp" alt="" width="1800" height="980" class="img-fluid">
+            <p class="small text-accent text-center">EGF（第１世代）より大幅進化2000種</p>
+          </div>
+        </div>
+        <img src="files/images/point_line.svg" alt="" width="1540" height="18" class="img-cover w-100 mb-4" id="point03">
+        <h3 class="d-flex gap-2 align-items-center ff-serif justify-content-md-center fs-4 mb-3"><span class="text-primary display-4">3.</span><span class="text-center">不死化技術<span class="small d-inline-block ls-0">（劣化・老化しない不老不死の幹細胞へ）</span></span></h3>
+        <div class="d-lg-flex gap-5">
+          <p class="text-align-justify lh-180 w-100 mb-3">一般的な幹細胞は、分裂が進むにつれて老化し、能力も劣化していきます。その寿命は１ヶ月程と言われており、培養後にすぐに使用しないと、本来の効果を享受できなくなるのです。<br>
+            不死化幹細胞は、上記（1、2）の通り、選抜されたエリート幹細胞を、世界特許技術である『不死化技術』で不死化させることによって、半永久的に老化・劣化しない細胞となります。<br>
+            つまり、老化も劣化もしないエリート幹細胞群が出来上がるのです。<br>
+            この最先端の再生医療技術がもたらす違いは、想像以上に大きいということがお判りいただけるのではないでしょうか。</p>
+          <div class="w-100"> <img src="files/images/service_006.webp" alt="" width="1800" height="980" class="img-fluid mb-3">
+            <p class="small text-accent mb-0">一般的培養方法では、細胞はコピーの過程で死滅するが不死化技術は細胞を劣化させることなく培養可能（特許技術）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white pb-5" style="margin-top: -1px">
+      <div class="position-relative mt-lg-0 max-2000 mx-auto"> <img src="files/images/service_002.webp" alt="" width="2000" height="1000" class="w-100 img-cover img-title"> <img src="files/images/msk_top_w_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0"> <img src="files/images/msk_top_w_02.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0">
+        <h2 class="d-flex align-items-center justify-content-center position-absolute w-100 h-100 top-0 start-0 ff-serif text-center lh-180 ffs-palt px-4 ls-2 fs-4">安心と安全</h2>
+      </div>
+      <div class="container text-gray-900 ffs-palt ls-1">
+        <h3 class="ff-serif fs-4 mb-3 text-center">誰のものか明確で極めて安全</h3>
+        <p class="text-center">市場流通の９割を占める脂肪由来のものは、<span class="d-inline-block">主に脂肪吸引の廃棄物から採取されています。</span></p>
+        <div class="d-lg-flex gap-5 mb-5">
+          <p class="text-align-justify lh-180 w-100 mb-3">ISC（幹細胞培養上清液）ですが、由来別の種類としては、植物由来、動物由来、ヒト由来が代表例として挙げられます。そして、ヒト由来のものも、さらに採取する場所によって分別されます。<br>
+            「脂肪幹細胞」「骨髄幹細胞」「胎盤幹細胞」「臍帯幹細胞」「歯髄幹細胞」が代表例で、それぞれ特徴や安全性も異なります。<br>
+            こうして比べてみると解り易いのですが、歯髄由来の幹細胞も優秀なものの、エリート幹細胞ISC（不死化ヒト由来歯髄幹細胞培養上清）は、乳歯の歯髄幹細胞を不死化することで、他と比べ「安全性」「安定性」「品質レベル」「生理活性物質の量」で圧倒的に優れたものとなるのです。</p>
+          <div class="w-100"> <img src="files/images/service_007.webp" alt="" width="1800" height="980" class="img-fluid">
+            <p class="small text-accent text-center">比較表</p>
+          </div>
+        </div>
+        <ul class="px-4 d-grid gap-4 gap-md-2 gap-lg-4 d-md-flex px-md-0 justify-content-center text-align-justify mb-4">
+          <li class="bg-gray-200 text-accent d-flex flex-column align-items-center gap-4 square-h justify-content-center max-360 p-3 justify-content-md-start pt-lg-4">
+            <h4 class="fw-bold mb-0 fs-5">ドナーが明確</h4>
+            <img src="files/images/icon_donor.svg" alt="" width="90" height="90">
+            <p class="mb-0 small">歯髄を採取するドナーは、ウィルス検査を実施し健康認定済の日本小児で、採取経路も正確にトレースされており、医療レベルで管理されています。</p>
+          </li>
+          <li class="bg-gray-200 text-accent d-flex flex-column align-items-center gap-4 square-h justify-content-center max-360 p-3 justify-content-md-start pt-lg-4">
+            <h4 class="fw-bold mb-0 ls-0 fs-5">細胞が損傷をうけずらい</h4>
+            <img src="files/images/icon_cell.svg" alt="" width="90" height="90">
+            <p class="mb-0 small">歯髄は歯の硬い層に守られている細胞のため、遺伝子に損傷を受けにくく、優秀で良質な細胞が多く存在します。</p>
+          </li>
+          <li class="bg-gray-200 text-accent d-flex flex-column align-items-center gap-4 square-h justify-content-center max-360 p-3 justify-content-md-start pt-lg-4">
+            <h4 class="fw-bold mb-0 fs-5">秘められた力</h4>
+            <img src="files/images/icon_power.svg" alt="" width="90" height="90">
+            <p class="mb-0 small">歯髄の中でも乳歯を採用しているのは、若くこれから成長する爆発的な力（再生力）を秘めています。また、採取の際にドナーに負担をかけないのも倫理的に大きなメリットです。</p>
+          </li>
+        </ul>
+      </div>
+      <div class="max-800 px-0 mx-auto">
+        <div class="text-accent text-center d-flex">
+          <div><img src="files/images/service_008.webp" alt="" width="1000" height="800" class="img-fluid mb-2">若い人から採取</div>
+          <div><img src="files/images/service_009.webp" alt="" width="1000" height="800" class="img-fluid mb-2">高齢者から採取</div>
+        </div>
+      </div>
+      <div class="container text-gray-900 ffs-palt ls-1 pt-5">
+        <h3 class="text-center ff-serif mb-4">幹細胞は年齢と共に老化し、<span class="d-inline-block">機能も劣化していきます。</span></h3>
+        <p class="text-align-justify lh-180">爆発的な成長（再生）力を持った認定済日本小児の乳歯歯髄から採取した幹細胞と、50代の大人の脂肪から採取した幹細胞のどちらが優秀であるかは想像も難しくはないのではないでしょうか。以上のように、圧倒的な効果と安全性、安定した品質を提供できるのが、世界特許取得の不死化技術を採用した唯一の幹細胞である「エリート幹細胞ISC（不死化ヒト由来歯髄幹細胞培養上清）」なのです。</p>
+      </div>
+    </section>
+    <section class="bg-gray-900 pb-5 position-relative overflow-hidden pt-lg-5" id="partner">
+      <div class="text-center position-absolute top-0 w-100"> <img src="files/images/footer.webp" alt="" width="2500" height="1000" class="img-cover img-fluid bg-partner" loading="lazy"> <img src="files/images/msk_top_w_01.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 top-0" style="max-height: 300PX;"> <img src="files/images/msk_top_03.svg" alt="" width="380" height="60" class="w-100 h-auto position-absolute start-0 bottom-0" style="max-height: 300PX;"> </div>
+      <nav aria-label="breadcrumb" class="position-absolute w-100 ps-3">
+        <ol class="breadcrumb max-2000 mx-auto">
+          <li class="breadcrumb-item"><a href="/Izu/" class="text-gray-900 text-decoration-none">HOME</a></li>
+          <li class="breadcrumb-item text-gray-900 active" aria-current="page">サービス</li>
+        </ol>
+      </nav>
+      <div class="container position-relative py-5 mt-5 text-center">
+        <h2 class="py-5 fs-top-title ff-serif ffs-palt ls-1 d-grid d-lg-flex justify-content-center" style="margin-top:10vmin"><span>パートナーを</span><span>募集しています</span></h2>
+        <p class="text-primary ff-serif display-1 ls-1 mb-5">Partner</p>
+        <p class="ffs-palt ls-2 col-xxl-10 mx-xxl-auto">Izuでは、エグゼクティブなお客様へ<span class="d-inline-block">最先端医療やラグジュアリーな</span> <span class="d-inline-block">サービスをご提供するために、</span> <span class="d-inline-block">共に取り組んでいただける</span> <span class="d-inline-block">パートナーを募集しています。</span></p>
+      </div>
+      <div class="d-grid gap-3 gap-md-0 d-md-flex container px-3 px-md-0"> <a href="/Izu/" class="d-block position-relative text-center text-white text-decoration-none w-100 hover-scale"> <img src="files/images/top_009.webp" alt="" width="1280" height="600" class="img-cover img-fluid h-100 position-absolute start-0" loading="lazy">
+        <div class="py-5 d-grid position-relative ffs-palt ls-1"> <span>私は施設運営者です</span> <span class="ff-serif fs-2">提携したい</span> </div>
+        </a> <a href="/Izu/" class="d-block position-relative text-center text-white text-decoration-none w-100 hover-scale"> <img src="files/images/top_010.webp" alt="" width="1280" height="600" class="img-cover img-fluid h-100 position-absolute start-0" loading="lazy">
+        <div class="py-5 d-grid position-relative ffs-palt ls-1"> <span>私はクリニックです</span> <span class="ff-serif fs-2">提携したい</span> </div>
+        </a> </div>
+    </section>
+  </article>
+</main>
+<footer>
+  <div class="py-5 container px-5 d-lg-flex px-lg-0 align-items-lg-start justify-content-lg-between footer-order">
+    <div class="d-grid gap-3 col-lg-3 col-12"> <a href="/Izu/" class="btn rounded-0 position-relative btn-primary d-block w-100 fw-bold px-0">ご予約はこちら<span class="position-absolute end-0 me-2 top-0 h-100 d-flex align-items-center"><i class="bi bi-arrow-right fs-4"></i></span></a> <a href="/Izu/contact.html" class="btn rounded-0 position-relative d-block w-100 bg-white fw-bold px-0">お問い合わせ<span class="position-absolute end-0 me-2 top-0 h-100 d-flex align-items-center"><i class="bi bi-arrow-right fs-4"></i></span></a> </div>
+    <div class="d-flex align-items-start gap-2 py-3 py-lg-0 col-lg-3"> <img src="files/images/logo.png" alt="" width="500" height="500" class="img-fluid col-3 col-lg-4" loading="lazy">
+      <div>
+        <div class="pt-4 mt-1 pb-3 ps-2 fw-bold">株式会社Izu</div>
+        <div class="d-flex"> <a href="####" class="col-6 p-2"><img src="files/images/icon_facebook.svg" alt="Facebook" width="36" height="36" class="img-fluid" loading="lazy"></a> <a href="####" class="col-6 p-2"><img src="files/images/icon_Instagram.svg" alt="Instagram" width="36" height="36" class="img-fluid" loading="lazy"></a> </div>
+      </div>
+    </div>
+    <div class="d-flex">
+      <ul class="ps-0 mb-0 w-50">
+        <li class="d-block"><a href="/Izu/" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>HOME</a></li>
+        <li class="d-block"><a href="/Izu/service.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>サービス</a></li>
+        <li class="d-block"><a href="/Izu/#faq" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>FAQ</a></li>
+        <li class="d-block"><a href="/Izu/join.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>ご入会について</a></li>
+      </ul>
+      <ul class="ps-0 mb-0 w-50">
+        <li class="d-block"><a href="/Izu/about.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>Izuについて</a></li>
+        <li class="d-block"><a href="#partner" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i>パートナー募集</a></li>
+        <li class="d-block"><a href="/Izu/service.html" class="text-white text-decoration-none py-1 d-flex"><i class="bi bi-dash-lg text-primary"></i><span>エリート幹細胞<span class="d-inline-block">ISCについて</span></span></a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="small pb-3 mb-0 container ff-serif">copyright 2023 Izu. All rights reserved.</p>
+</footer>
+<a href="#top" id="menu_top" class="move js-menutop col-3 col-md-2 col-lg-1" style="z-index: 1040"><img src="files/images/icon_top.svg" alt="" width="100" height="100" class="img-fluid" loading="lazy"> </a> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script>
+const e_offcanvasMenu = new bootstrap.Offcanvas('#offcanvas_menu');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href*="#"]');
+a_offcanvasHash.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    e_offcanvasMenu.hide();
+  });
+});
+const e_header=document.querySelector('header');
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  const v_y=window.pageYOffset;
+  if(v_y > 10){
+    e_header.classList.add('blur');
+  }else{
+    e_header.classList.remove('blur');
+  }
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((v_y > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+</script>
+</body>
+</html>

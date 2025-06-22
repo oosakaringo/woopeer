@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>子供食堂</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="子供食堂">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+header {
+  margin-bottom: -5vmin
+}
+.ff-zen_maru {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+.max-1800 {
+  max-width: 1800px;
+}
+.top-icons {
+  left: var(--icon-left, auto);
+  right: var(--icon-right, auto);
+  top: var(--icon-top, auto);
+  bottom: var(--icon-bottom, auto);
+  width: var(--icon-width, auto);
+  height: auto;
+  z-index: 5
+}
+.msk-main::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(transparent 50%, #bababa 70%);
+  mix-blend-mode: multiply;
+}
+.bg-cv {
+  background-image: linear-gradient(to right, #6ab539, #fcc400);
+}
+.scroll-snap-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.scroll-snap-carousel::-webkit-scrollbar {
+display: none;
+}
+.scroll-snap-carousel .img-logo {
+  height: 1.5em;
+  width: auto;
+}
+.scroll-snap-carousel >* {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+.js-carousel-prev:disabled, .js-carousel-next:disabled {
+  opacity: 0!important;
+}
+.hover-big:hover > img {
+  transform: scale(1.2, 1.2);
+}
+.js-top-img {
+  transition: 3s ease-out 0.5s;
+  will-change: scale;
+  scale: 97%;
+}
+.scalePlus {
+  scale: 99%;
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+body {
+  font-size: 1.2rem
+}
+header {
+  margin-bottom: -2vmin
+}
+}
+
+@media (min-width:992px) {/*PC*/
+.top-icons:nth-child(n+5) {
+  top: calc(var(--icon-top, auto) - 80px);
+}
+.btn-top {
+  margin-top: -50px
+}
+.msk-main::after {
+  background-image: linear-gradient( to left, transparent 50%, #bababa 70%);
+}
+}
+
+@media (min-width:2001px) {
+footer {
+  margin-top: 100px;
+}
+}
+
+@media (max-width:767px) {/*SP*/
+.scroll-snap-carousel .badge, .scroll-snap-carousel .small {
+  font-size: 10px;
+}
+.scroll-snap-carousel .badge {
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+}
+</style>
+</head>
+
+<body class="bg-light">
+<header class="ps-2 w-100 position-sticky">
+  <div class="rounded-bottom-100 overflow-hidden move">
+    <h1 class="text-center col-10 col-lg-6 mx-auto bg-primary text-white ffs-palt fw-bold mb-0">子供たちのための子ども食堂検索サイト</h1>
+  </div>
+  <div class="d-flex justify-content-between move max-1800 mx-auto align-items-lg-end">
+    <div class="col-5 col-md-6 col-lg-3 max-280 text-center mb-1 move"><img src="files/img/logo.svg" alt="" width="300" height="107" class="img-fluid"></div>
+    <div class="d-none d-lg-flex p-0 small w-100 justify-content-evenly max-720 top-menu align-items-center mb-3"> <a href="###" class="text-decoration-none text-body small">はじめのページ</a>| <a href="###" class="text-decoration-none text-body small">利用規約（ルール）</a>| <a href="###" class="text-decoration-none text-body small">使い方（つかいかた）</a>| <a href="###" class="text-decoration-none text-body small">お問い合わせ</a> </div>
+    <div class="d-flex align-items-center gap-1 gap-lg-2 col-7 col-lg-2 gap-1 justify-content-end pe-2 filter-drop-shadow pt-3 move max-280"> <a href="###" class="btn btn-success rounded-circle p-0 d-flex flex-column justify-content-center square-w col-3 col-md-5 max-80">
+      <div><img src="files/img/icon_group_w.svg" alt="" width="32" height="28"></div>
+      <div class="smaller fw-bold">団体様へ</div>
+      </a> <a href="###" class="btn btn-primary rounded-circle p-0 d-flex flex-column justify-content-center square-w col-3 col-md-5 max-80">
+      <div><img src="files/img/icon_user_w.svg" alt="" width="32" height="28"></div>
+      <div class="smaller fw-bold">ログイン</div>
+      </a>
+      <button class="btn bg-white rounded-circle p-0 d-flex justify-content-center align-items-center square-w col-3 col-md-5 max-80 d-lg-none" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu" aria-controls="offcanvas_menu"><img src="files/img/icon_hamburger.svg" alt="" width="28" height="28"></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-560 bg-light" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1 justify-content-end">
+    <button type="button" class="btn p-0 fs-3 text-primary" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body text-center">
+    <div class="col-8 max-320 mb-1 mx-auto"><img src="files/img/logo.svg" alt="" width="400" height="200" class="img-fluid"></div>
+    <p class="small ff-zen_maru">子供たちのための子ども食堂検索サイト</p>
+    <div class="d-flex justify-content-center mb-5 pb-4"> <a href="index.html" class="d-flex align-items-center flex-column pe-5 border-end text-decoration-none text-body" data-bs-dismiss="offcanvas">
+      <div class="mb-2 btn-success p-4 rounded-circle"><img src="files/img/icon_group_w.svg" alt="" width="50" height="50"></div>
+      <span class="fs-5">団体様へ</span></a> <a href="index.html" data-bs-dismiss="offcanvas" class="d-flex align-items-center flex-column ps-5 text-decoration-none text-body">
+      <div class="mb-2 btn-primary p-4 rounded-circle"><img src="files/img/icon_user_w.svg" alt="" width="50" height="50"></div>
+      <span class="fs-5">ログイン</span></a> </div>
+    <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto border-bottom">はじめのページ</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto border-bottom">利用規約（ルール）</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto">使い方（つかいかた）</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn ff-zen_maru bg-danger-subtle text-danger d-flex gap-3 col-8 justify-content-center align-items-center mx-auto filter-drop-shadow my-4"><img src="files/img/icon_donation.svg" alt="" width="40" height="40">寄付の申し込み</a> </div>
+</div>
+<main>
+  <article>
+    <section class="ff-zen_maru">
+      <div class="container position-relative px-0 ffs-palt">
+        <div class="msk-main"><img src="files/img/bg_main.webp" alt="" width="2000" height="1700" class="img-cover w-100 h-100 position-absolute top-0 start-0 w-100 p-2+ js-top-img" style="object-position: 60% 30%;"></div>
+        <picture >
+          <source media="(min-width:992px)" srcset="files/img/msk_main_pc.svg" width="800" height="500">
+          <img src="files/img/msk_main_sp.svg" width="110" height="150" alt="" class="h-100 w-100 position-relative"> </picture>
+        <img src="files/img/img_banana.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-top:8%;--icon-left:1%;--icon-width:clamp(74px,14vw,129px)"> <img src="files/img/img_fish.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-top:39%;--icon-left:0.5%;--icon-width:clamp(68px,14vw,131px)"> <img src="files/img/img_vegetables.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-top:85%;--icon-left:0.5%;--icon-width:clamp(81px,16vw,186px)"> <img src="files/img/img_meat.svg" alt="" width="100" height="100" class="position-absolute top-icons me-lg-5" style="--icon-top:18%;--icon-right:2%;--icon-width:clamp(59px,12vw,131px)"> <img src="files/img/img_egg.svg" alt="" width="100" height="100" class="position-absolute top-icons me-lg-4" style="--icon-top:45%;--icon-right:0.5%;--icon-width:clamp(46px,10vw,95px)"> <img src="files/img/img_bread.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-top:68%;--icon-right:2%;--icon-width:clamp(50px,10vw,117px)"> <img src="files/img/img_rice.svg" alt="" width="100" height="100" class="position-absolute top-icons mt-md-5+ mt-lg-0+" style="--icon-top:92%;--icon-right:5%;--icon-width:clamp(77px,14vw,143px)">
+        <div class="position-absolute h-100 top-0 text-white small d-grid justify-items-center justify-items-lg-start w-100 filter-drop-shadow pb-5 align-items-end align-items-lg-center">
+          <div class="col-lg-9 mx-auto pt-lg-5 text-lg-start text-center">
+            <p class="mb-2 mb-md-4">こども食堂とは、君たち「こども」のために<br>
+              大人たちがご飯を提供してくれます。</p>
+            <p class="mb-md-5">今日はありがたくいただき<br>
+              いつか大きくなったらお返し出来るように。</p>
+            <a href="###" class="btn btn-lg bg-cv border-0 rounded-pill text-white pt-3 mb-md-5">ちかくの
+            <ruby>食堂
+              <rt>しょくどう</rt>
+            </ruby>
+            を探す</a> </div>
+        </div>
+      </div>
+      <div class="d-flex btn-primary position-relative btn-top justify-content-center ls-1"><a href="###" class="d-grid d-lg-flex w-50 justify-items-center fw-bold text-decoration-none text-white py-3 border-end justify-content-center align-items-center gap-md-2 max-360 border-white"><img src="files/img/icon_adult.svg" alt="" width="60" height="60"><span>おとなの方へ</span></a><a href="###" class="d-grid d-lg-flex w-50 justify-items-center fw-bold text-decoration-none text-white py-3 justify-content-center align-items-center gap-md-2 max-360"><img src="files/img/icon_line.svg" alt="" width="60" height="60"><span>お問い合わせ</span></a> </div>
+    </section>
+    <section class="py-5">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h3 class="fw-bold d-flex align-items-center gap-3 fs-5"><img src="files/img/icon_history.svg" alt="" width="40" height="40">寄付の履歴</h3>
+        <div>
+          <button class="btn px-2 js-carousel-prev"><i class="bi bi-arrow-left"></i>前へ</button>
+          <button class="btn px-2 js-carousel-next">次へ<i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="max-1800 mx-auto d-flex gap-4 filter-drop-shadow p-3 scroll-snap-carousel"> <a href="index.html" class="btn bg-white rounded-5 max-480 p-1 d-flex text-start">
+        <div class="col-3"><img src="files/img/food_01.jpg" alt="" width="1500" height="1000" class="img-cover square-w w-100 h-auto rounded-3"></div>
+        <div class="col-9 p-1 p-md-2 d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex justify-content-between border-bottom">
+              <h5 class="fs-6 fw-bold mb-0">詰め合わせ野菜</h5>
+              <span class="small fw-bold text-primary">3月6日 14時</span> </div>
+          </div>
+          <p class="small mb-0">野菜３種５キロ程度です。売り物として使えない。</p>
+          <div class="d-flex align-items-end justify-content-between"> <span class="badge bg-primary">〇〇〇〇〇〇〇〇農産（株）</span> <img src="files/img/logo_01.svg" alt="" width="300" height="100" class="img-logo"> </div>
+        </div>
+        </a> <a href="index.html" class="btn bg-white rounded-5 max-480 p-1 d-flex text-start">
+        <div class="col-3"><img src="files/img/food_02.jpg" alt="" width="1500" height="1000" class="img-cover square-w w-100 h-auto rounded-3"></div>
+        <div class="col-9 p-1 p-md-2 d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex justify-content-between border-bottom">
+              <h5 class="fs-6 fw-bold mb-0">詰め合わせフルーツ</h5>
+              <span class="small fw-bold text-primary">3月6日 14時</span> </div>
+          </div>
+          <p class="small mb-0">フルーツ３種５キロ程度です。売り物として使えない。</p>
+          <div class="d-flex align-items-end justify-content-between"> <span class="badge bg-primary">〇〇〇〇〇〇〇〇農産（株）</span> <img src="files/img/logo_02.jpg" alt="" width="300" height="100" class="img-logo"> </div>
+        </div>
+        </a> <a href="index.html" class="btn bg-white rounded-5 max-480 p-1 d-flex text-start">
+        <div class="col-3"><img src="files/img/food_03.jpg" alt="" width="1500" height="1000" class="img-cover square-w w-100 h-auto rounded-3"></div>
+        <div class="col-9 p-1 p-md-2 d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex justify-content-between border-bottom">
+              <h5 class="fs-6 fw-bold mb-0">詰め合わせパン</h5>
+              <span class="small fw-bold text-primary">3月6日 14時</span> </div>
+          </div>
+          <p class="small mb-0">パン３種５キロ程度です。売り物として使えない。</p>
+          <div class="d-flex align-items-end justify-content-between"> <span class="badge bg-primary">〇〇〇〇〇〇〇〇パン製造（株）</span> <img src="files/img/logo_03.svg" alt="" width="300" height="100" class="img-logo"> </div>
+        </div>
+        </a> <a href="index.html" class="btn bg-white rounded-5 max-480 p-1 d-flex text-start">
+        <div class="col-3"><img src="files/img/food_04.jpg" alt="" width="1500" height="1000" class="img-cover square-w w-100 h-auto rounded-3"></div>
+        <div class="col-9 p-1 p-md-2 d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex justify-content-between border-bottom">
+              <h5 class="fs-6 fw-bold mb-0">詰め合わせドーナツ</h5>
+              <span class="small fw-bold text-primary">3月6日 14時</span> </div>
+          </div>
+          <p class="small mb-0">ドーナツ３種５キロ程度です。売り物として使えない。</p>
+          <div class="d-flex align-items-end justify-content-between"> <span class="badge bg-primary">〇〇〇〇〇〇〇〇製造（株）</span> <img src="files/img/logo_04.png" alt="" width="300" height="100" class="img-logo"> </div>
+        </div>
+        </a> </div>
+    </section>
+  </article>
+</main>
+<footer class="">
+  <div class="d-lg-flex align-items-center container mb-lg-4">
+    <div class="mx-auto d-flex align-items-end gap-2 justify-content-center max-600 mb-4 col-lg-5 justify-content-lg-start">
+      <div class="col-5 col-lg-6"><img src="files/img/logo.svg" alt="" width="300" height="107" class="img-fluid"></div>
+      <span class="ff-zen_maru small lh-sm">子供たちのための<br>
+      子ども食堂検索サイト</span></div>
+    <div class="d-flex container px-lg-0 mb-4 mb-lg-0 flex-lg-column small justify-content-evenly">
+      <ul class="footer-link ps-0 mb-0 fw-bold d-lg-flex justify-content-evenly">
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">はじめのページ</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">利用規約（ルール）</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">使い方（つかいかた）</a></li>
+      </ul>
+      <ul class="footer-link ps-0 mb-0 fw-bold d-lg-flex">
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">個人情報保護方針</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">プライバシーポリシー</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+  <a href="index.html" data-bs-dismiss="offcanvas" class="btn ff-zen_maru bg-danger-subtle text-danger d-flex gap-3 col-8 justify-content-center align-items-center mx-auto filter-drop-shadow mb-5 max-320"><img src="files/img/icon_donation.svg" alt="" width="40" height="40">寄付の申し込み</a>
+  <p class="text-center small py-3 mb-0 border-top">Copyright&copy;こども食堂.All rights reserved.</p>
+</footer>
+
+<div id="menu_top" class="move js-menutop col-4 max-80 pe-4" style="z-index: 1040">
+  <div class="rounded-circle filter-drop-shadow bg-white square-w d-flex justify-content-center align-items-center"> <i class="bi bi-arrow-up fs-2"></i></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script>
+const e_html=document.querySelector('html');
+const e_offcanvas=document.querySelector('[data-bs-toggle="offcanvas"]');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+e_offcanvas.addEventListener('click',()=>{
+  e_html.classList.add('offcanvasOP');
+});
+console.log(a_offcanvasHash);
+a_offcanvasHash.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    setTimeout(()=>{
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+const e_header=document.querySelector('header');
+const e_jsTopImg=document.querySelector('.js-top-img');
+e_jsTopImg.classList.add('scalePlus');
+let r_footer;
+window.onscroll = function () {  
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if(window.pageYOffset > 20){
+    e_header.classList.add('blur-w');
+    e_jsTopImg.classList.remove('scalePlus');
+  }else{
+    e_header.classList.remove('blur-w');
+    e_jsTopImg.classList.add('scalePlus');
+  }
+  if ((window.pageYOffset > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+
+const backToTop=()=>{
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+js_menutop.addEventListener("click", backToTop);
+}
+
+/*カルーセル移動*/
+const v_autoCarouselTime=10000;
+let v_autoCarouseFlg=true;
+let v_autoCarouseEnd=false;
+const e_scrollSnapCarousel=document.querySelector('.scroll-snap-carousel');
+const a_crollSnapCarouselChildren=e_scrollSnapCarousel.children;
+const v_crollSnapCarouselChildrenAll=a_crollSnapCarouselChildren.length;
+const e_jsCarouselPrev=document.querySelector('.js-carousel-prev');
+const e_jsCarouselNext=document.querySelector('.js-carousel-next');
+const f_carouselPrev=()=>{
+  const v_scrollSnapCarouselWidth=a_crollSnapCarouselChildren[0].clientWidth*2/3;
+  e_scrollSnapCarousel.scrollLeft -=v_scrollSnapCarouselWidth;
+  setTimeout(f_check,300);
+}
+const f_carouselNext=()=>{
+  const v_scrollSnapCarouselWidth=a_crollSnapCarouselChildren[0].clientWidth*2/3;
+  e_scrollSnapCarousel.scrollLeft +=v_scrollSnapCarouselWidth;
+  setTimeout(f_check,300);
+}
+const f_check=()=>{
+  const v_scroll=e_scrollSnapCarousel.scrollLeft;
+  const v_scrollSnapCarouselWidth=e_scrollSnapCarousel.offsetWidth;
+  const v_crollSnapCarouselChildrenWidth=v_crollSnapCarouselChildrenAll*(a_crollSnapCarouselChildren[0].clientWidth+24);
+  const v_difference=v_crollSnapCarouselChildrenWidth-v_scroll-v_scrollSnapCarouselWidth;
+  if(v_scroll<10){
+    e_jsCarouselPrev.disabled=true;
+  }else{
+    e_jsCarouselPrev.disabled=false;
+  }
+  if(v_difference<0){
+    e_jsCarouselNext.disabled=true;
+    v_autoCarouseEnd=true;
+  }else{
+    e_jsCarouselNext.disabled=false;
+  }
+}
+f_check();
+const f_autoCarousel=()=>{
+  if(v_autoCarouseEnd){
+    e_scrollSnapCarousel.scrollLeft=0;
+    v_autoCarouseEnd=false;
+    setTimeout(f_check,300);
+  }else if(v_autoCarouseFlg){
+    f_carouselNext();
+  }
+  setTimeout(f_autoCarousel,v_autoCarouselTime);
+}
+setTimeout(f_autoCarousel,v_autoCarouselTime);
+e_scrollSnapCarousel.addEventListener('touchstart',()=>{v_autoCarouseFlg=false});
+e_scrollSnapCarousel.addEventListener('touchend',()=>{v_autoCarouseFlg=true});
+e_scrollSnapCarousel.addEventListener('mouseover',()=>{v_autoCarouseFlg=false});
+e_scrollSnapCarousel.addEventListener('mouseout',()=>{v_autoCarouseFlg=true});
+e_jsCarouselPrev.addEventListener('click',f_carouselPrev);
+e_jsCarouselNext.addEventListener('click',f_carouselNext);
+</script>
+</body>
+</html>

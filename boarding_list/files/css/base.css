@@ -3,7 +3,7 @@
 a{color:var(--bs-success)}
 a:hover{color:var(--bs-success-hover)}
 body{min-height:100vh;background-color:#f5f5f5}
-header.sticky-top{height:calc(50px + 1em);margin-bottom: calc(-50px - 1em);z-index:1}
+header.sticky-top{height:calc(50px + 1em);margin-bottom: calc(-50px - 1em);z-index:10}
 header.sticky-top .container{background-color:rgba(0,0,0,0.4)}
 .h-h{z-index: -1;margin-bottom:-1em}
 .bd-gray-800{background-color:var(--bs-gray-dark)}
@@ -42,11 +42,12 @@ header.sticky-top .container{background-color:rgba(0,0,0,0.4)}
 .smaller{font-size:10px}
 .ls-1{letter-spacing:0.1em}
 .ls-2{letter-spacing:0.2em}
+.ls-4{letter-spacing:0.4em}
+.img-square{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
 .bottom-1{bottom:-1px}
 .remove-gap{transform: scaleY(1.02)}
 .filter-drop-shadow{filter:drop-shadow(0 0 5px rgba(0,0,0,0.5))}
 .offcanvas-end{width:500px;border:0}
-.modal.fade:not(.show) .modal-dialog{transform:translate(200px,0)}
 .border-color-nomal{border-color:rgba(0,0,0,.125)!important}
 .btn-menu{width:50px;height:50px;border:none;border-radius:0;line-height:1}
 .btn-active{position:relative}

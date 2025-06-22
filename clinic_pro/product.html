@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>商品詳細　CLINIC PRO クリニック・プロ　クリニック商材マッチングサイト</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="商品詳細　CLINIC PRO クリニック・プロ　クリニック商材マッチングサイト">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Noto+Sans+JP:wght@400;600&display=swap');
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+html:not(.offcanvasOP) {
+  scroll-padding-top: 70px
+}
+header {
+  background-image: url("files/img/bg_header.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header-breadcrumb {
+  top: 70px;
+  z-index: 10;
+  height: 50px;
+}
+.main-img {
+  height: 50vmin;
+}
+.max-2000 {
+  max-width: 2000px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: var(--bs-primary);
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  border: none;
+}
+.grid-2-2-3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3, .grid-3-4-6 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-1-2-3 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.badge-square {
+  height: fit-content;
+  aspect-ratio: 1/1;
+}
+.footer-order >:nth-child(1) {
+  order: 3;
+}
+.footer-order >:nth-child(2) {
+  order: 4;
+}
+.footer-order >:nth-child(3) {
+  order: 1;
+}
+.footer-order >:nth-child(4) {
+  order: 2;
+}
+a.shadow:hover {
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,0,0,.5)!important;
+  transition: 0.5s ease-out 0s;
+  z-index: 10
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+.header-breadcrumb {
+  margin-bottom: -60px;
+  height: 60px;
+}
+.grid-3-4-6 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-1-2-3, .grid-2-3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (min-width:992px) {/*PC*/
+.grid-3-4-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.grid-1-2-3, .grid-2-2-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+
+@media (max-width:767px) {/*SP*/
+header {
+  background-size: auto 180%;
+  background-position: 50% 10%;
+}
+}
+</style>
+</head>
+
+<body>
+<header class="ps-2 top-0 w-100 position-sticky">
+  <div class="d-flex justify-content-between align-items-center move max-2000 mx-auto">
+    <div class="col-5 col-md-3 max-160 text-center mb-1"><span class="smaller fw-bold ffs-palt text-white">クリニック専用販売サイト-クリプロ</span> <img src="files/img/logo_clipro.svg" alt="" width="237.84" height="64" class="img-fluid"></div>
+    <div class="d-flex align-items-center gap-1"> <a href="###" class="text-decoration-none text-white smaller d-grid text-center gap-1"> <span>Login</span> <img src="files/img/icon_user.svg" alt="" width="72" height="24"> </a>
+      <button class="btn btn-sm px-1 text-white d-grid gap-1" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <span class="smaller">Language</span> <span class="d-flex align-items-center gap-1"> <img src="files/img/icon_language.svg" alt="" width="24" height="24"> <span>JP</span><i class="bi bi-chevron-down"></i> </span> </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+        <li><a class="dropdown-item" href="#">日本語</a></li>
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">中文簡体</a></li>
+      </ul>
+      <button class="btn py-2 px-3 lh-1 fs-3" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><img src="files/img/icon_hamburger.svg" alt="" width="32" height="32"></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-560 bg-success text-white" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1 justify-content-end">
+    <button type="button" class="btn p-0 text-white fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex justify-content-center mb-5 pb-4"> <a href="###" class="d-flex align-items-center flex-column pe-5 border-end text-white text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close"><img src="files/img/icon_plan_w.svg" alt="" width="60" height="60" class="mb-3"> <span class="small d-none d-sm-block">私はクリニックに</span> <span class="fs-5">提案したい</span></a>
+      <button type="button" class="btn d-flex align-items-center flex-column ps-5 p-0 text-white" data-bs-toggle="modal" data-bs-target="#modal-sale" data-bs-dismiss="offcanvas" aria-label="Close"> <img src="files/img/icon_sale_w.svg" alt="" width="60" height="60" class="mb-3"> <span class="small d-none d-sm-block">私はクリニックです</span> <span class="fs-5">販売したい</span> </button>
+    </div>
+    <div class="d-flex gap-3 justify-content-around flex-wrap mb-5"> <a href="###" class="btn col-10 col-md-5 text-primary rounded-pill bg-white" data-bs-dismiss="offcanvas" aria-label="Close">提案を探したい</a> <a href="###" class="btn col-10 col-md-5 text-primary rounded-pill border border-white" data-bs-dismiss="offcanvas" aria-label="Close"><span class="text-white">お問い合わせ</span></a> </div>
+    <div class="d-flex small justify-content-center"> <a href="####" class="text-decoration-none text-white d-block px-3 border-end" data-bs-dismiss="offcanvas" aria-label="Close" target="_blank" rel="noopener">運営会社（外部リンク）</a> <a href="####" class="text-decoration-none text-white d-block px-3" data-bs-dismiss="offcanvas" aria-label="Close">利用規約（汎用）</a> </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-sale" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center mb-3"> <img src="files/img/icon_sale_b.svg" alt="" width="80" height="60">
+          <div>For CLINIC</div>
+        </div>
+        <h5 class="text-center">私はクリニックです</h5>
+        <p class="col-10 mx-auto mb-4">当サイトはクリニック様専用です。新規会員登録後審査がございます。あらかじめご了承ください。</p>
+        <div class="text-center"> <a href="###" class="btn btn-success rounded-pill col-8 mb-3" data-bs-dismiss="modal" aria-label="Close">新規会員登録（無料）</a> <a href="###" class="btn btn-success rounded-pill col-8 mb-3" data-bs-dismiss="modal" aria-label="Close">ログインする</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header-breadcrumb position-sticky max-2000 mx-auto">
+  <div class="d-flex align-items-center justify-content-md-between gap-2 container h-100">
+    <div class="col-md-2">
+      <button class="btn btn-sm btn-success ls-1 rounded-pill py-1 px-3" onClick="history.back()"> もどる </button>
+    </div>
+    <span class="ffs-palt"> HOME /  商品： KUJIME 美容クリーム</span> <span aria-label="space" class="col-md-2"></span> </div>
+</div>
+<main>
+  <article>
+    <section class="position-relative bg-light"> <img src="files/img/bg_product_top.webp" alt="" width="2000" height="980" class="img-cover max-2000 mx-auto d-block w-100 main-img">
+      <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+        <div class="container">
+          <h2 class="display-4">KUJIME</h2>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container py-3">
+        <h2 class="text-center fw-bold fs-4 ls-1 ffs-palt my-4">KUJIME美容クリーム</h2>
+        <div class="d-grid d-md-flex gap-4 mb-5">
+          <div id="carouselProduct" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="8000">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselProduct" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselProduct" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselProduct" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active"> <img src="files/img/product_01.webp" class="d-block w-100 img-cover square-h" alt="" width="600" height="600"> </div>
+              <div class="carousel-item"> <img src="files/img/product_02.webp" class="d-block w-100 img-cover square-h" alt="" width="600" height="600"> </div>
+              <div class="carousel-item"> <img src="files/img/product_03.webp" class="d-block w-100 img-cover square-h" alt="" width="600" height="600"> </div>
+            </div>
+            <div class="position-absolute top-0 start-0 pt-3 ps-3 d-flex gap-2 fs-5"> <span class="badge bg-primary">一般販売</span><span class="badge text-primary bg-white">直送販売</span> </div>
+            <div class="position-absolute top-0 end-0 mt-3 me-3 col-2 col-md-3 text-end"> <img src="files/img/icon_new.svg" alt="new" width="120" height="120" class="img-fluid"></div>
+          </div>
+          <div class="w-100 px-3 px-md-0 d-grid gap-3 align-content-start">
+            <div class="small order-md-1">ブランド：KUJIME</div>
+            <div class="bg-success px-3 py-1 fw-bold text-white order-md-1">幹細胞</div>
+            <dl class="d-flex justify-content-between mb-0 align-items-center px-3 order-md-1">
+              <dt class="fw-light">販売価格</dt>
+              <dd class="mb-0 fs-4">¥15,000</dd>
+            </dl>
+            <dl class="d-flex justify-content-between mb-0 align-items-center px-3 bg-light order-md-1">
+              <dt>卸売価格</dt>
+              <dd class="mb-0 fs-4 text-gray-400">¥15,000</dd>
+            </dl>
+            <div class="d-grid gap-2 grid-3 order-md-0"><span class="btn px-0 bg-primary-container text-primary">幹細胞</span> <span class="btn px-0 bg-primary-container text-primary">ヒアルロン酸</span> <span class="btn px-0 bg-primary-container text-primary">幹細胞</span></div>
+            <p class="mb-0 order-md-1 pt-md-4">歯髄幹細胞培養液*が素肌美を呼び覚ます。<br>
+              先進的な再生技術から生まれた美容クリーム<br>
+              歯髄幹細胞培養液*を配合し、乾燥やハリ不足が気になる肌に働きかける次世代幹細胞エキス配合クリームが誕生しました。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="bg-light pt-4 col-md-10 mx-auto mb-5">
+          <h3 class="fw-bold text-center fs-5 ls-1">クリニック様へ</h3>
+          <div class="small p-3 position-relative">
+            <p> 日頃より、私たちのクリニック向けサービスをご利用いただき、誠にありがとうございます。私たちは、常に皆様の健康ケアの向上と効率的な経営をサポートすることを使命としており、新たな展開と提案をお知らせできることを嬉しく思います。<br>
+              お知らせいたしますところ、私たちはさらなる質の高い医療ケアとスムーズなクリニック経営をサポートするため、以下の新しいサービスおよび製品を提供いたします</p>
+            <ol>
+              <li>新製品の導入：最新の医療機器や診療支援ツールを取り扱っており、クリニックの設備と医療スタッフの能力向上にお役立ていただけます。</li>
+              <li>病院情報システムのカスタマイズ：クリニックの特別なニーズに合わせて、病院情報システムをカスタマイズし、より効果的なデータ管理を実現します。</li>
+              <li>スタッフトレーニングと教育：医療スタッフのスキル向上を支援し、クリニックの医療サービスの品質向上を実現します。</li>
+              <li>効果的な広報戦略：クリニックの知名度向上と患者数増加を促進するための広報戦略の立案と実行をサポートします。</li>
+              <li>専門的なコンサルテーション：経営課題や戦略についてのアドバイスと戦略策定を行い、クリニックの成長をサポートします。</li>
+            </ol>
+            <p>これらのサービスを通じて、クリニックの経営者様の成功を共に築いていきたいと考えております。ご質問やご要望がございましたら、いつでもお気軽にご連絡ください。<br>
+              また、詳細情報やカスタマイズについては、弊社担当者との直接の対話をお勧めいたします。私たちは皆様のニーズに合わせた最適なソリューションを提供いたします。<br>
+              今後とも、ご支援いただきますようお願い申し上げます。皆様のクリニックが健康と繁栄の拠点となるお手伝いをさせていただけることを楽しみにしております。<br>
+              <br>
+              どうぞよろしくお願い申し上げます。<br>
+              敬具、<br>
+              <br>
+              [クリニック向けサービス提供者の名前]<br>
+              [連絡先情報]</p>
+            <div id="js_flg_login" class="position-absolute w-100 h-100 blur-w top-0 start-0 d-flex justify-content-center align-items-center fs-5 p-4">
+              <div>
+                <p class="mb-4 small">会員登録していただくとより詳細な情報をご覧いただけます。</p>
+                <a href="###" class="btn btn-success mx-auto d-block col-8 mb-4 rounded-pill">新規会員登録（無料）</a> <a href="###" class="btn btn-outline-success mx-auto d-block col-8 rounded-pill"><span>ログインする</span></a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container text-center py-5">
+        <h3 class="fw-bold fs-5 ls-1 mb-4">同じブランドの商品</h3>
+        <div class="d-grid gap-2 gap-md-3 grid-2-2-3 mb-4 small"> <a href="###" class="bg-white d-block text-decoration-none text-body position-relative shadow"> <img src="files/img/img_goods.webp" alt="" width="400" height="300" class="img-fluid" loading="lazy">
+          <div class="position-absolute top-0 end-0 mt-3 me-3 col-3 col-md-3 text-end"> <img src="files/img/icon_new.svg" alt="new" width="120" height="120" class="img-fluid"></div>
+          <h5 class="fw-bold px-2 fs-6">KUJIME美容クリーム</h5>
+          <div class="bg-success text-white fw-bold px-2">【特徴】不死化幹細胞</div>
+          <div class="py-1 px-2">ブランド：KUJIME</div>
+          <div class="px-2 smaller">先進的な再生技術から生まれた美容クリーム</div>
+          <div class="fs-4 p-2 pb-3">¥15,000</div>
+          </a> <a href="###" class="bg-white d-block text-decoration-none text-body position-relative shadow"> <img src="files/img/img_goods.webp" alt="" width="400" height="300" class="img-fluid" loading="lazy">
+          <div class="position-absolute top-0 end-0 mt-3 me-3 col-3 col-md-3 text-end"> <img src="files/img/icon_recruit.svg" alt="採用多数" width="120" height="120" class="img-fluid"></div>
+          <h5 class="fw-bold px-2 fs-6">KUJIME美容クリーム</h5>
+          <div class="bg-success text-white fw-bold px-2">【特徴】不死化幹細胞</div>
+          <div class="py-1 px-2">ブランド：KUJIME</div>
+          <div class="px-2 smaller">先進的な再生技術から生まれた美容クリーム</div>
+          <div class="fs-4 p-2 pb-3">¥15,000</div>
+          </a> <a href="###" class="bg-white d-block text-decoration-none text-body position-relative shadow"> <img src="files/img/img_goods.webp" alt="" width="400" height="300" class="img-fluid" loading="lazy">
+          <div class="position-absolute top-0 end-0 mt-3 me-3 col-3 col-md-3 text-end"> <img src="files/img/icon_classic.svg" alt="定番" width="120" height="120" class="img-fluid"></div>
+          <h5 class="fw-bold px-2 fs-6">KUJIME美容クリーム</h5>
+          <div class="bg-success text-white fw-bold px-2">【特徴】不死化幹細胞</div>
+          <div class="py-1 px-2">ブランド：KUJIME</div>
+          <div class="px-2 smaller">先進的な再生技術から生まれた美容クリーム</div>
+          <div class="fs-4 p-2 pb-3">¥15,000</div>
+          </a> </div>
+      </div>
+    </section>
+    <section class="bg-light py-5">
+      <div class="container">
+        <h3 class="fw-bold fs-5 ls-1 text-center">お取引条件</h3>
+        <div class="bg-white p-4 pb-1 col-md-10 mx-auto mb-3 small" style="max-height: 12em;overflow-y: auto">
+          <p> お取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意するお取引条件に同意する </p>
+        </div>
+        <div class="form-check d-flex justify-content-center gap-2 mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="product_check">
+          <label class="form-check-label" for="product_check"> お取引条件に同意する </label>
+        </div>
+        <div class="text-center"><a class="btn btn-danger rounded-pill btn-cv disabled">取引を申請する</a> </div>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="bg-gray-800 text-white">
+  <div class="d-lg-flex py-5 ps-5 px-lg-0 container justify-content-between footer-order">
+    <ul class="footer-link ps-0 mb-0">
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>HOME</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>クリニックに提案したい</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>商材を販売したい</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>提案を探したい</a></li>
+    </ul>
+    <ul class="footer-link ps-0 mb-5">
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>利用規約（汎用）</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>お問合せ（汎用）</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>運営会社（外部リンク）</a></li>
+    </ul>
+    <div class="pb-3"><img src="files/img/logo_clipro.svg" alt="" width="237.84" height="64" class="img-fluid"></div>
+    <dl class="mb-0 me-4 me-lg-5">
+      <dt class="fs-3 fw-normal ls-1 mb-2">SOLID Inc.</dt>
+      <dd class="mb-0">〒155-0031<br>
+        東京都世田谷区北沢２-３０-８<br>
+        クレセント下北沢２Ｆ</dd>
+    </dl>
+  </div>
+  <p class="text-center small py-3 mb-0 border-top">Copyright&copy;aaaaaaa.All rights reserved.</p>
+</footer>
+<div id="menu_top" class="move js-menutop col-3 max-120 pe-4" style="z-index: 1040">
+  <div class="bg-success text-white badge-square d-flex align-items-center justify-content-center rounded-circle flex-column filter-drop-shadow"> <img src="files/img/icon_up.svg" alt="" width="16" height="16" class="img-fluid"> TOP </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+const arg = new Object;
+const pair=location.search.substring(1).split('&');
+for(i=0;pair[i];i++) {
+var kv = pair[i].split('=');
+arg[kv[0]]=kv[1];
+}
+if(arg['login']=="true"){
+  document.getElementById('js_flg_login').remove();
+}
+
+/*cvボタン同意でON*/
+const e_productCheck=document.getElementById('product_check');
+const e_btnCv=document.querySelector('.btn-cv');
+e_productCheck.addEventListener('change',(e) => {
+  if(e.target.checked){
+    e_btnCv.classList.remove('disabled');
+  }else{
+    e_btnCv.classList.add('disabled');
+  }
+});
+
+const e_html=document.querySelector('html');
+const e_offcanvas=document.querySelector('[data-bs-toggle="offcanvas"]');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+e_offcanvas.addEventListener('click',function(){
+  e_html.classList.add('offcanvasOP');
+});
+console.log(a_offcanvasHash);
+a_offcanvasHash.forEach(function(e){
+  e.addEventListener('click',function(){
+    setTimeout(function(){
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+const e_headerBreadcrumb=document.querySelector('.header-breadcrumb');
+
+let r_footer;
+window.onscroll = function () {  
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if(window.pageYOffset > 5){
+    e_headerBreadcrumb.classList.add('blur-w');
+  }else{
+    e_headerBreadcrumb.classList.remove('blur-w');
+  }
+  if ((window.pageYOffset > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+
+js_menutop.addEventListener("click", backToTop);
+function backToTop() {
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

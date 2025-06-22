@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>MAP|子供食堂</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="MAP|子供食堂">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&family=Zen+Maru+Gothic:wght@500&display=swap" rel="stylesheet">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.ff-zen_maru {
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+.max-1800 {
+  max-width: 1800px;
+}
+.top-icons {
+  left: var(--icon-left, auto);
+  right: var(--icon-right, auto);
+  top: var(--icon-top, auto);
+  bottom: var(--icon-bottom, auto);
+  width: var(--icon-width, auto);
+  height: auto;
+}
+#map {
+  height: 50vh;
+  width: 100%;
+}
+#restaurant-list {
+  max-height: 40vh;
+  overflow-y: auto;
+  padding-bottom: 20vh!important;
+  scroll-behavior: smooth;
+}
+.restaurant-item {
+  font-size: 10px;
+}
+.place_photo {
+  max-height: 40vh;
+  width: auto;
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+body {
+  font-size: 1.2rem
+}
+.restaurant-item {
+  font-size: 14px;
+}
+}
+
+@media (min-width:992px) {/*PC*/
+.top-icons:nth-child(n+5) {
+  top: calc(var(--icon-top, auto) - 80px);
+}
+}
+
+@media (min-width:2001px) {
+footer {
+  margin-top: 100px;
+}
+}
+
+@media (max-width:767px) {/*SP*/
+}
+</style>
+</head>
+
+<body class="bg-light">
+<header class="ps-2 w-100 position-sticky">
+  <div class="rounded-bottom-100 overflow-hidden move">
+    <h1 class="text-center col-10 col-lg-6 mx-auto bg-primary text-white ffs-palt fw-bold mb-0">子供たちのための子ども食堂検索サイト</h1>
+  </div>
+  <div class="d-flex justify-content-between move max-1800 mx-auto align-items-lg-end">
+    <div class="col-5 col-md-6 col-lg-3 max-280 text-center mb-1 move"><img src="files/img/logo.svg" alt="" width="300" height="107" class="img-fluid"></div>
+    <div class="d-none d-lg-flex p-0 small w-100 justify-content-evenly max-720 top-menu align-items-center mb-3"> <a href="###" class="text-decoration-none text-body small">はじめのページ</a>| <a href="###" class="text-decoration-none text-body small">利用規約（ルール）</a>| <a href="###" class="text-decoration-none text-body small">使い方（つかいかた）</a>| <a href="###" class="text-decoration-none text-body small">お問い合わせ</a> </div>
+    <div class="d-flex align-items-center gap-1 gap-lg-2 col-7 col-lg-2 gap-1 justify-content-end pe-2 filter-drop-shadow pt-3 move max-280"> <a href="###" class="btn btn-success rounded-circle p-0 d-flex flex-column justify-content-center square-w col-3 col-md-5 max-80">
+      <div><img src="files/img/icon_group_w.svg" alt="" width="32" height="28"></div>
+      <div class="smaller fw-bold">団体様へ</div>
+      </a> <a href="###" class="btn btn-primary rounded-circle p-0 d-flex flex-column justify-content-center square-w col-3 col-md-5 max-80">
+      <div><img src="files/img/icon_user_w.svg" alt="" width="32" height="28"></div>
+      <div class="smaller fw-bold">ログイン</div>
+      </a>
+      <button class="btn bg-white rounded-circle p-0 d-flex justify-content-center align-items-center square-w col-3 col-md-5 max-80 d-lg-none" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu" aria-controls="offcanvas_menu"><img src="files/img/icon_hamburger.svg" alt="" width="28" height="28"></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-560 bg-light" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1 justify-content-end">
+    <button type="button" class="btn p-0 fs-3 text-primary" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body text-center">
+    <div class="col-8 max-320 mb-1 mx-auto"><img src="files/img/logo.svg" alt="" width="400" height="200" class="img-fluid"></div>
+    <p class="small ff-zen_maru">子供たちのための子ども食堂検索サイト</p>
+    <div class="d-flex justify-content-center mb-5 pb-4"> <a href="index.html" class="d-flex align-items-center flex-column pe-5 border-end text-decoration-none text-body" data-bs-dismiss="offcanvas">
+      <div class="mb-2 btn-success p-4 rounded-circle"><img src="files/img/icon_group_w.svg" alt="" width="50" height="50"></div>
+      <span class="fs-5">団体様へ</span></a> <a href="index.html" data-bs-dismiss="offcanvas" class="d-flex align-items-center flex-column ps-5 text-decoration-none text-body">
+      <div class="mb-2 btn-primary p-4 rounded-circle"><img src="files/img/icon_user_w.svg" alt="" width="50" height="50"></div>
+      <span class="fs-5">ログイン</span></a> </div>
+    <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto border-bottom">はじめのページ</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto border-bottom">利用規約（ルール）</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn btn-block col-10 mx-auto">使い方（つかいかた）</a> <a href="index.html" data-bs-dismiss="offcanvas" class="btn ff-zen_maru bg-danger-subtle text-danger d-flex gap-3 col-8 justify-content-center align-items-center mx-auto filter-drop-shadow my-4"><img src="files/img/icon_donation.svg" alt="" width="40" height="40">寄付の申し込み</a> </div>
+</div>
+<main>
+  <article>
+    <section class="pt-3 overflow-hidden">
+      <h2 class="btn-primary text-white ff-zen_maru text-center py-3 mb-0 js-day"></h2>
+      <div class="container p-0 pb-5 mb-5 position-relative">
+        <img src="files/img/img_fish_o.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-top:10%;--icon-left:-6%;--icon-width:clamp(80px,14vw,160px)"> <img src="files/img/img_bread_o.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-top:20%;--icon-right:-8%;--icon-width:clamp(80px,14vw,160px)"><img src="files/img/img_rice_o.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-bottom:30%;--icon-right:-1%;--icon-width:clamp(80px,14vw,160px)"> <img src="files/img/img_egg_o.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-bottom:30%;--icon-left:-2%;--icon-width:clamp(80px,14vw,160px)"> <img src="files/img/img_broccoli_o.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-bottom:10%;--icon-left:-2%;--icon-width:clamp(80px,14vw,160px)"> <img src="files/img/img_tomato_o.svg" alt="" width="100" height="100" class="position-absolute top-icons" style="--icon-bottom:0;--icon-right:-2%;--icon-width:clamp(80px,14vw,160px)">
+        <div id="map" class="position-relative mt-lg-5"></div>
+        <ul id="restaurant-list" class="d-grid p-3 gap-2 position-relative max-800 mx-auto">
+        </ul>
+      </div>
+    </section>
+  </article>
+</main>
+<div class="modal fade" id="placeModal" tabindex="-1" aria-labelledby="placeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg px-2">
+    <div class="modal-content bg-white">
+      <div class="modal-body">
+        <div class="text-center"><img src="files/img/no_image_map.webp" alt="" width="1500" height="1000" class="img-fluid rounded-5 place_photo"></div>
+        <div class="ffs-palt py-4">
+          <dl class="small d-flex border-bottom mb-0 py-1">
+            <dt class="d-flex col-4 fw-normal gap-1"><img src="files/img/icon_home.svg" alt="" width="20" height="20"><span class="text-align-justify-all w-100">名称</span>:</dt>
+            <dd class="place_name mb-0 ps-1">名称</dd>
+          </dl>
+          <dl class="small d-flex border-bottom mb-0 py-1">
+            <dt class="d-flex col-4 fw-normal gap-1"><img src="files/img/icon_place.svg" alt="" width="20" height="20"><span class="text-align-justify-all w-100">都道府県</span>:</dt>
+            <dd class="place_address mb-0 ps-1">都道府県</dd>
+          </dl>
+          <dl class="small d-flex border-bottom mb-0 py-1">
+            <dt class="d-flex col-4 fw-normal gap-1"><img src="files/img/icon_tel.svg" alt="" width="20" height="20"><span class="text-align-justify-all w-100">電話番号</span>:</dt>
+            <dd class="place_phoneNumber mb-0 ps-1">電話番号</dd>
+          </dl>
+          <dl class="small d-flex border-bottom mb-0 py-1">
+            <dt class="d-flex col-4 fw-normal gap-1"><img src="files/img/icon_time.svg" alt="" width="20" height="20"><span class="text-align-justify-all w-100">開催日時</span>:</dt>
+            <dd class="place_hours mb-0 ps-1">開催日時</dd>
+          </dl>
+          <dl class="small d-flex border-bottom mb-0 py-1">
+            <dt class="d-flex col-4 fw-normal gap-1"><img src="files/img/icon_price.svg" alt="" width="20" height="20"><span class="text-align-justify-all w-100">参加費</span>:</dt>
+            <dd class="place_price mb-0 ps-1">参加費</dd>
+          </dl>
+          <dl class="small d-flex border-bottom mb-0 py-1">
+            <dt class="d-flex col-4 fw-normal gap-1"><img src="files/img/icon_mail.svg" alt="" width="20" height="20"><span class="text-align-justify-all w-100">郵便物送付先</span>:</dt>
+            <dd class="place_name mb-0 ps-1">郵便物送付先</dd>
+          </dl>
+          <dl class="small d-flex mb-0 py-1">
+            <dt class="d-flex col-4 fw-normal gap-1"><img src="files/img/icon_map.svg" alt="" width="20" height="20"><span class="text-align-justify-all w-100">地図</span>:</dt>
+            <dd class="place_url mb-0 ps-1">地図</dd>
+          </dl>
+        </div>
+        <div class="d-flex justify-content-between max-400 mx-auto"> <a href="###" class="btn bg-primary text-white" target="_blank" rel="noopener">詳しく見る</a> <a class="btn bg-secondary text-white place_root" target="_blank" rel="noopener">行き方を見る</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="">
+  <div class="d-lg-flex align-items-center container mb-lg-4">
+    <div class="mx-auto d-flex align-items-end gap-2 justify-content-center max-600 mb-4 col-lg-5 justify-content-lg-start">
+      <div class="col-5 col-lg-6"><img src="files/img/logo.svg" alt="" width="300" height="107" class="img-fluid"></div>
+      <span class="ff-zen_maru small lh-sm">子供たちのための<br>
+      子ども食堂検索サイト</span></div>
+    <div class="d-flex container px-lg-0 mb-4 mb-lg-0 flex-lg-column small justify-content-evenly">
+      <ul class="footer-link ps-0 mb-0 fw-bold d-lg-flex justify-content-evenly">
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">はじめのページ</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">利用規約（ルール）</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">使い方（つかいかた）</a></li>
+      </ul>
+      <ul class="footer-link ps-0 mb-0 fw-bold d-lg-flex">
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">個人情報保護方針</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">プライバシーポリシー</a></li>
+        <li class="d-block w-100"><a href="###" class="d-block text-body text-decoration-none py-2">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="text-center small py-3 mb-0 border-top">Copyright&copy;こども食堂.All rights reserved.</p>
+</footer>
+<div id="menu_top" class="move js-menutop col-4 max-80 pe-4" style="z-index: 1040">
+  <div class="rounded-circle filter-drop-shadow bg-white square-w d-flex justify-content-center align-items-center"> <i class="bi bi-arrow-up fs-2"></i></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvdqDQ8LPts5_nmOcFIT-1cUhVuYbcaXo&libraries=places&callback=initMap" async defer></script> 
+<script>
+// タイトルの日付
+const today = new Date();
+const month = today.getMonth() + 1;
+const day = today.getDate();
+const dayOfWeek = today.getDay();
+const daysOfWeek = ["日", "月", "火", "水", "木", "金", "土"];
+const dayOfWeekText = daysOfWeek[dayOfWeek];
+const result = month + "月" + day + "日（第" + (Math.floor((day - 1) / 7) + 1) + dayOfWeekText + "曜日）です";
+document.querySelector('.js-day').innerHTML="今日は" + month + "月" + day + "日(第" + (Math.floor((day - 1) / 7) + 1) + dayOfWeekText + "曜日)です";
+
+/*マップの設定*/
+var map;
+var infowindow;
+const restaurantList = document.getElementById('restaurant-list');
+const placeModal = new bootstrap.Modal('#placeModal');
+
+function initMap() {/*現在地からのマップ取得*/
+  var lat, lng;
+  function success(position) {
+    lat = position.coords.latitude;
+    lng = position.coords.longitude;
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {
+        lat: lat,
+        lng: lng
+      },
+      zoom: 13
+    });
+    infowindow = new google.maps.InfoWindow();
+    var shadowCircle = {
+      path: google.maps.SymbolPath.CIRCLE,
+      fillColor: '#000',
+      fillOpacity: 0.2,
+      scale: 12,  // 少し大きめにして影を表現
+      strokeWeight: 0
+    };
+    var shadowMarker = new google.maps.Marker({
+      position: {
+        lat: lat,
+        lng: lng
+      },
+      map: map,
+      icon: shadowCircle,
+      clickable: false  // クリックイベントを無効化
+    });
+    var blueCircle = {
+      path: google.maps.SymbolPath.CIRCLE,
+      fillColor: '#1a73e8',
+      fillOpacity: 1,
+      scale: 8,
+      strokeColor: 'white',
+      strokeWeight: 3
+    };
+    var currentLocationMarker = new google.maps.Marker({
+      position: {
+        lat: lat,
+        lng: lng
+      },
+      map: map,
+      title: '現在地',
+      icon: blueCircle
+    });
+    var service = new google.maps.places.PlacesService(map);
+    var request = {
+      location: {
+        lat: lat,
+        lng: lng
+      },
+      radius: 100000,
+      query: '子ども食堂',
+      language: 'ja'
+    };
+    service.textSearch(request, callback);
+  }
+
+  function error() {
+    console.log('位置情報の取得に失敗しました。');
+  }
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      createMarker(results[i]);
+      displayRestaurantInfo(results[i]);
+    }
+  }
+}
+
+function createMarker(place) {
+  var marker = new google.maps.Marker({
+    map: map,
+    position: place.geometry.location,
+    title: place.name
+  });
+  google.maps.event.addListener(marker, 'click', function () {
+    const e_reference=restaurantList.querySelector('.'+place.reference);
+    restaurantList.scrollTop=e_reference.offsetTop;
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+  });
+  marker.setIcon({
+    url: 'files/img/icon_google_map.svg',
+    scaledSize: new google.maps.Size(60, 60)
+  });
+}
+
+let a_place={};
+function displayRestaurantInfo(place) {
+  var request = {
+    placeId: place.place_id,
+    fields: ['name', 'formatted_address', 'formatted_phone_number', 'opening_hours', 'price_level', 'rating', 'photo','url','user_ratings_total','geometry']
+  };
+  var service = new google.maps.places.PlacesService(map);
+  service.getDetails(request, function (place, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+      const v_placeId=request.placeId;
+      const v_photo=place.photos ? place.photos[place.photos.length-1].getUrl() : 'files/img/no_image_map.webp';
+      const v_name=place.name;
+      const v_address=place.formatted_address;
+      const v_hours=place.opening_hours ? (place.opening_hours.weekday_text ? formatOpeningHours(place.opening_hours.weekday_text) : '営業時間情報なし') : '営業情報なし';
+      const v_price=place.price_level ? '価格レベル: ' + place.price_level : '価格情報なし';
+      const v_likes=place.rating ? 'いいねの数: ' + place.rating : '評価なし';
+      const v_phoneNumber=place.formatted_phone_number ? place.formatted_phone_number : '電話番号なし';
+      const v_geometry=place.geometry.location;
+      a_place[v_placeId]={
+        'name':v_name,
+        'photo':v_photo,
+        'address':v_address,
+        'hours':v_hours,
+        'price':v_price,
+        'likes':v_likes,
+        'phoneNumber':v_phoneNumber,
+        'url':place.url,
+        'lat':place.geometry.location.lat(),
+        'lng':place.geometry.location.lng()
+      }
+      
+      const listItem = document.createElement('li');
+      listItem.className = 'restaurant-item small bg-white d-flex rounded-5 p-2 border justify-content-between '+v_placeId;
+      
+      const v_data=document.createElement('div');
+      v_data.className = 'd-grid px-2 w-100 align-content-start';
+      const v_html=`
+<img src="${v_photo}" alt="${v_name}" class="img-cover rounded-2 col-3 max-120">
+<div class="d-grid px-2 w-100 align-content-start">
+<h4 class="fs-6 fw-bold mb-0 three-point-2">${v_name}</h4>
+<div class="d-flex gap-1"><img src="files/img/icon_place.svg" alt="" width="12" height="16"><span class="three-point-1">${v_address}</span></div>
+<div class="d-flex gap-1 lh-0"><img src="files/img/icon_time.svg" alt="" width="12" height="16">${v_hours}</div>
+<div class="d-flex gap-1 three-point"><img src="files/img/icon_price.svg" alt="" width="12" height="16">${v_price}</div>
+</div>
+<button class="btn btn-primary px-2" onclick="f_open('${v_placeId}')"><i class="bi bi-arrow-right"></i></button>
+`;
+      listItem.innerHTML = v_html;
+      restaurantList.appendChild(listItem);
+    }
+  });
+
+}
+// 営業時間を整形する関数
+function formatOpeningHours(weekdayText) {
+  let formattedHours = '';
+  let prevDay = '';
+  let prevTime = '';
+  weekdayText.forEach((text, index) => {
+    const [day, time] = text.split(/[:：]\s*/);
+    let processedDay = day.replace("曜日", "");
+    processedDay = processedDay === "定休日" ? "休" : processedDay;
+    let processedTime;
+    if (time === "定休日") {
+      processedTime = "休";
+    } else {
+      processedTime = time.replace(/(\d{2})時(\d{2})分/g, "$1:$2").replace("〜", "-");
+      processedTime = processedTime.replace(/時分/g, "").replace("～", "-").replace(/:00-/g, ":00-");
+    }
+    if (index === 0) {
+      formattedHours += processedDay;
+    } else {
+      if (processedTime === prevTime) {
+        formattedHours += `${processedDay}`;
+      } else {
+        formattedHours += `(${prevTime})/${processedDay}`;
+      }
+    }
+    prevDay = processedDay;
+    prevTime = processedTime;
+  });
+  formattedHours += `(${prevTime})`;
+  return formattedHours;
+}
+const e_placeName=document.querySelector('.place_name');
+const e_placePhoto=document.querySelector('.place_photo');
+const e_placeAddress=document.querySelector('.place_address');
+const e_placeHours=document.querySelector('.place_hours');
+const e_placePrice=document.querySelector('.place_price');
+const e_placePhoneNumber=document.querySelector('.place_phoneNumber');
+const e_placeUrl=document.querySelector('.place_url');
+const e_placeRoot=document.querySelector('.place_root');
+function f_open(v_placeId){
+  const a_placeData=a_place[v_placeId]
+  e_placeName.innerHTML=a_placeData.name;
+  e_placePhoto.src=a_placeData.photo;
+  e_placeAddress.innerHTML=a_placeData.address;
+  e_placeHours.innerHTML=a_placeData.hours;
+  e_placePrice.innerHTML=a_placeData.price;
+  e_placePhoneNumber.innerHTML=a_placeData.phoneNumber;
+  e_placeUrl.innerHTML=`<a href="${a_placeData.url}" target="_blank" rel="noopener">${a_placeData.url}</a>`;
+  e_placeRoot.href=`https://www.google.com/maps/dir/?api=1&origin=current_location&destination=${a_placeData.lat},${a_placeData.lng}`;
+  placeModal.show();
+}
+</script> 
+<script>
+const e_html=document.querySelector('html');
+const e_offcanvas=document.querySelector('[data-bs-toggle="offcanvas"]');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+e_offcanvas.addEventListener('click',()=>{
+  e_html.classList.add('offcanvasOP');
+});
+a_offcanvasHash.forEach((e)=>{
+  e.addEventListener('click',()=>{
+    setTimeout(()=>{
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+const e_header=document.querySelector('header');
+let r_footer;
+window.onscroll = function () {  
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if(window.pageYOffset > 20){
+    e_header.classList.add('blur-w');
+  }else{
+    e_header.classList.remove('blur-w');
+  }
+  if ((window.pageYOffset > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+
+const backToTop=()=>{
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+js_menutop.addEventListener("click", backToTop);
+}
+
+</script>
+</body>
+</html>

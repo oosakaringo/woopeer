@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title> XilinxやIntel対応のFPGAボード（FPGA評価ボード） - FSI Embedded</title>
+
+<!--【メタロボットタグ】検索エンジンがクロールできることを伝える-->
+<meta name="robots" content="index, follow">
+<!--【メタビューポートタグ】レスポンシブデザインに対応させる-->
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<!--【カノニカルタグ】類似ページや重複ページ、多言語ページやAMPページがある場合--> 
+<!--link rel="canonical" href="https://www.fsi-embedded.jp/board/"--> 
+<!--【hreflangリンク】他の言語のページがある場合のみ指定-->
+<link rel="alternate" hreflang="ja" href="https://www.fsi-embedded.jp/board/" title="ja">
+<link href="../css/base.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+a:not(.ripple, .disp-block), .under_link {
+  color: #222;
+  text-decoration: underline;
+}
+a.ripple:hover {
+  text-decoration: none;
+}
+header nav {
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  opacity: .5;
+  top: -101vh;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+header nav ul {
+  padding: 0;
+}
+header a, button {
+  display: block;
+  font-size: 1em;
+  margin: 0;
+}
+header li, .open+.op-content {
+  display: block;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+header input {
+  -webkit-appearance: none;
+  border: solid thin var(--primary-color);
+  border-radius: 5px 0 0 5px;
+}
+header button.btn {
+  border-radius: 0 5px 5px 0;
+  box-shadow: none;
+}
+.sub-menu {
+  margin: 1rem 0 2rem;
+}
+.op-content, .on .hamburger-text {
+  display: none;
+}
+.op-content li {
+  margin: 0;
+}
+.hamburger {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  z-index: 20;
+  color: var(--base-color);
+  letter-spacing: -1px;
+}
+.open.op-nav {
+  opacity: 1;
+  top: 0;
+  padding: 1rem;
+}
+.logo-group {
+  max-width: 105px;
+  min-width: 80px;
+}
+.logo-site {
+  width: 50%;
+}
+.btn-icon a, .btn-icon {
+  color: #8a7442;
+  font-size: 80%;
+  text-align: center;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn-icon>svg {
+  background-color: #ae994b;
+  width: 10vw;
+  max-width: 80px;
+  padding: .35rem;
+  border-radius: 50%;
+  margin: auto;
+  fill: #fff;
+  display: block;
+}
+.breadcrumb li:not(:last-child)::after {
+  content: ">";
+  padding: 0 .5em;
+  color: #ae994b;
+}
+h1 {
+  font-size: 120%;
+  background: rgba(0,0,0,.55);
+  padding: 20px 0;
+  color: #fff;
+  line-height: 2.5em;
+  position: relative;
+}
+.btn {
+  border-radius: 3em;
+}
+.main-header {
+  background-color: var(--tertiary-color);
+  background-image: url("img/board_bg_sp.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.main-img_board {
+  position: absolute;
+}
+.sp2>* {
+  width: calc(50% - 1rem);
+  margin: .5rem;
+}
+.sp1>* {
+  width: 100%;
+  margin: .5rem;
+}
+.flex-wrap li {
+  display: block;
+}
+
+@media (max-width:767px) {
+.sp-disp-none {
+  display: none;
+}
+}
+
+@media (min-width:768px) {
+.main-header {
+  background-image: url("img/board_bg.jpg");
+}
+.main-header h1 {
+  margin-bottom: 50px;
+  margin-top: 120px;
+}
+.pc4 >* {
+  width: calc(25% - 1rem);
+}
+.pc3 >* {
+  width: calc(33.3% - 1rem);
+}
+.pc2>* {
+  width: calc(50% - 1rem);
+}
+.content-fpga {
+  height: 9em
+}
+.content-fpga h3 {
+  width: 150px;
+}
+}
+
+@media screen and (min-width:1321px) {
+.pc5 >* {
+  width: calc(20% - 1rem);
+}
+header.pos-sticky-top {
+  top: -140px;
+  height: 200px;
+}
+header nav {
+  position: absolute;
+  min-height: inherit;
+  width: 100%;
+  top: 20px;
+  opacity: 1;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 1;
+  overflow: visible;
+}
+.pc-top-menu >li {
+  width: 100%;
+  border-left: solid thin #ccc;
+}
+.pc-disp-none {
+  display: none;
+}
+.sub-menu {
+  width: 100%;
+  margin: 16px 0 24px;
+}
+.en-btn {
+  width: 100%;
+}
+.pc-jc-center {
+  justify-content: center;
+}
+header nav a {
+  text-decoration: none!important;
+  font-weight: bold;
+}
+.pc-hover-op-content {
+  background-color: #fff;
+  width: 100vw;
+  position: fixed;
+  margin: 0;
+  left: 0;
+  top: 160px;
+  z-index: -1;
+  padding-bottom: 1rem;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.pc-hover-op-content li {
+  text-align: left;
+  display: inline-block;
+}
+.op-content {
+  display: flex;
+  margin-left: 0;
+  min-width: 320px;
+}
+.pc-block-wrp >* {
+  width: 100%;
+}
+.pc-list-wrp >* {
+  width: 25%;
+}
+.hover-op:after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 2em;
+  margin-bottom: -2em;
+  position: relative;
+}
+.hover-op:hover .pc-hover-op-content, .hover-op:hover .op-content {
+  height: auto;
+  opacity: 1;
+}
+.hover-op:hover .pc-hover-op-content {
+  top: 200px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+}
+}
+</style>
+<meta name="description" content="XilinxとIntel (Altera)提供のFPGAを搭載した、FPGA評価ボード（FPGA開発ボード）をご紹介！Stratix、Arria、MAX10、Virtex、Airtix、Kintex、Spartan、Zynqが有名です。組み込み機器の開発や評価にお役立てください。入門者向けにFPGAの基本的な知識や価格についても解説。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="ここにSNS用のURLを記述">
+<meta property="og:title" content="XilinxやIntel対応のFPGAボード（FPGA評価ボード）">
+<meta property="og:description" content="XilinxとIntel (Altera)提供のFPGAを搭載した、FPGA評価ボード（FPGA開発ボード）をご紹介！Stratix、Arria、MAX10、Virtex、Airtix、Kintex、Spartan、Zynqが有名です。組み込み機器の開発や評価にお役立てください。入門者向けにFPGAの基本的な知識や価格についても解説。">
+<meta property="og:image" content="https://www.fsi-embedded.jp/contents/themes/fsi-embedded/dist/img/common/og-image.png">
+<meta property="twitter:site" content="ツイッターのアカウントIDを記述">
+<meta property="twitter:creator" content="twitterのアカウントIDを記述">
+<meta property="twitter:card" content="summary_large_image">
+<noscript class="deferred-node">
+<link href="../css/ripple.css" rel="stylesheet" type="text/css">
+</noscript>
+</head>
+<body>
+<script type="text/javascript" src="../js/fsi-embedded_header.js"></script>
+<main>
+  <nav class="breadcrumb pd05">
+    <ul class="mg0 small fb max-w pd0">
+      <li class="disp-iblock"><a href="/">富士ソフト 組み込み開発 TOP</a></li>
+      <li class="disp-iblock">XilinxやIntel対応のFPGAボード（FPGA評価ボード）</li>
+    </ul>
+  </nav>
+  <article>
+    <header class="text-center pt20 pb10 pos-relative main-header">
+      <div class="flex main-img_board w100 flex-jc-center">
+        <div><img src="img/board_mv01.png" alt="" width="440" height="320"></div>
+        <div><img src="img/board_mv02.png" alt="" width="440" height="320"></div>
+      </div>
+      <h1>IoTインテグレーター 富士ソフトが扱う<span class="disp-block font-xl">FPGAボード</span></h1>
+      <div class="flex flex-wrap sp1 pc2 max-w">
+        <div><a href="/board/xilinx/" class="btn btn-raised ripple ripple-white fb mb05 w80">Xilinx 対応 FPGAボード</a></div>
+        <div><a href="/board/intel/" class="btn btn-raised ripple ripple-white fb mb05 w80 ml0">Intel（Altera）対応 FPGAボード</a></div>
+      </div>
+    </header>
+    <section class="mb10">
+      <div class="pl10 pr10 mb10">
+        <p>FPGAとは「Field Programmable Gate Array」の略です。日本語で意訳するならば「ユーザー(エンジニア)がデバイス(半導体/IC)の入手後、開発現場で書き換えることができる論理回路の多数配列（ゲートアレイIC）」です。「インテル(Intel) ※旧アルテラ(ALTERA)」社と「ザイリンクス（XILINX）」社が有名です。Intelでは、Stratix、Arria、MAX10がよく知られており、XILINXはVirtex、Airtix、Kintex、Spartan、Zynqがよく知られています。ここでは、これらFPGAを搭載した評価ボード・開発ボードをご紹介します。</p>
+        <a href="/selection-guide/" class="ripple ripple-white disp-block bg-color_primary color-white pt05 pb05 text-center fb radius05">ご希望のFPGAボードがすぐに見つかる<span class="font-l disp-block">FPGAボードセレクションガイド</span></a>
+        <div class="text-center">
+          <p class="disp-iblock text-left mt05">評価ボードに搭載しているFPGAや周辺I/Fが一目で分かるため、ご希望のFPGAボードがすぐに見つかります 。</p>
+        </div>
+      </div>
+      <h2 class="bg-color_tertiary color-white text-center pt05 pb05 mt0 cam-border-bottom border-color_primary">取り扱いFPGAボードメーカー</h2>
+      <ul class="flex flex-wrap sp2 pc4 pc5 pl05 pr05 text-center">
+        <li class="disp-block pd0"><a href="/product/hitech-global/" class="disp-block ripple ripple-white"><img src="img/HTG-Logo.png" alt="" class="cam-border" width="250" height="166">
+          <div> Hitech Global</div>
+          </a></li>
+        <li class="disp-block pd0"><a href="/product/hitech-global/" class="disp-block ripple ripple-white"><img src="img/bittware_logo.jpg" alt="" class="cam-border" width="250" height="166">
+          <div> Bittware</div>
+          </a></li>
+        <li class="disp-block pd0"><a href="/product/hitech-global/" class="disp-block ripple ripple-white"><img src="img/tul_logo.jpg" alt="" class="cam-border" width="250" height="166">
+          <div> TUL</div>
+          </a></li>
+        <li class="disp-block pd0"><a href="/product/hitech-global/" class="disp-block ripple ripple-white"><img src="img/IOXOS-Logo.png" alt="" class="cam-border" width="250" height="166">
+          <div> IOxOS</div>
+          </a></li>
+        <li class="disp-block pd0"><a href="/product/hitech-global/" class="disp-block ripple ripple-white"><img src="img/Portwell_Logo.png" alt="" class="cam-border" width="250" height="166">
+          <div> Portwell</div>
+          </a></li>
+        <li class="disp-block pd0"><a href="/product/hitech-global/" class="disp-block ripple ripple-white"><img src="img/avnet_board.jpg" alt="" class="cam-border" width="250" height="166">
+          <div> AVNET</div>
+          </a></li>
+      </ul>
+    </section>
+    <section class="mb10">
+      <h2 class="bg-color_tertiary color-white text-center pt05 pb05 mt0 cam-border-bottom border-color_primary">取り扱いFPGA</h2>
+      <div class="pctab-flex mb10 content-fpga pl10 pr10">
+        <h3 class="font-l text-center ripple ripple-white bg-color_danger mg0 pd05 flex flex-ai-center flex-jc-center"><a href="/board/xilinx/" class="disp-block color-white">Xilinx</a></h3>
+        <ul class="mg0 pl0 fb pctab-flex flex-wrap" style="flex-direction:column">
+          <li><a href="/board/xilinx/VirtexUltraScalePlus/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Virtex<sup>&reg;</sup> UltraScale+</a></li>
+          <li><a href="/board/xilinx/VirtexUltraScale/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Virtex<sup>&reg;</sup> UltraScale</a></li>
+          <li><a href="/board/xilinx/KintexUltraScalePlus/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Kintex<sup>&reg;</sup>UltraScale+</a></li>
+          <li><a href="/board/xilinx/KintexUltraScale/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Kintex<sup>&reg;</sup>UltraScale</a></li>
+          <li><a href="/board/xilinx/Kintex7/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Kintex<sup>&reg;</sup>7</a></li>
+          <!--<li><a href="/board/xilinx/Zynq/" class="disp-block under_link pd025"><svg viewBox="0 0 24 24">
+            <use xlink:href="#square-svg"></use>
+          </svg>Zynq <sup>&reg;</sup></a></li>-->
+          <li><a href="/board/xilinx/Virtex7/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Virtex<sup>&reg;</sup>7</a></li>
+          <li><a href="/board/xilinx/ZynqUltraScalePlus/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Zynq<sup>&reg;</sup> Ultrascale+</a></li>
+          <li><a href="/board/xilinx/Zynq7000SoC/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Zynq<sup>&reg;</sup>-7000 SoC</a></li>
+        </ul>
+      </div>
+      <div class="pctab-flex mb10 content-fpga pl10 pr10">
+        <h3 class="font-l text-center ripple ripple-white bg-color_secondary mg0 pd05 flex flex-ai-center flex-jc-center"><a href="/board/xilinx/" class="disp-block color-white">Intel<br>
+          (Altera)</a></h3>
+        <ul class="mg0 pl0 fb pctab-flex flex-wrap" style="flex-direction:column">
+          <li><a href="/board/intel/Stratix10/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Stratix<sup>&reg;</sup>10</a></li>
+          <li><a href="/board/intel/Arria10/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Arria<sup>&reg;</sup>10</a></li>
+          <li><a href="/board/intel/StratixV/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Stratix<sup>&reg;</sup>V</a></li>
+          <li><a href="/board/intel/Agilex/" class="disp-block under_link pd025">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#square-svg"></use>
+            </svg>
+            Agilex&trade;</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="mb20">
+      <h2 class="bg-color_tertiary color-white text-center pt05 pb05 mt0 mb0 cam-border-bottom border-color_primary">用途別FPGAボード検索</h2>
+      <p class="text-center mt05"> 用途別にFPGAボードの絞り込み検索ができます。 </p>
+      <ul class="flex flex-wrap sp2 pc4 pc5 pl05 pr05 text-center">
+        <li><a href="/product_list/?category=fpga-board&amp;application=ai" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">AI</a></li>
+        <li><a href="/product_list/?category=fpga-board&amp;application=5g" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">5G</a></li>
+        <li><a href="/product_list/?category=fpga-board&amp;application=hpc" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">HPC</a></li>
+        <li><a href="/product_list/?category=fpga-board&amp;application=acceleration" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">アクセラレーション</a></li>
+        <li><a href="/product_list/?category=fpga-board&amp;application=storage" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">ストレージ</a></li>
+        <li><a href="/product_list/?category=fpga-board&amp;application=data-center" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">データセンター</a></li>
+        <li><a href="/product_list/?category=fpga-board&amp;application=image-processing" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">画像処理</a></li>
+        <!--<li><a href="/product_list/?category=fpga-board&application=video-distribution">映像処理</a></li>-->
+        <li><a href="/product_list/?category=fpga-board&amp;application=network" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">通信・ネットワーク</a></li>
+        <!--<li><a href="/product_list/?category=fpga-board&application=security">セキュリティ・暗号化</a></li>-->
+        <li><a href="/product_list/?category=fpga-board&amp;application=peripheral" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">検証・評価</a></li>
+        <li><a href="/product_list/?category=fpga-board&amp;application=factory-automation" class="disp-block pt05 pb05 cam-border radius05 border-color_primary ripple">工場自動化</a></li>
+        <!--<li><a href="/product_list/?category=fpga-board&application=other">その他</a></li>-->
+      </ul>
+    </section>
+    
+    <!--記事フッター-->
+    <footer> </footer>
+  </article>
+</main>
+
+<!--footer> 
+  <nav>
+    <ul>
+      <li>【プライバシーポリシー】</li>
+      <!--EAT（権威性、信頼性、専門性）の観点から必ずつける>
+      <li>【特定商取引法に基づく表示】</li>
+      <!--法で要求されているページへのリンクを必ずつける>
+    </ul>
+  </nav>
+  <p>【著作権情報】</p>
+</footer--> 
+<script>
+fetch('../img/icon_set.svg')
+  .then(response => response.text())
+  .then(svg => {document.querySelector('body').insertAdjacentHTML('beforeend',svg)});
+
+let e_opNav=document.querySelector('.op-nav');
+let xlinkNS = 'http://www.w3.org/1999/xlink';
+document.querySelector('.hamburger').addEventListener('click',function(){
+  e_opNav.classList.toggle('open');
+  this.classList.toggle('on');
+  if(e_opNav.classList.contains('open')){
+    this.querySelector('.hamburger use').setAttributeNS(xlinkNS, "href", "#close-svg");
+  }else{
+    this.querySelector('.hamburger use').setAttributeNS(xlinkNS, "href", "#hamburger-svg");
+  }
+});
+document.querySelectorAll('.js-op-content').forEach(function(e){
+  e.addEventListener('click',function(){
+    this.parentNode.classList.toggle('open');
+    if(this.parentNode.classList.contains('open')){
+      this.querySelector('use').setAttributeNS(xlinkNS, "href", "#remove-svg");
+    }else{
+      this.querySelector('use').setAttributeNS(xlinkNS, "href", "#add-svg");
+    }
+  });
+}
+);
+
+let a_lazyJs=["js/fpga_content.js","js/fpga_info.js","js/fpga_hitech_global.js","js/fpga_bittware.js","js/fpga_tul.js","js/fpga_ioxos.js","js/fpga_portwell.js","js/fpga_avnet.js","../js/ripple.js"];
+
+var loadDeferredStyles = function() {
+  var replacement = document.createElement("div");
+  var a_addNode = document.querySelectorAll(".deferred-node");
+  var v_addNodeAll = a_addNode.length;
+  for(var v_i=0; v_i<v_addNodeAll; v_i++){
+    replacement.innerHTML += a_addNode[v_i].textContent;
+  }
+  document.body.appendChild(replacement);
+  for(var v_i=0; v_i<v_addNodeAll; v_i++){
+    a_addNode[v_i].parentElement.removeChild(a_addNode[v_i]);
+  }
+  var v_lazyJsAll=a_lazyJs.length;
+  for(var v_i=0;v_i<v_lazyJsAll;v_i++){
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = a_lazyJs[v_i];
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore( script, firstScript );
+  }
+};
+var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+else window.addEventListener('load', loadDeferredStyles);
+</script>
+</body>
+</html>

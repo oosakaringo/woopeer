@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>WEB乗船名簿-船長用画面-顧客検索</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WEB乗船名簿-船長用画面-顧客検索">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+header .container, .bg-main, .bg-primary-gradient {
+  background-image: linear-gradient(to right, #283c73, #172642);
+}
+main .sticky-top {
+  top: calc(50px + 1em);
+  z-index: 5;
+  margin-top: -150px
+}
+.bg-main {
+  height: 100vmin;
+  max-height: 400px;
+  padding-top: 1.5em;
+  padding-bottom: 5em;
+  border-bottom: solid 80px #fff;
+}
+.wbl-captain-card {
+  border-radius: 0.5em;
+  background-image: linear-gradient(to right, rgba(80, 220, 255,0.85), rgba(200,240,255,0.85));
+  position: relative;
+}
+.wbl-top-bg-icon {
+  top: calc(50px + 1em);
+  max-height: 30vmin;
+}
+[aria-label="Close"] {
+  margin: -10px 0;
+}
+.page-item.active .page-link {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.page-item .page-link {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  min-width: 38px;
+  text-align: center;
+}
+.modal.fade .modal-dialog {
+  transform: translate(0, 50px);
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+.btn-check:checked+.btn-outline-primary {
+  color: #fff!important;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-outline-primary {
+  border-color: #ced4da!important;
+}
+.btn-outline-primary {
+  color: #888!important;
+}
+.accordion .btn:not(.collapsed) {
+  color: #fff;
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+}
+.wbl-scroll-y {
+  overflow-y: auto;
+  max-height: 120px;
+}
+.wbl-scroll-x {
+  overflow-x: auto;
+  max-width: 100%;
+}
+#menu_top {
+  z-index: 1030;
+}
+
+@media (min-width:768px) {
+}
+</style>
+</head>
+
+<body>
+<script src="files/js/header.js"></script>
+<header class="sticky-top"></header>
+<main>
+  <article class="pb-0 pb-sm-5">
+    <section class="container bg-main d-flex align-content-center flex-wrap text-center text-white position-relative px-0"> <img src="files/img/captain_img02.svg" alt="" width="200" height="200" class="position-absolute wbl-top-bg-icon w-100">
+      <div class="w-100 position-relative">
+        <h2 class="fw-bold ls-2 fs-1">船長用画面</h2>
+        <em class="ls-4">For CAPTAIN</em> </div>
+      <div class="position-absolute start-0 bottom-1 w-100">
+        <nav style="--bs-breadcrumb-divider: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='%23fff'/%3E%3C/svg%3E&quot;);" aria-label="breadcrumb" class="w-100 small">
+          <ol class="breadcrumb justify-content-center small mb-0 fw-bold">
+            <li class="breadcrumb-item"><a href="for_captain.html" class="text-white text-decoration-none">HOME</a></li>
+            <li class="breadcrumb-item" aria-current="page">顧客検索</li>
+          </ol>
+        </nav>
+        <img src="files/img/bg_msk.svg" width="375" height="100" alt="" class="w-100"> </div>
+    </section>
+    <div class="container px-3 sticky-top" data-bs-toggle="modal">
+      <div class="d-flex+ wbl-captain-card p-3 pb-2" data-bs-toggle="modal" data-bs-target="#modal_search">
+        <div class="input-group"> <i class="bi bi-search input-group-text bg-white border-end-0 pe-1"></i>
+          <input type="search" class="form-control border-start-0 ps-1" placeholder="ユーザー名・グループ名・性別・など" id="js_search_value">
+        </div>
+        <div id="js_search_info" class="smaller text-truncate fw-bold py-1"></div>
+      </div>
+    </div>
+    <section class="container px-3 pb-5 bg-white position-relative">
+      <nav aria-label="Page navigation example" class="d-flex align-items-center py-3 flex-wrap border-bottom">
+        <ul class="pagination mb-0 me-2 align-items-center gap-2">
+          <li class="page-item"><a class="page-link rounded-pill" href="####">1</a></li>
+          <li class="page-item"><i class="bi bi-three-dots"></i></li>
+          <li class="page-item"><a class="page-link rounded-pill" href="####">3</a></li>
+          <li class="page-item active"><a class="page-link rounded-pill" href="#">4</a></li>
+          <li class="page-item"><a class="page-link rounded-pill" href="#">5</a></li>
+          <li class="page-item"><i class="bi bi-three-dots"></i></li>
+          <li class="page-item"><a class="page-link rounded-pill" href="#">8</a></li>
+        </ul>
+        <span class="small text-primary">全245名</span> </nav>
+      <ul class="ps-0 mb-0">
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex position-relative">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_01.webp" alt="" width="1000" height="1500" class="img-square"> <img src="files/img/main_logo.svg" alt="" width="25" height="25" class="position-absolute end-0 bg-primary-gradient mt-1 me-1 rounded-3 border border-primary"> </div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">佐野 正登（サノ マサト）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 40歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"><span class=" badge bg-info">グループOne</span><span class=" badge bg-info">グループTwo</span><span class=" badge bg-info">グループThree</span></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_02.webp" alt="" width="1500" height="1000" class="img-square"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">木村 香奈（キムラ カナ）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 25歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"><span class=" badge bg-info">グループOne</span></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_03.webp" alt="" width="1500" height="1000" class="img-square"><img src="files/img/main_logo.svg" alt="" width="25" height="25" class="position-absolute end-0 bg-primary-gradient mt-1 me-1 rounded-3 border border-primary"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">田中 菜々（タナカ ナナ）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 30歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"><span class=" badge bg-info">グループOne</span></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_01.webp" alt="" width="1000" height="1500" class="img-square"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">佐野 正登（サノ マサト）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 40歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_02.webp" alt="" width="1500" height="1000" class="img-square"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">木村 香奈（キムラ カナ）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 25歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_03.webp" alt="" width="1500" height="1000" class="img-square"><img src="files/img/main_logo.svg" alt="" width="25" height="25" class="position-absolute end-0 bg-primary-gradient mt-1 me-1 rounded-3 border border-primary"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">田中 菜々（タナカ ナナ）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 30歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"><span class=" badge bg-info">グループOne</span></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_01.webp" alt="" width="1000" height="1500" class="img-square"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">佐野 正登（サノ マサト）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 40歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"><span class=" badge bg-info">グループOne</span></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_02.webp" alt="" width="1500" height="1000" class="img-square"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">木村 香奈（キムラ カナ）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 25歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"><span class=" badge bg-info">グループOne</span></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_03.webp" alt="" width="1500" height="1000" class="img-square"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">田中 菜々（タナカ ナナ）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 30歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"><span class=" badge bg-info">グループOne</span></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+        <li class="d-flex border-bottom">
+          <div class="pe-0 d-flex">
+            <div class="form-check d-flex align-items-center">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="btn d-flex px-0 text-start position-relative" data-bs-toggle="modal" data-bs-target="#modal_user">
+              <div class="col-3 position-relative"><img src="files/img/user_01.webp" alt="" width="1000" height="1500" class="img-square"><img src="files/img/main_logo.svg" alt="" width="25" height="25" class="position-absolute end-0 bg-primary-gradient mt-1 me-1 rounded-3 border border-primary"></div>
+              <dl class="col-9 small ps-2 mb-0">
+                <dt class="text-primary lh-1">佐野 正登（サノ マサト）</dt>
+                <dd class="text-primary mb-1 fw-bold">1982/10/05 40歳</dd>
+                <dd class="smaller mb-0">１回目1度目の乗船（前回：0000年00月00日）</dd>
+                <dd class="smaller mb-1">記入日：2023/01/05 08時</dd>
+                <dd class="d-flex gap-1 flex-wrap mb-0 pe-5 smaller"><span class=" badge bg-info">グループOne</span></dd>
+              </dl>
+              <span class="bg-primary rounded-3 text-white small position-absolute bottom-0 end-0 px-3 mb-2 fw-bold">詳細</span> </div>
+          </div>
+        </li>
+      </ul>
+      <div class="mt-2"><span class="small"><i class="bi bi-arrow-90deg-up"></i>チェックしたユーザーにグループを追加する</span>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <select name="group_addSelection" class="form-select" id="group_addSelection" aria-label="Default select example">
+            <option selected disabled hidden>グループ選択</option>
+            <option value="1">グループOne</option>
+            <option value="2">グループTwo</option>
+            <option value="3">グループThree</option>
+            <option value="4">グループFour</option>
+          </select>
+          <button class="btn btn btn-secondary btn-sm text-nowrap" type="button">追加する </button>
+        </div>
+      </div>
+    </section>
+    <div class="container p-3 bg-light small">
+      <p class="mb-0">毎年１１月末にお客様情報をEXCEL化し登録住所へお送りいたします。<br>
+        個人情報になりますので大切に管理下さい。</p>
+    </div>
+  </article>
+</main>
+<div class="modal fade" id="modal_user" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-primary-gradient text-white py-2">
+        <div class="d-flex align-items-center"><img src="files/img/main_logo.svg" alt="" width="40" height="40" class="me-2 border rounded-3 p-1">
+          <h5 class="modal-title fw-bold">お客様情報</h5>
+        </div>
+        <div class="d-flex"> <a class="btn p-0"><img src="files/img/icon_twitter.svg" alt="" width="32" height="32" class="me-2 
+          p-1"></a><a class="btn p-0"><img src="files/img/icon_facebook.svg" alt="" width="32" height="32" class="me-2 p-1"></a><a class="btn p-0"><img src="files/img/icon_instagram.svg" alt="" width="32" height="32" class="me-2 p-1"></a>
+          <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex border-bottom pb-3 mb-3">
+          <div class="col-3 position-relative"><img src="files/img/user_01.webp" alt="" width="1000" height="1500" class="img-square"><img src="files/img/main_logo.svg" alt="" width="25" height="25" class="position-absolute end-0 bg-primary-gradient mt-1 me-1 rounded-3 border border-primary"></div>
+          <dl class="col-9 small ps-2 mb-0">
+            <dt class="text-primary">佐野 正登（サノ マサト）</dt>
+            <dd class="mb-0">1982/10/05 40歳</dd>
+            <dd class="mb-0">性別　男</dd>
+            <dd class="mb-0">住所　東京都千代田区永田町1-7-1</dd>
+          </dl>
+        </div>
+        <div class="accordion border-bottom pb-3 mb-3" id="accordionExample">
+          <p class="fw-bold text-primary mb-1">グループ</p>
+          <div class="d-flex gap-1 flex-wrap mb-2"><span class=" badge bg-info">グループOne</span><span class=" badge bg-info">グループTwo</span><span class=" badge bg-info">グループThree</span></div>
+          <button class="btn btn-outline-secondary btn-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelect" aria-expanded="false">編集</button>
+          <div class="accordion-item border-0">
+            <div id="collapseSelect" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body border position-relative">
+                <p class="fw-bold d-flex justify-content-between">グループ選択</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheck01" checked>
+                  <label class="form-check-label" for="flexCheck01"> グループOne </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheck02" checked>
+                  <label class="form-check-label" for="flexCheck02"> グループTwo </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheck03" checked>
+                  <label class="form-check-label" for="flexCheck03"> グループThree </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheck04">
+                  <label class="form-check-label" for="flexCheck04"> グループFour </label>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <button class="btn px-0 text-accent btn-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdd" aria-expanded="false" ><i class="bi bi-plus-circle pe-2"></i>グループ追加 </button>
+                  <button class="btn btn-primary btn-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelect" aria-expanded="false">保存する </button>
+                </div>
+                <button class="btn text-secondary btn-sm collapsed position-absolute top-0 end-0 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDel" aria-expanded="false" > <i class="bi bi-trash-fill"></i> </button>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item border-0">
+            <div id="collapseAdd" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body border">
+                <p class="fw-bold d-flex justify-content-between">グループ追加</p>
+                <p>追加したいグループ名を入力してください。</p>
+                <input class="form-control mb-3" type="text" placeholder="">
+                <div class="text-end">
+                  <button class="btn btn-primary btn-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelect" aria-expanded="false">グループを追加する</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item border-0">
+            <div id="collapseDel" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body border">
+                <p class="fw-bold d-flex justify-content-between">グループ削除</p>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDel01">
+                  <label class="form-check-label" for="flexCheckDel01"> グループOne </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDel02">
+                  <label class="form-check-label" for="flexCheckDel02"> グループTwo </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDel03">
+                  <label class="form-check-label" for="flexCheckDel03"> グループThree </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDel04">
+                  <label class="form-check-label" for="flexCheckDel04"> グループFour </label>
+                </div>
+                <div class="text-end">
+                  <button class="btn btn-danger btn-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSelect" aria-expanded="false">選択したグループを削除する </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-bottom pb-3 mb-3">
+          <p class="fw-bold text-primary mb-1">船長メモ</p>
+          <div class="small bg-light p-2 wbl-scroll-y mb-2 me-3">
+            <dl class="d-flex mb-0">
+              <dt class="me-2 mb-1">2023/03/01</dt>
+              <dd class="mb-0">すーがま　40kg</dd>
+            </dl>
+            <dl class="d-flex mb-1">
+              <dt class="me-2 mb-0">2022/12/01</dt>
+              <dd class="mb-0">男岩　24kg</dd>
+            </dl>
+            <dl class="d-flex mb-1">
+              <dt class="me-2 mb-0">2022/10/01</dt>
+              <dd class="mb-0">すーがま　40kg</dd>
+            </dl>
+            <dl class="d-flex mb-1">
+              <dt class="me-2 mb-0">2022/09/01</dt>
+              <dd class="mb-0">すーがま　40kg</dd>
+            </dl>
+            <dl class="d-flex mb-1">
+              <dt class="me-2 mb-0">2022/08/01</dt>
+              <dd class="mb-0">男岩　24kg</dd>
+            </dl>
+          </div>
+          <div class="input-group pe-3">
+            <input type="text" class="form-control" placeholder="">
+            <button class="btn btn-outline-secondary btn-sm px-2" type="button" id="button-addon2">メモ追加</button>
+          </div>
+        </div>
+        <div class="border-bottom pb-3 mb-3">
+          <p class="fw-bold text-primary mb-1">同船者</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <div class="col-2 max-160 position-relative"><img src="files/img/user_01.webp" alt="" width="1000" height="1500" class="img-square"><img src="files/img/main_logo.svg" alt="" width="16" height="16" class="position-absolute end-0 bg-primary-gradient mt-1 me-1 rounded-3 border border-primary"></div>
+            <div class="col-2 max-160 position-relative"><img src="files/img/user_02.webp" alt="" width="1500" height="1000" class="img-square"><img src="files/img/main_logo.svg" alt="" width="16" height="16" class="position-absolute end-0 bg-primary-gradient mt-1 me-1 rounded-3 border border-primary"></div>
+            <div class="col-2 max-160 position-relative"><img src="files/img/user_03.webp" alt="" width="1500" height="1000" class="img-square"></div>
+            <div class="col-2 max-160 position-relative"><img src="files/img/user_01.webp" alt="" width="1000" height="1500" class="img-square"></div>
+            <div class="col-2 max-160 position-relative"><img src="files/img/user_02.webp" alt="" width="1500" height="1000" class="img-square"></div>
+            <div class="col-2 max-160 position-relative"><img src="files/img/user_03.webp" alt="" width="1500" height="1000" class="img-square"></div>
+          </div>
+        </div>
+        <div>
+          <p class="fw-bold text-primary mb-1">乗船履歴</p>
+          <div class="small bg-light p-2 wbl-scroll-y mb-2 me-3">
+            <dl class="d-flex mb-1">
+              <dt class="me-2 small lh-1">2023/03/01<br>
+                -2023/03/05</dt>
+              <dd>○○○○○○○○○○○○○○○ツアー</dd>
+            </dl>
+            <dl class="d-flex mb-1">
+              <dt class="me-2 small lh-1">2022/12/30<br>
+                -2023/01/01</dt>
+              <dd>○○○○○○○○○○○○○○○ツアー</dd>
+            </dl>
+            <dl class="d-flex mb-1">
+              <dt class="me-2 small lh-1">2022/10/01<br>
+                -2022/10/05</dt>
+              <dd>○○○○○○○○○○○○○○○ツアー</dd>
+            </dl>
+            <dl class="d-flex mb-1">
+              <dt class="me-2 small lh-1">2022/09/01<br>
+                -2022/09/02</dt>
+              <dd>○○○○○○○○○○○○○○○ツアー</dd>
+            </dl>
+            <dl class="d-flex mb-1">
+              <dt class="me-2 small lh-1">2022/09/01<br>
+                -2022/09/01</dt>
+              <dd>○○○○○○○○○○○○○○○ツアー</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal_search" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-lg modal-fullscreen-lg-down modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-primary-gradient text-white">
+        <h5 class="modal-title fw-bold">顧客検索</h5>
+        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+      </div>
+      <form class="modal-body" name="js_formSearch">
+        <div class="mb-3">
+          <label class="small fw-bold" for="free_word">フリーワード</label>
+          <input name="free_word" type="text" class="form-control" id="free_word" placeholder="">
+        </div>
+        <div class="d-flex gap-4 flex-wrap">
+          <div>
+            <label class="small fw-bold" for="group_selection">グループ選択</label>
+            <select name="group_selection" class="form-select" id="group_selection" aria-label="Default select example">
+              <option selected>グループ選択</option>
+              <option value="1">グループOne</option>
+              <option value="2">グループTwo</option>
+              <option value="3">グループThree</option>
+              <option value="4">グループFour</option>
+            </select>
+          </div>
+          <div>
+            <label class="small fw-bold">性別</label>
+            <div class="d-flex gap-3">
+              <input name="gender" type="radio" class="btn-check" id="gender_male" value="gender_male">
+              <label class="btn btn-outline-primary btn-sm" for="gender_male">男性</label>
+              <input name="gender" type="radio" class="btn-check" id="gender_female" value="gender_female">
+              <label class="btn btn-outline-primary btn-sm" for="gender_female">女性</label>
+            </div>
+          </div>
+          <div>
+            <label class="small fw-bold" for="birth_month">誕生月</label>
+            <select class="form-select" name="birth_month" id="birth_month">
+              <option selected>月</option>
+              <option value="1">1月</option>
+              <option value="2">2月</option>
+              <option value="3">3月</option>
+              <option value="4">4月</option>
+              <option value="5">5月</option>
+              <option value="6">6月</option>
+              <option value="7">7月</option>
+              <option value="8">8月</option>
+              <option value="9">9月</option>
+              <option value="10">10月</option>
+              <option value="11">11月</option>
+              <option value="12">12月</option>
+            </select>
+          </div>
+          <div>
+            <label class="small fw-bold" for="number_boardings">乗船回数</label>
+            <div class="input-group">
+              <input name="number_boardings" type="number" class="form-control border-end-0" id="number_boardings" placeholder="" min="0" max="10000">
+              <span class="input-group-text bg-transparent ps-0">回</span></div>
+          </div>
+          <div>
+            <label class="small fw-bold" for="elapsed_months">最終から経過月数</label>
+            <div class="input-group">
+              <input name="elapsed_months" type="number" class="form-control border-end-0" id="elapsed_months" placeholder="" min="0" max="1000">
+              <span class="input-group-text bg-transparent ps-0">ヶ月経過</span></div>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onClick="f_search()">検索する</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<footer class="sticky-top pt-4 bd-gray-800 text-white"></footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<script src="files/js/footer.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+
+
+const e_jsSearchInfo=document.getElementById('js_search_info');
+const e_jsSearchValue=document.getElementById('js_search_value');
+const e_modalSearch=document.js_formSearch;
+const v_modalSearchAll=e_modalSearch.length;
+const a_modalSearchName=[];
+for(let v_i=0;v_i<v_modalSearchAll;v_i++){
+  const v_name = e_modalSearch[v_i].name;
+  const e_label=document.querySelector('label[for="'+v_name+'"]');
+  let v_label="";
+  if(e_label){
+     v_label=e_label.innerText;
+  }
+  const a_searchName={v_name,v_label};
+  if(v_name && !a_modalSearchName.find(item => item.v_name === a_searchName.v_name)){
+    a_modalSearchName.push(a_searchName);
+  }
+}
+const v_modalSearchNameAll=a_modalSearchName.length;
+let v_search="";
+function f_search(){
+  v_search="";
+  for(let v_i=0;v_i<v_modalSearchNameAll;v_i++){
+    var e_searchTarget=e_modalSearch.elements[a_modalSearchName[v_i].v_name];
+    var v_label=document.querySelector('label[for="'+a_modalSearchName[v_i].v_name+'"]');
+    var v_selectedIndex=e_searchTarget.selectedIndex;
+    if(e_searchTarget.type==='select-one' && v_selectedIndex>0){
+       v_search+=a_modalSearchName[v_i].v_label+":"+e_searchTarget[v_selectedIndex].innerText+"/";
+    }else if((e_searchTarget.value!="" && e_searchTarget.type==='text') || e_searchTarget.type==='number' && e_searchTarget.value>0){
+      if(v_i==0){
+         e_jsSearchValue.value=e_searchTarget.value;
+      }else{
+         v_search+=a_modalSearchName[v_i].V_label+":"+e_searchTarget.value+"/";
+      }
+    }else if(document.querySelector('label[for="'+e_searchTarget.value+'"]')){
+      v_search+=document.querySelector('label[for="'+e_searchTarget.value+'"]').innerText+"/";
+    }
+  }
+  e_jsSearchInfo.innerHTML=v_search;
+}
+
+
+let e_menuTop=document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll=function(){
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 500){
+    e_menuTop.style.bottom="0px";
+  } else {
+    e_menuTop.style.bottom="-200px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

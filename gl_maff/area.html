@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>日本地理的表示協議会（JGIC） - Japan Geographical Indication Council LP</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="日本地理的表示協議会（JGIC） - Japan Geographical Indication Council LP">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Noto+Sans+JP:wght@400;600&display=swap');
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+html:not(.offcanvasOP) {
+  scroll-padding-top: 70px
+}
+.bg-main-title {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("files/img/bg-content_02.webp");
+  background-position: center;
+  background-size: cover;
+  padding: min(8em, 25vw) 0;
+}
+.jp-map {
+  top: 35%;
+  left: 50%;
+  margin-left: 300px;
+}
+.bg-foods {
+  background-image: url("files/img/bg-foods01.svg"), url("files/img/bg-foods02.svg");
+  padding: 5em 0 3em;
+  background-size: min(560px, 50%);
+  background-position: center -15px, center calc(100% + 20px);
+  background-repeat: no-repeat;
+}
+.list-fruits {
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: auto;
+}
+.page-item.active .page-link {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.page-item .page-link {
+  color: var(--bs-primary);
+}
+.pc-columns-2 {
+  columns: 400px;
+  column-gap: 4em;
+}
+.img-btn {
+  height: 7em;
+  mix-blend-mode: multiply;
+}
+
+@media (min-width:768px) {
+}
+
+@media (max-width:991px) {
+.jp-map {
+  top: 40%;
+  left: auto;
+  right: 10px;
+  margin-left: 0;
+}
+}
+
+@media (max-width:767px) {
+.bg-foods {
+  padding: 4em 0 2em;
+  background-size: 96%;
+  background-position: center 20px, center calc(100% + 10px);
+  background-repeat: no-repeat;
+}
+.list-fruits {
+  grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+
+<body>
+<header class="sticky-top">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="max-200 col-5 ps-2 py-1"><a href="index.html"><img src="files/img/logo_jgic.webp" alt="" width="1111" height="321" class="img-fluid"></a></div>
+    <div class="d-flex">
+      <div class="align-items-center small gap-3 d-none d-lg-flex"> <a href="###" class="text-body text-decoration-none border-bottom border-primary">地理的表示とは</a> <a href="#information" class="text-body text-decoration-none border-bottom border-primary">お知らせ</a><a href="###" class="text-body text-decoration-none border-bottom border-primary">産品検索</a><a href="###" class="text-body text-decoration-none border-bottom border-primary">登録申請</a><a href="###" class="text-body text-decoration-none border-bottom border-primary">偽造防止について</a> <a href="#contact" class="btn btn-primary btn-sm rounded-pill">お問い合わせ</a> </div>
+      <button class="btn btn-sm text-primary px-2 d-flex align-items-center" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <img src="files/img/icon_language.svg" alt="" width="24" height="24"> <span class="d-grid px-2 lh-1 small"><span>JP</span><i class="bi bi-caret-down-fill"></i></span></button>
+      <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+        <li><a class="dropdown-item" href="#">日本語</a></li>
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">中文簡体</a></li>
+      </ul>
+      <button class="btn p-3 lh-1 fs-3 text-primary border-start border-primary border-0 rounded-0 d-lg-none" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-480 bg-black border-start" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1 justify-content-end">
+    <button type="button" class="btn p-0 text-primary fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body d-grid align-content-between px-0"> <img src="files/img/bg-menu.svg" alt="" class="img-fluid position-absolute mt-4">
+    <div class="col-10 mx-auto position-relative">
+      <h5 class="text-center fs-2 text-primary ls-2 ffs-palt mb-5 border-bottom border-primary pb-3">日本の特産品を<br>
+        世界へ</h5>
+      <div class="d-grid pt-4"> <a href="#import" class="btn fs-5 border-bottom py-3 fw-bold" data-bs-dismiss="offcanvas" aria-label="Close">輸入したい</a> <a href="#scanning" class="btn fs-5 border-bottom py-3 fw-bold" data-bs-dismiss="offcanvas" aria-label="Close">日本産証明</a><a href="#information" class="btn fs-5 py-3 fw-bold" data-bs-dismiss="offcanvas" aria-label="Close">お知らせ</a>
+        <div class="d-flex gap-3"> <a href="###" class="border-bottom py-2 fw-bold text-body text-decoration-none w-50" data-bs-dismiss="offcanvas" aria-label="Close">地理的表示とは </a><a href="###" class="border-bottom py-2 fw-bold text-body text-decoration-none w-50" data-bs-dismiss="offcanvas" aria-label="Close">登録申請</a> </div>
+        <div class="d-flex gap-3"> <a href="###" class="py-2 fw-bold text-body text-decoration-none w-50" data-bs-dismiss="offcanvas" aria-label="Close">産品検索</a><a href="###" class="py-2 fw-bold text-body text-decoration-none w-50" data-bs-dismiss="offcanvas" aria-label="Close">偽造防止について</a> </div>
+        <a href="#contact" class="btn btn-primary btn-lg rounded-pill my-3">お問い合わせ</a> </div>
+    </div>
+    <div class="small d-flex gap-1 justify-content-center text-center ls-1 px-4 mb-3"> <span class="py-1 px-3 text-white bd-gray-800 flex-fill">日本語</span> <a href="###" class="text-decoration-none py-1 px-3 border text-body flex-fill">English</a> <a href="###" class="text-decoration-none py-1 px-3 border text-body flex-fill">中文簡体</a> </div>
+  </div>
+</div>
+<main>
+  <article>
+    <section class="position-relative">
+      <div class="bg-main-title">
+        <div class="bg-white rounded-circle position-absolute col-3 col-sm-2 max-160 p-3 p-lg-4 jp-map"><img src="files/img/map_primary/japan_map_1.svg" alt="" width="150" height="150" class="img-fluid"></div>
+        <h2 class="fw-bold text-white text-center m-0 ls-3 filter-drop-shadow">北海道</h2>
+      </div>
+      <div class="small d-flex gap-2 justify-content-center text-center ls-1 bg-primary py-4 py-sm-5"> <span class="py-1 text-white bd-gray-800 col-3 max-160">日本語</span> <a href="###" class="text-decoration-none py-1 border text-white col-3 max-160">English</a> <a href="###" class="text-decoration-none py-1 border text-white col-3 max-160">中文簡体</a> </div>
+    </section>
+    <section>
+      <div class="container py-5 position-relative">
+        <div class="position-absolute col-5 col-md-3 start-0 top-0 max-240"> <img src="files/img/map_beige/japan_map_1.svg" alt="" width="1000" height="1000" class="img-fluid"> </div>
+        <div class="position-relative filter-drop-shadow-white mb-5">
+          <h3 class="fw-bold fs-4 text-center lh-lg ls-1 py-5">北海道の自然恵みと美食の楽園<br>
+            海の幸から風味豊かな農産物まで</h3>
+          <div class="pc-columns-2">
+            <p> 北海道は、日本の最北に位置し、四季折々の自然と風景が魅力の地ですが、その中でも食品文化が特に印象的です。北海道は新鮮な海産物、豊かな大地からの新鮮な農産物、そして乳製品の宝庫として知られています。 </p>
+            <p> 新鮮な海の幸を楽しむなら、北海道の寿司や海鮮丼が最高です。新鮮な魚介類がそのままお皿に届けられ、口の中で溶けるような美味しさを味わえます。 </p>
+            <p> また、北海道の大地からは新鮮な野菜、ジャガイモ、とうもろこし、大豆などが収穫され、美味しい料理の材料として使われます。ジャガイモを使ったポテト料理やとうもろこしの甘さを楽しむ料理は地元の人々に愛されています。 </p>
+            <p> さらに、北海道は乳製品の生産が盛んで、美味しいチーズ、バター、アイスクリームなどが豊富にあります。特に北海道産の生乳を使用したものは、クリーミーで風味豊かです。 </p>
+            <p> 北海道の食品は、その豊かな自然環境から生まれたもので、地元の風味を楽しむことができます。北海道を訪れた際には、その美食をぜひ堪能してみてください。 </p>
+          </div>
+        </div>
+        <ul class="d-flex ps-0 gap-2 gap-md-5">
+          <li class="d-block flex-fill"><a href="###" class="position-relative d-block ls-3 text-white fw-bold text-decoration-none rounded-10 overflow-hidden filter-drop-shadow bd-gray-500"><img src="files/img/btn_travel.webp" alt="" width="1000" height="600" class="img-cover w-100 img-btn" loading="lazy">
+            <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-center align-items-center fs-4 filter-drop-shadow">旅行</div>
+            </a></li>
+          <li class="d-block flex-fill"><a href="###" class="position-relative d-block ls-3 text-white fw-bold text-decoration-none rounded-10 overflow-hidden filter-drop-shadow bd-gray-500"><img src="files/img/btn_foods.webp" alt="" width="1000" height="600" class="img-cover w-100 img-btn" loading="lazy">
+            <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-center align-items-center fs-4 filter-drop-shadow">食べ物</div>
+            </a></li>
+          <li class="d-block flex-fill"><a href="###" class="position-relative d-block ls-3 text-white fw-bold text-decoration-none rounded-10 overflow-hidden filter-drop-shadow bd-gray-500"><img src="files/img/btn_specialties.webp" alt="" width="1000" height="600" class="img-cover w-100 img-btn" loading="lazy">
+            <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-center align-items-center fs-4 filter-drop-shadow">特産品</div>
+            </a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="bg-light bg-foods">
+      <div class="container">
+        <h3 class="fw-bold text-center mb-4">北海道の登録商品</h3>
+        <ul class="d-grid gap-3 px-3 list-fruits mb-4">
+          <li class="d-flex rounded-3 justify-content-between overflow-hidden bg-white shadow-sm"> <a href="foods.html" class="btn p-0 d-flex border-0 flex-fill text-start"><span class="bg-primary text-white smaller d-flex flex-column col-2 align-items-center py-2"><img src="files/img/icon_vegetables_grains_w.svg" alt="" width="40" height="50">野菜・穀物類</span><img src="files/img/foods_01_01.jpg" alt="" class="col-2 img-cover h-100" loading="lazy"> <span class="d-flex flex-column align-items-start justify-content-center flex-fill h-100 px-2 small text-sm-start"><span class="badge bg-success mb-1">山梨県</span>株式会社明野九州屋ファーム</span> </a> <a href="files/foods_information.pdf" download="株式会社明野九州屋ファーム.pdf" class="px-2 bg-primary d-flex align-items-center"><img src="files/img/icon_pfd_download_w.svg" alt="" width="30" height="30"></a></li>
+          <li class="d-flex rounded-3 justify-content-between overflow-hidden bg-white shadow-sm"> <a href="foods.html" class="btn p-0 d-flex border-0 flex-fill text-start"><span class="bg-primary text-white smaller d-flex flex-column col-2 align-items-center py-2"><img src="files/img/icon_meat_w.svg" alt="" width="40" height="50">食肉</span><img src="files/img/foods_01_02.jpg" alt="" class="col-2 img-cover h-100" loading="lazy"> <span class="d-flex flex-column align-items-start justify-content-center flex-fill h-100 px-2 small text-sm-start"><span class="badge bg-success mb-1">山梨県</span>株式会社明野九州屋ファーム</span> </a> <a href="files/foods_information.pdf" download="株式会社明野九州屋ファーム.pdf" class="px-2 bg-primary d-flex align-items-center"><img src="files/img/icon_pfd_download_w.svg" alt="" width="30" height="30"></a></li>
+          <li class="d-flex rounded-3 justify-content-between overflow-hidden bg-white shadow-sm"> <a href="foods.html" class="btn p-0 d-flex border-0 flex-fill text-start"><span class="bg-primary text-white smaller d-flex flex-column col-2 align-items-center py-2"><img src="files/img/icon_fruits_w.svg" alt="" width="40" height="50">果物</span><img src="files/img/foods_01_03.jpg" alt="" class="col-2 img-cover h-100" loading="lazy"> <span class="d-flex flex-column align-items-start justify-content-center flex-fill h-100 px-2 small text-sm-start"><span class="badge bg-success mb-1">山梨県</span>株式会社明野九州屋ファーム</span> </a> <a href="files/foods_information.pdf" download="株式会社明野九州屋ファーム.pdf" class="px-2 bg-primary d-flex align-items-center"><img src="files/img/icon_pfd_download_w.svg" alt="" width="30" height="30"></a></li>
+          <li class="d-flex rounded-3 justify-content-between overflow-hidden bg-white shadow-sm"> <a href="foods.html" class="btn p-0 d-flex border-0 flex-fill text-start"><span class="bg-primary text-white smaller d-flex flex-column col-2 align-items-center py-2"><img src="files/img/icon_seafood_w.svg" alt="" width="40" height="50">魚介類</span><img src="files/img/foods_01_04.jpg" alt="" class="col-2 img-cover h-100" loading="lazy"> <span class="d-flex flex-column align-items-start justify-content-center flex-fill h-100 px-2 small text-sm-start"><span class="badge bg-success mb-1">山梨県</span>株式会社明野九州屋ファーム</span> </a> <a href="files/foods_information.pdf" download="株式会社明野九州屋ファーム.pdf" class="px-2 bg-primary d-flex align-items-center"><img src="files/img/icon_pfd_download_w.svg" alt="" width="30" height="30"></a></li>
+          <li class="d-flex rounded-3 justify-content-between overflow-hidden bg-white shadow-sm"> <a href="foods.html" class="btn p-0 d-flex border-0 flex-fill text-start"><span class="bg-primary text-white smaller d-flex flex-column col-2 align-items-center py-2"><img src="files/img/icon_processed_foods_w.svg" alt="" width="40" height="50">加工食品</span><img src="files/img/foods_01_05.jpg" alt="" class="col-2 img-cover h-100" loading="lazy"> <span class="d-flex flex-column align-items-start justify-content-center flex-fill h-100 px-2 small text-sm-start"><span class="badge bg-success mb-1">山梨県</span>株式会社明野九州屋ファーム</span> </a> <a href="files/foods_information.pdf" download="株式会社明野九州屋ファーム.pdf" class="px-2 bg-primary d-flex align-items-center"><img src="files/img/icon_pfd_download_w.svg" alt="" width="30" height="30"></a></li>
+          <li class="d-flex rounded-3 justify-content-between overflow-hidden bg-white shadow-sm"> <a href="foods.html" class="btn p-0 d-flex border-0 flex-fill text-start"><span class="bg-primary text-white smaller d-flex flex-column col-2 align-items-center py-2"><img src="files/img/icon_other_w.svg" alt="" width="40" height="50">その他</span><img src="files/img/foods_01_06.jpg" alt="" class="col-2 img-cover h-100" loading="lazy"> <span class="d-flex flex-column align-items-start justify-content-center flex-fill h-100 px-2 small text-sm-start"><span class="badge bg-success mb-1">山梨県</span>株式会社明野九州屋ファーム</span> </a> <a href="files/foods_information.pdf" download="株式会社明野九州屋ファーム.pdf" class="px-2 bg-primary d-flex align-items-center"><img src="files/img/icon_pfd_download_w.svg" alt="" width="30" height="30"></a></li>
+        </ul>
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled"> <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a> </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+        </ul>
+      </div>
+    </section>
+    <div class="text-center py-5">
+      <button class="btn btn-outline-primary rounded-pill px-5" onClick="history.back()">前に戻る</button>
+    </div>
+  </article>
+</main>
+<footer class="bg-light pt-4">
+  <div class="d-lg-flex justify-content-center align-items-center p-4">
+    <div class="d-flex gap-4 justify-content-evenly col-12 col-lg-5">
+      <ul class="footer-link ps-0 max-240 w-100">
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">HOME<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">地理的表示とは<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">お知らせ<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">産品検索<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">関連リンク<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">お問い合わせ<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">登録申請<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+      </ul>
+      <ul class="footer-link ps-0 max-240 w-100">
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Japanese<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">English<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Chinese<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Thai<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">French<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Italian<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+        <li class="d-block"><a href="###" class="text-body text-decoration-none d-flex border-bottom py-1 border-color-nomal justify-content-between">Spanish<i class="bi bi-caret-right-fill text-primary"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-12 col-lg-5"> <a href="https://www.jgic.jp/" target="_blank" rel="noopener" class="col-10 max-360 d-block mx-auto my-4 mt-lg-0"><img src="files/img/logo_jgic.png" alt="" width="1039" height="189" class="img-fluid" style="mix-blend-mode:darken"></a>
+      <div class="d-flex justify-content-evenly align-items-center gap-2"> <a href="https://www.jetro.go.jp/" class="col-3 max-120" target="_blank" rel="noopener"><img src="files/img/logo_jetro.webp" alt="" width="344" height="166" class="blend-screen img-fluid" style="mix-blend-mode:darken"></a> <a href="https://www.maff.go.jp/" class="col-4 max-200" target="_blank" rel="noopener"><img src="files/img/logo_ci_head.jpg" alt="" width="280" height="53" class="blend-screen img-fluid" style="mix-blend-mode:darken"></a> <a href="https://jdmso.co.jp/" class="col-4 max-160" target="_blank" rel="noopener"><img src="files/img/logo_jdmso_kabu.png" alt="" width="457" height="143" class="blend-screen img-fluid" style="mix-blend-mode:darken"></a> </div>
+    </div>
+  </div>
+  <p class="text-center small py-3 mb-0 border-top border-color-nomal">Copyright&copy;地理的表示産品.All rights reserved.</p>
+</footer>
+<div id="menu_top" class="move js-menutop col-2 max-120" style="z-index: 1040"> <img src="files/img/icon_menu_top.svg" alt="" width="204" height="150" class="img-fluid"> </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+const e_html=document.querySelector('html');
+const e_offcanvas=document.querySelector('[data-bs-toggle="offcanvas"]');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+e_offcanvas.addEventListener('click',function(){
+  e_html.classList.add('offcanvasOP');
+});
+console.log(a_offcanvasHash);
+a_offcanvasHash.forEach(function(e){
+  e.addEventListener('click',function(){
+    setTimeout(function(){
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,865 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FISHING PASSPORT</title>
+<meta content="telephone=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FISHING PASSPORT">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style type="text/css">
+.bg-main {
+  background-image: url("files/img/main_bg.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.myfilde svg, .user-photo-edit svg {
+  width: 100%;
+  height: 100%;
+}
+.icon-myfilde {
+  background-color: var(--bs-light);
+}
+.myfilde-on .icon-myfilde {
+  background-color: var(--bs-secondary);
+  color: #fff;
+}
+.myfilde-on {
+  color: var(--bs-secondary);
+}
+.footer-menu {
+  color: var(--bs-primary);
+  stroke: #fff;
+  fill: var(--bs-primary);
+}
+.footer-menu a {
+  color: var(--bs-gray);
+  fill: #fff;
+  stroke: var(--bs-gray);
+}
+.footer-menu svg {
+  width: 40px;
+  height: 40px;
+}
+.drop-shadow {
+  filter: drop-shadow(0px 2px 8px rgba(0,0,0,.3));
+}
+.user-photo-edit {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: 35px;
+  color: rgba(0,0,0,0.5);
+}
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23e10000' d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3e%3c/svg%3e");
+  background-size: 16px 16px;
+}
+.btn-check:checked+.btn {
+  background-color: #4d4d4d;
+  color: #fff;
+}
+.readonly label, .readonly .form-control {
+  pointer-events: none;
+}
+</style>
+</head>
+
+<body>
+<header class="bg-white d-flex justify-content-between align-items-center ps-2 sticky-top"> <a href="index.html" class="text-decoration-none">
+  <h1 class="mb-0"><img src="files/img/main_logo.svg" alt="FISHING PASSPORT WEB乗船名簿" width="140" height="54"></h1>
+  </a>
+  <div class="d-flex">
+    <button class="btn btn-sm text-white dropdown-toggle px-0 bg-primary rounded-0" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <img src="files/img/language_icon.svg" alt="" width="60" height="20"><br>
+    <span class="small">JP</span></button>
+    <button class="btn btn-sm text-white bg-secondary px-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu" aria-controls="offcanvasRight"> <img src="files/img/menu_icon.svg" alt="" width="60" height="20"><br>
+    <span class="smaller">MENU</span></button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+      <li><a class="dropdown-item" href="#">日本語</a></li>
+      <li><a class="dropdown-item" href="#">English</a></li>
+      <li><a class="dropdown-item" href="#">中文</a></li>
+    </ul>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-80 max-400 bg-primary text-white" tabindex="-1" id="offcanvas_menu" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header border-bottom py-1">
+    <h5 id="offcanvasRightLabel"><img src="files/img/main_logo.svg" alt="FISHING PASSPORT WEB乗船名簿" width="140" height="54"></h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-grid gap-2 border-bottom pb-3"> <a href="index.html" class="btn text-white">ホーム</a><a href="##" class="btn text-white">プロフィール</a><a href="##" class="btn text-white">緊急連絡先</a> <a href="##" class="btn text-white">連携サービス</a> </div>
+    <div class="d-grid gap-2 py-3"> <a href="###"><img src="files/img/banner_001.svg" alt="" class="img-fluid rounded-3 mb-3 shadow"></a> <a href="###"><img src="files/img/banner_002.svg" alt="" class="img-fluid rounded-3 mb-3 shadow"></a></div>
+  </div>
+  <div class="offcanvas-footer p-2 text-end">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+  </div>
+</div>
+<main>
+<article>
+<div class="bg-primary position-relative pt-3">
+  <div class="container bg-main py-5" style="height: 200px;"> </div>
+  <img src="files/img/bg_msk.svg" alt="" class="bottom-1 position-absolute w-100" width="380" height="70"> </div>
+<section class="bg-light px-3 pb-5">
+<div class="container container-800 bg-white p-3 pt-4 rounded-10 position-relative mb-5" style="margin-top: -100px">
+<h3 class="bg-success text-white position-absolute start-0 rounded-5 py-2 px-3 fs-6 w-50 fw-bold rounded-bottom-0" style="top: -20px">マイページ</h3>
+<div class="position-absolute text-center w-100 start-0" onClick="f_canvasSet(this)" style="top:-100px"><img src="files/img/user.jpg" class="rounded-circle col-5 h-auto max-160" width="500" height="500" alt="ユーザー画像">
+  <button class="btn position-absolute bottom-0 p-0 user-photo-edit" data-bs-toggle="modal" data-bs-target="#modal_userimg_edit">
+  <svg>
+    <use xlink:href="files/img/icon_set.svg#camera"></use>
+  </svg>
+  </button>
+</div>
+<h4 class="fs-6 fw-bold mt-2">ユーザー情報</h4>
+<img src="files/img/profile_main.svg" alt="" class="img-fluid ps-2 mb-3" style="margin-top: -30px">
+<p class="small">プロフィール情報は正確な情報を歩記入ください。<br>
+  万が一事故が発生した際、公的機関からの申請に対し速やかに情報を提供する事をご了承ください。</p>
+<hr class="m-2">
+<form name="form" method="post" novalidate="novalidate" class="h-adr readonly">
+  <div class="row mb-3">
+    <div class="col">ニックネーム
+      <input name="form[nickname]" type="text" required="required" class="form-control form-control" id="form_nickname" value="まーくん" maxlength="180">
+    </div>
+  </div>
+  <div class="d-flex gap-2 mb-3">
+    <div class="w-50">姓
+      <input name="form[lastname]" type="text" required="required" class="form-control form-control" id="form_lastname" value="佐野" maxlength="180">
+    </div>
+    <div class="w-50">名
+      <input name="form[firstname]" type="text" required="required" class="form-control  form-control" id="form_firstname" value="正登" maxlength="180">
+    </div>
+  </div>
+  <div class="d-flex mb-3 justify-content-between">
+    <div>性別
+      <div id="form_gender" class="d-flex gap-2">
+        <input name="form[gender]" type="radio" required="required" class="btn-check" id="form_gender_0" autocomplete="off" value="1" checked="checked">
+        <label class="btn border px-2" for="form_gender_0">男性</label>
+        <input type="radio" class="btn-check" id="form_gender_1" name="form[gender]" required="required" autocomplete="off" value="2">
+        <label class="btn border px-2" for="form_gender_1">女性</label>
+      </div>
+    </div>
+    <div>血液型
+      <div id="form_blood" class="d-flex gap-1">
+        <input name="form[blood]" type="radio" required="required" class="btn-check" id="form_blood_a" autocomplete="off" value="A" checked="checked">
+        <label class="btn border px-3" for="form_blood_a">A</label>
+        <input type="radio" class="btn-check" id="form_blood_b" name="form[blood]" required="required" autocomplete="off" value="B">
+        <label class="btn border px-3" for="form_blood_b">B</label>
+        <input type="radio" class="btn-check" id="form_blood_ab" name="form[blood]" required="required" autocomplete="off" value="AB">
+        <label class="btn border px-3" for="form_blood_ab">AB</label>
+        <input type="radio" class="btn-check" id="form_blood_o" name="form[blood]" required="required" autocomplete="off" value="O">
+        <label class="btn border px-3" for="form_blood_o">O</label>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="">誕生日</label>
+    <div class="d-flex gap-2">
+      <select id="form_birthday_year" name="form[birthday][year]" required="required" class="form-select" style="">
+        <option value=""></option>
+        <option value="1903">1903</option>
+        <option value="1904">1904</option>
+        <option value="1905">1905</option>
+        <option value="1906">1906</option>
+        <option value="1907">1907</option>
+        <option value="1908">1908</option>
+        <option value="1909">1909</option>
+        <option value="1910">1910</option>
+        <option value="1911">1911</option>
+        <option value="1912">1912</option>
+        <option value="1913">1913</option>
+        <option value="1914">1914</option>
+        <option value="1915">1915</option>
+        <option value="1916">1916</option>
+        <option value="1917">1917</option>
+        <option value="1918">1918</option>
+        <option value="1919">1919</option>
+        <option value="1920">1920</option>
+        <option value="1921">1921</option>
+        <option value="1922">1922</option>
+        <option value="1923">1923</option>
+        <option value="1924">1924</option>
+        <option value="1925">1925</option>
+        <option value="1926">1926</option>
+        <option value="1927">1927</option>
+        <option value="1928">1928</option>
+        <option value="1929">1929</option>
+        <option value="1930">1930</option>
+        <option value="1931">1931</option>
+        <option value="1932">1932</option>
+        <option value="1933">1933</option>
+        <option value="1934">1934</option>
+        <option value="1935">1935</option>
+        <option value="1936">1936</option>
+        <option value="1937">1937</option>
+        <option value="1938">1938</option>
+        <option value="1939">1939</option>
+        <option value="1940">1940</option>
+        <option value="1941">1941</option>
+        <option value="1942">1942</option>
+        <option value="1943">1943</option>
+        <option value="1944">1944</option>
+        <option value="1945">1945</option>
+        <option value="1946">1946</option>
+        <option value="1947">1947</option>
+        <option value="1948">1948</option>
+        <option value="1949">1949</option>
+        <option value="1950">1950</option>
+        <option value="1951">1951</option>
+        <option value="1952">1952</option>
+        <option value="1953">1953</option>
+        <option value="1954">1954</option>
+        <option value="1955">1955</option>
+        <option value="1956">1956</option>
+        <option value="1957">1957</option>
+        <option value="1958">1958</option>
+        <option value="1959">1959</option>
+        <option value="1960">1960</option>
+        <option value="1961">1961</option>
+        <option value="1962">1962</option>
+        <option value="1963">1963</option>
+        <option value="1964">1964</option>
+        <option value="1965">1965</option>
+        <option value="1966">1966</option>
+        <option value="1967">1967</option>
+        <option value="1968">1968</option>
+        <option value="1969">1969</option>
+        <option value="1970">1970</option>
+        <option value="1971">1971</option>
+        <option value="1972">1972</option>
+        <option value="1973">1973</option>
+        <option value="1974">1974</option>
+        <option value="1975">1975</option>
+        <option value="1976">1976</option>
+        <option value="1977">1977</option>
+        <option value="1978">1978</option>
+        <option value="1979">1979</option>
+        <option value="1980">1980</option>
+        <option value="1981">1981</option>
+        <option value="1982" selected="selected">1982</option>
+        <option value="1983">1983</option>
+        <option value="1984">1984</option>
+        <option value="1985">1985</option>
+        <option value="1986">1986</option>
+        <option value="1987">1987</option>
+        <option value="1988">1988</option>
+        <option value="1989">1989</option>
+        <option value="1990">1990</option>
+        <option value="1991">1991</option>
+        <option value="1992">1992</option>
+        <option value="1993">1993</option>
+        <option value="1994">1994</option>
+        <option value="1995">1995</option>
+        <option value="1996">1996</option>
+        <option value="1997">1997</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        <option value="2004">2004</option>
+        <option value="2005">2005</option>
+        <option value="2006">2006</option>
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+      </select>
+      <select id="form_birthday_month" name="form[birthday][month]" required="required" class="form-control form-select">
+        <option value=""></option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10" selected="selected">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <select id="form_birthday_day" name="form[birthday][day]" required="required" class="form-control form-select">
+        <option value=""></option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5" selected="selected">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+    </div>
+  </div>
+  <div class="">
+    <label>国籍</label>
+    <select id="form_country" name="form[country]" class="form-control  form-select">
+      <option value="JP" selected="selected">日本</option>
+      <option disabled="disabled">-------------------</option>
+      <option value="IS">アイスランド</option>
+      <option value="IE">アイルランド</option>
+      <option value="AZ">アゼルバイジャン</option>
+      <option value="AF">アフガニスタン</option>
+      <option value="US">アメリカ合衆国</option>
+      <option value="AE">アラブ首長国連邦</option>
+      <option value="DZ">アルジェリア</option>
+      <option value="AR">アルゼンチン</option>
+      <option value="AW">アルバ</option>
+      <option value="AL">アルバニア</option>
+      <option value="AM">アルメニア</option>
+      <option value="AI">アンギラ</option>
+      <option value="AO">アンゴラ</option>
+      <option value="AG">アンティグア・バーブーダ</option>
+      <option value="AD">アンドラ</option>
+      <option value="YE">イエメン</option>
+      <option value="GB">イギリス</option>
+      <option value="IL">イスラエル</option>
+      <option value="IT">イタリア</option>
+      <option value="IQ">イラク</option>
+      <option value="IR">イラン</option>
+      <option value="IN">インド</option>
+      <option value="ID">インドネシア</option>
+      <option value="WF">ウォリス・フツナ</option>
+      <option value="UG">ウガンダ</option>
+      <option value="UA">ウクライナ</option>
+      <option value="UZ">ウズベキスタン</option>
+      <option value="UY">ウルグアイ</option>
+      <option value="EC">エクアドル</option>
+      <option value="EG">エジプト</option>
+      <option value="EE">エストニア</option>
+      <option value="SZ">エスワティニ</option>
+      <option value="ET">エチオピア</option>
+      <option value="ER">エリトリア</option>
+      <option value="SV">エルサルバドル</option>
+      <option value="AU">オーストラリア</option>
+      <option value="AT">オーストリア</option>
+      <option value="AX">オーランド諸島</option>
+      <option value="OM">オマーン</option>
+      <option value="NL">オランダ</option>
+      <option value="BQ">オランダ領カリブ</option>
+      <option value="GH">ガーナ</option>
+      <option value="CV">カーボベルデ</option>
+      <option value="GG">ガーンジー</option>
+      <option value="GY">ガイアナ</option>
+      <option value="KZ">カザフスタン</option>
+      <option value="QA">カタール</option>
+      <option value="CA">カナダ</option>
+      <option value="GA">ガボン</option>
+      <option value="CM">カメルーン</option>
+      <option value="GM">ガンビア</option>
+      <option value="KH">カンボジア</option>
+      <option value="GN">ギニア</option>
+      <option value="GW">ギニアビサウ</option>
+      <option value="CY">キプロス</option>
+      <option value="CU">キューバ</option>
+      <option value="CW">キュラソー</option>
+      <option value="GR">ギリシャ</option>
+      <option value="KI">キリバス</option>
+      <option value="KG">キルギス</option>
+      <option value="GT">グアテマラ</option>
+      <option value="GP">グアドループ</option>
+      <option value="GU">グアム</option>
+      <option value="KW">クウェート</option>
+      <option value="CK">クック諸島</option>
+      <option value="GL">グリーンランド</option>
+      <option value="CX">クリスマス島</option>
+      <option value="GD">グレナダ</option>
+      <option value="HR">クロアチア</option>
+      <option value="KY">ケイマン諸島</option>
+      <option value="KE">ケニア</option>
+      <option value="CI">コートジボワール</option>
+      <option value="CC">ココス(キーリング)諸島</option>
+      <option value="CR">コスタリカ</option>
+      <option value="KM">コモロ</option>
+      <option value="CO">コロンビア</option>
+      <option value="CG">コンゴ共和国(ブラザビル)</option>
+      <option value="CD">コンゴ民主共和国(キンシャサ)</option>
+      <option value="SA">サウジアラビア</option>
+      <option value="GS">サウスジョージア・サウスサンドウィッチ諸島</option>
+      <option value="WS">サモア</option>
+      <option value="BL">サン・バルテルミー</option>
+      <option value="MF">サン・マルタン</option>
+      <option value="ST">サントメ・プリンシペ</option>
+      <option value="ZM">ザンビア</option>
+      <option value="PM">サンピエール島・ミクロン島</option>
+      <option value="SM">サンマリノ</option>
+      <option value="SL">シエラレオネ</option>
+      <option value="DJ">ジブチ</option>
+      <option value="GI">ジブラルタル</option>
+      <option value="JE">ジャージー</option>
+      <option value="JM">ジャマイカ</option>
+      <option value="GE">ジョージア</option>
+      <option value="SY">シリア</option>
+      <option value="SG">シンガポール</option>
+      <option value="SX">シント・マールテン</option>
+      <option value="ZW">ジンバブエ</option>
+      <option value="CH">スイス</option>
+      <option value="SE">スウェーデン</option>
+      <option value="SD">スーダン</option>
+      <option value="SJ">スバールバル諸島・ヤンマイエン島</option>
+      <option value="ES">スペイン</option>
+      <option value="SR">スリナム</option>
+      <option value="LK">スリランカ</option>
+      <option value="SK">スロバキア</option>
+      <option value="SI">スロベニア</option>
+      <option value="SC">セーシェル</option>
+      <option value="SN">セネガル</option>
+      <option value="RS">セルビア</option>
+      <option value="KN">セントクリストファー・ネーヴィス</option>
+      <option value="VC">セントビンセント及びグレナディーン諸島</option>
+      <option value="SH">セントヘレナ</option>
+      <option value="LC">セントルシア</option>
+      <option value="SO">ソマリア</option>
+      <option value="SB">ソロモン諸島</option>
+      <option value="TC">タークス・カイコス諸島</option>
+      <option value="TH">タイ</option>
+      <option value="TJ">タジキスタン</option>
+      <option value="TZ">タンザニア</option>
+      <option value="CZ">チェコ</option>
+      <option value="TD">チャド</option>
+      <option value="TN">チュニジア</option>
+      <option value="CL">チリ</option>
+      <option value="TV">ツバル</option>
+      <option value="DK">デンマーク</option>
+      <option value="DE">ドイツ</option>
+      <option value="TG">トーゴ</option>
+      <option value="TK">トケラウ</option>
+      <option value="DO">ドミニカ共和国</option>
+      <option value="DM">ドミニカ国</option>
+      <option value="TT">トリニダード・トバゴ</option>
+      <option value="TM">トルクメニスタン</option>
+      <option value="TR">トルコ</option>
+      <option value="TO">トンガ</option>
+      <option value="NG">ナイジェリア</option>
+      <option value="NR">ナウル</option>
+      <option value="NA">ナミビア</option>
+      <option value="NU">ニウエ</option>
+      <option value="NI">ニカラグア</option>
+      <option value="NE">ニジェール</option>
+      <option value="NC">ニューカレドニア</option>
+      <option value="NZ">ニュージーランド</option>
+      <option value="NP">ネパール</option>
+      <option value="NF">ノーフォーク島</option>
+      <option value="NO">ノルウェー</option>
+      <option value="HM">ハード島・マクドナルド諸島</option>
+      <option value="BH">バーレーン</option>
+      <option value="HT">ハイチ</option>
+      <option value="PK">パキスタン</option>
+      <option value="VA">バチカン市国</option>
+      <option value="PA">パナマ</option>
+      <option value="VU">バヌアツ</option>
+      <option value="BS">バハマ</option>
+      <option value="PG">パプアニューギニア</option>
+      <option value="BM">バミューダ</option>
+      <option value="PW">パラオ</option>
+      <option value="PY">パラグアイ</option>
+      <option value="BB">バルバドス</option>
+      <option value="PS">パレスチナ自治区</option>
+      <option value="HU">ハンガリー</option>
+      <option value="BD">バングラデシュ</option>
+      <option value="PN">ピトケアン諸島</option>
+      <option value="FJ">フィジー</option>
+      <option value="PH">フィリピン</option>
+      <option value="FI">フィンランド</option>
+      <option value="BT">ブータン</option>
+      <option value="BV">ブーベ島</option>
+      <option value="PR">プエルトリコ</option>
+      <option value="FO">フェロー諸島</option>
+      <option value="FK">フォークランド諸島</option>
+      <option value="BR">ブラジル</option>
+      <option value="FR">フランス</option>
+      <option value="BG">ブルガリア</option>
+      <option value="BF">ブルキナファソ</option>
+      <option value="BN">ブルネイ</option>
+      <option value="BI">ブルンジ</option>
+      <option value="VN">ベトナム</option>
+      <option value="BJ">ベナン</option>
+      <option value="VE">ベネズエラ</option>
+      <option value="BY">ベラルーシ</option>
+      <option value="BZ">ベリーズ</option>
+      <option value="PE">ペルー</option>
+      <option value="BE">ベルギー</option>
+      <option value="PL">ポーランド</option>
+      <option value="BA">ボスニア・ヘルツェゴビナ</option>
+      <option value="BW">ボツワナ</option>
+      <option value="BO">ボリビア</option>
+      <option value="PT">ポルトガル</option>
+      <option value="HN">ホンジュラス</option>
+      <option value="MH">マーシャル諸島</option>
+      <option value="MG">マダガスカル</option>
+      <option value="YT">マヨット</option>
+      <option value="MW">マラウイ</option>
+      <option value="ML">マリ</option>
+      <option value="MT">マルタ</option>
+      <option value="MQ">マルティニーク</option>
+      <option value="MY">マレーシア</option>
+      <option value="IM">マン島</option>
+      <option value="FM">ミクロネシア連邦</option>
+      <option value="MM">ミャンマー (ビルマ)</option>
+      <option value="MX">メキシコ</option>
+      <option value="MU">モーリシャス</option>
+      <option value="MR">モーリタニア</option>
+      <option value="MZ">モザンビーク</option>
+      <option value="MC">モナコ</option>
+      <option value="MV">モルディブ</option>
+      <option value="MD">モルドバ</option>
+      <option value="MA">モロッコ</option>
+      <option value="MN">モンゴル</option>
+      <option value="ME">モンテネグロ</option>
+      <option value="MS">モントセラト</option>
+      <option value="JO">ヨルダン</option>
+      <option value="LA">ラオス</option>
+      <option value="LV">ラトビア</option>
+      <option value="LT">リトアニア</option>
+      <option value="LY">リビア</option>
+      <option value="LI">リヒテンシュタイン</option>
+      <option value="LR">リベリア</option>
+      <option value="RO">ルーマニア</option>
+      <option value="LU">ルクセンブルク</option>
+      <option value="RW">ルワンダ</option>
+      <option value="LS">レソト</option>
+      <option value="LB">レバノン</option>
+      <option value="RE">レユニオン</option>
+      <option value="RU">ロシア</option>
+      <option value="IO">英領インド洋地域</option>
+      <option value="VG">英領ヴァージン諸島</option>
+      <option value="KR">韓国</option>
+      <option value="UM">合衆国領有小離島</option>
+      <option value="EH">西サハラ</option>
+      <option value="GQ">赤道ギニア</option>
+      <option value="TW">台湾</option>
+      <option value="CF">中央アフリカ共和国</option>
+      <option value="MO">中華人民共和国マカオ特別行政区</option>
+      <option value="HK">中華人民共和国香港特別行政区</option>
+      <option value="CN">中国</option>
+      <option value="TL">東ティモール</option>
+      <option value="ZA">南アフリカ</option>
+      <option value="SS">南スーダン</option>
+      <option value="AQ">南極</option>
+      <option value="JP">日本</option>
+      <option value="GF">仏領ギアナ</option>
+      <option value="PF">仏領ポリネシア</option>
+      <option value="TF">仏領極南諸島</option>
+      <option value="VI">米領ヴァージン諸島</option>
+      <option value="AS">米領サモア</option>
+      <option value="MK">北マケドニア</option>
+      <option value="MP">北マリアナ諸島</option>
+      <option value="KP">北朝鮮</option>
+    </select>
+    <input type="hidden" class="p-country-name" value="Japan">
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <label for="">郵便番号</label>
+      <input type="tel" id="form_zip" name="form[zip]" required="required" class="form-control p-postal-code form-control">
+    </div>
+    <div class="col">
+      <label for="">都道府県</label>
+      <input type="text" id="form_region" name="form[region]" required="required" maxlength="50" class="form-control p-region form-control" readonly="readonly">
+    </div>
+  </div>
+  <div class=""> 市区町村
+    <input type="text" id="form_city" name="form[city]" required="required" maxlength="50" class="form-control p-locality  p-street-address form-control" readonly="readonly">
+  </div>
+  <div class=""> 番地
+    <input type="text" id="form_address1" name="form[address1]" required="required" maxlength="80" class="form-control form-control">
+  </div>
+  <div class=""> ビル名・部屋番号
+    <input type="text" id="form_address2" name="form[address2]" maxlength="80" class="form-control p-extended-address form-control">
+  </div>
+</form>
+</section>
+</article>
+</main>
+<nav class="position-fixed bottom-0 w-100 bg-white footer-menu">
+  <ol class="d-flex text-center smaller justify-content-between mb-0 ps-0">
+    <li class="d-block w-20"> <a href="mypage.html" class="d-grid text-decoration-none">
+      <svg class="mx-auto">
+        <use xlink:href="files/img/icon_menu.svg#home"></use>
+      </svg>
+      ホーム</a></li>
+    <li class="d-block w-20"><span class="d-grid">
+      <svg class="mx-auto">
+        <use xlink:href="files/img/icon_menu.svg#profile"></use>
+      </svg>
+      プロフィール</span></li>
+    <li class="d-block w-20"><a href="###" class="d-grid text-decoration-none">
+      <div> <span class="position-relative d-inline-block">
+        <svg>
+          <use xlink:href="files/img/icon_menu.svg#contact"></use>
+        </svg>
+        <span class="position-absolute end-0 top-0 badge rounded-pill bg-primary border border-white border-2">2</span> </span> </div>
+      お知らせ</a></li>
+    <li class="d-block w-20"><a href="###" class="d-grid text-decoration-none">
+      <svg class="mx-auto">
+        <use xlink:href="files/img/icon_menu.svg#services"></use>
+      </svg>
+      提携サービス</a></li>
+    <li class="d-block">
+      <button class="btn btn-sm text-white bg-primary px-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"> <img src="files/img/menu_icon.svg" alt="" width="60" height="20"><br>
+      <span class="smaller">MENU</span></button>
+    </li>
+  </ol>
+</nav>
+<div class="modal fade" id="modal_userimg_edit" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0 bg-secondary text-white">
+        <h5 class="modal-title fw-bold">プロフィール画像</h5>
+        <button type="button" class="btn p-0" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-white fs-5"></i></button>
+      </div>
+      <div class="modal-body pb-0">
+        <label for="form_userimg" class="form-label">画像を選択してください</label>
+        <input class="form-control mb-3" type="file" id="form_userimg" onChange="f_imgChange(this)">
+        <canvas width="1200" height="1200" class="w-100"></canvas>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-primary" onClick="f_sendImg(this)" data-bs-dismiss="modal">設定する</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_modalCanvas;
+let e_context;
+let e_img;
+let isDragging = false;
+let startX;
+let startY;
+let lastX = 0;
+let lastY = 0;
+let newX = 0;
+let newY = 0;
+let newWidth;
+let newHeight;
+let scale = 1;
+let ratio = 1;
+let v_width;
+let v_height;
+let e_imgTarget;
+
+function f_canvasSet(el) {
+  e_modalCanvas = document.querySelector((el.getAttribute('data-bs-target') || el.querySelector('[data-bs-target]').getAttribute('data-bs-target')) + ' canvas');
+  e_context = e_modalCanvas.getContext('2d');
+  e_img = new Image();
+  e_img.onload = () => {
+    calculateImageDimensions();
+    drawImageOnCanvas();
+    e_modalCanvas.addEventListener('touchstart', handleDragStart);
+    e_modalCanvas.addEventListener('touchmove', handleTouchMove);
+    e_modalCanvas.addEventListener('wheel', handleWheel);
+    e_modalCanvas.addEventListener('mousedown', handleDragStart);
+    ['mouseup', 'mouseout', 'touchend'].forEach(eventName => e_modalCanvas.addEventListener(eventName, handleDragEnd));
+    e_modalCanvas.addEventListener('mousemove', handleMouseMove);
+  };
+  e_imgTarget = el.querySelector('img');
+  e_img.src = e_imgTarget.getAttribute('src');
+}
+
+function calculateImageDimensions() {
+  const { width, height } = e_img;
+  const widthRatio = e_modalCanvas.width / width;
+  const heightRatio = e_modalCanvas.height / height;
+  ratio = Math.max(widthRatio, heightRatio);
+  v_width = width * ratio;
+  v_height = height * ratio;
+  newX = Math.min((e_modalCanvas.width - v_width) / 2, 0);
+  newY = Math.min((e_modalCanvas.height - v_height) / 2, 0);
+  newWidth = v_width;
+  newHeight = v_height;
+}
+
+function drawImageOnCanvas() {
+  const { width, height } = e_modalCanvas;
+  e_context.clearRect(0, 0, width, height);
+  e_context.drawImage(e_img, newX, newY, newWidth, newHeight);
+}
+
+function handleDragStart(event) {
+  event.preventDefault();
+  isDragging = true;
+  if (event.touches && event.touches.length > 0) {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  } else {
+    startX = event.clientX;
+    startY = event.clientY;
+  }
+  lastX = newX;
+  lastY = newY;
+  if (event.touches && event.touches.length > 1) {
+    const [touch1, touch2] = event.touches;
+    startX = (touch1.clientX + touch2.clientX) / 2;
+    startY = (touch1.clientY + touch2.clientY) / 2;
+    v_beforX = startX;
+    v_beforY = startY;
+    initialDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+    initialScale = scale;
+  }
+}
+
+function handleDragEnd() {
+  isDragging = false;
+  initialDistance = 0;
+  initialScale = scale;
+}
+
+function handleTouchMove(event) {
+  event.preventDefault();
+  if (event.touches.length === 1 && isDragging) {
+    const touch = event.touches[0];
+    const clientX = touch.clientX;
+    const clientY = touch.clientY;
+    const deltaX = clientX - startX;
+    const deltaY = clientY - startY;
+    newX = lastX + deltaX * scale * ratio;
+    newY = lastY + deltaY * scale * ratio;
+    const minX = e_modalCanvas.width - newWidth;
+    const minY = e_modalCanvas.height - newHeight;
+    newX = Math.max(Math.min(newX, 0), minX);
+    newY = Math.max(Math.min(newY, 0), minY);
+    drawImageOnCanvas();
+  } else if (event.touches.length > 1) {
+    const [touch1, touch2] = event.touches;
+    const currentDistance = Math.hypot(touch2.clientX - touch1.clientX, touch2.clientY - touch1.clientY);
+    const delta = currentDistance - initialDistance;
+    const zoom = 1 + delta * 0.01;
+    scale = Math.max(initialScale * zoom, 1);
+    const rect = e_modalCanvas.getBoundingClientRect();
+    const offsetX = (touch1.clientX + touch2.clientX) / 2;
+    const offsetY = (touch1.clientY + touch2.clientY) / 2;
+    const preRatioX = (offsetX - newX) / newWidth;
+    const preRatioY = (offsetY - newY) / newHeight;
+    newWidth = v_width * scale;
+    newHeight = v_height * scale;
+    newX = offsetX - preRatioX * newWidth + (offsetX - startX) * scale;
+    newY = offsetY - preRatioY * newHeight + (offsetY - startY) * scale;
+    const minX = e_modalCanvas.width - newWidth;
+    const minY = e_modalCanvas.height - newHeight;
+    drawImageOnCanvas();
+    lastX = newX;
+    lastY = newY;
+    startX = offsetX;
+    startY = offsetY;
+  }
+}
+
+function handleWheel(event) {
+  event.preventDefault();
+  const delta = Math.sign(event.deltaY);
+  const zoom = delta > 0 ? 0.9 : 1.1;
+  scale *= zoom;
+  scale = Math.min(Math.max(scale, 1), 4);
+  const offsetX = event.clientX - e_modalCanvas.getBoundingClientRect().left;
+  const offsetY = event.clientY - e_modalCanvas.getBoundingClientRect().top;
+  const preRatioX = (offsetX - newX) / newWidth;
+  const preRatioY = (offsetY - newY) / newHeight;
+  newWidth = v_width * scale;
+  newHeight = v_height * scale;
+  newX = offsetX - preRatioX * newWidth;
+  newY = offsetY - preRatioY * newHeight;
+  const minX = e_modalCanvas.width - newWidth;
+  const minY = e_modalCanvas.height - newHeight;
+  newX = Math.max(Math.min(newX, 0), minX);
+  newY = Math.max(Math.min(newY, 0), minY);
+  drawImageOnCanvas();
+}
+
+function handleMouseMove(event) {
+  if (!isDragging) return;
+  newX = lastX + (event.clientX - startX) * scale * ratio;
+  newY = lastY + (event.clientY - startY) * scale * ratio;
+  const minX = e_modalCanvas.width - newWidth;
+  const minY = e_modalCanvas.height - newHeight;
+  newX = Math.max(Math.min(newX, 0), minX);
+  newY = Math.max(Math.min(newY, 0), minY);
+  drawImageOnCanvas();
+}
+
+function drawImageOnCanvas() {
+  e_context.clearRect(0, 0, e_modalCanvas.width, e_modalCanvas.height);
+  e_context.drawImage(e_img, newX, newY, newWidth, newHeight);
+}
+function f_imgChange(e_file) {
+  e_modalCanvas = e_file.nextElementSibling;
+  e_context = e_modalCanvas.getContext('2d');
+  e_img = new Image();
+  scale = 1;
+  e_img.onload = () => {
+    const widthRatio = e_modalCanvas.width / e_img.width;
+    const heightRatio = e_modalCanvas.height / e_img.height;
+    ratio = Math.max(widthRatio, heightRatio);
+    v_width = e_img.width * ratio;
+    v_height = e_img.height * ratio;
+    newX = Math.min((e_modalCanvas.width - v_width) / 2, 0);
+    newY = Math.min((e_modalCanvas.height - v_height) / 2, 0);
+    newWidth = v_width;
+    newHeight = v_height;
+    drawImageOnCanvas();
+  };
+  e_img.src = URL.createObjectURL(e_file.files[0]);
+}
+
+/*画像送信*/
+const sendUrl = "https://www.send_img.com"; // 送信先のURL
+function f_sendImg(el) {
+  var e_modalFadeId=el.closest('.modal.fade').getAttribute('id');
+  
+  var e_canvas = document.querySelector('#'+e_modalFadeId+' canvas');
+  var e_image = e_canvas.toDataURL("image/png");
+  e_imgTarget.src = e_image; // 元の画像を上書き
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log("画像が送信されました。");
+      // 送信が成功した後の処理をここに追加する
+    }
+  };
+  xhr.open("POST", sendUrl, true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  xhr.send("image=" + encodeURIComponent(e_image));
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>リクルートサイト株式会社エバーウィン｜Everwin</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="リクルートサイト株式会社エバーウィン｜Everwin">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Noto+Sans+JP:wght@400;600&display=swap');
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.max-2000 {
+  max-width: 2000px;
+}
+.main {
+  height: max(50vh, 540px);
+  background-image: url(files/img/bg_main.webp);
+  background-position: 40% 60%;
+  background-size: cover;
+}
+.bg-job, .bg-recruit {
+  background-image: url(files/img/bg_job.webp);
+  background-size: cover;
+  background-position: center;
+  height: 60vmin;
+  max-height: 360px;
+}
+.bg-recruit {
+  background-image: url(files/img/bg_recruit.webp);
+}
+.bg-about {
+  background-image: url(files/img/bg_about.webp);
+  background-size: cover;
+  padding: 5em 0;
+  background-position: 43% 50%;
+}
+.grid-01 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid-02 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.bg-job-list {
+  background-color: #d4e0ef;
+}
+.border-01::after {
+  position: absolute;
+  content: "";
+  width: 5em;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--bs-primary);
+}
+
+@media (min-width:768px) {/*md*/
+.fs-md-4 {
+  font-size: 1.5rem;
+}
+.h-md-100 {
+  height: 100%;
+}
+.bg-job-list:nth-child(-2n + 4) {
+  background-color: #ebeded;
+}
+.bg-job-list:nth-child(odd):nth-child(n+5) {
+  background-color: #ebeded;
+}
+.grid-03 {
+  grid-template-columns: repeat(12, 1fr);
+}
+.grid-03 > :nth-child(1) {
+  grid-column: 1 / 9;
+  grid-row: 1 / 2;
+}
+.grid-03 > :nth-child(2) {
+  grid-column: 1 / 7;
+  grid-row: 2 / 3;
+}
+.grid-03 > :nth-child(3) {
+  grid-column: 9 / 13;
+  grid-row: 1 / 2;
+}
+.grid-03 > :nth-child(4) {
+  grid-column: 7 / 13;
+  grid-row: 2 / 3;
+}
+.grid-03 > :nth-child(5) {
+  grid-column: 1 / 13;
+  grid-row: 3 / 4;
+}
+.grid-04 {
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.grid-05 {
+  margin-top: -5em;
+  grid-template-columns: 1fr 1.5fr;
+}
+.grid-05 > :nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.grid-05 > :nth-child(2) {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.grid-05 > :nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.grid-05 > :nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.grid-06 {
+  grid-template-columns: 1fr 1fr;
+}
+.grid-06:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  background-color: #fff;
+}
+}
+
+@media (min-width:992px) {/*lg*/
+.grid-03 > :nth-child(1) {
+  grid-column: 2 / 9;
+}
+.grid-03 > :nth-child(3) {
+  grid-column: 9 / 12;
+}
+.grid-03 > :nth-child(5) {
+  grid-column: 2 / 12;
+}
+}
+
+@media (min-width:1200px) {/*xl*/
+}
+
+@media (max-width:767px) {/*xs*/
+.main {
+  height: max(50vh, 540px);
+  background-position: 66% 60%;
+}
+.grid-01 {
+  grid-template-columns: 1fr 1fr;
+}
+.bg-job-list:nth-child(2n) {
+  background-color: #ebeded;
+}
+.grid-05 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-05 > :nth-child(1) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.grid-05 > :nth-child(2) {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+.grid-05 > :nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+.grid-05 > :nth-child(4) {
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+}
+}
+</style>
+</head>
+
+<body>
+<header class="d-flex justify-content-between align-items-center sticky-top move ffs-palt">
+  <h1 class="col-8 col-md-4 col-lg-4 mb-0 d-flex align-items-center ps-3"><img src="files/img/logo_everwin.svg" alt="株式会社エバーウィン｜Everwin" width="300" height="40" class="col-7 h-auto pe-2 max-160"><span class="smaller">リクルートサイト<br>
+    株式会社エバーウィン</span></h1>
+  <div class="d-flex align-items-center">
+    <ul class="d-none d-md-flex mb-0 ps-0 gap-2 me-3">
+      <li class="d-block mb-0"><a href="###" class="text-primary text-decoration-none border border-primary px-2 small" target="_blank" rel="noopener">LINEでエントリー</a></li>
+      <li class="d-block mb-0"><a href="###" class="text-primary text-decoration-none border border-primary px-2 small" target="_blank" rel="noopener">メールでエントリー</a></li>
+      <li class="d-block mb-0"><a href="###" class="text-primary text-decoration-none border border-primary px-2 small" target="_blank" rel="noopener">電話でエントリー</a></li>
+    </ul>
+    <button class="btn btn-primary rounded-0 px-3 text-white d-flex align-items-center flex-column" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu" aria-label="メニュー表示">
+    <svg width="30" height="30" viewBox="0 0 30 30" class="text-secondary">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="1 10, 29 10"></polyline>
+        <polyline points="1 22, 29 22"></polyline>
+      </g>
+    </svg>
+    <span class="smaller">MENU</span> </button>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-680 text-white-50 border-start text-white bg-dark" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header p-0 justify-content-between">
+    <div class="d-flex col-10 align-items-center ps-4 gap-3 mt-md-2"><img src="files/img/logo_everwin_white.svg" alt="株式会社エバーウィン｜Everwin" width="300" height="40" class="col-5 h-auto max-160"><span class="smaller lh-1 col-7 text-white">リクルートサイト<br>
+      株式会社エバーウィン</span></div>
+    <button class="btn btn-primary rounded-0 px-3 text-white d-flex align-items-center flex-column " data-bs-dismiss="offcanvas" aria-label="Close">
+    <svg width="30" height="30" viewBox="0 0 30 30" class="text-secondary">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="1 5, 29 26"></polyline>
+        <polyline points="1 26, 29 5"></polyline>
+      </g>
+    </svg>
+    <span class="smaller">CLOSE</span> </button>
+  </div>
+  <div class="offcanvas-body px-3">
+    <ul class="d-flex flex-column d-md-grid grid-02 gap-4 py-4 col-10 px-0 mx-auto">
+      <li class="d-flex d-md-grid"><a href="#top" class="text-decoration-none lh-1 modal-close-link" data-bs-dismiss="offcanvas"><span class="text-white fw-bold d-flex align-items-center fs-5"><i class="bi bi-square-fill smaller text-secondary me-2"></i>TOP</span><span class="text-white-50 smaller ps-3">トップ</span></a></li>
+      <li class="d-flex d-md-grid"><a href="#job" class="text-decoration-none lh-1 modal-close-link" data-bs-dismiss="offcanvas"><span class="text-white fw-bold d-flex align-items-center fs-5"><i class="bi bi-square-fill smaller text-secondary me-2"></i>OUR JOB</span><span class="text-white-50 smaller ps-3">仕事内容</span></a></li>
+      <li class="d-flex d-md-grid"><a href="#voice" class="text-decoration-none lh-1 modal-close-link" data-bs-dismiss="offcanvas"><span class="text-white fw-bold d-flex align-items-center fs-5"><i class="bi bi-square-fill smaller text-secondary me-2"></i>VOICE</span><span class="text-white-50 smaller ps-3">社員の声</span></a></li>
+      <li class="d-flex d-md-grid"><a href="#recruit" class="text-decoration-none lh-1 modal-close-link" data-bs-dismiss="offcanvas"><span class="text-white fw-bold d-flex align-items-center fs-5"><i class="bi bi-square-fill smaller text-secondary me-2"></i>RECRUIT</span><span class="text-white-50 smaller ps-3">募集情報</span></a></li>
+      <li class="d-flex d-md-grid"><a href="#entry" class="text-decoration-none lh-1 modal-close-link" data-bs-dismiss="offcanvas"><span class="text-white fw-bold d-flex align-items-center fs-5"><i class="bi bi-square-fill smaller text-secondary me-2"></i>ENTRY</span><span class="text-white-50 smaller ps-3">応募方法</span></a></li>
+      <li class="d-flex d-md-grid"><a href="#about" class="text-decoration-none lh-1 modal-close-link" data-bs-dismiss="offcanvas"><span class="text-white fw-bold d-flex align-items-center fs-5"><i class="bi bi-square-fill smaller text-secondary me-2"></i>ABOUT US</span><span class="text-white-50 smaller ps-3">エバーウィンについて</span></a></li>
+    </ul>
+    <ul class="d-flex flex-column d-md-grid grid-02 gap-4 py-4 text-center col-10 px-0 mx-auto fw-bold ffs-palt">
+      <li class="d-block"><a href="###" class="text-decoration-none text-white d-block border border-white py-1">LINEでエントリー</a></li>
+      <li class="d-block"><a href="###" class="text-decoration-none text-white d-block border border-white py-1">メールでエントリー</a></li>
+      <li class="d-block"><a href="###" class="text-decoration-none text-white d-block border border-white py-1">電話でエントリー</a></li>
+    </ul>
+  </div>
+</div>
+<main>
+  <article>
+    <section id="top" class="bg-light">
+      <div class="bg-secondary text-white ffs-palt text-center smaller py-1 px-2"> 日施工管理（管工事）、溶接・鍛冶工、衛生（配管工）、<span class="d-inline-block">衛生（ガス）、</span><span class="d-inline-block">空調（配管・冷房）、</span><span class="d-inline-block">鳶（鉄骨）、</span><span class="d-inline-block">防災（消火栓）</span> </div>
+      <div class="main max-2000 position-relative mx-auto d-flex flex-column justify-content-between">
+        <div class="container pt-2 ffs-palt filter-drop-shadow-white pt-md-4 mb-2">
+          <div class="px-2 px-md-4 d-flex justify-content-center justify-content-md-start"><span class="fs-md-4 mb-2 text-primary fw-bold ls-1 border-bottom border-2 border-primary d-inline-block pb-2">２０〜４０代が活躍！<br>
+            事務を減らして「技術者に還元する会社」</span> </div>
+          <div class="d-flex gap-3 align-items-center">
+            <div class="col-4 max-200"><img src="files/img/img_aichi.svg" alt="" width="150" height="150" class="w-100 h-100"></div>
+            <h2 class="display-5 fw-bold ls-1">化学プラントの<br>
+              現場施工管理</h2>
+          </div>
+        </div>
+        <div class="h-md-100 position-relative d-flex justify-content-between flex-column pt-md-4">
+          <div class="ffs-palt ls-1">
+            <div class="d-flex mb-2 fw-bold"><span class="bg-white col-md-1 col-xl-2"></span><span class="bg-white py-1 px-2"><span class="fs-5 text-primary">家族を最優先</span>な福利厚生</span></div>
+            <div class="d-flex mb-4 mb-md-0 fw-bold"><span class="bg-white col-md-1 col-xl-2"></span><span class="bg-white py-1 px-2"><span class="fs-5 text-primary">残業・夜間工事</span>なし</span></div>
+          </div>
+          <div class="text-end position-absolute top-0 pt-md-5 pe-3 pe-md-0 w-100" style="z-index: 10">
+            <div class="col-md-8 mx-auto"><img src="files/img/icon_moving.svg" alt="" width="100" height="100" class=""></div>
+          </div>
+          <div class="py-md-3" style="background-color: rgba(0,0,0,0.5)">
+            <ul class="d-grid p-3 gap-3 col-xl-8 col-md-10 mx-auto mb-0 grid-01">
+              <li class="d-block mb-0 flex-fill"><a href="#job" class="bg-primary text-decoration-none text-white py-1 px-3 d-flex justify-content-between">仕事内容<i class="bi bi-arrow-down"></i></a></li>
+              <li class="d-block mb-0 flex-fill"><a href="#voice" class="bg-white text-decoration-none text-body py-1 px-3 d-flex justify-content-between">社員の声<i class="bi bi-arrow-down text-primary"></i></a></li>
+              <li class="d-block mb-0 flex-fill"><a href="#recruit" class="bg-white text-decoration-none text-body py-1 px-3 d-flex justify-content-between">募集情報<i class="bi bi-arrow-down text-primary"></i></a></li>
+              <li class="d-block mb-0 flex-fill"><a href="#entry" class="bg-white text-decoration-none text-body py-1 px-3 d-flex justify-content-between">応募方法<i class="bi bi-arrow-down text-primary"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="job">
+      <h3 class="fw-bold d-grid gap-2 pb-4 pt-5 px-4 mb-0 container"><span class="fs-6"><span class="small"><i class="bi bi-square-fill text-secondary me-2"></i>仕事内容</span></span><span class="fs-1">OUR JOB</span></h3>
+      <div class="bg-job max-2000 mx-auto text-white fw-bold fs-2 ls-2 d-flex justify-content-center align-items-center"><span class="filter-drop-shadow">施工管理職募集</span></div>
+      <div class="bg-light pb-5">
+        <div class="max-2000 mx-auto grid-03 d-md-grid">
+          <div class="bg-white col-10 col-md-12 mx-auto px-3 py-4 d-grid align-content-center">
+            <h4 class="d-flex align-items-center lh-sm ffs-palt justify-content-center gap-2 mb-4 mb-md-5"><img src="files/img/icon_jpb.svg" alt="" width="50" height="50"><span>働きやすい<span class="text-primary display-2 fst-italic ls-2 fw-bold lh-1 d-inline-block position-relative" style="bottom: -0.1em;margin-top: -0.3em">8</span>つの<span class="d-block d-md-inline">注目POINT！</span></span></h4>
+            <ul class="ps-0 text-center grid-04 d-grid gap-2 ffs-palt small">
+              <li class="d-block bg-job-list py-1">現場は大手化学プラント！</li>
+              <li class="d-block bg-job-list py-1">現場作業・写真撮影・書類作成等の業務なし!</li>
+              <li class="d-block bg-job-list py-1">残業・夜間工事なし！</li>
+              <li class="d-block bg-job-list py-1">配管工からのキャリアアップ歓迎！</li>
+              <li class="d-block bg-job-list py-1">移住支援・家賃補助あり！</li>
+              <li class="d-block bg-job-list py-1">書類作成の自動化で効率よく働ける！</li>
+              <li class="d-block bg-job-list py-1">休みやプライベートも充実！</li>
+              <li class="d-block bg-job-list py-1">自らのアイデアをシステム化可能！</li>
+            </ul>
+          </div>
+          <div class="d-flex gap-1">
+            <div><img src="files/img/img_job_01.webp" alt="" width="1521" height="961" class="img-fluid" loading="lazy"></div>
+            <div><img src="files/img/img_job_02.webp" alt="" width="1521" height="961" class="img-fluid" loading="lazy"></div>
+          </div>
+          <div class="bg-primary text-white col-10 col-md-12 mx-auto px-3 py-5">
+            <h5 class="d-flex justify-content-center align-items-center gap-3 fw-bold fs-6 mb-4"><img src="files/img/icon_clock.svg" alt="" width="40" height="40"><span><span class="fs-5">SCHEDULE</span><span class="small d-block">ある1日のスケジュール</span></span></h5>
+            <div class="max-320 mx-auto">
+              <dl class="d-flex small mb-0">
+                <dt class="col-4 text-end pe-2 border-end py-1">8:00</dt>
+                <dd class="mb-0 ps-2 py-1">出社（現場へ直接）</dd>
+              </dl>
+              <dl class="d-flex small mb-0">
+                <dt class="col-4 text-end pe-2 border-end py-1">8:30</dt>
+                <dd class="mb-0 ps-2 py-1">朝礼&amp;ミーティング</dd>
+              </dl>
+              <div class="col-4 text-end pe-2 border-end py-1">〜</div>
+              <dl class="d-flex small mb-0">
+                <dt class="col-4 text-end pe-2 border-end py-1">12:00</dt>
+                <dd class="mb-0 ps-2 py-1">ランチ</dd>
+              </dl>
+              <dl class="d-flex small mb-0">
+                <dt class="col-4 text-end pe-2 border-end py-1">13:00</dt>
+                <dd class="mb-0 ps-2 py-1">午後作業開始</dd>
+              </dl>
+              <dl class="d-flex small mb-0">
+                <dt class="col-4 text-end pe-2 border-end py-1">15:00</dt>
+                <dd class="mb-0 ps-2 py-1">工程会議</dd>
+              </dl>
+              <dl class="d-flex small mb-0">
+                <dt class="col-4 text-end pe-2 border-end py-1">17:00</dt>
+                <dd class="mb-0 ps-2 py-1">帰社</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="d-flex gap-1">
+            <div><img src="files/img/img_job_03.webp" alt="" width="1521" height="961" class="img-fluid img-cover h-100 ps-md-1" loading="lazy"></div>
+            <div><img src="files/img/img_job_04.webp" alt="" width="1521" height="961" class="img-fluid" loading="lazy"></div>
+          </div>
+          <div class="bg-white col-10 col-md-12 mx-auto pt-md-4 d-grid align-content-center pb-md-5">
+            <h5 class="text-center fs-4 my-4">プラント配管と<span class="d-block d-md-inline">他との違い</span></h5>
+            <div class="d-md-flex justify-content-center align-items-center container p-0">
+              <div class="position-relative p-4 bg-light col-10 col-md-4 mx-auto mx-md-0 text-center fw-bold mb-4 mb-md-0"><img src="files/img/icon_plumbing.svg" alt="" width="60" height="60" class="position-absolute" style="top: -15px;left: -15px">
+                <h6 class="fw-bold text-primary fs-5 mb-3">水道屋さん</h6>
+                <div class="d-flex justify-content-evenly">
+                  <dl class=" mb-0">
+                    <dt class="ls-2 small mb-1">流すもの</dt>
+                    <dd class="fs-2 mb-0"> 水 </dd>
+                  </dl>
+                  <span class="border-start border-primary border-2"></span>
+                  <dl class=" mb-0">
+                    <dt class="ls-2 small mb-1">技術難易度</dt>
+                    <dd class="fs-2 mb-0"> 中 </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="position-relative p-4 bg-primary text-white col-12 col-md-7 text-center fw-bold"><img src="files/img/icon_plants.svg" alt="" width="80" height="80" class="position-absolute" style="top: -20px;right: -20px">
+                <h6 class="fw-bold fs-3 mb-3">水道屋さん</h6>
+                <div class="d-flex justify-content-evenly">
+                  <dl class=" mb-0">
+                    <dt class="ls-2  mb-1">流すもの</dt>
+                    <dd class="fs-1 mb-0"> 燃料 </dd>
+                  </dl>
+                  <span class="border-start border-white border-2"></span>
+                  <dl class=" mb-0">
+                    <dt class="ls-2  mb-1">技術難易度</dt>
+                    <dd class="fs-1 mb-0"> 高 </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="voice"> <img src="files/img/img_voice.webp" alt="" width="2000" height="900" class="max-2000 mx-auto img-cover w-100 d-block" style="height: min(65vmin,500px);object-position: 50% 30%" loading="lazy">
+      <div class="max-2000 mx-auto">
+        <div class="bg-white p-4 p-lg-5 container d-grid grid-05 gap-3 gap-md-4 gap-lg-5 me-0 position-relative">
+          <h3 class="fw-bold d-grid gap-2 mb-0"><span class="fs-6"><span class="small"><i class="bi bi-square-fill text-secondary me-2"></i>社員の声</span></span><span class="fs-1">VOICE</span></h3>
+          <img src="files/img/img_voice_02.webp" alt="" width="1000" height="600" class="img-cover col-12 h-100" loading="lazy">
+          <dl class="bg-white ps-4 ps-md-0 pt-2 mb-0">
+            <dt>常務取締役</dt>
+            <dd class="text-primary fw-bold mb-0"><span class="fs-2 me-3">本田　歩</span><span class="d-block d-md-inline fst-italic">Ayumu Honda</span></dd>
+          </dl>
+          <dl class="mb-0">
+            <dt class="fw-normal mb-3 ffs-palt ls-1 fs-4 mt-3 mt-md-0">より良い未来を築く<br>
+              「循環を」を永遠に。</dt>
+            <dd class="small fw-bold mb-0">本多からのメッセージ本多からのメッセージ本多からのメッセージ本多からのメッセージ本多からのメッセージ本多からのメッセージ本多からのメッセージ本多からのメッセージ本多からのメッセージ本多からのメッセージ本多からのメッセージ</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="bg-primary text-white py-5 px-4">
+        <div class="container">
+          <h4 class="text-center mb-5 ls-1 fs-3"><span class="fw-bold border-bottom border-3 p-2 d-inline-block">働いている社員の声</span></h4>
+          <ul class="ps-0 d-grid grid-06 gap-4 gap-md-5 position-relative">
+            <li class="d-flex align-items-center flex-column gap-3"> <img src="files/img/icon_worker_01.svg" alt="" width="100" height="100">
+              <p>明るく陽気な現場管理者（40代前半）と協力会社の職人（20代前半〜後半、50代）5〜6名が常駐して現場作業を行っております。非常に高いスキルを持つ職人さんたちと 現場作業を進めております。</p>
+            </li>
+            <li class="d-flex align-items-center flex-column gap-3"> <img src="files/img/icon_worker_02.svg" alt="" width="100" height="100">
+              <p>今期で2期目の会社のため、社内交流はできておりませんでしたが、今年からは協力会社が経営するキャンプ場で家族なども招待し、社内交流を行いたいと考えております。</p>
+            </li>
+            <li class="d-flex align-items-center flex-column gap-3"> <img src="files/img/icon_worker_03.svg" alt="" width="100" height="100">
+              <p>お客様、協力会社、そして当社。３社がWin-Win-Winになれる関係性を目指して おります。 自分だけがよければいいという考えより、他社貢献も重要視しております。</p>
+            </li>
+            <li class="d-flex align-items-center flex-column gap-3"> <img src="files/img/icon_worker_04.svg" alt="" width="100" height="100">
+              <p>職人をたいせつにする会社です。給与、手当など手厚くしていきたいと考えております。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="recruit">
+      <h3 class="fw-bold d-grid gap-2 pb-4 pt-5 px-4 mb-0 container"><span class="fs-6"><span class="small"><i class="bi bi-square-fill text-secondary me-2"></i>募集情報</span></span><span class="fs-1">RECRUIT</span></h3>
+      <div class="bg-recruit max-2000 mx-auto text-white d-flex justify-content-center align-items-center text-center mb-4">
+        <dl class="mb-0 ffs-palt filter-drop-shadow">
+          <dt class="fw-bold fs-2 ls-2 mb-2">基本月給25万円以上</dt>
+          <dd class="mb-0 ls-2 fs-5">経験スキルを大きく評価！<br>
+            賞与年2回/随時昇級</dd>
+        </dl>
+      </div>
+      <div class="container">
+        <h4 class="fw-bold pb-3 border-bottom border-01 position-relative mb-4">募集要項</h4>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">募集職種</dt>
+          <dd class="d-flex small ffs-palt mb-0"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+            <p>施工管理職・現場監督候補生<br>
+              施工管理（管工事）、溶接・鍛冶工、衛生（配管工）、衛生（ガス）、空調（配管）、空調（冷房）、鳶（鉄骨）、防災（消火栓）</p>
+          </dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">給与</dt>
+          <dd class="small ffs-palt mb-3">月給２５万円〜 ＋残業代は別途支給<br>
+            ※経験年数、資格、能力などを十分考慮いたします。<br>
+            ※日給制にも対応いたします。<br>
+            試用期間（１ヶ月 ）の給与：本採用時と同条件勤務時間 </dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">諸⼿当</dt>
+          <dd class="small ffs-palt mb-3">通勤手当、時間外手当、制服貸与</dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">賞与</dt>
+          <dd class="small ffs-palt mb-3">年2回<br>
+            ※日給制にも対応いたします。<br>
+            試用期間（１ヶ月 ）の給与：本採用時と同条件勤務時間 </dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">昇給</dt>
+          <dd class="small ffs-palt mb-3">年1回＋随時（能力アップ、資格取得など）</dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">勤務地</dt>
+          <dd class="small ffs-palt mb-0">
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>愛知県三河地区など<br>
+                直行直帰、マイカー通勤可、社用車貸与も可</p>
+            </div>
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>通勤可能エリア<br>
+                愛知県内名古屋市／一宮市／瀬戸市／春日井市／犬山市／江南市／小牧市／稲沢市／尾張旭市／岩倉市／豊明市／日進市／清須市／北名古屋市／長久手市／東郷町／豊山町／大口町／扶桑町／津島市／愛西市／弥富市／あま市／大治町／蟹江町／飛鳥村／半田市／常滑市／東海市／大府市／知多市／阿久比町／東浦町／南知多町／美浜町／武豊町／岡崎市／碧南市／刈谷市／豊田市／安城市／西尾市／知立市／高浜市／みよし市／幸田町／豊橋市／豊川市／蒲郡市／新城市／田原市／設楽町／東栄町／豊根村</p>
+            </div>
+          </dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">勤務時間</dt>
+          <dd class="small ffs-palt mb-3">８：００〜１７：００ ※残業、夜間作業はほとんどありません。</dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">休日休暇</dt>
+          <dd class="small ffs-palt mb-0">
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>休日<br>
+                水曜日 ※事前申告で休日対応可能です。<br>
+                ※休日出勤の場合、代休または休日手当</p>
+            </div>
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>休暇<br>
+                年末年始休暇、有給休暇</p>
+            </div>
+          </dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">必須・歓迎資格</dt>
+          <dd class="small ffs-palt mb-0">
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>必須資格<br>
+                普通自動車運転免許（第1種）</p>
+            </div>
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>歓迎資格<br>
+                １級管工事施工管理技士、２級管工事施工管理技士、高所作業車運転（作業床10m以上）、職長・安全衛生責任者教育、玉掛業務従事者、アーク溶接作業員、ガス溶接作業主任者、溶接技術者（１級）、溶接技術者（２級）、溶接作業指導者、フォークリフト運転員（１t以上）、フォークリフト運転員（１t未満）</p>
+            </div>
+          </dd>
+        </dl>
+        <div class="d-grid gap-4 d-md-flex">
+          <div> <img src="files/img/img_recruit_01.webp" alt="" width="921" height="561" class="img-fluid" loading="lazy"></div>
+          <div> <img src="files/img/img_recruit_02.webp" alt="" width="921" height="561" class="img-fluid" loading="lazy"></div>
+        </div>
+        <h4 class="fw-bold py-4 border-bottom border-01 position-relative my-4 lh-lg"><span class="d-inline-block">それぞれの社員にあった</span><span class="d-inline-block">働き方を提供するために、</span><span class="d-inline-block">多彩な制度を用意しています。</span></h4>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">福利厚生制度</dt>
+          <dd class="small ffs-palt mb-0">
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>保険<br>
+                社会保険完備</p>
+            </div>
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>福利厚生<br>
+                健康診断 《待遇》、健康診断年1回（社員・配偶者共に受診可能）、がん検診年1回（社員・配偶者共に受診可能）</p>
+            </div>
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>支援制度<br>
+                資格取得支援、子供手当、移住補助（支援内容は要相談にて）、家賃補助</p>
+            </div>
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>資格手当<br>
+                １級管工事施工管理技士 ＋1万円<br>
+                ２級管工事施工管理技士 ＋5千円</p>
+            </div>
+            <div class="d-flex"> <i class="bi bi-square-fill text-primary me-2 small"></i>
+              <p>その他<br>
+                子供とのイベント優先（学校行事）、釣具貸出（どんな釣具でもございます）</p>
+            </div>
+          </dd>
+        </dl>
+        <div class="d-grid gap-4 d-md-flex text-primary small text-center ffs-palt border-bottom border-01 pb-5 mb-3 position-relative">
+          <div> <img src="files/img/img_recruit_03.webp" alt="" width="921" height="561" class="img-fluid mb-3" loading="lazy">
+            <p>プライベートを充実させる子供とのイベント優先や<br>
+              健康診断やがん検診など働きやすい環境を応援。</p>
+          </div>
+          <div> <img src="files/img/img_recruit_04.webp" alt="" width="921" height="561" class="img-fluid mb-3" loading="lazy">
+            <p>東京や大阪の展示会へ、積極的に参加するなど<br>
+              キャリア形成をしっかりとサポート。</p>
+          </div>
+        </div>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">建設許可</dt>
+          <dd class="small ffs-palt mb-3">管工事業／土木工事業／建築工事業／大工工事業／とび・土工工事業／石工事業／屋根工事業／タイル・れんが・ブロック工事業／鋼構造物工事業／舗装工事業／しゅんせつ工事業／内装仕上工事業／水道施設工事業／解体工事業</dd>
+        </dl>
+      </div>
+    </section>
+    <section id="entry"> <img src="files/img/img_entry.webp" alt="" width="2000" height="700" class="img-cover max-2000 mx-auto w-100 d-block" style="height: min(60vmin,400px)" loading="lazy">
+      <div class="container">
+        <h2 class="fw-bold display-1 text-primary lh-1 text-center mb-4 ls-1 ffs-palt" style="margin-top: -0.5em">ENTRY</h2>
+        <p class="fw-bold fs-3 text-primary text-center ls-1 ffs-palt">あなたの人生と<span class="d-block d-md-inline">キャリアをUP</span></p>
+        <p class="fw-bold text-center ls-1 ffs-palt border-bottom border-01 pb-5 mb-3 position-relative">明るく・楽しく・前向きに仕事ができる、<span class="d-inline-block">そんな人材を求めています。</span><br>
+          私たちと一緒に働いてみませんか？</p>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">応募方法</dt>
+          <dd class="small ffs-palt mb-3">電話やＬＩＮＥ、メールでお問い合わせください。</dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">面接場所</dt>
+          <dd class="small ffs-palt mb-3">愛知県三河地区、または名古屋市内<br>
+            ※面接場所はご応募いただいた後、ご相談の上で 決定いたします。Webでの対応も可能。</dd>
+        </dl>
+        <dl class="border-bottom d-md-flex">
+          <dt class="text-primary mb-2 col-md-3">連絡先</dt>
+          <dd class="ffs-palt mb-3">
+            <div class="fw-bold ls-1 mb-2">05054479168</div>
+            <div class="small">※営業電話は禁止しております。<br>
+              こちらの電話番号にご連絡いただいた場合、発信者の電話番号・発信日時等が求人企業に対して通知されますので、ご了承の上ご連絡ください。</div>
+          </dd>
+        </dl>
+        <ul class="d-flex flex-column d-md-grid grid-02 gap-4 py-5 text-center px-0 mx-auto fw-bold ffs-palt fs-5">
+          <li class="d-block"><a href="###" class="text-decoration-none text-primary d-block border border-primary py-2">LINEでエントリー</a></li>
+          <li class="d-block"><a href="###" class="text-decoration-none text-primary d-block border border-primary py-2">メールでエントリー</a></li>
+          <li class="d-block"><a href="###" class="text-decoration-none text-primary d-block border border-primary py-2">電話でエントリー</a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="about" class="bd-gray-800 ls-1 ffs-palt text-white">
+      <div class="bg-about max-2000 mx-auto text-center">
+        <div class=" filter-drop-shadow"> <img src="files/img/logo_everwin_white_02.svg" alt="" width="284" height="150" class="col-5 max-200 mb-4" loading="lazy">
+          <h3 class="fs-1 ls-2 mb-4">より良い未来を築く<span class="d-block d-md-inline">「循環」を永遠に。</span></h3>
+          <p class="lh-lg">私たちが作り上げるものが、<span class="d-block d-md-inline">お客様のお役に立ち</span> <span class="d-block">また、お客様が作り出す商品やサービスが</span> <span class="d-block">お客様とスタッフ、そして社会が末永く<span class="d-block d-md-inline">WIN-WINな関係を築く</span></span> 企業でありたいという思いで<span class="d-block d-md-inline">事業に取り組んでおります。</span></p>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="bg-dark pt-5 pb-4 text-white">
+  <div class="container d-md-flex justify-content-between">
+    <div class="d-flex col-md-7 ps-4 mt-md-2 align-items-lg-start align-items-center mb-4"><img src="files/img/logo_everwin_white.svg" alt="株式会社エバーウィン｜Everwin" width="300" height="40" class="col-5 h-auto max-160 pe-2" loading="lazy"><span class="smaller lh-1 col-7 text-white">リクルートサイト<br>
+      株式会社エバーウィン</span></div>
+    <div class="col-md-5 ps-4">
+      <div class="d-md-flex mb-5 mb-md-4">
+        <ul class="d-grid ps-0 gap-3 small col-4">
+          <li class="d-block"><a href="#top" class="text-white text-decoration-none">トップ</a></li>
+          <li class="d-block"><a href="#job" class="text-white text-decoration-none">仕事内容</a></li>
+          <li class="d-block"><a href="#voice" class="text-white text-decoration-none">社員の声</a></li>
+          <li class="d-block"><a href="#recruit" class="text-white text-decoration-none">募集情報</a></li>
+          <li class="d-block"><a href="#entry" class="text-white text-decoration-none">応募方法</a></li>
+        </ul>
+        <ul class="d-grid ps-0 gap-3 small align-content-start">
+          <li class="d-block"><a href="###" class="text-white text-decoration-none">LINEでエントリー</a></li>
+          <li class="d-block"><a href="###" class="text-white text-decoration-none">メールでエントリー</a></li>
+          <li class="d-block"><a href="###" class="text-white text-decoration-none">電話でエントリー</a></li>
+        </ul>
+      </div>
+      <p class="smaller text-md-end">&copy;2023 everwin All rights reserved</p>
+    </div>
+  </div>
+</footer>
+<div id="menu_top" class="move bg-white p-2 lh-1 js-menutop shadow text-primary border fs-2 rounded-circle" style="z-index: 1040"> <i class="bi bi-arrow-up"></i> </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+
+
+const modalCloseLinks = document.querySelectorAll(".modal-close-link");
+modalCloseLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // アンカーリンクのデフォルト動作をキャンセル
+    // 0.5秒後にアンカーリンクのジャンプを実行
+    const target = link.getAttribute("href");
+    setTimeout(function () {
+      window.location = target;
+    }, 500);
+  });
+});
+
+
+
+
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "60px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

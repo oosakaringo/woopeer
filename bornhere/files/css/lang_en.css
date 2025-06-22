@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+.main-title {
+  font-size: 320%;
+  letter-spacing: 0;
+}
+.secondary-title {
+  font-size: clamp(1.4rem, 3vw, 2.5rem);
+}
+.ls-1,.ls-2,.ls-3{
+  letter-spacing:0
+}
+#technology .fs-4{
+  font-size: 110%!important;
+}
+@media (max-width:767px) {
+.main-title {
+  font-size: 240%;
+  }
+}

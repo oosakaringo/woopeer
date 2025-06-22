@@ -1,0 +1,282 @@
+[
+  {
+    "ID": "1",
+    "Name": "子どもの笑顔食堂",
+    "Description": "地域の子どもたちに無料で食事を提供しています。みんなで楽しく食べましょう！",
+    "Phone": "03-1234-5678",
+    "Email": "info@example.com",
+    "URL": "",
+    "Address": {
+      "PostalCode": "123-4567",
+      "Prefecture": "東京都",
+      "City": "渋谷区",
+      "Street": "1-2-3",
+      "Building": "",
+      "Latitude": 35.6585805,
+      "Longitude": 139.7454329
+    },
+    "SNS": {
+      "LINE": "@childsmiles",
+      "Facebook": "childsmiles",
+      "Instagram": "childsmiles_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "毎週水曜日 12:00-14:00",
+      "Fee": "無料"
+    },
+    "ImageURL": "files/img/childsmiles001.webp"
+  },
+  {
+    "ID": "2",
+    "Name": "虹色給食",
+    "Description": "地域の子どもたちが安心して食事できる場所です。おいしい給食を提供しています。",
+    "Phone": "03-2345-6789",
+    "Email": "info@rainbowlunch.com",
+    "URL": "https://rainbowlunch.com",
+    "Address": {
+      "PostalCode": "987-6543",
+      "Prefecture": "東京都",
+      "City": "豊島区",
+      "Street": "4-5-6",
+      "Building": "虹色ビル",
+      "Latitude": 35.7313778,
+      "Longitude": 139.7153923
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "rainbowlunch",
+      "Instagram": "rainbowlunch_tokyo",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "第2・第4土曜日 11:30-13:30",
+      "Fee": "無料（寄付歓迎）"
+    },
+    "ImageURL": "files/img/childsmiles002.webp"
+  },
+  {
+    "ID": "3",
+    "Name": "ひまわりキッチン",
+    "Description": "必要な子供たちに栄養たっぷりの食事を提供しています。一緒に健康なランチを楽しみましょう！",
+    "Phone": "03-3456-7890",
+    "Email": "info@sunflowerkitchen.org",
+    "URL": "https://sunflowerkitchen.org",
+    "Address": {
+      "PostalCode": "543-2109",
+      "Prefecture": "東京都",
+      "City": "世田谷区",
+      "Street": "7-8-9",
+      "Building": "ひまわりハウス",
+      "Latitude": 35.6439923,
+      "Longitude": 139.6726735
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "sunflowerkitchen",
+      "Instagram": "sunflowerkitchen_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "毎週木曜日 11:00-13:00",
+      "Fee": "12歳以下無料"
+    },
+    "ImageURL": "files/img/childsmiles001.webp"
+  },
+  {
+    "ID": "4",
+    "Name": "ハッピーバイト",
+    "Description": "楽しい食事を通じて子供たちに健康な食習慣を促進しています。一緒に参加しましょう！",
+    "Phone": "03-4567-8901",
+    "Email": "info@happybites.jp",
+    "URL": "https://happybites.jp",
+    "Address": {
+      "PostalCode": "210-9876",
+      "Prefecture": "東京都",
+      "City": "足立区",
+      "Street": "10-11-12",
+      "Building": "ハッピープラザ",
+      "Latitude": 35.7751803,
+      "Longitude": 139.8049477
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "happybites_jp",
+      "Instagram": "happybites_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "毎週火曜日 12:30-14:30",
+      "Fee": "大人同伴の子供無料"
+    },
+    "ImageURL": ""
+  },
+  {
+    "ID": "5",
+    "Name": "スマイルキッチン",
+    "Description": "おいしく栄養たっぷりな食事で子供たちの笑顔をもたらします。一緒にランチを楽しみましょう！",
+    "Phone": "03-6789-0123",
+    "Email": "info@smilekitchen.com",
+    "URL": "https://smilekitchen.com",
+    "Address": {
+      "PostalCode": "876-5432",
+      "Prefecture": "東京都",
+      "City": "新宿区",
+      "Street": "13-14-15",
+      "Building": "スマイルタワー",
+      "Latitude": 35.6938405,
+      "Longitude": 139.7035494
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "smilekitchen",
+      "Instagram": "smilekitchen_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "毎週金曜日 11:00-13:00",
+      "Fee": "無料"
+    },
+    "ImageURL": "files/img/childsmiles002.webp"
+  },
+  {
+    "ID": "6",
+    "Name": "ハッピータミーズ",
+    "Description": "楽しい食事で子供たちのおなかを幸せにします。一緒においしいランチを食べましょう！",
+    "Phone": "03-8901-2345",
+    "Email": "info@happytummies.jp",
+    "URL": "https://happytummies.jp",
+    "Address": {
+      "PostalCode": "543-2109",
+      "Prefecture": "東京都",
+      "City": "墨田区",
+      "Street": "16-17-18",
+      "Building": "ハッピーハウス",
+      "Latitude": 35.7100625,
+      "Longitude": 139.8013392
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "happytummies_jp",
+      "Instagram": "happytummies_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "毎週月曜日 12:00-14:00",
+      "Fee": "無料"
+    },
+    "ImageURL": ""
+  },
+  {
+    "ID": "7",
+    "Name": "ヘルシーヘイブン",
+    "Description": "健康な食事で子供たちに安全な場所を提供します。一緒に栄養のあるランチを楽しみましょう！",
+    "Phone": "03-2109-8765",
+    "Email": "info@healthyhaven.jp",
+    "URL": "https://healthyhaven.jp",
+    "Address": {
+      "PostalCode": "321-0987",
+      "Prefecture": "東京都",
+      "City": "板橋区",
+      "Street": "19-20-21",
+      "Building": "ヘルシーハウス",
+      "Latitude": 35.7472263,
+      "Longitude": 139.7187864
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "healthyhaven",
+      "Instagram": "healthyhaven_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "毎週水曜日 11:30-13:30",
+      "Fee": "全ての子供無料"
+    },
+    "ImageURL": "files/img/childsmiles001.webp"
+  },
+  {
+    "ID": "8",
+    "Name": "チアフルミールズ",
+    "Description": "楽しい食事で子供たちの元気を促進します。一緒に明るいランチを楽しみましょう！",
+    "Phone": "03-0987-6543",
+    "Email": "info@cheerfulmeals.com",
+    "URL": "https://cheerfulmeals.com",
+    "Address": {
+      "PostalCode": "210-9876",
+      "Prefecture": "東京都",
+      "City": "目黒区",
+      "Street": "22-23-24",
+      "Building": "チアフルタワー",
+      "Latitude": 35.6330022,
+      "Longitude": 139.7157652
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "cheerfulmeals",
+      "Instagram": "cheerfulmeals_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "毎週木曜日 12:00-14:00",
+      "Fee": "無料"
+    },
+    "ImageURL": ""
+  },
+  {
+    "ID": "9",
+    "Name": "ハッピー・ハーツ・カフェ",
+    "Description": "心温まる食事で子供たちの笑顔を育みます。一緒に幸せなランチを楽しみましょう！",
+    "Phone": "03-7654-3210",
+    "Email": "info@happyhearts.jp",
+    "URL": "https://happyhearts.jp",
+    "Address": {
+      "PostalCode": "876-5432",
+      "Prefecture": "東京都",
+      "City": "港区",
+      "Street": "25-26-27",
+      "Building": "ハッピーハーツハウス",
+      "Latitude": 35.6585693,
+      "Longitude": 139.7415131
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "happyhearts",
+      "Instagram": "happyhearts_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "毎週金曜日 11:30-13:30",
+      "Fee": "全ての子供無料"
+    },
+    "ImageURL": "files/img/childsmiles002.webp"
+  },
+  {
+    "ID": "10",
+    "Name": "ブライトバイツキッチン",
+    "Description": "",
+    "Phone": "",
+    "Email": "info@brightbites.com",
+    "URL": "https://brightbites.com",
+    "Address": {
+      "PostalCode": "543-2109",
+      "Prefecture": "東京都",
+      "City": "文京区",
+      "Street": "28-29-30",
+      "Building": "ブライトビル",
+      "Latitude": 35.7074175,
+      "Longitude": 139.7527432
+    },
+    "SNS": {
+      "LINE": "",
+      "Facebook": "brightbites",
+      "Instagram": "brightbites_official",
+      "X": ""
+    },
+    "Events": {
+      "Schedule": "",
+      "Fee": "無料（寄付歓迎）"
+    },
+    "ImageURL": ""
+  }
+]

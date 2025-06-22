@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.93 4.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #008a8e;
+        stroke-miterlimit: 10;
+        stroke-width: .85px;
+      }
+    </style>
+  </defs>
+  <g id="_モバイル" data-name="モバイル">
+    <polyline class="cls-1" points="0 4.23 18.2 4.23 10.85 .38"/>
+  </g>
+</svg>

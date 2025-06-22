@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FISHING PASSPORT</title>
+<meta content="telephone=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FISHING PASSPORT">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+<link href="files/css/base.css?2" rel="stylesheet" type="text/css">
+<style type="text/css">
+.bg-main {
+  background-image: url("files/img/main_bg.webp");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.logo-bg {
+  background-image: url("files/img/logo_bg.png");
+  background-repeat: no-repeat;
+  background-size: min(60%, 360px);
+  background-position: calc(100% - 1em) 2em;
+}
+.myfilde svg, .user-photo-edit svg {
+  width: 100%;
+  height: 100%;
+}
+.icon-myfilde {
+  background-color: var(--bs-light);
+}
+.myfilde-on .icon-myfilde {
+  background-color: var(--bs-secondary);
+  color: #fff;
+}
+.myfilde-on {
+  color: var(--bs-secondary);
+}
+.footer-menu {
+  color: var(--bs-primary);
+  stroke: #fff;
+  fill: var(--bs-primary);
+}
+.footer-menu a {
+  color: var(--bs-gray);
+  fill: #fff;
+  stroke: var(--bs-gray);
+}
+.footer-menu svg {
+  width: 40px;
+  height: 40px;
+}
+.drop-shadow {
+  filter: drop-shadow(0px 2px 8px rgba(0,0,0,.3));
+}
+.user-photo-edit {
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  margin-left: 35px;
+  color: rgba(0,0,0,0.5);
+}
+.form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23e10000' d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3e%3c/svg%3e");
+  background-size: 16px 16px;
+}
+.btn-check:checked+.btn {
+  background-color: #4d4d4d;
+  color: #fff;
+}
+.readonly label, .readonly .form-control {
+  pointer-events: none;
+}
+</style>
+</head>
+
+<body>
+<header class="bg-white d-flex justify-content-between align-items-center ps-2 sticky-top"> <a href="index.html" class="text-decoration-none">
+  <h1 class="mb-0"><img src="files/img/main_logo.svg" alt="FISHING PASSPORT WEB乗船名簿" width="140" height="54"></h1>
+  </a>
+  <div class="d-flex">
+    <button class="btn btn-sm text-white dropdown-toggle px-0 bg-primary rounded-0" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <img src="files/img/language_icon.svg" alt="" width="60" height="20"><br>
+    <span class="small">JP</span></button>
+    <button class="btn btn-sm text-white bg-secondary px-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu" aria-controls="offcanvasRight"> <img src="files/img/menu_icon.svg" alt="" width="60" height="20"><br>
+    <span class="smaller">MENU</span></button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+      <li><a class="dropdown-item" href="#">日本語</a></li>
+      <li><a class="dropdown-item" href="#">English</a></li>
+      <li><a class="dropdown-item" href="#">中文</a></li>
+    </ul>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-80 max-400 bg-primary text-white" tabindex="-1" id="offcanvas_menu" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header border-bottom py-1">
+    <h5 id="offcanvasRightLabel"><img src="files/img/main_logo.svg" alt="FISHING PASSPORT WEB乗船名簿" width="140" height="54"></h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-grid gap-2 border-bottom pb-3"> <a href="index.html" class="btn text-white">ホーム</a><a href="##" class="btn text-white">プロフィール</a><a href="##" class="btn text-white">緊急連絡先</a> <a href="##" class="btn text-white">連携サービス</a> </div>
+    <div class="d-grid gap-2 py-3"> <a href="###"><img src="files/img/banner_001.svg" alt="" class="img-fluid rounded-3 mb-3 shadow"></a> <a href="###"><img src="files/img/banner_002.svg" alt="" class="img-fluid rounded-3 mb-3 shadow"></a></div>
+  </div>
+  <div class="offcanvas-footer p-2 text-end">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+  </div>
+</div>
+<main>
+  <article>
+    <div class="bg-primary position-relative pt-3">
+      <div class="container bg-main py-5" style="height: 290px;"> </div>
+      <img src="files/img/bg_msk.svg" alt="" class="bottom-1 position-absolute w-100" width="380" height="120"> </div>
+    <section class="bg-light px-3 pb-5">
+      <div class="container container-800 bg-white p-3 rounded-10 position-relative mb-5 logo-bg" style="margin-top: -200px">
+        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='15'%3E%3Cpath d='M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item p-0"><a href="mypage.html" class="text-body text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item p-0 active" aria-current="page">ご利用規約</li>
+          </ol>
+        </nav>
+        <div class="fw-bold text-primary text-center py-4">
+          <h3 class="fw-bold ls-1 mb-1 pt-3">ご利用規約</h3>
+          <em class="ls-2">Terms of Service</em> </div>
+        <h4 class="text-center fs-5 fw-bold mb-3">【ご利用規約について】</h4>
+        <p class="small mb-5">FISHINGPASSPOT®釣りパスが運営する(当社が運営する釣りパスWEBサイト以下「本サービス」といいます。）のご利用規約（以下「本規約」といいます。）を次のとおり定めます。</p>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第1条 本サービスの利用</dt>
+          <dd class="small">利用者は、本規約に同意の上、本規約および当社が別途定めるご利用ガイドなどに従い、本サービスを利用するものとします。</dd>
+        </dl>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第2条 利用者</dt>
+          <dd class="small">「利用者」とは、本サービスの利用を行う方をいいます。</dd>
+        </dl>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第3条 会員登録</dt>
+          <dd class="small">
+            <ol class="ps-3">
+              <li>利用者は、本サービスを利用するにあたり、会員登録申請を行うものとします。</li>
+              <li>会員登録申請者が過去に本規約違反などにより会員登録の抹消処分を受けていることが判明した場合、会員登録申請者の申請内容に虚偽の事項が含まれている場合または、その他会員登録申請を承認することが不適当であると当社が　合理的に判断する場合には、当該会員登録申請を承認しない場合があります。</li>
+              <li>利用者は、住所、氏名、電話番号またはその他登録事項に変更が生じた場合には、当社が別途指定する方法により届け出るものとします。</li>
+            </ol>
+          </dd>
+        </dl>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第4条 本サービスの提供停止、会員登録の抹消</dt>
+          <dd class="small">
+            <ol class="ps-3">
+              <li>退会を希望する場合には、利用者は当社が指定する方法に従い退会申請を行うものとします。</li>
+              <li>当社は利用者の退会後も、一定期間の間、適用法令に従い利用者の情報を保持する場合があります。</li>
+            </ol>
+          </dd>
+        </dl>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第6条 禁止事項</dt>
+          <dd class="small">利用者は以下の行為を行ってはならないものとします。
+            <ol class="ps-3">
+              <li>会員登録の際に虚偽の登録内容を申請する行為</li>
+              <li>本サービスの運営を妨げる行為、その他本サービスに支障をきたす恐れのある行為</li>
+              <li>メールアドレスおよびパスワードを不正に使用する行為</li>
+              <li>その他、当社が不適当と合理的に判断する行為</li>
+            </ol>
+          </dd>
+        </dl>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第7条 著作権</dt>
+          <dd class="small">
+            <ol class="ps-3">
+              <li>本サービスにおいて使用されている文言、画像およびデザイン等に関する著作権または商標権、その他全ての知的財産権は、当社またはその他の著作権者等正当な権利者に帰属するものであり、利用者はこれらの権利を侵害する行為を行わないものとします。</li>
+              <li>本条の規定に違反して権利者あるいは第三者との間で問題が生じた場合、当社の責めに帰すべき事由によるときを除き、利用者は自己の責任と費用においてその問題を解決するとともに、当社に何の迷惑または損害を与えないものとします。</li>
+            </ol>
+          </dd>
+        </dl>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第8条 IDおよびパスワードの管理</dt>
+          <dd class="small">
+            <ol class="ps-3">
+              <li>利用者は、自らの責任において、利用者自身で設定したID（メールアドレス）およびパスワードを管理するものとします。</li>
+              <li>当社は、当社の責めに帰すべき事由によるときを除き、利用者によるID（メールアドレス）およびパスワードの不適切な管理、使用上の過誤、第三者による使用などに起因する損害について一切の責任を負わないものとします。</li>
+              <li>利用者は、ID（メールアドレス）およびパスワードが第三者によって不正に使用されていることが判明した場合には直ちに当社に連絡するものとします。</li>
+            </ol>
+          </dd>
+        </dl>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第9条 利用者情報</dt>
+          <dd class="small">当社は、本サービスの利用に際し、利用者に関する以下の情報（個人情報を含みます。以下「利用者情報」といいます。）を取得します。当社は、利用者情報を、プライバシーポリシーに基づき取り扱います。</dd>
+        </dl>
+        <dl class="mb-4">
+          <dt class="border-bottom pb-2 mb-2">第10条 サービスの停止</dt>
+          <dd class="small">当社は、本サービスの稼動状態を良好に保つために、次の各号に該当する場合には、利用者に事前に通知を行うことなく本サービスの全部あるいは一部の提供を停止することができるものとします。
+            <ol class="ps-3">
+              <li>システムの定期保守および緊急保守のために必要な場合</li>
+              <li>火災、停電、第三者による妨害行為などによりシステムの運用が困難になった場合</li>
+              <li>その他、止むを得ずシステムの停止が必要と当社が判断した場合</li>
+            </ol>
+          </dd>
+        </dl>
+        <div class="text-center py-4">
+          <button class="btn btn-outline-dark w-80 max-280" type="button" onclick="history.back()">戻　る</button>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="sticky-top pt-4 bg-secondary text-white"> <img src="files/img/footer_bg.svg" alt="" width="300" height="400" class="position-absolute start-0 top-0 w-100 bg-footer-img bg-secondary">
+  <div class="position-relative">
+    <div class="text-center"> <img src="files/img/logo_04.svg" width="200" height="300" alt="Fishing Passport 釣りパス"> </div>
+    <div class="col-10 col-lg-8 col-xl-6 mx-auto">
+      <div class="row d-flex flex-wrap mb-4"> <a href="###" class="col-6 p-2"><img src="files/img/banner_001.svg" alt="" class="img-fluid rounded-3 shadow"></a> <a href="###" class="col-6 p-2"><img src="files/img/banner_002.svg" alt="" class="img-fluid rounded-3 shadow"></a> <a href="###" class="col-6 p-2"><img src="files/img/banner_001.svg" alt="" class="img-fluid rounded-3 shadow"></a> <a href="###" class="col-6 p-2"><img src="files/img/banner_002.svg" alt="" class="img-fluid rounded-3 shadow"></a> <a href="###" class="col-6 p-2"><img src="files/img/banner_001.svg" alt="" class="img-fluid rounded-3 shadow"></a> <a href="###" class="col-6 p-2"><img src="files/img/banner_002.svg" alt="" class="img-fluid rounded-3 shadow"></a> </div>
+    </div>
+    <div class="border-top py-2">
+      <p class="col-10 col-lg-8 col-xl-6 mx-auto smaller mb-0">©2023 Fishing passport</p>
+    </div>
+  </div>
+</footer>
+<div id="menu_top" class="move"><img src="files/img/icon_menu_top.svg" width="30" height="135" alt="" class="js-menutop"></div>
+<nav class="position-fixed bottom-0 w-100 bg-white footer-menu">
+  <ol class="d-flex text-center smaller justify-content-between mb-0 ps-0">
+    <li class="d-block w-20"> <a href="mypage.html" class="d-grid text-decoration-none">
+      <svg class="mx-auto">
+        <use xlink:href="files/img/icon_menu.svg#home"></use>
+      </svg>
+      ホーム</a></li>
+    <li class="d-block w-20"><a href="profile.html" class="d-grid text-decoration-none">
+      <svg class="mx-auto">
+        <use xlink:href="files/img/icon_menu.svg#profile"></use>
+      </svg>
+      プロフィール</a></li>
+    <li class="d-block w-20"><a href="###" class="d-grid text-decoration-none">
+      <div> <span class="position-relative d-inline-block">
+        <svg>
+          <use xlink:href="files/img/icon_menu.svg#contact"></use>
+        </svg>
+        <span class="position-absolute end-0 top-0 badge rounded-pill bg-primary border border-white border-2">2</span> </span> </div>
+      お知らせ</a></li>
+    <li class="d-block w-20"><a href="###" class="d-grid text-decoration-none">
+      <svg class="mx-auto">
+        <use xlink:href="files/img/icon_menu.svg#services"></use>
+      </svg>
+      提携サービス</a></li>
+    <li class="d-block">
+      <button class="btn btn-sm text-white bg-primary px-0 rounded-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"> <img src="files/img/menu_icon.svg" alt="" width="60" height="20"><br>
+      <span class="smaller">MENU</span></button>
+    </li>
+  </ol>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+let e_menuTop = document.getElementById("menu_top");
+let js_menutop=document.querySelector('.js-menutop');
+let r_footer;
+window.onscroll = function () {
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if ((document.body.scrollTop > 300 || document.documentElement.scrollTop > 300 ) && r_footer.top > 500){
+    e_menuTop.style.bottom = "100px";
+  } else {
+    e_menuTop.style.bottom = "-150px";
+  }
+};
+js_menutop.addEventListener("click", backToTop);
+
+function backToTop() {
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>

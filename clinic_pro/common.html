@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>汎用ページ　CLINIC PRO クリニック・プロ　クリニック商材マッチングサイト</title>
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="汎用ページ　CLINIC PRO クリニック・プロ　クリニック商材マッチングサイト">
+<meta name="format-detection" content="telephone=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="files/css/base.css" rel="stylesheet" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Noto+Sans+JP:wght@400;600&display=swap');
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+html:not(.offcanvasOP) {
+  scroll-padding-top: 70px
+}
+header {
+  background-image: url("files/img/bg_header.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header-breadcrumb {
+  top: 70px;
+  z-index: 10;
+  height: 50px;
+}
+.max-2000 {
+  max-width: 2000px;
+}
+.badge-square {
+  height: fit-content;
+  aspect-ratio: 1/1;
+}
+.footer-order >:nth-child(1) {
+  order: 3;
+}
+.footer-order >:nth-child(2) {
+  order: 4;
+}
+.footer-order >:nth-child(3) {
+  order: 1;
+}
+.footer-order >:nth-child(4) {
+  order: 2;
+}
+
+@media (min-width:768px) {/*TAB,PC*/
+}
+
+@media (min-width:992px) {/*PC*/
+}
+
+@media (max-width:991px) {/*SP,TAB*/
+}
+
+@media (max-width:767px) {/*SP*/
+header {
+  background-size: auto 180%;
+  background-position: 50% 10%;
+}
+}
+</style>
+</head>
+
+<body>
+<header class="ps-2 top-0 w-100 position-sticky">
+  <div class="d-flex justify-content-between align-items-center move max-2000 mx-auto">
+    <div class="col-5 col-md-3 max-160 text-center mb-1"><span class="smaller fw-bold ffs-palt text-white">クリニック専用販売サイト-クリプロ</span> <img src="files/img/logo_clipro.svg" alt="" width="237.84" height="64" class="img-fluid"></div>
+    <div class="d-flex align-items-center gap-1"> <a href="###" class="text-decoration-none text-white smaller d-grid text-center gap-1"> <span>Login</span> <img src="files/img/icon_user.svg" alt="" width="72" height="24"> </a>
+      <button class="btn btn-sm px-1 text-white d-grid gap-1" type="button" id="dropdown_language" data-bs-toggle="dropdown" aria-expanded="false"> <span class="smaller">Language</span> <span class="d-flex align-items-center gap-1"> <img src="files/img/icon_language.svg" alt="" width="24" height="24"> <span>JP</span><i class="bi bi-chevron-down"></i> </span> </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdown_language">
+        <li><a class="dropdown-item" href="#">日本語</a></li>
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">中文簡体</a></li>
+      </ul>
+      <button class="btn py-2 px-3 lh-1 fs-3" aria-label="メニューボタン" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_menu"><img src="files/img/icon_hamburger.svg" alt="" width="32" height="32"></button>
+    </div>
+  </div>
+</header>
+<div class="offcanvas offcanvas-end w-100 max-560 bg-success text-white" tabindex="-1" id="offcanvas_menu">
+  <div class="offcanvas-header py-1 justify-content-end">
+    <button type="button" class="btn p-0 text-white fs-3" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex justify-content-center mb-5 pb-4"> <a href="###" class="d-flex align-items-center flex-column pe-5 border-end text-white text-decoration-none" data-bs-dismiss="offcanvas" aria-label="Close"><img src="files/img/icon_plan_w.svg" alt="" width="60" height="60" class="mb-3"> <span class="small d-none d-sm-block">私はクリニックに</span> <span class="fs-5">提案したい</span></a>
+      <button type="button" class="btn d-flex align-items-center flex-column ps-5 p-0 text-white" data-bs-toggle="modal" data-bs-target="#modal-sale" data-bs-dismiss="offcanvas" aria-label="Close"> <img src="files/img/icon_sale_w.svg" alt="" width="60" height="60" class="mb-3"> <span class="small d-none d-sm-block">私はクリニックです</span> <span class="fs-5">販売したい</span> </button>
+    </div>
+    <div class="d-flex gap-3 justify-content-around flex-wrap mb-5"> <a href="###" class="btn col-10 col-md-5 text-primary rounded-pill bg-white" data-bs-dismiss="offcanvas" aria-label="Close">提案を探したい</a> <a href="###" class="btn col-10 col-md-5 text-primary rounded-pill border border-white" data-bs-dismiss="offcanvas" aria-label="Close"><span class="text-white">お問い合わせ</span></a> </div>
+    <div class="d-flex small justify-content-center"> <a href="####" class="text-decoration-none text-white d-block px-3 border-end" data-bs-dismiss="offcanvas" aria-label="Close" target="_blank" rel="noopener">運営会社（外部リンク）</a> <a href="####" class="text-decoration-none text-white d-block px-3" data-bs-dismiss="offcanvas" aria-label="Close">利用規約（汎用）</a> </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-sale" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center mb-3"> <img src="files/img/icon_sale_b.svg" alt="" width="80" height="60">
+          <div>For CLINIC</div>
+        </div>
+        <h5 class="text-center">私はクリニックです</h5>
+        <p class="col-10 mx-auto mb-4">当サイトはクリニック様専用です。新規会員登録後審査がございます。あらかじめご了承ください。</p>
+        <div class="text-center"> <a href="###" class="btn btn-success rounded-pill col-8 mb-3" data-bs-dismiss="modal" aria-label="Close">新規会員登録（無料）</a> <a href="###" class="btn btn-success rounded-pill col-8 mb-3" data-bs-dismiss="modal" aria-label="Close">ログインする</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="header-breadcrumb position-sticky mx-auto">
+  <div class="d-flex align-items-center justify-content-center gap-2 container h-100"> <span class="ffs-palt"> HOME / 特定商取引の表記</span> </div>
+</div>
+<main>
+  <article>
+    <section>
+      <div class="container">
+        <h2 class="text-center fw-bold ls-1 ffs-palt my-5 py-3">特定商取引の表記</h2>
+        <h3 class="fs-5 fw-bold border-bottom p-3 mb-0">KUJIME 美容クリーム</h3>
+        <div class="small p-3 mb-5">
+          <dl class="d-flex gap-3 mb-0">
+            <dt>販売業者名:</dt>
+            <dd class="mb-0">説株式会社ABC</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>運営責任者:</dt>
+            <dd class="mb-0">山田太郎</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>所在地:</dt>
+            <dd class="mb-0">〒123-4567 〇〇市△△町1-2-3</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>連絡先:</dt>
+            <dd class="mb-0">電話 0123-456-7890 / メール info@abc.co.jp</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>商品名:</dt>
+            <dd class="mb-0">KUJIME 美容クリーム</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>価格:</dt>
+            <dd class="mb-0">5,000円（税込）</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>お支払い方法:</dt>
+            <dd class="mb-0">クレジットカード、銀行振込</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>送料:</dt>
+            <dd class="mb-0">送料無料</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>お届け日数:</dt>
+            <dd class="mb-0">通常3-5日以内</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>返品・交換について:</dt>
+            <dd class="mb-0">商品到着後7日以内にご連絡ください。詳細はウェブサイトをご確認ください。</dd>
+          </dl>
+        </div>
+        <h4 class="fs-5 fw-bold border-bottom p-3 mb-0">KUJIME 美容クリーム</h4>
+        <div class="small p-3 mb-5">
+          <dl class="d-flex gap-3 mb-0">
+            <dt>販売業者名:</dt>
+            <dd class="mb-0">ABC Beauty株式会社</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>代表者:</dt>
+            <dd class="mb-0">山田花子</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>所在地:</dt>
+            <dd class="mb-0">〒123-4567 東京都△△区◇◇町4-5-6</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>お問い合わせ先:</dt>
+            <dd class="mb-0">電話 0120-123-456 / メール support@abcbeauty.co.jp</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>商品名:</dt>
+            <dd class="mb-0">KUJIME 美容クリーム</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>価格:</dt>
+            <dd class="mb-0">5,000円（税込）</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>お支払い方法:</dt>
+            <dd class="mb-0">クレジットカード、代金引換</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>送料:</dt>
+            <dd class="mb-0">送料無料</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>お届け日数:</dt>
+            <dd class="mb-0">ご注文から2営業日以内</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>返品・交換ポリシー:</dt>
+            <dd class="mb-0">商品到着後7日以内にご返品いただいた場合、返金または交換を承ります。詳細はウェブサイトをご確認ください。</dd>
+          </dl>
+        </div>
+        <h4 class="fs-5 fw-bold border-bottom p-3 mb-0">KUJIME 美容クリーム</h4>
+        <div class="small p-3 mb-5">
+          <dl class="d-flex gap-3 mb-0">
+            <dt>販売者:</dt>
+            <dd class="mb-0">KUJIME 美容クリーム公式オンラインストア</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>運営会社:</dt>
+            <dd class="mb-0">株式会社XYZ</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>所在地:</dt>
+            <dd class="mb-0">〒789-0123 ▽▽県××市◆◆町7-8-9</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>カスタマーサポート:</dt>
+            <dd class="mb-0">お問い合わせフォーム（ウェブサイト参照）</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>商品名:</dt>
+            <dd class="mb-0">KUJIME 美容クリーム</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>価格:</dt>
+            <dd class="mb-0">5,000円（税込）</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>お支払い方法:</dt>
+            <dd class="mb-0">クレジットカード、PayPal</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>送料:</dt>
+            <dd class="mb-0">送料無料</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>出荷予定日:</dt>
+            <dd class="mb-0">通常2営業日以内</dd>
+          </dl>
+          <dl class="d-flex gap-3 mb-0">
+            <dt>返品・交換条件:</dt>
+            <dd class="mb-0">商品到着後14日以内にご連絡ください。詳細はウェブサイトをご確認ください。</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+<footer class="bg-gray-800 text-white">
+  <div class="d-lg-flex py-5 ps-5 px-lg-0 container justify-content-between footer-order">
+    <ul class="footer-link ps-0 mb-0">
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>HOME</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>クリニックに提案したい</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>商材を販売したい</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>提案を探したい</a></li>
+    </ul>
+    <ul class="footer-link ps-0 mb-5">
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>利用規約（汎用）</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>お問合せ（汎用）</a></li>
+      <li class="d-block"><a href="###" class="text-white text-decoration-none py-1 d-flex gap-2"><i class="bi bi-circle-fill text-primary"></i>運営会社（外部リンク）</a></li>
+    </ul>
+    <div class="pb-3"><img src="files/img/logo_clipro.svg" alt="" width="237.84" height="64" class="img-fluid"></div>
+    <dl class="mb-0 me-4 me-lg-5">
+      <dt class="fs-3 fw-normal ls-1 mb-2">SOLID Inc.</dt>
+      <dd class="mb-0">〒155-0031<br>
+        東京都世田谷区北沢２-３０-８<br>
+        クレセント下北沢２Ｆ</dd>
+    </dl>
+  </div>
+  <p class="text-center small py-3 mb-0 border-top">Copyright&copy;aaaaaaa.All rights reserved.</p>
+</footer>
+<div id="menu_top" class="move js-menutop col-3 max-120 pe-4" style="z-index: 1040">
+  <div class="bg-success text-white badge-square d-flex align-items-center justify-content-center rounded-circle flex-column filter-drop-shadow"> <img src="files/img/icon_up.svg" alt="" width="16" height="16" class="img-fluid"> TOP </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+<script>
+const arg = new Object;
+const pair=location.search.substring(1).split('&');
+for(i=0;pair[i];i++) {
+var kv = pair[i].split('=');
+arg[kv[0]]=kv[1];
+}
+if(arg['login']=="true"){
+  document.getElementById('js_flg_login').remove();
+}
+
+const e_html=document.querySelector('html');
+const e_offcanvas=document.querySelector('[data-bs-toggle="offcanvas"]');
+const a_offcanvasHash=document.querySelectorAll('.offcanvas a[href^="#"]');
+e_offcanvas.addEventListener('click',function(){
+  e_html.classList.add('offcanvasOP');
+});
+console.log(a_offcanvasHash);
+a_offcanvasHash.forEach(function(e){
+  e.addEventListener('click',function(){
+    setTimeout(function(){
+      e_html.classList.remove('offcanvasOP');
+    },500);
+  });
+});
+const e_menuTop=document.getElementById("menu_top");
+const js_menutop=document.querySelector('.js-menutop');
+const e_headerBreadcrumb=document.querySelector('.header-breadcrumb');
+
+let r_footer;
+window.onscroll = function () {  
+  r_footer=document.querySelector('footer').getBoundingClientRect();
+  if(window.pageYOffset > 5){
+    e_headerBreadcrumb.classList.add('blur-w');
+  }else{
+    e_headerBreadcrumb.classList.remove('blur-w');
+  }
+  if ((window.pageYOffset > 400 || document.documentElement.scrollTop > 400 ) && r_footer.top > 1200){
+    e_menuTop.style.bottom = "50px";
+  } else {
+    e_menuTop.style.bottom = "-200px";
+  }
+};
+
+js_menutop.addEventListener("click", backToTop);
+function backToTop() {
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>
